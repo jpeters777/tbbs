@@ -49,20 +49,39 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 1.75rem;
+  align-items: center;
 }
 
 .ba-case {
-  padding: 1.25rem;
+  width: 100%;
+  max-width: 520px;
+  padding: 1rem 1.1rem 1.15rem;
   border-radius: 1rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.02);
-  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
 }
 
 @media (min-width: 768px) {
   .ba-case {
-    padding: 1.5rem 1.75rem 1.75rem;
+    max-width: 560px;
+    padding: 1.15rem 1.25rem 1.35rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .ba-gallery-cases {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem 1.25rem;
+    align-items: stretch;
+    max-width: 920px;
+    margin-inline: auto;
+  }
+
+  .ba-case {
+    max-width: none;
   }
 }
 
