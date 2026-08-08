@@ -4,6 +4,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { StickyConsultBar } from "@/components/experience/StickyConsultBar";
 import { siteConfig } from "@/lib/site";
+import { toTitleCase } from "@/lib/text";
 import "./globals.css";
 import "./premium.css";
 import "./ba-gallery.css";
@@ -28,8 +29,10 @@ const cantarell = Cantarell({
 
 export const metadata: Metadata = {
   title: {
-    default: "Tampa Bay Body Sculpting | Cosmetic Surgery, Lipo 360 & Tummy Tuck",
-    template: "%s | Tampa Bay Body Sculpting",
+    default: toTitleCase(
+      "Tampa Bay Body Sculpting | Cosmetic Surgery, Lipo 360 & Tummy Tuck"
+    ),
+    template: `%s | ${toTitleCase("Tampa Bay Body Sculpting")}`,
   },
   description:
     "Lipo 360, Tummy Tuck, Breast Procedures, Arm and Thigh Liposuction, and Male Body Sculpting.",

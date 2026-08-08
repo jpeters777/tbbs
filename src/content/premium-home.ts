@@ -1,10 +1,10 @@
 import { homeDifference, homeWhyChoose } from "@/content/home-sections";
 
 export const trustSignals = [
-  { label: "Complimentary virtual consult", detail: "Start from home" },
-  { label: "Board-certified surgeon network", detail: "Vetted partners" },
-  { label: "Transparent pricing guidance", detail: "No surprise fees" },
-  { label: "Concierge through recovery", detail: "Before & after surgery" },
+  { label: "Complimentary Virtual Consult", detail: "Start From Home" },
+  { label: "Board-Certified Surgeon Network", detail: "Vetted Partners" },
+  { label: "Transparent Pricing Guidance", detail: "No Surprise Fees" },
+  { label: "Concierge Through Recovery", detail: "Before & After Surgery" },
 ];
 
 export const conciergeSteps = [

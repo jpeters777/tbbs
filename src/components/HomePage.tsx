@@ -90,13 +90,16 @@ export function HomePage({ page }: { page: PageContent }) {
             {homeProcedures.items.map((item) => (
               <article key={item.title} className="procedure-card">
                 <h4 className="procedure-card-title">{item.title}</h4>
-                <Link href={item.href} className="procedure-card-media">
+                <Link
+                  href={item.href}
+                  className={`procedure-card-media${item.imageMediaClass ? ` ${item.imageMediaClass}` : ""}`}
+                >
                   <Image
                     src={item.image}
                     alt={item.imageAlt}
                     width={640}
                     height={480}
-                    className="procedure-card-image"
+                    className={`procedure-card-image${item.imageClass ? ` ${item.imageClass}` : ""}`}
                   />
                 </Link>
                 <div className="procedure-card-body">

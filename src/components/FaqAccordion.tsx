@@ -30,7 +30,7 @@ export function FaqAccordion({
                   aria-expanded={isOpen}
                   onClick={() => setOpen(isOpen ? null : idx)}
                 >
-                  <span className="font-semibold" style={{ fontFamily: "var(--font-ui)" }}>
+                  <span className="font-semibold capitalize" style={{ fontFamily: "var(--font-ui)" }}>
                     {item.q}
                   </span>
                   <span className="text-[var(--color-accent)] text-xl leading-none">{isOpen ? "−" : "+"}</span>

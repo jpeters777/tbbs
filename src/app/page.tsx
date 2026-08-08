@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import { PremiumHomePage } from "@/components/experience/PremiumHomePage";
 import { getHomePage } from "@/lib/content";
+import { toTitleCase } from "@/lib/text";
 
 export const metadata: Metadata = {
-  title: "Tampa Bay Body Sculpting | Cosmetic Surgery, Lipo 360 & Tummy Tuck",
+  title: toTitleCase(
+    "Tampa Bay Body Sculpting | Cosmetic Surgery, Lipo 360 & Tummy Tuck"
+  ),
   description:
     "Considering cosmetic surgery in Tampa? Explore Lipo 360, tummy tuck, breast surgery, body contouring, and male body sculpting. Schedule your free consultation.",
 };
