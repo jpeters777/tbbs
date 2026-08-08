@@ -91,7 +91,10 @@ export type HomeProcedureItem = {
   alsoInCategories?: ProcedureCategory[];
 };
 
-export const homeProcedures = {
+export const homeProcedures: {
+  title: string;
+  items: HomeProcedureItem[];
+} = {
   title: "Popular Cosmetic Surgery Procedures",
   items: [
     {
@@ -290,7 +293,7 @@ export const homeProcedures = {
       links: [{ href: "/adult-circumcision", text: "Adult circumcision" }],
       category: "men",
     },
-  ] satisfies HomeProcedureItem[],
+  ],
 };
 
 export const homeTravel = {
