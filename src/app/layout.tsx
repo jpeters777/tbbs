@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Lato, Lusitana, Cantarell, Poppins } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -37,6 +37,7 @@ export const metadata: Metadata = {
   description:
     "Lipo 360, Tummy Tuck, Breast Procedures, Arm and Thigh Liposuction, and Male Body Sculpting.",
   metadataBase: new URL("https://tampabaybodysculpting.com"),
+  themeColor: "#65ebc9",
   openGraph: {
     siteName: siteConfig.brand,
     type: "website",

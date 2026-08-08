@@ -2,15 +2,22 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { siteConfig } from "@/lib/site";
 
 export function Header() {
   const [open, setOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  const pathname = usePathname();
+
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    return pathname === href || pathname.startsWith(`${href}/`);
+  };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[var(--color-border)] bg-white/95 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-[var(--color-border)] bg-black/90 backdrop-blur">
       <div className="container flex items-center justify-between gap-4 py-3">
         <Link href="/" className="flex items-center gap-3 shrink-0" onClick={() => setOpen(false)}>
           <Image
@@ -18,12 +25,12 @@ export function Header() {
             alt={siteConfig.brand}
             width={52}
             height={52}
-            className="h-12 w-12 object-contain"
+            className="h-11 w-11 object-contain"
             priority
           />
           <span
-            className="hidden sm:block text-[1.05rem] leading-tight tracking-wide"
-            style={{ fontFamily: "var(--font-display)" }}
+            className="hidden sm:block text-[0.95rem] leading-tight tracking-[0.04em] uppercase text-white"
+            style={{ fontFamily: "var(--font-ui)" }}
           >
             Tampa Bay
             <br />
@@ -31,52 +38,56 @@ export function Header() {
           </span>
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-1">
-          {siteConfig.main.map((item) => (
-            <div
-              key={item.href}
-              className="relative"
-              onMouseEnter={() => setActiveMenu(item.label)}
-              onMouseLeave={() => setActiveMenu(null)}
-            >
-              <Link
-                href={item.href}
-                className="px-3 py-2 text-sm uppercase tracking-[0.08em] font-semibold hover:text-[var(--color-bg-forest)]"
-                style={{ fontFamily: "var(--font-ui)" }}
+        <div className="hidden lg:flex flex-col items-end gap-1">
+          <nav className="flex items-center gap-1">
+            {siteConfig.main.map((item) => (
+              <div
+                key={item.href}
+                className="relative"
+                onMouseEnter={() => setActiveMenu(item.label)}
+                onMouseLeave={() => setActiveMenu(null)}
               >
-                {item.label}
-              </Link>
-              {item.children && activeMenu === item.label ? (
-                <div className="absolute left-0 top-full min-w-[240px] border border-[var(--color-border)] bg-white py-2 shadow-lg">
-                  {item.children.map((child, childIdx) => (
-                    <Link
-                      key={`${item.label}-${childIdx}-${child.href}`}
-                      href={child.href}
-                      className="block px-4 py-2 text-sm text-[var(--color-text)] hover:bg-[var(--color-accent-soft)]"
-                    >
-                      {child.label}
-                    </Link>
-                  ))}
-                </div>
-              ) : null}
-            </div>
-          ))}
-        </nav>
-
-        <div className="flex items-center gap-3">
+                <Link
+                  href={item.href}
+                  className={`px-3 py-2 text-xs uppercase tracking-[0.12em] font-semibold transition-colors ${
+                    isActive(item.href) ? "text-[var(--color-accent)]" : "text-white hover:text-[var(--color-accent)]"
+                  }`}
+                  style={{ fontFamily: "var(--font-ui)" }}
+                >
+                  {item.label}
+                </Link>
+                {item.children && activeMenu === item.label ? (
+                  <div className="absolute right-0 top-full min-w-[250px] border border-[var(--color-border)] bg-[#161616] py-2 shadow-xl">
+                    {item.children.map((child, childIdx) => (
+                      <Link
+                        key={`${item.label}-${childIdx}-${child.href}`}
+                        href={child.href}
+                        className="block px-4 py-2 text-sm text-white/85 hover:bg-[var(--color-accent-soft)] hover:text-[var(--color-accent)]"
+                      >
+                        {child.label}
+                      </Link>
+                    ))}
+                  </div>
+                ) : null}
+              </div>
+            ))}
+          </nav>
           <a
             href={siteConfig.phoneHref}
-            className="hidden md:inline-flex text-sm font-semibold tracking-wide"
+            className="pr-3 text-xs font-semibold tracking-[0.08em] text-white/90"
             style={{ fontFamily: "var(--font-ui)" }}
           >
             {siteConfig.phone}
           </a>
-          <a href={siteConfig.consultUrl} className="btn btn-primary !py-2.5 !px-3.5 !text-xs" target="_blank" rel="noreferrer">
+        </div>
+
+        <div className="flex items-center gap-3 lg:hidden">
+          <a href={siteConfig.consultUrl} className="btn btn-primary !py-2 !px-3 !text-[0.7rem]" target="_blank" rel="noreferrer">
             Consultation
           </a>
           <button
             type="button"
-            className="lg:hidden border border-[var(--color-border)] px-3 py-2 text-xs uppercase tracking-wider"
+            className="border border-[var(--color-border-strong)] px-3 py-2 text-xs uppercase tracking-wider text-white"
             aria-expanded={open}
             aria-label="Toggle menu"
             onClick={() => setOpen((v) => !v)}
@@ -87,13 +98,15 @@ export function Header() {
       </div>
 
       {open ? (
-        <div className="lg:hidden border-t border-[var(--color-border)] bg-white">
+        <div className="lg:hidden border-t border-[var(--color-border)] bg-black">
           <div className="container py-4 flex flex-col gap-2">
             {siteConfig.main.map((item) => (
               <div key={item.href} className="border-b border-[var(--color-border)] pb-2">
                 <Link
                   href={item.href}
-                  className="block py-2 font-semibold uppercase tracking-wide text-sm"
+                  className={`block py-2 font-semibold uppercase tracking-wide text-sm ${
+                    isActive(item.href) ? "text-[var(--color-accent)]" : "text-white"
+                  }`}
                   onClick={() => setOpen(false)}
                 >
                   {item.label}
@@ -104,7 +117,7 @@ export function Header() {
                       <Link
                         key={`m-${item.label}-${childIdx}-${child.href}`}
                         href={child.href}
-                        className="py-1 text-sm text-[var(--color-text-muted)]"
+                        className="py-1 text-sm text-white/65"
                         onClick={() => setOpen(false)}
                       >
                         {child.label}
@@ -114,7 +127,7 @@ export function Header() {
                 ) : null}
               </div>
             ))}
-            <a href={siteConfig.phoneHref} className="py-2 font-semibold">
+            <a href={siteConfig.phoneHref} className="py-2 font-semibold text-white">
               Call {siteConfig.phone}
             </a>
           </div>

@@ -15,7 +15,6 @@ export function ProcedureCards({
 }) {
   if (!cards.length) return null;
 
-  // Deduplicate near-identical cards
   const seen = new Set<string>();
   const unique = cards.filter((card) => {
     const key = card.title.toLowerCase();
@@ -33,11 +32,13 @@ export function ProcedureCards({
             <Link
               key={`${card.href}-${card.title}`}
               href={card.href}
-              className="group border border-[var(--color-border)] bg-white p-5 transition duration-300 hover:-translate-y-1 hover:border-[var(--color-accent)] hover:shadow-[0_16px_40px_rgba(16,32,27,0.08)]"
+              className="group border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-5 transition duration-300 hover:-translate-y-1 hover:border-[var(--color-accent)]"
             >
-              <h3 className="text-xl mb-2 group-hover:text-[var(--color-bg-forest)]">{card.title}</h3>
+              <h3 className="text-lg mb-2 uppercase tracking-[0.04em] text-white group-hover:text-[var(--color-accent)]">
+                {card.title}
+              </h3>
               <p className="text-sm text-[var(--color-text-muted)] mb-4">{card.description}</p>
-              <span className="text-xs uppercase tracking-[0.12em] font-semibold text-[var(--color-bg-forest)]">
+              <span className="text-xs uppercase tracking-[0.12em] font-semibold text-[var(--color-accent)]">
                 Learn more →
               </span>
             </Link>

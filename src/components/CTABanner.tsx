@@ -9,16 +9,16 @@ export function CTABanner({
 }) {
   return (
     <section className="section section-accent">
-      <div className="container flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-        <div className="max-w-2xl">
-          <h2 className="section-title">{title}</h2>
-          <p className="section-lead">{body}</p>
+      <div className="container flex flex-col items-center text-center gap-5">
+        <div className="max-w-3xl">
+          <h2 className="section-title !mb-3">{title}</h2>
+          <p className="section-lead mx-auto">{body}</p>
         </div>
-        <div className="flex flex-wrap gap-3">
-          <a href={CONSULT_URL} className="btn btn-primary" target="_blank" rel="noreferrer">
+        <div className="flex flex-wrap justify-center gap-3">
+          <a href={CONSULT_URL} className="btn btn-dark" target="_blank" rel="noreferrer">
             Start a consultation
           </a>
-          <a href={siteConfig.phoneHref} className="btn btn-outline text-white border-white/60">
+          <a href={siteConfig.phoneHref} className="btn btn-outline !border-black/40 !text-[var(--color-on-accent)]">
             {siteConfig.phone}
           </a>
         </div>
