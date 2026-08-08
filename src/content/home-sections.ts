@@ -81,7 +81,7 @@ export const homeProcedures = {
     {
       title: "Lipo 360",
       href: "/liposuction-360",
-      image: "/images/blob-10293ad.png",
+      image: "/images/1565629.png",
       imageAlt: "Lipo 360 body contouring results in Tampa",
       body: "Sculpt your waistline with comprehensive circumferential liposuction designed to target stubborn fat around the abdomen, flanks, and back. Lipo 360 creates a smoother, more defined silhouette while enhancing your body's natural contours for balanced, natural-looking results.",
       links: [{ href: "/liposuction-360", text: "Lipo 360" }],
@@ -89,7 +89,7 @@ export const homeProcedures = {
     {
       title: "Tummy Tuck",
       href: "/tummy-tuck",
-      image: "/images/blob-8f7eab9.png",
+      image: "/images/blob-56b3a68.png",
       imageAlt: "Woman representing tummy tuck surgery",
       body: "Restore a flatter, firmer abdomen by removing excess skin and tightening weakened abdominal muscles. Whether after pregnancy or significant weight loss, a tummy tuck can dramatically improve your midsection and help you feel more confident in your appearance.",
       links: [{ href: "/tummy-tuck", text: "tummy tuck" }],
@@ -97,7 +97,7 @@ export const homeProcedures = {
     {
       title: "Breast Augmentation",
       href: "/breast-augmentation",
-      image: "/images/blob-71f8471.png",
+      image: "/images/blob-6c75d85.png",
       imageAlt: "Woman representing breast augmentation",
       body: "Enhance your confidence with breast augmentation tailored to your desired size, shape, and overall proportions. Whether using implants or fat transfer, our trusted cosmetic surgeons help create balanced, natural-looking results that complement your body.",
       links: [

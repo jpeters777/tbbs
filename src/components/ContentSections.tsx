@@ -37,10 +37,10 @@ function renderLinkedText(text: string, links?: { href: string; text: string }[]
 
 function Block({ block }: { block: ContentBlock }) {
   if (block.type === "h3") {
-    return <h3 className="text-xl mt-4 text-white" style={{ fontFamily: "var(--font-serif)" }}>{block.text}</h3>;
+    return <h3 className="mt-4">{block.text}</h3>;
   }
   if (block.type === "h4") {
-    return <h4 className="text-lg mt-3 text-white" style={{ fontFamily: "var(--font-serif)" }}>{block.text}</h4>;
+    return <h4 className="mt-3">{block.text}</h4>;
   }
   if (block.type === "list") {
     const ListTag = block.ordered ? "ol" : "ul";
@@ -157,12 +157,15 @@ export function ContentSections({
 
         if (isFeatureSection && features) {
           const cardTitleTone = heading.toLowerCase().includes("difference") ? "accent" : "white";
+          const sectionTitleTone = heading.toLowerCase().includes("difference") ? "light" : "accent";
           return (
             <FeatureGrid
               key={`${heading}-${idx}`}
               title={heading || undefined}
               items={features}
               cardTitleTone={cardTitleTone}
+              sectionTitleTone={sectionTitleTone}
+              cardHeadingLevel={cardTitleTone === "white" ? "h4" : "h3"}
             />
           );
         }

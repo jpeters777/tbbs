@@ -9,10 +9,10 @@ export function Testimonials({ items }: { items: string[] }) {
           {items.map((item, idx) => (
             <blockquote
               key={`testimonial-${idx}`}
-              className="border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-5 text-sm leading-relaxed text-[var(--color-text-muted)]"
+              className="border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-5 leading-relaxed text-[var(--color-text-body)]"
             >
-              <p className="text-white mb-3 tracking-[0.2em]">★★★★★</p>
-              <p>{item}</p>
+              <p className="text-[var(--color-heading-soft)] mb-3 tracking-[0.2em] text-sm font-ui">★★★★★</p>
+              <p className="text-base">{item}</p>
             </blockquote>
           ))}
         </div>

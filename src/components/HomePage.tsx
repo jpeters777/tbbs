@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { ReactNode } from "react";
 import { Hero } from "@/components/Hero";
 import { FeatureGrid } from "@/components/FeatureGrid";
+import { RichText } from "@/components/RichText";
 import { Testimonials } from "@/components/Testimonials";
 import { CTABanner } from "@/components/CTABanner";
 import {
@@ -14,35 +14,6 @@ import {
 } from "@/content/home-sections";
 import { CONTACT_URL } from "@/lib/site";
 import type { PageContent } from "@/lib/content";
-
-function LinkedParagraph({
-  text,
-  links,
-}: {
-  text: string;
-  links: { href: string; text: string }[];
-}) {
-  if (!links.length) return <p>{text}</p>;
-
-  const parts: ReactNode[] = [];
-  let remaining = text;
-  let key = 0;
-
-  for (const link of links) {
-    const idx = remaining.toLowerCase().indexOf(link.text.toLowerCase());
-    if (idx === -1) continue;
-    if (idx > 0) parts.push(<span key={`t-${key++}`}>{remaining.slice(0, idx)}</span>);
-    const matched = remaining.slice(idx, idx + link.text.length);
-    parts.push(
-      <Link key={`a-${key++}`} href={link.href} className="inline-link">
-        {matched}
-      </Link>
-    );
-    remaining = remaining.slice(idx + link.text.length);
-  }
-  if (remaining) parts.push(<span key={`t-${key++}`}>{remaining}</span>);
-  return <p>{parts}</p>;
-}
 
 export function HomePage({ page }: { page: PageContent }) {
   const subtitle =
@@ -73,9 +44,9 @@ export function HomePage({ page }: { page: PageContent }) {
               />
             </div>
             <div className="about-copy">
-              <h3 className="about-subtitle">{homeAbout.subtitle}</h3>
+              <h4 className="about-subtitle">{homeAbout.subtitle}</h4>
               {homeAbout.paragraphs.map((p) => (
-                <LinkedParagraph key={p.text.slice(0, 40)} text={p.text} links={p.links} />
+                <RichText key={p.text.slice(0, 40)} text={p.text} links={p.links} />
               ))}
             </div>
           </div>
@@ -85,8 +56,8 @@ export function HomePage({ page }: { page: PageContent }) {
       {/* Difference */}
       <section className="section section-black">
         <div className="container">
-          <h2 className="section-title section-title-white">{homeDifference.title}</h2>
-          <h3 className="section-subtitle-accent">{homeDifference.introTitle}</h3>
+          <h2 className="section-title section-title-light">{homeDifference.title}</h2>
+          <h3 className="section-kicker">{homeDifference.introTitle}</h3>
           <p className="difference-intro">{homeDifference.intro}</p>
           <div className="text-center mt-8 mb-10">
             <a href={CONTACT_URL} className="btn btn-primary" target="_blank" rel="noreferrer">
@@ -108,6 +79,7 @@ export function HomePage({ page }: { page: PageContent }) {
         title={homeWhyChoose.title}
         items={homeWhyChoose.items}
         cardTitleTone="white"
+        cardHeadingLevel="h4"
       />
 
       {/* Popular procedures */}
@@ -117,7 +89,7 @@ export function HomePage({ page }: { page: PageContent }) {
           <div className="procedure-grid">
             {homeProcedures.items.map((item) => (
               <article key={item.title} className="procedure-card">
-                <h3 className="procedure-card-title">{item.title}</h3>
+                <h4 className="procedure-card-title">{item.title}</h4>
                 <Link href={item.href} className="procedure-card-media">
                   <Image
                     src={item.image}
@@ -128,7 +100,7 @@ export function HomePage({ page }: { page: PageContent }) {
                   />
                 </Link>
                 <div className="procedure-card-body">
-                  <LinkedParagraph text={item.body} links={item.links} />
+                  <RichText text={item.body} links={item.links} />
                 </div>
               </article>
             ))}
@@ -144,9 +116,9 @@ export function HomePage({ page }: { page: PageContent }) {
           <h2 className="section-title">{homeTravel.title}</h2>
           <div className="about-split">
             <div className="about-copy">
-              <h3 className="about-subtitle">{homeTravel.subtitle}</h3>
-              <p>{homeTravel.body}</p>
-              <p className="mt-4 mb-2 text-white/80">We provide guidance on:</p>
+              <h4 className="about-subtitle">{homeTravel.subtitle}</h4>
+              <RichText text={homeTravel.body} />
+              <p className="mt-4 mb-2 text-[var(--color-heading-soft)]">We provide guidance on:</p>
               <ul className="travel-list">
                 {homeTravel.bullets.map((b) => (
                   <li key={b}>{b}</li>

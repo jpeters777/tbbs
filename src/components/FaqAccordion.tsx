@@ -36,7 +36,7 @@ export function FaqAccordion({
                   <span className="text-[var(--color-accent)] text-xl leading-none">{isOpen ? "−" : "+"}</span>
                 </button>
                 {isOpen ? (
-                  <div className="px-4 pb-4 text-[var(--color-text-muted)] text-sm leading-relaxed">
+                  <div className="px-4 pb-4 text-[var(--color-text-body)] text-base leading-relaxed">
                     {item.a}
                   </div>
                 ) : null}

@@ -39,16 +39,12 @@ export function Hero({
 
       <div className="container relative z-10 py-28 px-4">
         <h1
-          className="animate-fade-up mx-auto max-w-4xl text-[clamp(1.9rem,4.8vw,3.5rem)] uppercase tracking-[0.08em] text-balance text-[var(--color-accent)]"
-          style={{ fontFamily: "var(--font-display)", fontWeight: 700 }}
+          className="animate-fade-up mx-auto max-w-4xl text-[clamp(2.5rem,5vw,3.875rem)] uppercase tracking-[1px] text-balance text-[var(--color-heading-mint)] font-display font-normal leading-[1.2]"
         >
           {title}
         </h1>
         {subtitle ? (
-          <p
-            className="animate-fade-up-delay mx-auto mt-5 max-w-2xl text-base md:text-lg text-white/90"
-            style={{ fontFamily: "var(--font-serif)" }}
-          >
+          <p className="animate-fade-up-delay mx-auto mt-5 max-w-2xl text-base text-[var(--color-text-body)] leading-relaxed">
             {subtitle}
           </p>
         ) : null}
