@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { HomePage } from "@/components/HomePage";
+import { PremiumHomePage } from "@/components/experience/PremiumHomePage";
 import { getHomePage } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -10,5 +10,5 @@ export const metadata: Metadata = {
 
 export default function Page() {
   const page = getHomePage();
-  return <HomePage page={page} />;
+  return <PremiumHomePage page={page} />;
 }

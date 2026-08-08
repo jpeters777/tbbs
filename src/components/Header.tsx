@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { siteConfig } from "@/lib/site";
 
-export function Header() {
+export function Header({ premium = false }: { premium?: boolean }) {
   const [open, setOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const pathname = usePathname();
@@ -17,8 +17,8 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-black/95 backdrop-blur">
-      <div className="container flex items-center justify-between gap-4 py-4">
+    <header className={`sticky top-0 z-50 ${premium ? "premium-header" : "bg-black/95 backdrop-blur"}`}>
+      <div className="container flex items-center justify-between gap-4 py-3 md:py-4">
         <Link href="/" className="shrink-0" onClick={() => setOpen(false)} aria-label={siteConfig.brand}>
           <Image
             src={siteConfig.logo}
@@ -30,7 +30,8 @@ export function Header() {
           />
         </Link>
 
-        <div className="hidden lg:flex flex-col items-end gap-1">
+        <div className="hidden lg:flex items-center gap-4">
+          <div className="flex flex-col items-end gap-1">
           <nav className="flex items-center">
             {siteConfig.main.map((item) => (
               <div
@@ -72,6 +73,15 @@ export function Header() {
             style={{ fontFamily: "var(--font-ui)" }}
           >
             {siteConfig.phone}
+          </a>
+          </div>
+          <a
+            href={siteConfig.consultUrl}
+            className="btn btn-primary !py-2.5 !px-4 !text-[0.72rem] shrink-0 premium-btn-glow"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Free consult
           </a>
         </div>
 
