@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --color-bg: #161616;
-  --color-bg-elevated: #1c1c1c;
-  --color-bg-soft: #111111;
+  --color-bg: #000000;
+  --color-bg-elevated: #111111;
+  --color-bg-soft: #0a0a0a;
   --color-bg-black: #000000;
   --color-text: #ffffff;
-  --color-text-muted: rgba(255, 255, 255, 0.72);
-  --color-text-dim: rgba(255, 255, 255, 0.55);
+  --color-text-muted: #cfcfcf;
+  --color-text-dim: #a0a0a0;
   --color-accent: #65ebc9;
   --color-accent-strong: #7af0d3;
   --color-accent-soft: rgba(101, 235, 201, 0.14);
@@ -15,10 +15,11 @@
   --color-border-strong: rgba(255, 255, 255, 0.22);
   --color-on-accent: #111111;
   --font-display: var(--font-lato), Arial, sans-serif;
+  --font-serif: var(--font-lusitana), Georgia, "Times New Roman", serif;
   --font-body: var(--font-lato), Arial, sans-serif;
   --font-ui: var(--font-cantarell), Arial, sans-serif;
   --font-accent: var(--font-poppins), Arial, sans-serif;
-  --max-width: 1120px;
+  --max-width: 1100px;
   --header-height: 84px;
 }
 
@@ -34,15 +35,15 @@
 
 html {
   scroll-behavior: smooth;
-  background: var(--color-bg-black);
+  background: #000;
 }
 
 body {
   margin: 0;
-  background: var(--color-bg);
+  background: #000;
   color: var(--color-text);
   font-family: var(--font-body);
-  line-height: 1.65;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -61,11 +62,8 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-display);
-  font-weight: 700;
-  line-height: 1.2;
   margin: 0;
-  letter-spacing: 0.02em;
+  line-height: 1.25;
 }
 
 p {
@@ -73,7 +71,7 @@ p {
 }
 
 .container {
-  width: min(100% - 2rem, var(--max-width));
+  width: min(100% - 2.5rem, var(--max-width));
   margin-inline: auto;
 }
 
@@ -82,12 +80,12 @@ p {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.9rem 1.5rem;
+  padding: 0.9rem 1.55rem;
   border-radius: 0;
   font-family: var(--font-ui);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
@@ -106,8 +104,8 @@ p {
 }
 
 .btn-dark {
-  background: var(--color-bg-black);
-  color: var(--color-text);
+  background: #000;
+  color: #fff;
 }
 
 .btn-dark:hover {
@@ -117,55 +115,190 @@ p {
 .btn-outline {
   border: 1px solid currentColor;
   background: transparent;
-  color: var(--color-text);
 }
 
-.btn-outline:hover {
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.section {
-  padding: 4.25rem 0;
-  background: var(--color-bg);
+.section,
+.section-black {
+  padding: 5rem 0;
+  background: #000;
 }
 
 .section-soft {
-  background: var(--color-bg-soft);
-}
-
-.section-dark {
-  background: var(--color-bg-black);
+  background: #0a0a0a;
 }
 
 .section-accent {
   background: var(--color-accent);
   color: var(--color-on-accent);
+  padding: 5rem 0;
 }
 
 .section-title {
-  font-size: clamp(1.35rem, 2.4vw, 1.85rem);
-  margin-bottom: 1.5rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2.2vw, 1.65rem);
+  font-weight: 700;
+  margin-bottom: 2.5rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   color: var(--color-accent);
   text-align: center;
   text-wrap: balance;
+}
+
+.section-title-white {
+  color: #fff;
+}
+
+.section-subtitle-accent {
+  font-family: var(--font-display);
+  color: var(--color-accent);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+.section-lead {
+  font-size: 1.05rem;
+  color: rgba(17, 17, 17, 0.8);
+  max-width: 42rem;
 }
 
 .section-accent .section-title {
   color: var(--color-on-accent);
 }
 
-.section-lead {
-  font-size: 1.05rem;
+.inline-link {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* About split */
+.about-split {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.about-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  filter: grayscale(1);
+}
+
+.about-subtitle {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.about-copy {
+  display: grid;
+  gap: 1rem;
+  font-family: var(--font-serif);
   color: var(--color-text-muted);
-  max-width: 42rem;
+  font-size: 1.02rem;
 }
 
-.section-accent .section-lead {
-  color: rgba(17, 17, 17, 0.8);
+.difference-intro {
+  max-width: 48rem;
+  margin: 0 auto;
+  text-align: center;
+  font-family: var(--font-serif);
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
 }
 
+/* Feature grid (Why Choose) */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.75rem 2rem;
+}
+
+.feature-card {
+  text-align: center;
+}
+
+.feature-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 0.85rem;
+}
+
+.feature-card-body {
+  font-family: var(--font-serif);
+  font-size: 0.98rem;
+  color: var(--color-text-dim);
+  line-height: 1.65;
+}
+
+/* Procedure cards with images */
+.procedure-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.75rem 2rem;
+}
+
+.procedure-card {
+  text-align: center;
+}
+
+.procedure-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.55rem;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.procedure-card-media {
+  display: block;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.procedure-card-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  filter: grayscale(1);
+  transition: transform 0.45s ease, filter 0.45s ease;
+}
+
+.procedure-card-media:hover .procedure-card-image {
+  transform: scale(1.03);
+  filter: grayscale(0.35);
+}
+
+.procedure-card-body {
+  font-family: var(--font-serif);
+  font-size: 0.98rem;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.travel-list {
+  list-style: disc;
+  padding-left: 1.25rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-serif);
+}
+
+.travel-list li + li {
+  margin-top: 0.25rem;
+}
+
+/* Generic prose used on inner pages */
 .prose-block {
   display: grid;
   gap: 1rem;
@@ -175,12 +308,14 @@ p {
 
 .prose-block h3,
 .prose-block h4 {
-  color: var(--color-text);
-  font-weight: 600;
+  font-family: var(--font-serif);
+  color: #fff;
+  font-weight: 400;
 }
 
 .prose-block p,
 .prose-block li {
+  font-family: var(--font-serif);
   font-size: 1.02rem;
   color: var(--color-text-muted);
 }
@@ -199,18 +334,32 @@ p {
 }
 
 @media (max-width: 900px) {
+  .about-split,
+  .feature-grid,
+  .procedure-grid,
+  .grid-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-grid,
+  .procedure-grid {
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 900px) {
+  .feature-grid,
+  .procedure-grid,
   .grid-cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 640px) {
-  .grid-cards {
-    grid-template-columns: 1fr;
-  }
-
-  .section {
-    padding: 3.25rem 0;
+  .section,
+  .section-black,
+  .section-accent {
+    padding: 3.5rem 0;
   }
 }
 

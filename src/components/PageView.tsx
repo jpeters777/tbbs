@@ -67,14 +67,14 @@ export function PageView({ page }: { page: PageContent }) {
         brandFirst={isHome}
       />
 
-      {page.cards.length > 0 ? (
+      <ContentSections sections={contentSections} />
+
+      {page.cards.length > 0 && !isHome ? (
         <ProcedureCards
-          title={isHome ? "Popular Cosmetic Surgery Procedures" : "Explore Procedures & Resources"}
-          cards={page.cards.filter((c) => c.href && c.href !== "#")}
+          title="Explore Procedures & Resources"
+          cards={page.cards.filter((c) => c.href && c.href !== "#" && !c.title.includes("★"))}
         />
       ) : null}
-
-      <ContentSections sections={contentSections} />
 
       {faqs.length > 0 ? <FaqAccordion items={faqs} /> : null}
 

@@ -17,29 +17,21 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[var(--color-border)] bg-black/90 backdrop-blur">
-      <div className="container flex items-center justify-between gap-4 py-3">
-        <Link href="/" className="flex items-center gap-3 shrink-0" onClick={() => setOpen(false)}>
+    <header className="sticky top-0 z-50 bg-black/95 backdrop-blur">
+      <div className="container flex items-center justify-between gap-4 py-4">
+        <Link href="/" className="shrink-0" onClick={() => setOpen(false)} aria-label={siteConfig.brand}>
           <Image
             src={siteConfig.logo}
             alt={siteConfig.brand}
-            width={52}
-            height={52}
-            className="h-11 w-11 object-contain"
+            width={56}
+            height={56}
+            className="h-12 w-12 object-contain opacity-90"
             priority
           />
-          <span
-            className="hidden sm:block text-[0.95rem] leading-tight tracking-[0.04em] uppercase text-white"
-            style={{ fontFamily: "var(--font-ui)" }}
-          >
-            Tampa Bay
-            <br />
-            Body Sculpting
-          </span>
         </Link>
 
         <div className="hidden lg:flex flex-col items-end gap-1">
-          <nav className="flex items-center gap-1">
+          <nav className="flex items-center">
             {siteConfig.main.map((item) => (
               <div
                 key={item.href}
@@ -49,15 +41,17 @@ export function Header() {
               >
                 <Link
                   href={item.href}
-                  className={`px-3 py-2 text-xs uppercase tracking-[0.12em] font-semibold transition-colors ${
-                    isActive(item.href) ? "text-[var(--color-accent)]" : "text-white hover:text-[var(--color-accent)]"
+                  className={`px-3 py-2 text-[0.72rem] uppercase tracking-[0.14em] font-semibold transition-colors border-b-2 ${
+                    isActive(item.href)
+                      ? "text-[var(--color-accent)] border-[var(--color-accent)]"
+                      : "text-white border-transparent hover:text-[var(--color-accent)]"
                   }`}
                   style={{ fontFamily: "var(--font-ui)" }}
                 >
                   {item.label}
                 </Link>
                 {item.children && activeMenu === item.label ? (
-                  <div className="absolute right-0 top-full min-w-[250px] border border-[var(--color-border)] bg-[#161616] py-2 shadow-xl">
+                  <div className="absolute right-0 top-full min-w-[250px] border border-[var(--color-border)] bg-black py-2 shadow-xl">
                     {item.children.map((child, childIdx) => (
                       <Link
                         key={`${item.label}-${childIdx}-${child.href}`}
@@ -74,7 +68,7 @@ export function Header() {
           </nav>
           <a
             href={siteConfig.phoneHref}
-            className="pr-3 text-xs font-semibold tracking-[0.08em] text-white/90"
+            className="pr-3 text-xs tracking-[0.06em] text-white/90"
             style={{ fontFamily: "var(--font-ui)" }}
           >
             {siteConfig.phone}

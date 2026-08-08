@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PageView } from "@/components/PageView";
+import { HomePage } from "@/components/HomePage";
 import { getHomePage } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     "Considering cosmetic surgery in Tampa? Explore Lipo 360, tummy tuck, breast surgery, body contouring, and male body sculpting. Schedule your free consultation.",
 };
 
-export default function HomePage() {
+export default function Page() {
   const page = getHomePage();
-  return <PageView page={page} />;
+  return <HomePage page={page} />;
 }

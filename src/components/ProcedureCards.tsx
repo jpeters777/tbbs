@@ -19,26 +19,23 @@ export function ProcedureCards({
   const unique = cards.filter((card) => {
     const key = card.title.toLowerCase();
     if (seen.has(key)) return false;
+    if (key.includes("★")) return false;
     seen.add(key);
     return true;
   });
 
   return (
-    <section className="section">
+    <section className="section section-black">
       <div className="container">
         {title ? <h2 className="section-title">{title}</h2> : null}
-        <div className="grid-cards">
+        <div className="feature-grid">
           {unique.map((card) => (
-            <Link
-              key={`${card.href}-${card.title}`}
-              href={card.href}
-              className="group border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-5 transition duration-300 hover:-translate-y-1 hover:border-[var(--color-accent)]"
-            >
-              <h3 className="text-lg mb-2 uppercase tracking-[0.04em] text-white group-hover:text-[var(--color-accent)]">
+            <Link key={`${card.href}-${card.title}`} href={card.href} className="feature-card group">
+              <h3 className="feature-card-title group-hover:text-[var(--color-accent)] transition-colors">
                 {card.title}
               </h3>
-              <p className="text-sm text-[var(--color-text-muted)] mb-4">{card.description}</p>
-              <span className="text-xs uppercase tracking-[0.12em] font-semibold text-[var(--color-accent)]">
+              <p className="feature-card-body">{card.description}</p>
+              <span className="inline-block mt-3 text-xs uppercase tracking-[0.12em] font-semibold text-[var(--color-accent)]">
                 Learn more →
               </span>
             </Link>

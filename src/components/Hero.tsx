@@ -20,39 +20,35 @@ export function Hero({
   ctaLabel = "Start a consultation",
   ctaHref = CONSULT_URL,
 }: HeroProps) {
+  void brandFirst;
   return (
-    <section className="relative min-h-[78vh] flex items-center justify-center overflow-hidden bg-black text-white text-center">
+    <section className="relative min-h-[82vh] flex items-center justify-center overflow-hidden bg-black text-white text-center">
       {imageSrc ? (
         <Image
           src={imageSrc}
           alt={imageAlt || title}
           fill
           priority
-          className="object-cover hero-media opacity-55"
+          className="object-cover hero-media opacity-60"
           sizes="100vw"
         />
       ) : (
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(101,235,201,0.18),transparent_40%),linear-gradient(180deg,#111,#000)]" />
       )}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/45 to-[#161616]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black" />
 
-      <div className="container relative z-10 py-24 px-4">
-        {brandFirst ? (
-          <p
-            className="animate-fade-up mb-4 text-xs uppercase tracking-[0.28em] text-[var(--color-accent)]"
-            style={{ fontFamily: "var(--font-ui)" }}
-          >
-            Tampa Bay Body Sculpting
-          </p>
-        ) : null}
+      <div className="container relative z-10 py-28 px-4">
         <h1
-          className="animate-fade-up-delay mx-auto max-w-4xl text-[clamp(1.8rem,4.5vw,3.4rem)] uppercase tracking-[0.06em] text-balance text-white"
-          style={{ fontFamily: "var(--font-display)" }}
+          className="animate-fade-up mx-auto max-w-4xl text-[clamp(1.9rem,4.8vw,3.5rem)] uppercase tracking-[0.08em] text-balance text-[var(--color-accent)]"
+          style={{ fontFamily: "var(--font-display)", fontWeight: 700 }}
         >
           {title}
         </h1>
         {subtitle ? (
-          <p className="animate-fade-up-delay-2 mx-auto mt-5 max-w-2xl text-base md:text-lg text-white/85">
+          <p
+            className="animate-fade-up-delay mx-auto mt-5 max-w-2xl text-base md:text-lg text-white/90"
+            style={{ fontFamily: "var(--font-serif)" }}
+          >
             {subtitle}
           </p>
         ) : null}

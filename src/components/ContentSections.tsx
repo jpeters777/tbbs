@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import type { ContentBlock, ContentSection } from "@/lib/content";
+import { FeatureGrid } from "@/components/FeatureGrid";
 
 function renderLinkedText(text: string, links?: { href: string; text: string }[]) {
   if (!links?.length) return text;
@@ -36,10 +37,10 @@ function renderLinkedText(text: string, links?: { href: string; text: string }[]
 
 function Block({ block }: { block: ContentBlock }) {
   if (block.type === "h3") {
-    return <h3 className="text-xl mt-4 text-white">{block.text}</h3>;
+    return <h3 className="text-xl mt-4 text-white" style={{ fontFamily: "var(--font-serif)" }}>{block.text}</h3>;
   }
   if (block.type === "h4") {
-    return <h4 className="text-lg mt-3 text-white/90">{block.text}</h4>;
+    return <h4 className="text-lg mt-3 text-white" style={{ fontFamily: "var(--font-serif)" }}>{block.text}</h4>;
   }
   if (block.type === "list") {
     const ListTag = block.ordered ? "ol" : "ul";
@@ -52,6 +53,75 @@ function Block({ block }: { block: ContentBlock }) {
     );
   }
   return <p>{renderLinkedText(block.text, block.links)}</p>;
+}
+
+/** Pair heading blocks with following paragraphs into feature cards when scrape order is messy. */
+function extractFeatureItems(blocks: ContentBlock[]): { title: string; body: string }[] | null {
+  const headings = blocks.filter((b) => b.type === "h3" || b.type === "h4");
+  const paragraphs = blocks.filter((b) => b.type === "p");
+
+  if (headings.length < 3 || paragraphs.length < 2) return null;
+
+  // Ideal case: h, p, h, p...
+  const interleaved: { title: string; body: string }[] = [];
+  for (let i = 0; i < blocks.length; i++) {
+    const b = blocks[i];
+    if ((b.type === "h3" || b.type === "h4") && blocks[i + 1]?.type === "p") {
+      const p = blocks[i + 1];
+      if (p.type === "p") {
+        interleaved.push({ title: b.text, body: p.text });
+      }
+    }
+  }
+  if (interleaved.length >= 3) return interleaved;
+
+  // Broken scrape order: all headings then paragraphs (or mixed clusters)
+  // Use known pairing heuristics by index when counts are close
+  if (headings.length >= 3 && paragraphs.length >= 3) {
+    const count = Math.min(headings.length, paragraphs.length);
+    // For "why choose" style: titles often appear in DOM before bodies in wrong order.
+    // Prefer matching by unique content keywords when possible.
+    const usedP = new Set<number>();
+    const paired: { title: string; body: string }[] = [];
+
+    const keywordMap: Record<string, string[]> = {
+      "personalized treatment": ["tailored", "anatomy", "lifestyle"],
+      "trusted cosmetic": ["experienced", "providers", "safety", "natural-looking"],
+      "complimentary virtual": ["comfort of your home", "personalized consultation"],
+      "transparent pricing": ["financing", "no hidden", "clear procedure"],
+      "patient concierge": ["before, during, and after", "coordinate"],
+      "serving tampa": ["travel from", "across the country", "throughout florida"],
+      "personalized care": ["every cosmetic surgery journey", "understand your goals"],
+      "concierge experience": ["stress-free", "transparent pricing, financing"],
+    };
+
+    for (const h of headings) {
+      const key = Object.keys(keywordMap).find((k) => h.text.toLowerCase().includes(k));
+      let bodyIdx = -1;
+      if (key) {
+        bodyIdx = paragraphs.findIndex(
+          (p, idx) =>
+            !usedP.has(idx) &&
+            p.type === "p" &&
+            keywordMap[key].some((kw) => p.text.toLowerCase().includes(kw))
+        );
+      }
+      if (bodyIdx === -1) {
+        bodyIdx = paragraphs.findIndex((_, idx) => !usedP.has(idx));
+      }
+      if (bodyIdx >= 0) {
+        const p = paragraphs[bodyIdx];
+        if (p.type === "p") {
+          usedP.add(bodyIdx);
+          paired.push({ title: h.text, body: p.text });
+        }
+      }
+    }
+
+    if (paired.length >= 3) return paired.slice(0, count);
+  }
+
+  return null;
 }
 
 const SKIP_HEADINGS = new Set([
@@ -75,18 +145,39 @@ export function ContentSections({
 
   return (
     <>
-      {filtered.map((section, idx) => (
-        <section key={`${section.heading || "section"}-${idx}`} className="section">
-          <div className="container">
-            {section.heading ? <h2 className="section-title">{section.heading}</h2> : null}
-            <div className="prose-block">
-              {section.blocks.map((block, bIdx) => (
-                <Block key={`${block.type}-${bIdx}`} block={block} />
-              ))}
+      {filtered.map((section, idx) => {
+        const features = extractFeatureItems(section.blocks);
+        const heading = section.heading || "";
+        const isFeatureSection =
+          features &&
+          (heading.toLowerCase().includes("why") ||
+            heading.toLowerCase().includes("difference") ||
+            heading.toLowerCase().includes("choose") ||
+            features.length >= 3);
+
+        if (isFeatureSection && features) {
+          return (
+            <FeatureGrid
+              key={`${heading}-${idx}`}
+              title={heading || undefined}
+              items={features}
+            />
+          );
+        }
+
+        return (
+          <section key={`${heading || "section"}-${idx}`} className="section section-black">
+            <div className="container">
+              {heading ? <h2 className="section-title">{heading}</h2> : null}
+              <div className="prose-block">
+                {section.blocks.map((block, bIdx) => (
+                  <Block key={`${block.type}-${bIdx}`} block={block} />
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
-      ))}
+          </section>
+        );
+      })}
     </>
   );
 }
