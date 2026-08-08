@@ -3,6 +3,7 @@ import { ConversionRail } from "@/components/experience/ConversionRail";
 import { ContentSections } from "@/components/ContentSections";
 import { ProcedureCards } from "@/components/ProcedureCards";
 import { Testimonials } from "@/components/Testimonials";
+import { BeforeAfterGallery } from "@/components/BeforeAfterGallery";
 import { GalleryGrid } from "@/components/GalleryGrid";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { imageSrc, type PageContent } from "@/lib/content";
@@ -52,9 +53,10 @@ function getSubtitle(page: PageContent): string | undefined {
 }
 
 export function PremiumPageView({ page }: { page: PageContent }) {
+  const isFemaleBaGallery = page.slug === "female-b-a-gallery";
   const isGallery =
     page.slug.includes("gallery") ||
-    page.slug === "female-b-a-gallery" ||
+    isFemaleBaGallery ||
     page.slug === "male-surgery-gallery" ||
     page.slug === "breast-surgery-gallery";
 
@@ -84,19 +86,33 @@ export function PremiumPageView({ page }: { page: PageContent }) {
   }
 
   const faqs = page.faqs || [];
-  const contentSections =
+  let contentSections =
     faqs.length > 0
       ? sections.filter((s) => !(s.heading || "").toLowerCase().includes("faq"))
       : sections;
+
+  if (isFemaleBaGallery) {
+    contentSections = contentSections.filter(
+      (s) => !(s.heading || "").toLowerCase().includes("before and after")
+    );
+  }
+
+  const gallerySectionHeading =
+    sections.find((s) => (s.heading || "").toLowerCase().includes("before and after"))?.heading ??
+    "Female body sculpting — before & after";
 
   return (
     <>
       <PremiumPageHero
         title={page.h1}
-        subtitle={subtitle}
+        subtitle={page.description}
         imageSrc={heroImage}
         imageAlt={page.hero?.alt || page.h1}
       />
+
+      {isFemaleBaGallery ? (
+        <BeforeAfterGallery title={gallerySectionHeading} intro={page.description} images={page.images} />
+      ) : null}
 
       <div className="container premium-page-layout pb-24">
         <div className="premium-page-main">
@@ -114,7 +130,7 @@ export function PremiumPageView({ page }: { page: PageContent }) {
 
           {inlineTestimonials.length > 0 ? <Testimonials items={inlineTestimonials} /> : null}
 
-          {isGallery || page.images.length > 4 ? (
+          {!isFemaleBaGallery && (isGallery || page.images.length > 4) ? (
             <GalleryGrid title={isGallery ? page.h1 : "Before & after inspiration"} images={page.images} />
           ) : null}
 

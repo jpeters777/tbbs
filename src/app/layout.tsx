@@ -6,6 +6,7 @@ import { StickyConsultBar } from "@/components/experience/StickyConsultBar";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
 import "./premium.css";
+import "./ba-gallery.css";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
