@@ -37,11 +37,14 @@ export const metadata: Metadata = {
   description:
     "Lipo 360, Tummy Tuck, Breast Procedures, Arm and Thigh Liposuction, and Male Body Sculpting.",
   metadataBase: new URL("https://tampabaybodysculpting.com"),
-  themeColor: "#65ebc9",
   openGraph: {
     siteName: siteConfig.brand,
     type: "website",
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#65ebc9",
 };
 
 export default function RootLayout({
