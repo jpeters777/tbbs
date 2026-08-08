@@ -93,10 +93,10 @@ export function HomePage({ page }: { page: PageContent }) {
               Contact us
             </a>
           </div>
-          <div className="feature-grid">
+          <div className="feature-grid feature-grid--difference">
             {homeDifference.columns.map((col) => (
               <article key={col.title} className="feature-card">
-                <h3 className="feature-card-title">{col.title}</h3>
+                <h3 className="feature-card-title feature-card-title--accent">{col.title}</h3>
                 <p className="feature-card-body">{col.body}</p>
               </article>
             ))}
@@ -104,7 +104,11 @@ export function HomePage({ page }: { page: PageContent }) {
         </div>
       </section>
 
-      <FeatureGrid title={homeWhyChoose.title} items={homeWhyChoose.items} />
+      <FeatureGrid
+        title={homeWhyChoose.title}
+        items={homeWhyChoose.items}
+        cardTitleTone="white"
+      />
 
       {/* Popular procedures */}
       <section className="section section-black">

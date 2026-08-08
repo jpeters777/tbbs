@@ -156,11 +156,13 @@ export function ContentSections({
             features.length >= 3);
 
         if (isFeatureSection && features) {
+          const cardTitleTone = heading.toLowerCase().includes("difference") ? "accent" : "white";
           return (
             <FeatureGrid
               key={`${heading}-${idx}`}
               title={heading || undefined}
               items={features}
+              cardTitleTone={cardTitleTone}
             />
           );
         }

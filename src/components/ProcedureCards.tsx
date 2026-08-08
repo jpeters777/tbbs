@@ -31,7 +31,7 @@ export function ProcedureCards({
         <div className="feature-grid">
           {unique.map((card) => (
             <Link key={`${card.href}-${card.title}`} href={card.href} className="feature-card group">
-              <h3 className="feature-card-title group-hover:text-[var(--color-accent)] transition-colors">
+              <h3 className="feature-card-title feature-card-title--white group-hover:text-[var(--color-accent)] transition-colors">
                 {card.title}
               </h3>
               <p className="feature-card-body">{card.description}</p>
