@@ -6,9 +6,9 @@ export function Testimonials({ items }: { items: string[] }) {
       <div className="container">
         <h2 className="section-title">Patient Testimonials</h2>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 mt-6">
-          {items.map((item) => (
+          {items.map((item, idx) => (
             <blockquote
-              key={item.slice(0, 40)}
+              key={`testimonial-${idx}`}
               className="border border-white/10 bg-white/5 p-5 text-sm leading-relaxed text-white/85"
             >
               <p className="text-[var(--color-accent)] mb-3 tracking-[0.2em]">★★★★★</p>

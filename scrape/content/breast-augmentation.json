@@ -7,7 +7,8 @@
   "h1": "Breast Augmentation TAMPA",
   "hero": {
     "src": "https://img1.wsimg.com/isteam/ip/63a9ae1f-fda4-44c0-addf-b31927ec5222/blob-71f8471.png/:/cr=t:30%25,l:0%25,w:100%25,h:40%25/rs=w:600,h:300,cg:true",
-    "alt": "Woman representing breast augmentation with implants"
+    "alt": "Woman representing breast augmentation with implants",
+    "localSrc": "/images/blob-71f8471.png"
   },
   "sections": [
     {
@@ -249,7 +250,63 @@
   "images": [
     {
       "src": "https://img1.wsimg.com/isteam/ip/63a9ae1f-fda4-44c0-addf-b31927ec5222/blob-71f8471.png/:/cr=t:30%25,l:0%25,w:100%25,h:40%25/rs=w:600,h:300,cg:true",
-      "alt": "Woman representing breast augmentation with implants"
+      "alt": "Woman representing breast augmentation with implants",
+      "localSrc": "/images/blob-71f8471.png"
+    }
+  ],
+  "routeKey": "breast-augmentation",
+  "faqs": [
+    {
+      "q": "What is Breast Augmentation?",
+      "a": "Breast augmentation is a cosmetic surgical procedure designed to enhance the size, shape, and symmetry of the breasts. Whether you want fuller breasts, improved balance, or restored volume after pregnancy or weight loss, breast augmentation can be customized to help you achieve your aesthetic goals. Depending on your anatomy and desired outcome, your provider may recommend breast implants or fat transfer to create natural-looking, long-lasting results."
+    },
+    {
+      "q": "Who is a good candidate for Breast Augmentation?",
+      "a": "Breast augmentation may be an excellent option for healthy adults who would like to increase breast size, improve breast symmetry, restore lost volume, or enhance their body proportions. Many women choose breast augmentation after pregnancy, breastfeeding, weight loss, or simply to achieve the appearance they've always wanted. During your consultation, your provider will discuss your goals and recommend the most appropriate treatment plan."
+    },
+    {
+      "q": "What types of implants are available for Breast Augmentation?",
+      "a": "Breast augmentation can be performed using silicone or saline implants, each offering unique advantages depending on your goals and anatomy. Some patients may also be candidates for fat transfer breast augmentation, which uses your own fat to provide a modest increase in breast volume without implants. Your provider will review each option and help you determine which approach best suits your desired results."
+    },
+    {
+      "q": "Will there be scars after Breast Augmentation?",
+      "a": "Breast Augmentation does involve small surgical incisions, typically placed in discreet areas to help minimize visible scarring."
+    },
+    {
+      "q": "What is recovery after Breast Augmentation?",
+      "a": "Most patients return to light daily activities within several days of recovery, although strenuous exercise and heavy lifting should be avoided until cleared by your provider. Swelling and mild discomfort gradually improve during the first several weeks, and your implants or transferred fat continue to settle as healing progresses. Following your provider's recovery instructions is essential for achieving optimal results."
+    },
+    {
+      "q": "What are the benefits of Breast Augmentation?",
+      "a": "Breast augmentation can enhance breast size, improve symmetry, restore volume lost after pregnancy or weight changes, and create better overall body proportions. Because every procedure is customized, the goal is to achieve results that complement your natural frame while helping you feel more confident in your appearance."
+    },
+    {
+      "q": "Can Breast Augmentation be combined with other cosmetic procedures?",
+      "a": "Yes. Breast augmentation is commonly combined with other cosmetic procedures to create a more comprehensive body transformation. Depending on your goals, your provider may recommend combining breast augmentation with a breast lift, Lipo 360, tummy tuck, Brazilian Butt Lift (BBL), arm liposuction, thigh liposuction, fat transfer procedures, or a customized Mommy Makeover. Combining procedures may reduce the need for multiple surgeries and recovery periods while helping achieve balanced, natural-looking results. During your consultation, your provider will determine which combination of procedures is safe and appropriate based on your anatomy, health, and aesthetic goals."
+    },
+    {
+      "q": "What financing options are available for Breast Augmentation?",
+      "a": "We offer financing options to help make breast augmentation more affordable. During your consultation, we'll review available payment plans and financing solutions so you can choose the option that best fits your budget."
+    },
+    {
+      "q": "How do I schedule a consultation for Breast Augmentation?",
+      "a": "Ready to enhance your confidence with breast augmentation? Schedule your consultation with Tampa Bay Body Sculpting today. We'll discuss your goals, answer your questions, and develop a personalized treatment plan designed specifically for you."
+    },
+    {
+      "q": "What is the difference between silicone and saline implants?",
+      "a": "Silicone implants are filled with a cohesive silicone gel that many patients feel provides a natural look and feel. Saline implants are filled with sterile salt water after placement and can offer different incision options. Your provider will explain the benefits of each type during your consultation."
+    },
+    {
+      "q": "Can I choose the size of my implants?",
+      "a": "Yes. During your consultation, your provider will help you select an implant size and profile that complements your body proportions, lifestyle, and desired appearance. The goal is to achieve beautiful, balanced, and natural-looking results."
+    },
+    {
+      "q": "Can Breast Augmentation be combined with a Breast Lift?",
+      "a": "Yes. Many patients choose to combine breast augmentation with a breast lift when they want to increase breast volume while also correcting sagging. Combining these procedures can restore fullness and create a more youthful breast position."
+    },
+    {
+      "q": "Can Breast Augmentation be performed with fat transfer instead of implants?",
+      "a": "Yes. Some patients are candidates for fat transfer breast augmentation, which uses fat removed through liposuction to provide a modest increase in breast volume. This option is ideal for women seeking subtle enhancement without implants."
     }
   ]
 }

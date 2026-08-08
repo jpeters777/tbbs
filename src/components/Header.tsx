@@ -48,9 +48,9 @@ export function Header() {
               </Link>
               {item.children && activeMenu === item.label ? (
                 <div className="absolute left-0 top-full min-w-[240px] border border-[var(--color-border)] bg-white py-2 shadow-lg">
-                  {item.children.map((child) => (
+                  {item.children.map((child, childIdx) => (
                     <Link
-                      key={child.href}
+                      key={`${item.label}-${childIdx}-${child.href}`}
                       href={child.href}
                       className="block px-4 py-2 text-sm text-[var(--color-text)] hover:bg-[var(--color-accent-soft)]"
                     >
@@ -100,9 +100,9 @@ export function Header() {
                 </Link>
                 {item.children ? (
                   <div className="pl-3 flex flex-col gap-1 pb-2">
-                    {item.children.map((child) => (
+                    {item.children.map((child, childIdx) => (
                       <Link
-                        key={child.href}
+                        key={`m-${item.label}-${childIdx}-${child.href}`}
                         href={child.href}
                         className="py-1 text-sm text-[var(--color-text-muted)]"
                         onClick={() => setOpen(false)}

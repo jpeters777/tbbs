@@ -7,7 +7,8 @@
   "h1": "Lipo 360 in Tampa bay",
   "hero": {
     "src": "https://img1.wsimg.com/isteam/ip/63a9ae1f-fda4-44c0-addf-b31927ec5222/blob-10293ad.png/:/cr=t:0%25,l:0%25,w:100%25,h:90.65%25/rs=w:600,h:300,cg:true",
-    "alt": "Lipo 360 body contouring results in Tampa"
+    "alt": "Lipo 360 body contouring results in Tampa",
+    "localSrc": "/images/blob-10293ad.png"
   },
   "sections": [
     {
@@ -482,7 +483,99 @@
   "images": [
     {
       "src": "https://img1.wsimg.com/isteam/ip/63a9ae1f-fda4-44c0-addf-b31927ec5222/blob-10293ad.png/:/cr=t:0%25,l:0%25,w:100%25,h:90.65%25/rs=w:600,h:300,cg:true",
-      "alt": "Lipo 360 body contouring results in Tampa"
+      "alt": "Lipo 360 body contouring results in Tampa",
+      "localSrc": "/images/blob-10293ad.png"
+    }
+  ],
+  "routeKey": "liposuction-360",
+  "faqs": [
+    {
+      "q": "What is Lipo 360?",
+      "a": "Lipo 360 is a comprehensive liposuction procedure that removes unwanted fat from the entire midsection, including the abdomen, waist, flanks, and back. By treating these areas together, Lipo 360 creates a smoother, more balanced, and natural-looking body contour."
+    },
+    {
+      "q": "Who is a candidate for Lipo 360?",
+      "a": "Men and women with stubborn fat in the abdomen, waistline, flanks, or lower back who are looking for a more sculpted silhouette may be good candidates for Lipo 360. Ideal candidates are in good overall health and close to their target weight."
+    },
+    {
+      "q": "What areas are treated with Lipo 360?",
+      "a": "Lipo 360 targets multiple areas around the torso in one procedure, including the upper and lower abdomen, love handles (flanks), waist, lower back, bra roll, and mid-back. Treating the entire circumference helps create a more sculpted silhouette."
+    },
+    {
+      "q": "Can other areas be added to Lipo 360 surgery?",
+      "a": "Yes. Lipo 360 can often be customized to include additional areas based on your anatomy and aesthetic goals. During your consultation, your provider will recommend a personalized treatment plan to help achieve balanced, natural-looking results. Common areas that may be added include: Upper Back, axilla, arms, chin, and also Brazilian Butt Lift BBL."
+    },
+    {
+      "q": "What is recovery like after Lipo 360?",
+      "a": "Most patients experience swelling, bruising, and soreness during the first 1\u20132 weeks after surgery. Compression garments are typically worn to support healing during recovery and help optimize contouring results."
+    },
+    {
+      "q": "What are the benefits of Lipo 360?",
+      "a": "Lipo 360 can create a slimmer waistline, improve body proportions, remove stubborn fat, and enhance natural curves. Because multiple areas are treated together, patients often achieve a more balanced and comprehensive body contour than with traditional liposuction."
+    },
+    {
+      "q": "What are financing options for Lipo 360?",
+      "a": "We offer financing options to help make Lipo 360 more affordable. During your consultation, we'll review available payment plans and financing solutions so you can choose the option that best fits your budget."
+    },
+    {
+      "q": "How long do Lipo 360 results last?",
+      "a": "Results from Lipo 360 can be long-lasting when combined with a stable weight and healthy lifestyle. Once fat cells are removed, they do not return."
+    },
+    {
+      "q": "How do I schedule a consultation for Lipo 360?",
+      "a": "Ready to learn if Lipo 360 is right for you? Schedule your consultation with Tampa Bay Body Sculpting today. Our team will discuss your goals, answer your questions, and help you explore your personalized treatment options."
+    },
+    {
+      "q": "Is Lipo 360 permanent?",
+      "a": "The fat cells removed during Lipo 360 are permanently eliminated. Maintaining a stable weight through a healthy lifestyle helps preserve your long-term body contouring results."
+    },
+    {
+      "q": "How much fat can be removed with Lipo 360?",
+      "a": "The amount of fat removed with Lipo 360 depends on your body type, treatment goals, and overall health. Your provider will recommend a safe approach designed to achieve natural-looking results."
+    },
+    {
+      "q": "How long does swelling last after Lipo360?",
+      "a": "Most swelling improves significantly within the first several weeks, but mild residual swelling can persist for several months."
+    },
+    {
+      "q": "Does Lipo 360 tighten loose skin?",
+      "a": "Lipo 360 removes excess fat but does not significantly tighten loose skin. Patients with moderate to severe skin laxity may benefit from procedures such as a tummy tuck or other body contouring options."
+    },
+    {
+      "q": "Can Lipo 360 be combined with a Tummy Tuck?",
+      "a": "Yes. Many patients combine Lipo 360 with a tummy tuck to remove excess skin, tighten abdominal muscles, and create a more comprehensive body contouring result."
+    },
+    {
+      "q": "Can Lipo 360 be combined with a Brazilian Butt Lift (BBL)?",
+      "a": "Yes. Lipo 360 is commonly combined with a Brazilian Butt Lift (BBL), using purified fat removed during liposuction to enhance the shape and volume of the buttocks while improving overall body proportions."
+    },
+    {
+      "q": "What is the difference between Lipo 360 and regular liposuction?",
+      "a": "Traditional liposuction typically targets one specific area, while Lipo 360 treats the entire midsection\u2014including the abdomen, waist, flanks, and lower back\u2014to create a more balanced, 360-degree contour."
+    },
+    {
+      "q": "Am I a good candidate for Lipo 360?",
+      "a": "Ideal candidates are generally in good overall health, close to their goal weight, and have stubborn areas of fat that have not responded to diet and exercise. A consultation is the best way to determine whether Lipo 360 is the right option for your goals."
+    },
+    {
+      "q": "Can I finance Lipo 360?",
+      "a": "Yes. We offer flexible financing options through trusted financing partners, making it easier to fit your procedure into your budget. During your consultation, we'll review the options available to you."
+    },
+    {
+      "q": "When can I return to work?",
+      "a": "Many patients return to non-physical work within several days to one week, depending on their recovery and the nature of their job."
+    },
+    {
+      "q": "When can I exercise again?",
+      "a": "Light walking is encouraged immediately after Lipo 360. More strenuous exercise should only be resumed with provider approval, often around four to six weeks."
+    },
+    {
+      "q": "Will I have scars?",
+      "a": "Liposuction incisions are typically very small and placed in discreet locations whenever possible."
+    },
+    {
+      "q": "When will I see my final results?",
+      "a": "Most patients see significant improvement after Lipo 360 within the first few months, with final results continuing to develop as swelling resolves."
     }
   ]
 }

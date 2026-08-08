@@ -45,8 +45,8 @@ function Block({ block }: { block: ContentBlock }) {
     const ListTag = block.ordered ? "ol" : "ul";
     return (
       <ListTag className={block.ordered ? "list-decimal pl-5 space-y-1" : "list-disc pl-5 space-y-1"}>
-        {block.items.map((item) => (
-          <li key={item}>{item}</li>
+        {block.items.map((item, idx) => (
+          <li key={`${idx}-${item.slice(0, 24)}`}>{item}</li>
         ))}
       </ListTag>
     );

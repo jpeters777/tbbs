@@ -4,6 +4,7 @@ import { ProcedureCards } from "@/components/ProcedureCards";
 import { Testimonials } from "@/components/Testimonials";
 import { CTABanner } from "@/components/CTABanner";
 import { GalleryGrid } from "@/components/GalleryGrid";
+import { FaqAccordion } from "@/components/FaqAccordion";
 import { imageSrc, type PageContent } from "@/lib/content";
 
 function getSubtitle(page: PageContent): string | undefined {
@@ -49,6 +50,13 @@ export function PageView({ page }: { page: PageContent }) {
     sections.splice(testimonialSectionIndex, 1);
   }
 
+  const faqs = page.faqs || [];
+  // When dedicated FAQ accordion exists, drop dense FAQ prose sections to avoid duplication
+  const contentSections =
+    faqs.length > 0
+      ? sections.filter((s) => !(s.heading || "").toLowerCase().includes("faq"))
+      : sections;
+
   return (
     <>
       <Hero
@@ -66,7 +74,9 @@ export function PageView({ page }: { page: PageContent }) {
         />
       ) : null}
 
-      <ContentSections sections={sections} />
+      <ContentSections sections={contentSections} />
+
+      {faqs.length > 0 ? <FaqAccordion items={faqs} /> : null}
 
       {inlineTestimonials.length > 0 ? <Testimonials items={inlineTestimonials} /> : null}
 

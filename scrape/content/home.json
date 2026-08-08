@@ -7,7 +7,8 @@
   "h1": "Cosmetic Surgery guidance in Tampa bay",
   "hero": {
     "src": "https://img1.wsimg.com/isteam/ip/63a9ae1f-fda4-44c0-addf-b31927ec5222/blob-d88ea83.png/:/cr=t:0%25,l:0%25,w:100%25,h:50%25/rs=w:600,h:300,cg:true",
-    "alt": "Male and female Lipo 360 body contouring in Tampa"
+    "alt": "Male and female Lipo 360 body contouring in Tampa",
+    "localSrc": "/images/blob-d88ea83.png"
   },
   "sections": [
     {
@@ -502,7 +503,10 @@
   "images": [
     {
       "src": "https://img1.wsimg.com/isteam/ip/63a9ae1f-fda4-44c0-addf-b31927ec5222/blob-d88ea83.png/:/cr=t:0%25,l:0%25,w:100%25,h:50%25/rs=w:600,h:300,cg:true",
-      "alt": "Male and female Lipo 360 body contouring in Tampa"
+      "alt": "Male and female Lipo 360 body contouring in Tampa",
+      "localSrc": "/images/blob-d88ea83.png"
     }
-  ]
+  ],
+  "routeKey": "",
+  "faqs": []
 }

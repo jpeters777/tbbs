@@ -250,5 +250,27 @@
       "localSrc": "/images/shutterstock_359476844_801685051614.JPG"
     }
   ],
-  "routeKey": "resources"
+  "routeKey": "resources",
+  "faqs": [
+    {
+      "q": "Where should I start if I'm considering cosmetic surgery?",
+      "a": "Begin by researching the procedures you're interested in and scheduling a consultation. During your consultation, your provider will discuss your goals, review your medical history, and recommend the treatment options that best fit your needs."
+    },
+    {
+      "q": "How can I prepare for cosmetic surgery?",
+      "a": "Preparation may include completing any required lab work, ekg, stopping certain medications as directed, arranging transportation, preparing your recovery area at home, and purchasing recommended recovery supplies. Our Preparing for Surgery Guide provides a detailed checklist to help you get ready."
+    },
+    {
+      "q": "Where can I learn about recovery after surgery?",
+      "a": "Our recovery guides provide procedure-specific information about healing timelines, activity restrictions, follow-up care, and helpful recovery tips so you know what to expect after your procedure."
+    },
+    {
+      "q": "Do you offer financing?",
+      "a": "Yes. We offer financing options to help make cosmetic surgery more affordable. During your consultation, we'll discuss available payment plans and financing solutions that fit your budget."
+    },
+    {
+      "q": "Do you work with out-of-town patients?",
+      "a": "Yes. Many of our patients travel from throughout Florida and other states. We provide guidance to help make the planning process as smooth and convenient as possible for our out-of-town patients."
+    }
+  ]
 }

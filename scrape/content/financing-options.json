@@ -7,7 +7,8 @@
   "h1": "Cosmetic Surgery Financing Tampa",
   "hero": {
     "src": "https://img1.wsimg.com/isteam/ip/63a9ae1f-fda4-44c0-addf-b31927ec5222/blob-504fd1c.png/:/cr=t:5.56%25,l:0%25,w:100%25,h:88.89%25/rs=w:600,h:300,cg:true",
-    "alt": "Woman planning cosmetic surgery budget"
+    "alt": "Woman planning cosmetic surgery budget",
+    "localSrc": "/images/blob-504fd1c.png"
   },
   "sections": [
     {
@@ -214,7 +215,31 @@
   "images": [
     {
       "src": "https://img1.wsimg.com/isteam/ip/63a9ae1f-fda4-44c0-addf-b31927ec5222/blob-504fd1c.png/:/cr=t:5.56%25,l:0%25,w:100%25,h:88.89%25/rs=w:600,h:300,cg:true",
-      "alt": "Woman planning cosmetic surgery budget"
+      "alt": "Woman planning cosmetic surgery budget",
+      "localSrc": "/images/blob-504fd1c.png"
+    }
+  ],
+  "routeKey": "financing-options",
+  "faqs": [
+    {
+      "q": "Do you offer financing for cosmetic surgery?",
+      "a": "Yes. We offer financing through trusted financing partners, including Cherry. Qualified patients may be eligible for flexible monthly payment plans based on credit approval."
+    },
+    {
+      "q": "Can I make monthly payments?",
+      "a": "Yes. Many patients choose monthly payment plans to spread the cost of their cosmetic procedure over time. Available payment options depend on your financing approval and selected program."
+    },
+    {
+      "q": "Which cosmetic procedures can be financed?",
+      "a": "Most cosmetic procedures offered through Tampa Bay Body Sculpting may be eligible for financing, including Lipo 360, tummy tuck, Mommy Makeover, breast procedures, body contouring, and male cosmetic surgery. During your consultation, we'll review the financing options available for your treatment plan."
+    },
+    {
+      "q": "How do I apply for financing?",
+      "a": "Applying for financing is quick and easy. We partner with Cherry to provide flexible payment options for qualified patients. Simply click Apply with Cherry to complete a secure online application. Many applicants receive a financing decision within minutes. If you're unsure which option is best for you, our team is happy to answer your questions and help you choose the financing solution that best fits your needs."
+    },
+    {
+      "q": "Can I finance part of my procedure?",
+      "a": "Yes. Many patients choose to make a down payment and finance the remaining balance. During your consultation, we'll help you review the payment options available for your customized treatment plan."
     }
   ]
 }

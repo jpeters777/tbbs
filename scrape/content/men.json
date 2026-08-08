@@ -7,7 +7,8 @@
   "h1": "Male Body Contouring tampa",
   "hero": {
     "src": "https://img1.wsimg.com/isteam/ip/63a9ae1f-fda4-44c0-addf-b31927ec5222/blob-b4cdcb1.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25",
-    "alt": ""
+    "alt": "",
+    "localSrc": "/images/blob-b4cdcb1.png"
   },
   "sections": [
     {
@@ -293,7 +294,10 @@
   "images": [
     {
       "src": "https://img1.wsimg.com/isteam/ip/63a9ae1f-fda4-44c0-addf-b31927ec5222/blob-b4cdcb1.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25",
-      "alt": ""
+      "alt": "",
+      "localSrc": "/images/blob-b4cdcb1.png"
     }
-  ]
+  ],
+  "routeKey": "men",
+  "faqs": []
 }

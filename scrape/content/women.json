@@ -7,7 +7,8 @@
   "h1": "FEMALE BODY CONTOURING tampa",
   "hero": {
     "src": "https://img1.wsimg.com/isteam/ip/63a9ae1f-fda4-44c0-addf-b31927ec5222/blob-0773ab0.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25",
-    "alt": ""
+    "alt": "",
+    "localSrc": "/images/blob-0773ab0.png"
   },
   "sections": [
     {
@@ -332,7 +333,10 @@
   "images": [
     {
       "src": "https://img1.wsimg.com/isteam/ip/63a9ae1f-fda4-44c0-addf-b31927ec5222/blob-0773ab0.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25",
-      "alt": ""
+      "alt": "",
+      "localSrc": "/images/blob-0773ab0.png"
     }
-  ]
+  ],
+  "routeKey": "women",
+  "faqs": []
 }

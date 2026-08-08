@@ -28,6 +28,7 @@ export type PageContent = {
   ctas: { href: string; text: string }[];
   testimonials: string[];
   images: { src: string; alt: string; localSrc?: string }[];
+  faqs?: { q: string; a: string }[];
   routeKey?: string;
 };
 

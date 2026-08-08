@@ -236,7 +236,31 @@
   "images": [
     {
       "src": "https://img1.wsimg.com/isteam/ip/63a9ae1f-fda4-44c0-addf-b31927ec5222/17-6f8c86a.png/:/cr=t:30%25,l:0%25,w:100%25,h:40%25/rs=w:600,h:300,cg:true/fx-gs",
-      "alt": ""
+      "alt": "",
+      "localSrc": "/images/17-6f8c86a.png"
+    }
+  ],
+  "routeKey": "out-of-town-patient-guide",
+  "faqs": [
+    {
+      "q": "How long should I stay in Tampa after surgery?",
+      "a": "The recommended length of stay varies depending on the procedure and your provider's instructions. Your surgical team will advise you on the appropriate recovery period before traveling home."
+    },
+    {
+      "q": "Can I travel alone?",
+      "a": "Most providers require patients to have a responsible adult available during the initial recovery period. We recommend arranging for a companion whenever possible."
+    },
+    {
+      "q": "Are virtual consultations available?",
+      "a": "Yes. Many patients begin the process with a virtual consultation before traveling to Tampa."
+    },
+    {
+      "q": "When can I fly after surgery?",
+      "a": "Travel recommendations vary depending on the procedure performed and your recovery progress. Your provider will advise you on when it is safe to fly."
+    },
+    {
+      "q": "Will I need follow-up appointments?",
+      "a": "Most procedures require follow-up visits to monitor healing and recovery. Your provider will discuss your personalized follow-up schedule."
     }
   ]
 }

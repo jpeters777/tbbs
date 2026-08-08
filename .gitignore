@@ -42,3 +42,7 @@ yarn-error.log*
 # scrape raw HTML (content JSON + public images are kept)
 /scrape/pages/*.html
 /scrape/assets/
+
+# next agent rule stubs
+/AGENTS.md
+/CLAUDE.md

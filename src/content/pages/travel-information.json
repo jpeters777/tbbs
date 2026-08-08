@@ -331,5 +331,31 @@
       "localSrc": "/images/17-6f8c86a.png"
     }
   ],
-  "routeKey": "travel-information"
+  "routeKey": "travel-information",
+  "faqs": [
+    {
+      "q": "Do you work with patients who live outside the Tampa Bay area?",
+      "a": "Yes. We regularly assist patients from throughout Florida and across the United States. Many consultations can begin virtually, making it convenient to start the process before traveling."
+    },
+    {
+      "q": "When should I arrive before my surgery?",
+      "a": "It is recommended patients arrive at least one day before surgery. Your provider may recommend a different timeline depending on your procedure and treatment plan."
+    },
+    {
+      "q": "How long should I stay in Tampa after surgery?",
+      "a": "The recommended length of stay varies depending on your procedure and recovery progress. Your provider will advise you on when it is safe to travel home after your follow-up evaluation."
+    },
+    {
+      "q": "Can I fly after cosmetic surgery?",
+      "a": "Many patients are able to fly home after surgery, but the timing depends on the procedure performed and your provider's recommendations. For your safety, always follow your provider's instructions before making travel arrangements."
+    },
+    {
+      "q": "Will I need someone to travel with me?",
+      "a": "For many cosmetic procedures, a responsible adult is required to drive you home after surgery and assist you during the initial recovery period. Your provider will explain any caregiver requirements before your procedure."
+    },
+    {
+      "q": "Can you recommend hotels or accommodations?",
+      "a": "Yes. Our team can provide general recommendations for hotels and extended-stay accommodations located near our providers' surgical facilities to help make your recovery as comfortable and convenient as possible."
+    }
+  ]
 }

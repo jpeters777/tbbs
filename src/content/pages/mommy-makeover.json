@@ -188,5 +188,39 @@
       "localSrc": "/images/blob-0773ab0.png"
     }
   ],
-  "routeKey": "mommy-makeover"
+  "routeKey": "mommy-makeover",
+  "faqs": [
+    {
+      "q": "What is a Mommy Makeover?",
+      "a": "A Mommy Makeover is a customized combination of cosmetic procedures designed to restore your body after pregnancy and childbirth. Many women experience changes such as loose abdominal skin, stretched muscles, stubborn fat, and changes in breast shape or volume that cannot be corrected through diet and exercise alone. A Mommy Makeover allows multiple procedures to be performed as part of a personalized surgical plan to help restore your confidence and achieve your aesthetic goals."
+    },
+    {
+      "q": "Who is a good candidate for a Mommy Makeover?",
+      "a": "A Mommy Makeover may be an excellent option for healthy women who have completed childbearing and are close to their ideal weight. Candidates often want to address changes caused by pregnancy, breastfeeding, or significant weight fluctuations. During your consultation, your provider will discuss your goals, evaluate your anatomy, and recommend a customized treatment plan designed specifically for you."
+    },
+    {
+      "q": "What procedures can be included in a Mommy Makeover?",
+      "a": "Every Mommy Makeover is personalized based on your goals. Depending on your treatment plan, procedures may include a tummy tuck, Lipo 360, breast augmentation, breast lift, breast reduction, Brazilian Butt Lift (BBL), arm liposuction, thigh liposuction, or fat transfer procedures. Combining procedures allows multiple concerns to be addressed while creating balanced, natural-looking results."
+    },
+    {
+      "q": "How long is recovery after a Mommy Makeover?",
+      "a": "Recovery varies depending on the combination of procedures performed. Most patients return to light daily activities within one to two weeks, although complete healing continues over the following months. Following your provider's post-operative instructions, wearing compression garments when recommended, and attending follow-up appointments are important parts of a successful recovery."
+    },
+    {
+      "q": "What are the benefits of a Mommy Makeover?",
+      "a": "A Mommy Makeover can restore abdominal firmness, improve breast shape and volume, remove stubborn fat, enhance body proportions, and create a more youthful silhouette. Because every treatment plan is customized, the goal is to help you achieve natural-looking results that complement your body."
+    },
+    {
+      "q": "What financing options are available for a Mommy Makeover?",
+      "a": "We offer financing options to help make a Mommy Makeover more affordable. During your consultation, we'll review available payment plans and financing solutions to help you choose the option that best fits your budget."
+    },
+    {
+      "q": "How can I schedule a consultation for a Mommy Makeover?",
+      "a": "Ready to restore your confidence and achieve your body contouring goals? Schedule your consultation with Tampa Bay Body Sculpting today. We'll discuss your goals, answer your questions, and create a personalized treatment plan tailored to your needs."
+    },
+    {
+      "q": "How long should I wait after having children to get a Mommy Makeover?",
+      "a": "Most providers recommend waiting until you have fully recovered from childbirth, finished breastfeeding, and reached a stable weight before considering a Mommy Makeover. During your consultation, your provider will determine the best timing based on your individual situation."
+    }
+  ]
 }

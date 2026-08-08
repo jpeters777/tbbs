@@ -101,5 +101,19 @@
       "localSrc": "/images/blob-f945845.png"
     }
   ],
-  "routeKey": "thigh-liposuction"
+  "routeKey": "thigh-liposuction",
+  "faqs": [
+    {
+      "q": "Who is a candidate for Thigh Liposuction?",
+      "a": "Women with stubborn fat in the inner or outer thighs who are looking for slimmer, more contoured legs may be good candidates. Ideal candidates are in good overall health and close to their target weight."
+    },
+    {
+      "q": "What areas can be treated with Thigh Liposuction?",
+      "a": "Thigh Liposuction can target the inner thighs, outer thighs, front thighs, and areas around the knees depending on your contouring goals."
+    },
+    {
+      "q": "Can Thigh Liposuction be combined with other procedures?",
+      "a": "Yes. Thigh Liposuction is commonly combined with procedures such as Lipo 360, a Brazilian Butt Lift (BBL), or Waist Contouring to further enhance overall body proportions and feminine contours."
+    }
+  ]
 }
