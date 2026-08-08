@@ -36,3 +36,10 @@ npm start
 Page copy lives in `src/content/pages/*.json` (extracted from the live site). Shared navigation/contact config is in `src/content/site.json`. Downloaded media assets are in `public/images/`.
 
 Raw scrape artifacts used during import are kept under `scrape/` for reference.
+
+## Branch experiences
+
+| Branch | Purpose |
+|--------|---------|
+| `cursor/clone-tampabaybodysculpting-a801` | Faithful visual clone of the live GoDaddy site |
+| `cursor/premium-conversion-redesign-a801` | Same content; premium conversion UI — see `docs/PREMIUM-EXPERIENCE.md` |

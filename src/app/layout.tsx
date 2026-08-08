@@ -1,32 +1,29 @@
 import type { Metadata, Viewport } from "next";
-import { Lato, Lusitana, Cantarell, Poppins } from "next/font/google";
+import { DM_Sans, Cormorant_Garamond, Cantarell } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { StickyConsultBar } from "@/components/experience/StickyConsultBar";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
+import "./premium.css";
+import "./ba-gallery.css";
 
-const lato = Lato({
-  variable: "--font-lato",
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400", "500", "600", "700"],
 });
 
-const lusitana = Lusitana({
-  variable: "--font-lusitana",
+const cormorant = Cormorant_Garamond({
+  variable: "--font-cormorant",
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400", "500", "600"],
 });
 
 const cantarell = Cantarell({
   variable: "--font-cantarell",
   subsets: ["latin"],
   weight: ["400", "700"],
-});
-
-const poppins = Poppins({
-  variable: "--font-poppins",
-  subsets: ["latin"],
-  weight: ["300", "400", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -55,11 +52,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${lato.variable} ${lusitana.variable} ${cantarell.variable} ${poppins.variable} antialiased`}
+        className={`experience-premium ${dmSans.variable} ${cormorant.variable} ${cantarell.variable} antialiased`}
       >
-        <Header />
+        <Header premium />
         <main>{children}</main>
         <Footer />
+        <StickyConsultBar />
       </body>
     </html>
   );
