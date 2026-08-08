@@ -625,3 +625,113 @@
 .experience-premium main {
   font-family: var(--font-body);
 }
+
+/* Related procedures (inner pages) */
+.related-procedures {
+  margin-top: 3.5rem;
+  padding-top: 3.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.related-procedures-header {
+  max-width: 40rem;
+  margin-bottom: 2rem;
+}
+
+.related-procedures-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.65rem, 3vw, 2.1rem);
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.related-procedures-lead {
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.related-procedures-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .related-procedures-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .related-procedures-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.related-procedures-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding: 1.5rem 1.5rem 1.35rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.related-procedures-card:hover {
+  border-color: rgba(101, 235, 201, 0.28);
+  background: rgba(101, 235, 201, 0.04);
+}
+
+.related-procedures-card-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #fff;
+}
+
+.related-procedures-card-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.related-procedures-card-title a:hover {
+  color: var(--color-accent);
+}
+
+.related-procedures-card-body {
+  margin-top: 0.65rem;
+  flex: 1;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.related-procedures-card-cta {
+  margin-top: 1.1rem;
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(101, 235, 201, 0.45);
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.related-procedures-card-cta:hover {
+  color: var(--color-accent-strong);
+  border-bottom-color: var(--color-accent-strong);
+}

@@ -8,6 +8,41 @@ import { FaqAccordion } from "@/components/FaqAccordion";
 import { imageSrc, type PageContent } from "@/lib/content";
 import { CONSULT_URL } from "@/lib/site";
 
+function pickRelatedCards(
+  cards: { title: string; description: string; href: string }[],
+  pagePath: string
+) {
+  const filtered = cards.filter((c) => c.href && c.href !== "#" && !c.title.includes("★"));
+  const seenHref = new Set<string>();
+  const seenTitle = new Set<string>();
+
+  const scored = filtered
+    .map((card) => {
+      const pathOnly = card.href.split("#")[0].split("?")[0];
+      const isOffPage = pathOnly !== pagePath && pathOnly !== "";
+      const isHashOnly = card.href.includes("#") && pathOnly === pagePath;
+      return { card, pathOnly, isOffPage, isHashOnly };
+    })
+    .filter(({ isHashOnly, card }) => {
+      if (isHashOnly) return false;
+      const titleKey = card.title.toLowerCase();
+      if (seenTitle.has(titleKey)) return false;
+      seenTitle.add(titleKey);
+      return true;
+    })
+    .sort((a, b) => Number(b.isOffPage) - Number(a.isOffPage));
+
+  const out: typeof filtered = [];
+  for (const { card, pathOnly } of scored) {
+    const key = pathOnly || card.href;
+    if (seenHref.has(key) && !card.href.includes("#")) continue;
+    seenHref.add(key);
+    out.push(card);
+    if (out.length >= 6) break;
+  }
+  return out;
+}
+
 function getSubtitle(page: PageContent): string | undefined {
   const first = page.sections[0];
   if (!first) return page.description;
@@ -70,7 +105,8 @@ export function PremiumPageView({ page }: { page: PageContent }) {
           {page.cards.length > 0 ? (
             <ProcedureCards
               title="Related procedures & resources"
-              cards={page.cards.filter((c) => c.href && c.href !== "#" && !c.title.includes("★"))}
+              variant="premium-related"
+              cards={pickRelatedCards(page.cards, page.path)}
             />
           ) : null}
 
