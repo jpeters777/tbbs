@@ -1,0 +1,952 @@
+[
+  {
+    "source": "/about-us",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/arms/tampa-fl/102338",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/arms/tampa-fl/102760",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/arms/tampa-fl/103584",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/arms/tampa-fl/104586",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/arms/tampa-fl/95281",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/arms/tampa-fl/95297",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/arms/tampa-fl/95339",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/arms/tampa-fl/95343",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/arms/tampa-fl/95379",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/arms/tampa-fl/96031",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/arms/tampa-fl/96480",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/arms/tampa-fl/99979",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/body-contouring/tampa-fl/100623",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/body-contouring/tampa-fl/100895",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/body-contouring/tampa-fl/101164",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/body-contouring/tampa-fl/101360",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/body-contouring/tampa-fl/102503",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/body-contouring/tampa-fl/102755",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/body-contouring/tampa-fl/102762",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/body-contouring/tampa-fl/103055",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/body-contouring/tampa-fl/103250",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/body-contouring/tampa-fl/103254",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/body-contouring/tampa-fl/103548",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/body-contouring/tampa-fl/103550",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/body-contouring/tampa-fl/95264",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/body-contouring/tampa-fl/95265",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/body-contouring/tampa-fl/95278",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/body-contouring/tampa-fl/95280",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/body-contouring/tampa-fl/95336",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/body-contouring/tampa-fl/95350",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/body-contouring/tampa-fl/95352",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/body-contouring/tampa-fl/95905",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/body-contouring/tampa-fl/96266",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/body-contouring/tampa-fl/96474",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/body-contouring/tampa-fl/99977",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/body-contouring/tampa-fl/99987",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/brazilian-butt-lift/tampa-fl/101178",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/brazilian-butt-lift/tampa-fl/102756",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/brazilian-butt-lift/tampa-fl/102901",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/brazilian-butt-lift/tampa-fl/103103",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/brazilian-butt-lift/tampa-fl/103236",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/brazilian-butt-lift/tampa-fl/105464",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/brazilian-butt-lift/tampa-fl/105744",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/brazilian-butt-lift/tampa-fl/105748",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/brazilian-butt-lift/tampa-fl/95266",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/brazilian-butt-lift/tampa-fl/95302",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/brazilian-butt-lift/tampa-fl/95305",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/brazilian-butt-lift/tampa-fl/95349",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/brazilian-butt-lift/tampa-fl/95989",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/brazilian-butt-lift/tampa-fl/96335",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/brazilian-butt-lift/tampa-fl/96378",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/brazilian-butt-lift/tampa-fl/96379",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/brazilian-butt-lift/tampa-fl/96382",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/brazilian-butt-lift/tampa-fl/96507",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/brazilian-butt-lift/tampa-fl/96509",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/lipo-360/tampa-fl/100624",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/lipo-360/tampa-fl/101357",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/lipo-360/tampa-fl/102485",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/lipo-360/tampa-fl/102763",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/lipo-360/tampa-fl/102904",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/lipo-360/tampa-fl/105465",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/lipo-360/tampa-fl/105746",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/lipo-360/tampa-fl/106200",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/lipo-360/tampa-fl/106201",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/lipo-360/tampa-fl/95351",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/lipo-360/tampa-fl/95911",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/lipo-360/tampa-fl/96295",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/lipo-360/tampa-fl/96330",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/lipo-360/tampa-fl/96331",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/lipo-360/tampa-fl/96334",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/lipo-360/tampa-fl/96338",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/lipo-360/tampa-fl/96360",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/lipo-360/tampa-fl/96397",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/lipo-360/tampa-fl/96469",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/lipo-360/tampa-fl/96473",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/lipo-360/tampa-fl/96504",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/lipo-360/tampa-fl/96513",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/thighs/tampa-fl/95287",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/thighs/tampa-fl/95340",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/thighs/tampa-fl/96296",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/thighs/tampa-fl/96359",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/thighs/tampa-fl/96369",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/body/thighs/tampa-fl/96479",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/breast/breast-rejuvenation/tampa-fl/103099",
+    "destination": "/breast-surgery-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/breast/breast-rejuvenation/tampa-fl/105466",
+    "destination": "/breast-surgery-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/breast/breast-rejuvenation/tampa-fl/95289",
+    "destination": "/breast-surgery-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/breast/breast-rejuvenation/tampa-fl/96333",
+    "destination": "/breast-surgery-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/face/chin-and-neck-liposuction/tampa-fl/101363",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/face/chin-and-neck-liposuction/tampa-fl/103245",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/face/chin-and-neck-liposuction/tampa-fl/94372",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/face/chin-and-neck-liposuction/tampa-fl/95292",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/face/chin-and-neck-liposuction/tampa-fl/95293",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/face/chin-and-neck-liposuction/tampa-fl/95296",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/face/chin-and-neck-liposuction/tampa-fl/95300",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/face/chin-and-neck-liposuction/tampa-fl/95823",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/face/chin-and-neck-liposuction/tampa-fl/95825",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/face/chin-and-neck-liposuction/tampa-fl/96268",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/face/chin-and-neck-liposuction/tampa-fl/96332",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/face/chin-and-neck-liposuction/tampa-fl/96472",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/face/chin-and-neck-liposuction/tampa-fl/99991",
+    "destination": "/female-ba-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/male/male-body-sculpting/tampa-fl/101165",
+    "destination": "/male-surgery-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/male/male-body-sculpting/tampa-fl/95353",
+    "destination": "/male-surgery-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/male/male-body-sculpting/tampa-fl/95380",
+    "destination": "/male-surgery-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/male/male-body-sculpting/tampa-fl/96337",
+    "destination": "/male-surgery-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/before-after-photos/male/male-body-sculpting/tampa-fl/96510",
+    "destination": "/male-surgery-gallery",
+    "permanent": true
+  },
+  {
+    "source": "/contact-us",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/directory",
+    "destination": "/resources",
+    "permanent": true
+  },
+  {
+    "source": "/directory/grid",
+    "destination": "/resources",
+    "permanent": true
+  },
+  {
+    "source": "/directory/list",
+    "destination": "/resources",
+    "permanent": true
+  },
+  {
+    "source": "/dr-robert-miles-talks-about-our-most-popular-surgical-proced",
+    "destination": "/liposuction-360",
+    "permanent": true
+  },
+  {
+    "source": "/facilities",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/financing-information",
+    "destination": "/financing-options",
+    "permanent": true
+  },
+  {
+    "source": "/leave-a-review",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/liposuction-qa-w-dr-miles-how-long-is-recovery-post-liposuct",
+    "destination": "/recovery-guides",
+    "permanent": true
+  },
+  {
+    "source": "/markup-53223",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog",
+    "destination": "/resources",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/a-weight-loss-journey-transformed-dr-miless-signature-body-sculpting-results",
+    "destination": "/feminine-waist-contouring",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/achieve-chiseled-definition-with-6-pack-abs-etching-at-tampa-bay-body-sculpting",
+    "destination": "/male-abdominal-sculpting",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/achieve-natural-breast-enhancement-with-liposuction-fat-transfer-in-tampa-fl",
+    "destination": "/breast-rejuvenation",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/achieve-slim-sculpted-arms-with-arm-liposuction-360-by-dr-miles-in-tampa-fl",
+    "destination": "/arm-lipo-360-arm-lift",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/achieve-slimmer-arms-with-liposuction-at-tampa-bay-body-sculpting",
+    "destination": "/arm-lipo-360-arm-lift",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/achieve-your-dream-hourglass-figure-with-dr-miles-at-tampa-bay-body-sculpting",
+    "destination": "/feminine-waist-contouring",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/achieve-your-ideal-physique-with-male-body-sculpting-in-tampa-florida",
+    "destination": "/male-liposuction-360-1",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/are-liposuction-results-immediate-liposuction-in-tampa-florida",
+    "destination": "/liposuction",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/are-the-results-of-liposuction-permanent-everything-you-need-to-know",
+    "destination": "/liposuction",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/beyond-fat-removal-how-dr-miles-transforms-bodies-with-signature-sculpting",
+    "destination": "/feminine-waist-contouring",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/breast-augmentation-lift-or-reduction-which-is-right-for-you-83063",
+    "destination": "/breasts",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/can-a-bbl-be-subtle-and-natural-looking",
+    "destination": "/brazilian-butt-lift-bbl",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/do-i-qualify-for-a-skinny-bbl",
+    "destination": "/brazilian-butt-lift-bbl",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/do-you-really-need-a-tummy-tuck-why-liposuction-might-be-the-better-option",
+    "destination": "/liposuction",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/expanded-cosmetic-surgery-body-contouring-services-in-tampa-bay",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/gynecomastia-surgery-am-i-a-candidate",
+    "destination": "/male-chest-reduction",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/gynecomastia-surgery-in-tampa-florida-by-dr-robert-miles",
+    "destination": "/male-chest-reduction",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/how-liposuction-tightens-skin-while-removing-fat-in-tampa-florida",
+    "destination": "/liposuction",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/is-gynecomastia-genetic-tampa-bay-body-sculpting-with-dr-solomon",
+    "destination": "/male-chest-reduction",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/liposuction-recovery-at-tampa-bay-body-sculpting-what-to-expect",
+    "destination": "/recovery-guides",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/liposuction-recovery-faqs",
+    "destination": "/recovery-guides",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/loose-skin-after-glp-1-weight-loss-in-tampa-surgical-options-explained",
+    "destination": "/tummy-tuck",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/power-assisted-liposuction-pal-vs-airsculpt-coolsculpting-and-other-methods",
+    "destination": "/liposuction",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/rewind-the-clock-defying-age-with-chin-liposuction-at-tampa-bay-body-sculpting",
+    "destination": "/female-chin-liposuction",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/safe-bbls-achieving-natural-and-beautiful-results-in-tampa-florida",
+    "destination": "/brazilian-butt-lift-bbl",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/say-goodbye-to-the-double-chin-sculpt-your-neckline-at-tampa-bay-body-sculpting",
+    "destination": "/female-chin-liposuction",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/sculpt-a-defined-jawline-with-chin-and-neck-liposuction-in-tampa-fl",
+    "destination": "/female-chin-liposuction",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/sculpt-and-smooth-monogram-thighs-glutes-liposuction",
+    "destination": "/thigh-liposuction",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/sculpt-the-perfect-6-pack-with-high-def-lipo-by-dr-miles",
+    "destination": "/male-abdominal-sculpting",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/sculpted-arms-with-precision-discover-the-autograph-arms-procedure-in-tampa-fl",
+    "destination": "/arm-lipo-360-arm-lift",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/sculpting-confidence-a-patients-journey-to-an-hourglass-figure",
+    "destination": "/feminine-waist-contouring",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/six-pack-abs-etching-liposuction-with-dr-robert-miles-in-tampa-florida",
+    "destination": "/male-abdominal-sculpting",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/the-benefits-of-awake-liposuction-safer-faster-recovery-and-better-results",
+    "destination": "/recovery-guides",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/the-benefits-of-breast-rejuvenation",
+    "destination": "/breast-rejuvenation",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/the-importance-of-ultrasound-guided-brazilian-butt-lifts-bbls",
+    "destination": "/brazilian-butt-lift-bbl",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/thinking-about-cosmetic-surgery-start-from-home",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/top-5-areas-patients-love-to-treat-with-liposuction-at-tampa-bay-body-sculpting",
+    "destination": "/liposuction",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/top-areas-people-choose-for-liposuction-at-tampa-bay-body-sculpting",
+    "destination": "/liposuction",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/top-questions-to-ask-during-a-liposuction-consultation",
+    "destination": "/liposuction",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/top-questions-to-ask-during-your-liposuction-consultation",
+    "destination": "/liposuction",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/transform-your-body-with-the-signature-waist-at-tampa-bay-body-sculpting",
+    "destination": "/feminine-waist-contouring",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/turn-back-time-with-chin-liposuction",
+    "destination": "/female-chin-liposuction",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/why-choose-arm-liposuction-at-tampa-bay-body-sculpting",
+    "destination": "/arm-lipo-360-arm-lift",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/why-lipo360-signature-waist-bbl-is-our-most-popular-procedure",
+    "destination": "/brazilian-butt-lift-bbl",
+    "permanent": true
+  },
+  {
+    "source": "/med-spa-blog/your-essential-guide-to-liposuction-insights-from-tampa-bay-body-sculpting",
+    "destination": "/liposuction",
+    "permanent": true
+  },
+  {
+    "source": "/patient-resources",
+    "destination": "/resources",
+    "permanent": true
+  },
+  {
+    "source": "/patient-testimonial-regarding-the-surgical-process",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/privacy-policy",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/promotions",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/reviews",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/services/body",
+    "destination": "/liposuction",
+    "permanent": true
+  },
+  {
+    "source": "/services/body/arm-liposuction-and-arm-lift-tampa-fl",
+    "destination": "/arm-lipo-360-arm-lift",
+    "permanent": true
+  },
+  {
+    "source": "/services/body/body-contouring-tampa-fl",
+    "destination": "/feminine-waist-contouring",
+    "permanent": true
+  },
+  {
+    "source": "/services/body/brazilian-butt-lift-tampa-fl",
+    "destination": "/brazilian-butt-lift-bbl",
+    "permanent": true
+  },
+  {
+    "source": "/services/body/lipo-360-tampa-fl",
+    "destination": "/liposuction-360",
+    "permanent": true
+  },
+  {
+    "source": "/services/body/thighs-tampa-fl",
+    "destination": "/thigh-liposuction",
+    "permanent": true
+  },
+  {
+    "source": "/services/body/tummy-tuck-tampa-fl",
+    "destination": "/tummy-tuck",
+    "permanent": true
+  },
+  {
+    "source": "/services/breast",
+    "destination": "/breasts",
+    "permanent": true
+  },
+  {
+    "source": "/services/breast/breast-augmentation-tampa-fl",
+    "destination": "/breast-augmentation",
+    "permanent": true
+  },
+  {
+    "source": "/services/breast/breast-lift-tampa-fl",
+    "destination": "/breast-lift",
+    "permanent": true
+  },
+  {
+    "source": "/services/breast/breast-reduction-tampa-fl",
+    "destination": "/breast-reduction",
+    "permanent": true
+  },
+  {
+    "source": "/services/breast/breast-rejuvenation-tampa-fl",
+    "destination": "/breast-rejuvenation",
+    "permanent": true
+  },
+  {
+    "source": "/services/face",
+    "destination": "/women",
+    "permanent": true
+  },
+  {
+    "source": "/services/face/chin-and-neck-liposuction-tampa-fl",
+    "destination": "/female-chin-liposuction",
+    "permanent": true
+  },
+  {
+    "source": "/services/face/facelift-and-mini-facelift-tampa-fl",
+    "destination": "/women",
+    "permanent": true
+  },
+  {
+    "source": "/services/male",
+    "destination": "/men",
+    "permanent": true
+  },
+  {
+    "source": "/services/male/gynecomastia-tampa-fl",
+    "destination": "/male-chest-reduction",
+    "permanent": true
+  },
+  {
+    "source": "/services/male/male-body-sculpting-tampa-fl",
+    "destination": "/male-liposuction-360-1",
+    "permanent": true
+  },
+  {
+    "source": "/site-policies",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/tampa-bay-body-sculpting",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/travel",
+    "destination": "/travel-information",
+    "permanent": true
+  },
+  {
+    "source": "/video-gallery",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/videos",
+    "destination": "/",
+    "permanent": true
+  }
+]

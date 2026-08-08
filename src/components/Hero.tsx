@@ -39,7 +39,7 @@ export function Hero({
 
       <div className="container relative z-10 py-28 px-4">
         <h1
-          className="animate-fade-up mx-auto max-w-4xl text-[clamp(2.5rem,5vw,3.875rem)] uppercase tracking-[1px] text-balance text-[var(--color-heading-mint)] font-display font-normal leading-[1.2]"
+          className="animate-fade-up mx-auto max-w-4xl text-[clamp(2.5rem,5vw,3.875rem)] tracking-[1px] text-balance text-[var(--color-heading-mint)] font-display font-normal leading-[1.2]"
         >
           {title}
         </h1>

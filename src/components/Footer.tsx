@@ -19,32 +19,29 @@ const procedureLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-black text-white border-t border-[var(--color-border)]">
-      <div className="container py-14 grid gap-10 md:grid-cols-4">
-        <div className="md:col-span-1">
-          <p
-            className="text-xl mb-3 uppercase tracking-[0.06em] text-[var(--color-accent)]"
-            style={{ fontFamily: "var(--font-display)" }}
-          >
-            {siteConfig.brand}
-          </p>
-          <p className="text-sm text-white/65 mb-4">
+    <footer className="site-footer bg-black text-white border-t border-[var(--color-border)]">
+      <div className="container site-footer-main">
+        <div className="site-footer-brand">
+          <p className="site-footer-brand-title">{siteConfig.brand}</p>
+          <p className="site-footer-tagline">
             Personalized cosmetic surgery guidance across Tampa Bay and beyond.
           </p>
-          <a href={siteConfig.phoneHref} className="block font-semibold mb-2 text-white">
-            {siteConfig.phone}
-          </a>
-          <a href={`mailto:${siteConfig.email}`} className="block text-sm text-white/75 hover:text-[var(--color-accent)]">
-            {siteConfig.email}
-          </a>
+          <div className="site-footer-contact">
+            <a href={siteConfig.phoneHref} className="site-footer-phone">
+              {siteConfig.phone}
+            </a>
+            <a href={`mailto:${siteConfig.email}`} className="site-footer-email">
+              {siteConfig.email}
+            </a>
+          </div>
         </div>
 
-        <div>
-          <h3 className="text-sm uppercase tracking-[0.12em] text-[var(--color-accent)] mb-3">Procedures</h3>
-          <ul className="space-y-2 text-sm text-white/70">
+        <div className="site-footer-column">
+          <h3 className="site-footer-heading">Procedures</h3>
+          <ul className="site-footer-links">
             {procedureLinks.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className="hover:text-[var(--color-accent)]">
+                <Link href={link.href} className="site-footer-link">
                   {link.label}
                 </Link>
               </li>
@@ -52,12 +49,12 @@ export function Footer() {
           </ul>
         </div>
 
-        <div>
-          <h3 className="text-sm uppercase tracking-[0.12em] text-[var(--color-accent)] mb-3">Resources</h3>
-          <ul className="space-y-2 text-sm text-white/70">
+        <div className="site-footer-column">
+          <h3 className="site-footer-heading">Resources</h3>
+          <ul className="site-footer-links">
             {resourceLinks.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className="hover:text-[var(--color-accent)]">
+                <Link href={link.href} className="site-footer-link">
                   {link.label}
                 </Link>
               </li>
@@ -65,26 +62,26 @@ export function Footer() {
           </ul>
         </div>
 
-        <div>
-          <h3 className="text-sm uppercase tracking-[0.12em] text-[var(--color-accent)] mb-3">Connect</h3>
-          <div className="flex flex-col gap-3 text-sm">
-            <a href={siteConfig.consultUrl} className="btn btn-primary !text-xs w-fit" target="_blank" rel="noreferrer">
-              Start a consultation
-            </a>
-            <a href={siteConfig.paymentUrl} className="text-white/75 hover:text-[var(--color-accent)]" target="_blank" rel="noreferrer">
+        <div className="site-footer-column">
+          <h3 className="site-footer-heading">Connect</h3>
+          <div className="site-footer-connect">
+            <a href={siteConfig.paymentUrl} className="site-footer-link" target="_blank" rel="noreferrer">
               Make a payment
             </a>
-            <a href={siteConfig.social.instagram} className="text-white/75 hover:text-[var(--color-accent)]" target="_blank" rel="noreferrer">
+            <a href={siteConfig.social.instagram} className="site-footer-link" target="_blank" rel="noreferrer">
               Instagram
             </a>
-            <a href={siteConfig.social.facebook} className="text-white/75 hover:text-[var(--color-accent)]" target="_blank" rel="noreferrer">
+            <a href={siteConfig.social.facebook} className="site-footer-link" target="_blank" rel="noreferrer">
               Facebook
+            </a>
+            <a href={siteConfig.consultUrl} className="btn btn-primary site-footer-cta" target="_blank" rel="noreferrer">
+              Start a consultation
             </a>
           </div>
         </div>
       </div>
-      <div className="border-t border-[var(--color-border)]">
-        <div className="container py-4 text-xs text-white/45 flex flex-col sm:flex-row gap-2 sm:justify-between">
+      <div className="site-footer-legal-wrap border-t border-[var(--color-border)]">
+        <div className="container site-footer-legal">
           <span>Copyright © {new Date().getFullYear()} Tampa Bay Body Sculpting — All Rights Reserved.</span>
           <span>Prototype recreation for development.</span>
         </div>

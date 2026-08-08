@@ -79,9 +79,12 @@ img {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+h6 {
   margin: 0;
   line-height: 1.25;
+  text-transform: capitalize;
 }
 
 p {
@@ -151,18 +154,45 @@ p {
   padding: 5rem 0;
 }
 
-/* HeadingBeta — section titles (Lato, uppercase, teal) */
+/* HeadingBeta — section titles (Lato, title case, teal) */
 .section-title {
   font-family: var(--font-display);
   font-size: clamp(1.875rem, 3.2vw, 2.375rem);
   font-weight: 400;
   line-height: 1.4;
   margin-bottom: 2.5rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
   letter-spacing: 1px;
   color: var(--color-accent);
   text-align: center;
   text-wrap: balance;
+}
+
+.testimonials-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.testimonials-grid blockquote {
+  flex: 0 1 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .testimonials-grid blockquote {
+    flex-basis: calc(50% - 0.5rem);
+    max-width: calc(50% - 0.5rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .testimonials-grid blockquote {
+    flex-basis: calc(33.333% - 0.67rem);
+    max-width: calc(33.333% - 0.67rem);
+  }
 }
 
 .section-title-white,
@@ -269,7 +299,7 @@ p {
   font-weight: 400;
   font-style: normal;
   letter-spacing: normal;
-  text-transform: none;
+  text-transform: capitalize;
   margin-bottom: 1rem;
   line-height: 1.25;
 }
@@ -327,7 +357,15 @@ p {
   aspect-ratio: 4 / 3;
   object-fit: cover;
   filter: grayscale(1);
-  transition: transform 0.45s ease, filter 0.45s ease;
+  transition: filter 0.25s ease, transform 0.25s ease;
+}
+
+.procedure-card-image.premium-procedure-image--crop-arm {
+  object-position: 12% 2%;
+}
+
+.procedure-card-image.premium-procedure-image--crop-chin {
+  object-position: 18% 32%;
 }
 
 .procedure-card-media:hover .procedure-card-image {

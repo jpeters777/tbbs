@@ -17,25 +17,14 @@ import {
 import { CONSULT_URL, CONTACT_URL } from "@/lib/site";
 import type { PageContent } from "@/lib/content";
 
-const categoryMap: Record<string, ProcedureCategoryId> = {
-  "Lipo 360": "body",
-  "Tummy Tuck": "body",
-  "Brazilian Butt Lift": "body",
-  "Chin & Neck Liposuction": "face",
-  "Breast Augmentation": "breast",
-  "Male Body Sculpting": "men",
-};
-
-function procedureCategory(title: string): ProcedureCategoryId {
-  return categoryMap[title] ?? "body";
-}
-
 export function PremiumHomePage({ page }: { page: PageContent }) {
   const [filter, setFilter] = useState<ProcedureCategoryId>("all");
 
   const filteredProcedures = useMemo(() => {
     if (filter === "all") return homeProcedures.items;
-    return homeProcedures.items.filter((p) => procedureCategory(p.title) === filter);
+    return homeProcedures.items.filter(
+      (p) => p.category === filter || p.alsoInCategories?.includes(filter)
+    );
   }, [filter]);
 
   const featuredQuote =
@@ -126,13 +115,12 @@ export function PremiumHomePage({ page }: { page: PageContent }) {
       {/* Procedures */}
       <section className="premium-section premium-section--soft" id="procedures">
         <div className="container">
-          <div className="premium-section-head">
-            <div>
-              <p className="premium-eyebrow">Procedures</p>
-              <h2 className="premium-section-title">{homeProcedures.title}</h2>
-            </div>
-            <p className="premium-section-intro">
-              Filter by what you&apos;re exploring. Every path leads to the same thing: clarity before you commit.
+          <div className="premium-procedures-intro">
+            <p className="premium-eyebrow">Procedures</p>
+            <h2 className="premium-section-title">{homeProcedures.title}</h2>
+            <p className="premium-filter-intro">
+              Filter by what you&apos;re exploring. Every path leads to the same thing:{" "}
+              <span className="premium-filter-intro-accent">clarity before you commit.</span>
             </p>
           </div>
           <div className="premium-filter" role="tablist" aria-label="Filter procedures">
@@ -152,16 +140,29 @@ export function PremiumHomePage({ page }: { page: PageContent }) {
           <div className="premium-procedure-grid">
             {filteredProcedures.map((item) => (
               <article key={item.title} className="premium-procedure-card">
-                <Link href={item.href} className="premium-procedure-media">
-                  <Image src={item.image} alt={item.imageAlt} width={640} height={480} className="premium-procedure-image" />
+                <Link
+                  href={item.href}
+                  className={`premium-procedure-media${item.imageMediaClass ? ` ${item.imageMediaClass}` : ""}`}
+                >
+                  <Image
+                    src={item.image}
+                    alt={item.imageAlt}
+                    width={640}
+                    height={480}
+                    className={`premium-procedure-image${item.imageClass ? ` ${item.imageClass}` : ""}`}
+                  />
                 </Link>
                 <div className="premium-procedure-body">
                   <h3 className="premium-procedure-title">
                     <Link href={item.href}>{item.title}</Link>
                   </h3>
-                  <RichText text={item.body} links={item.links} className="!text-left !text-[0.95rem]" />
+                  <RichText
+                    text={item.body}
+                    links={item.links}
+                    className="premium-procedure-copy !text-left !text-[0.95rem]"
+                  />
                   <Link href={item.href} className="premium-card-link">
-                    Learn about {item.title} →
+                    Learn about {item.learnAboutLabel ?? item.title} →
                   </Link>
                 </div>
               </article>
@@ -171,10 +172,10 @@ export function PremiumHomePage({ page }: { page: PageContent }) {
       </section>
 
       {/* Concierge journey */}
-      <section className="premium-section">
+      <section className="premium-section premium-section--compact-bottom">
         <div className="container">
-          <p className="premium-eyebrow text-center">How it works</p>
-          <h2 className="premium-section-title text-center max-w-2xl mx-auto">
+          <p className="premium-eyebrow">How it works</p>
+          <h2 className="premium-section-title max-w-2xl">
             A concierge path from curiosity to consultation
           </h2>
           <ol className="premium-journey">
@@ -190,11 +191,13 @@ export function PremiumHomePage({ page }: { page: PageContent }) {
       </section>
 
       {/* Difference */}
-      <section className="premium-section premium-section--soft">
+      <section className="premium-section premium-section--soft premium-section--difference">
         <div className="container">
           <p className="premium-eyebrow text-center">{homeDifference.title}</p>
-          <h2 className="premium-section-title text-center">{homeDifference.introTitle}</h2>
-          <p className="premium-section-intro text-center mx-auto">{homeDifference.intro}</p>
+          <div className="premium-difference-intro">
+            <h2 className="premium-section-title text-center">{homeDifference.introTitle}</h2>
+            <p className="premium-section-intro">{homeDifference.intro}</p>
+          </div>
           <div className="premium-bento mt-12">
             {homeDifference.columns.map((col) => (
               <article key={col.title} className="premium-bento-card">
@@ -233,7 +236,9 @@ export function PremiumHomePage({ page }: { page: PageContent }) {
           <div>
             <p className="premium-eyebrow">{homeTravel.subtitle}</p>
             <h2 className="premium-section-title">{homeTravel.title}</h2>
-            <RichText text={homeTravel.body} className="mt-4" />
+            <div className="premium-prose mt-4">
+              <RichText text={homeTravel.body} />
+            </div>
             <ul className="premium-checklist mt-6">
               {homeTravel.bullets.map((b) => (
                 <li key={b}>{b}</li>

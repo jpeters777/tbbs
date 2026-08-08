@@ -8,6 +8,7 @@ import {
   getPageBySlug,
   resolvePathToSlug,
 } from "@/lib/content";
+import { toTitleCase } from "@/lib/text";
 
 type Props = {
   params: Promise<{ slug: string[] }>;
@@ -23,11 +24,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const pageSlug = resolvePathToSlug(pathname);
   const page = pageSlug ? getPageBySlug(pageSlug) : null;
   if (!page) return {};
+  const title = toTitleCase(page.title);
   return {
-    title: page.title,
+    title,
     description: page.description,
     openGraph: {
-      title: page.title,
+      title,
       description: page.description,
       images: page.ogImage ? [page.ogImage] : undefined,
     },
