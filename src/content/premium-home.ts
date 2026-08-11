@@ -1,6 +1,6 @@
 import { homeDifference, homeWhyChoose } from "@/content/home-sections";
 import { companyStats } from "@/content/company-stats";
-import { siteConfig } from "@/lib/site";
+import { CONSULT_URL, siteConfig } from "@/lib/site";
 
 export type TrustSignal = {
   label: string;
@@ -24,6 +24,11 @@ export const trustSignals: TrustSignal[] = [
         },
       ]
     : []),
+  {
+    label: "Complimentary Consult",
+    detail: "Free virtual · No obligation",
+    href: CONSULT_URL,
+  },
 ];
 
 export const conciergeSteps = [
