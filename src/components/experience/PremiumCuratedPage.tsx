@@ -4,6 +4,7 @@ import { PremiumHeroMedia } from "@/components/experience/PremiumHeroMedia";
 import { PremiumPageFaq } from "@/components/experience/PremiumPageFaq";
 import { PremiumRecoveryGuides } from "@/components/experience/PremiumRecoveryGuides";
 import { PremiumFinancingCta } from "@/components/experience/PremiumFinancingCta";
+import { ConsultInterestForm } from "@/components/experience/ConsultInterestForm";
 import { CuratedPageJsonLd } from "@/components/seo/CuratedPageJsonLd";
 import { PremiumTrustStrip } from "@/components/experience/PremiumTrustStrip";
 import { premiumWhyChoose } from "@/content/premium-shared-sections";
@@ -60,6 +61,21 @@ export function PremiumCuratedPage({ content }: { content: CuratedPageContent })
         </section>
 
         <PremiumTrustStrip />
+
+        {content.jumpLinks.length > 0 ? (
+          <nav className="premium-jump-nav" aria-label="On this page">
+            <div className="container premium-jump-nav-scroller">
+              {content.jumpLinks.map((link) => (
+                <a key={link.href} href={link.href} className="premium-jump-nav-link">
+                  {link.label}
+                </a>
+              ))}
+              <a href="#get-started" className="premium-jump-nav-link">
+                Get started
+              </a>
+            </div>
+          </nav>
+        ) : null}
 
         <section className="premium-section">
           <div className="container max-w-3xl">
@@ -436,6 +452,17 @@ export function PremiumCuratedPage({ content }: { content: CuratedPageContent })
         </section>
 
         <PremiumPageFaq title={content.faqTitle} intro={content.faqIntro} faqs={content.faqs} currentPath={pagePath} />
+
+        <section className="premium-section premium-section--soft" id="get-started">
+          <div className="container max-w-3xl">
+            <p className="premium-eyebrow">Next step</p>
+            <h2 className="premium-section-title">Ready to talk through your options?</h2>
+            <p className="premium-section-intro mt-4">
+              Tell us what you&apos;re researching and choose how you&apos;d like to connect—no obligation.
+            </p>
+            <ConsultInterestForm className="mt-8" location={`curated-${content.slug}`} />
+          </div>
+        </section>
 
         <section className="premium-final-cta">
           <div className="container premium-final-inner">

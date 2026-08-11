@@ -4,6 +4,7 @@ import type { Metadata, Viewport } from "next";
 import { DM_Sans, Cormorant_Garamond, Cantarell } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { MobileChromeProvider } from "@/components/MobileChromeProvider";
 import { StickyConsultBar } from "@/components/experience/StickyConsultBar";
 import { siteConfig } from "@/lib/site";
 import { toTitleCase } from "@/lib/text";
@@ -60,11 +61,13 @@ export default function RootLayout({
         className={`experience-premium ${dmSans.variable} ${cormorant.variable} ${cantarell.variable} antialiased`}
       >
         <SiteAnalytics />
-        <Header premium />
-        <main>{children}</main>
-        <Footer />
-        <StickyConsultBar />
-        <CookieConsent />
+        <MobileChromeProvider>
+          <Header premium />
+          <main>{children}</main>
+          <Footer />
+          <StickyConsultBar />
+          <CookieConsent />
+        </MobileChromeProvider>
       </body>
     </html>
   );

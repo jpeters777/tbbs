@@ -3,10 +3,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { hasNavDropdown, siteConfig, type NavItem } from "@/lib/site";
 import { TrackedPhoneLink } from "@/components/TrackedPhoneLink";
 import { MobileNav } from "@/components/MobileNav";
+import { useMobileChrome } from "@/components/MobileChromeProvider";
 
 function DesktopDropdown({ item }: { item: NavItem }) {
   if (item.groups?.length) {
@@ -64,6 +65,15 @@ export function Header({ premium = false }: { premium?: boolean }) {
   const [open, setOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const pathname = usePathname();
+  const { setMenuOpen } = useMobileChrome();
+
+  useEffect(() => {
+    setMenuOpen(open);
+  }, [open, setMenuOpen]);
+
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
 
   const isActive = (href: string) => {
     if (href === "/") return pathname === "/";
@@ -125,6 +135,9 @@ export function Header({ premium = false }: { premium?: boolean }) {
         </div>
 
         <div className="flex items-center gap-2 sm:gap-3 lg:hidden">
+          <TrackedPhoneLink className="header-mobile-call" location="header-mobile-chrome">
+            Call
+          </TrackedPhoneLink>
           <a
             href={siteConfig.consultUrl}
             className="btn btn-primary header-mobile-consult premium-btn-glow"

@@ -35,6 +35,53 @@
   color: var(--color-text-dim);
 }
 
+.ba-gallery-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1.75rem;
+}
+
+.ba-gallery-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--touch-min, 2.75rem);
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.82);
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+.ba-gallery-filter-btn.is-active,
+.ba-gallery-filter-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: var(--color-accent-soft);
+}
+
+.ba-gallery-empty {
+  margin: 0 0 1.5rem;
+  padding: 1.25rem;
+  border: 1px dashed rgba(255, 255, 255, 0.16);
+  border-radius: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+
+.ba-case-tag--btn {
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+}
+
 .ba-eyebrow {
   font-family: var(--font-ui);
   font-size: 0.72rem;
