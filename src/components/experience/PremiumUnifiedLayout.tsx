@@ -127,7 +127,7 @@ export function PremiumUnifiedLayout({ data }: { data: UnifiedData }) {
 
         <PremiumTrustStrip />
 
-        {jumpLinks.length > 1 ? (
+        {jumpLinks.length > 0 ? (
           <nav className="premium-jump-nav" aria-label="On this page">
             <div className="container premium-jump-nav-scroller">
               {jumpLinks.map((link) => (
