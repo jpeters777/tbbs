@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { RichText } from "@/components/RichText";
 import { PremiumHeroMedia } from "@/components/experience/PremiumHeroMedia";
-import { PremiumFinancingCta } from "@/components/experience/PremiumFinancingCta";
+import { PremiumCostSection } from "@/components/experience/PremiumCostSection";
+import { PremiumJumpNav, SeeResultsLink } from "@/components/experience/PremiumJumpNav";
 import { PremiumPageFaq } from "@/components/experience/PremiumPageFaq";
 import { BblJsonLd } from "@/components/seo/BblJsonLd";
 import { PremiumTrustStrip } from "@/components/experience/PremiumTrustStrip";
@@ -25,6 +26,16 @@ import {
   bblWhyChoose,
 } from "@/content/bbl-page";
 import { CONSULT_URL, CONTACT_URL } from "@/lib/site";
+
+const BBL_JUMP_LINKS = [
+  { href: "#at-a-glance", label: "At a glance" },
+  { href: "#how-bbl-works", label: "How it works" },
+  { href: "#candidacy", label: "Candidacy" },
+  { href: "#recovery", label: "Recovery" },
+  { href: "#cost", label: "Cost & financing" },
+  { href: "#bbl-results", label: "Results" },
+  { href: "#faq", label: "FAQ" },
+];
 
 export function PremiumBblPage() {
   let relatedIndex = 0;
@@ -55,35 +66,14 @@ export function PremiumBblPage() {
                 <Link href="#at-a-glance" className="btn btn-outline !border-white/30 !text-white">
                   BBL at a glance
                 </Link>
-              </div>
-              <div className="flex flex-wrap gap-x-4 gap-y-2 mt-6">
-                <Link href="#how-bbl-works" className="inline-link text-sm">
-                  How BBL works
-                </Link>
-                <Link href="#candidacy" className="inline-link text-sm">
-                  Candidacy
-                </Link>
-                <Link href="#low-bmi-bbl" className="inline-link text-sm">
-                  Low BMI & hip dips
-                </Link>
-                <Link href="#bbl-safety" className="inline-link text-sm">
-                  BBL safety
-                </Link>
-                <Link href="#recovery" className="inline-link text-sm">
-                  Recovery
-                </Link>
-                <Link href="#bbl-results" className="inline-link text-sm">
-                  Results
-                </Link>
-                <Link href="#faq" className="inline-link text-sm">
-                  FAQs
-                </Link>
+                <SeeResultsLink className="btn btn-outline !border-white/30 !text-white" />
               </div>
             </div>
           </div>
         </section>
 
         <PremiumTrustStrip />
+        <PremiumJumpNav links={BBL_JUMP_LINKS} />
 
         <section className="premium-section">
           <div className="container max-w-3xl">
@@ -396,9 +386,10 @@ export function PremiumBblPage() {
                 Read full recovery guides →
               </Link>
             </div>
-            <PremiumFinancingCta location="bbl-recovery" procedureLabel="BBL" />
           </div>
         </section>
+
+        <PremiumCostSection procedureLabel="BBL" location="bbl-cost" />
 
         <section className="premium-section" id="bbl-results">
           <div className="container">
@@ -418,6 +409,7 @@ export function PremiumBblPage() {
                 </div>
               ))}
             </div>
+            <SeeResultsLink className="inline-link mt-8 inline-block font-ui text-sm uppercase tracking-wider" />
           </div>
         </section>
 

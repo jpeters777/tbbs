@@ -361,6 +361,11 @@ export type BblRelatedItem = {
 
 export const bblRelatedProcedures: BblRelatedItem[] = [
   {
+    title: "Before & After Gallery",
+    href: "/female-ba-gallery",
+    body: "Browse real patient results to see contour and curve outcomes after BBL and body sculpting.",
+  },
+  {
     title: "Lipo 360",
     href: "/liposuction-360",
     body: "Comprehensive midsection sculpting—often combined with a BBL to slim the waist while enhancing curves.",

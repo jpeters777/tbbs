@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { RichText } from "@/components/RichText";
 import { PremiumHeroMedia } from "@/components/experience/PremiumHeroMedia";
-import { PremiumFinancingCta } from "@/components/experience/PremiumFinancingCta";
+import { PremiumCostSection } from "@/components/experience/PremiumCostSection";
+import { PremiumJumpNav, SeeResultsLink } from "@/components/experience/PremiumJumpNav";
 import { PremiumPageFaq } from "@/components/experience/PremiumPageFaq";
 import { Lipo360JsonLd } from "@/components/seo/Lipo360JsonLd";
 import { PremiumTrustStrip } from "@/components/experience/PremiumTrustStrip";
@@ -18,6 +19,15 @@ import {
   lipo360WhyChoose,
 } from "@/content/lipo-360-page";
 import { CONSULT_URL, CONTACT_URL } from "@/lib/site";
+
+const LIPO360_JUMP_LINKS = [
+  { href: "#at-a-glance", label: "At a glance" },
+  { href: "#recovery", label: "Recovery" },
+  { href: "#cost", label: "Cost & financing" },
+  { href: "#related", label: "Related" },
+  { href: "#faq", label: "FAQ" },
+  { href: "/female-ba-gallery", label: "See results" },
+];
 
 export function PremiumLipo360Page() {
   let relatedIndex = 0;
@@ -52,12 +62,14 @@ export function PremiumLipo360Page() {
                 <Link href="#at-a-glance" className="btn btn-outline !border-white/30 !text-white">
                   Lipo 360 at a glance
                 </Link>
+                <SeeResultsLink className="btn btn-outline !border-white/30 !text-white" />
               </div>
             </div>
           </div>
         </section>
 
         <PremiumTrustStrip />
+        <PremiumJumpNav links={LIPO360_JUMP_LINKS} />
 
         {/* Intro */}
         <section className="premium-section">
@@ -206,9 +218,10 @@ export function PremiumLipo360Page() {
                 Read full recovery guides →
               </Link>
             </div>
-            <PremiumFinancingCta location="liposuction-360-recovery" procedureLabel="Lipo 360" />
           </div>
         </section>
+
+        <PremiumCostSection procedureLabel="Lipo 360" location="liposuction-360-cost" />
 
         {/* Related procedures */}
         <section className="premium-section premium-section--soft" id="related">

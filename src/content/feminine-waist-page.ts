@@ -306,6 +306,11 @@ export type FeminineWaistRelatedItem = {
 
 export const feminineWaistRelatedProcedures: FeminineWaistRelatedItem[] = [
   {
+    title: "Before & After Gallery",
+    href: "/female-ba-gallery",
+    body: "Browse real patient waist and body contouring results to visualize your goals.",
+  },
+  {
     title: "Lipo 360",
     href: "/liposuction-360",
     body: "The circumferential midsection technique often used to achieve a slimmer waist—abdomen, flanks, and back in one plan.",
