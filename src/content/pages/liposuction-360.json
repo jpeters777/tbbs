@@ -58,57 +58,42 @@
       "blocks": [
         {
           "type": "h4",
-          "text": "Lipo 360 Quick Facts"
-        },
-        {
-          "type": "p",
-          "text": "Lipo 360 is a comprehensive body contouring procedure designed to sculpt the entire midsection for a slimmer, more balanced appearance. Here's a quick overview of the areas treated, who makes an ideal candidate, and the key benefits of Lipo 360.",
-          "links": []
-        },
-        {
-          "type": "h4",
-          "text": "Areas Treated During Lipo 360"
+          "text": "Areas treated"
         },
         {
           "type": "list",
           "ordered": false,
           "items": [
             "Abdomen",
-            "Waist",
-            "Love Handles (Flanks)",
-            "Lower Back"
+            "Waist & love handles",
+            "Lower back"
           ]
         },
         {
           "type": "h4",
-          "text": "Who Is a Good Candidate?"
+          "text": "Good candidates"
         },
         {
           "type": "list",
           "ordered": false,
           "items": [
-            "Near your goal weight",
+            "Near goal weight with stubborn midsection fat",
             "Good skin elasticity",
-            "Localized fat deposits",
-            "Realistic expectations",
-            "Non-smoker or willing to stop",
-            "Good overall health"
+            "Non-smoker in good overall health",
+            "Realistic expectations"
           ]
         },
         {
           "type": "h4",
-          "text": "Benefits of Lipo 360"
+          "text": "Key benefits"
         },
         {
           "type": "list",
           "ordered": false,
           "items": [
-            "Creates a more defined waistline",
-            "Improves body proportions",
-            "Removes stubborn fat resistant to diet and exercise",
-            "Treats multiple areas during one procedure",
-            "Creates smoother body contours",
-            "Can be combined with other body contouring procedures",
+            "More defined waistline from every angle",
+            "Multiple areas treated in one procedure",
+            "Smoother, balanced body proportions",
             "Long-lasting results with a stable weight"
           ]
         }
@@ -161,7 +146,7 @@
           "text": "Yes. Lipo 360 can often be customized to include additional areas based on your anatomy and aesthetic goals. During your consultation, your provider will recommend a personalized treatment plan to help achieve balanced, natural-looking results. Common areas that may be added include: Upper Back, axilla, arms, chin, and also Brazilian Butt Lift BBL.",
           "links": [
             {
-              "href": "/arm-lipo-360%C2%B0-%2F-arm-lift",
+              "href": "/arm-lipo-360-arm-lift",
               "text": "arms"
             },
             {
@@ -412,7 +397,7 @@
       "blocks": [
         {
           "type": "p",
-          "text": "Lipo360 Recovery Guide (pdf)",
+          "text": "Lipo 360 Recovery Guide (available from our team during consultation)",
           "links": []
         }
       ]

@@ -40,6 +40,8 @@ const PATH_ALIASES: Record<string, string> = {
   "/arm-lipo-360-arm-lift": "arm-lipo-360----arm-lift",
   "/female-b&a-gallery": "female-b-a-gallery",
   "/female-ba-gallery": "female-b-a-gallery",
+  "/male-liposuction-360": "male-liposuction-360-1",
+  "/male-tummy-tuck": "male-tummy-tuck-1",
 };
 
 export function getAllPageSlugs(): string[] {
@@ -106,6 +108,14 @@ export function getAllStaticParams(): { slug: string[] }[] {
     }
     if (slug === "female-b-a-gallery") {
       params.push({ slug: ["female-ba-gallery"] });
+      continue;
+    }
+    if (slug === "male-liposuction-360-1") {
+      params.push({ slug: ["male-liposuction-360"] });
+      continue;
+    }
+    if (slug === "male-tummy-tuck-1") {
+      params.push({ slug: ["male-tummy-tuck"] });
       continue;
     }
     const segments = p.replace(/^\//, "").split("/").filter(Boolean);

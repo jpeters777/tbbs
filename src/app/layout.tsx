@@ -1,3 +1,5 @@
+import { CookieConsent } from "@/components/CookieConsent";
+import { SiteAnalytics } from "@/components/SiteAnalytics";
 import type { Metadata, Viewport } from "next";
 import { DM_Sans, Cormorant_Garamond, Cantarell } from "next/font/google";
 import { Header } from "@/components/Header";
@@ -57,10 +59,12 @@ export default function RootLayout({
       <body
         className={`experience-premium ${dmSans.variable} ${cormorant.variable} ${cantarell.variable} antialiased`}
       >
+        <SiteAnalytics />
         <Header premium />
         <main>{children}</main>
         <Footer />
         <StickyConsultBar />
+        <CookieConsent />
       </body>
     </html>
   );

@@ -1,3 +1,4 @@
+import { RichText } from "@/components/RichText";
 import Link from "next/link";
 
 type Card = {
@@ -51,7 +52,12 @@ export function ProcedureCards({
                 <h3 className="related-procedures-card-title">
                   <Link href={card.href}>{card.title}</Link>
                 </h3>
-                <p className="related-procedures-card-body">{excerpt(card.description, 200)}</p>
+                <RichText
+                  as="p"
+                  className="related-procedures-card-body"
+                  text={excerpt(card.description, 200)}
+                  autoLinkKeywords
+                />
                 <Link href={card.href} className="related-procedures-card-cta">
                   View details
                 </Link>

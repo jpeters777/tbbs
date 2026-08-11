@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/site";
+import { TrackedPhoneLink } from "@/components/TrackedPhoneLink";
 
 const resourceLinks = [
+  { label: "How We Select Providers", href: "/how-we-select-providers" },
   { label: "Financing Options", href: "/financing-options" },
   { label: "Travel Information", href: "/travel-information" },
   { label: "Recovery Guides", href: "/recovery-guides" },
@@ -11,25 +13,26 @@ const resourceLinks = [
 
 const procedureLinks = [
   { label: "Lipo 360", href: "/liposuction-360" },
+  { label: "Brazilian Butt Lift (BBL)", href: "/brazilian-butt-lift-bbl" },
+  { label: "Feminine Waist Contouring", href: "/feminine-waist-contouring" },
   { label: "Tummy Tuck", href: "/tummy-tuck" },
   { label: "Breast Augmentation", href: "/breast-augmentation" },
-  { label: "Brazilian Butt Lift", href: "/brazilian-butt-lift-bbl" },
-  { label: "Male Body Contouring", href: "/men" },
+  { label: "Women's Procedures", href: "/women" },
+  { label: "Men's Body Contouring", href: "/men" },
+  { label: "Before & After Gallery", href: "/female-ba-gallery" },
 ];
 
 export function Footer() {
   return (
     <footer className="site-footer bg-black text-white border-t border-[var(--color-border)]">
       <div className="container site-footer-main">
-        <div className="site-footer-brand">
+        <div className="site-footer-column site-footer-brand-col">
           <p className="site-footer-brand-title">{siteConfig.brand}</p>
           <p className="site-footer-tagline">
             Personalized cosmetic surgery guidance across Tampa Bay and beyond.
           </p>
           <div className="site-footer-contact">
-            <a href={siteConfig.phoneHref} className="site-footer-phone">
-              {siteConfig.phone}
-            </a>
+            <TrackedPhoneLink className="site-footer-phone" location="footer" />
             <a href={`mailto:${siteConfig.email}`} className="site-footer-email">
               {siteConfig.email}
             </a>
@@ -82,8 +85,12 @@ export function Footer() {
       </div>
       <div className="site-footer-legal-wrap border-t border-[var(--color-border)]">
         <div className="container site-footer-legal">
-          <span>Copyright © {new Date().getFullYear()} Tampa Bay Body Sculpting — All Rights Reserved.</span>
-          <span>Prototype recreation for development.</span>
+          <p className="site-footer-legal-copy">
+            Copyright © {new Date().getFullYear()} Tampa Bay Body Sculpting — All Rights Reserved.
+          </p>
+          <Link href="/privacy-policy" className="site-footer-legal-link">
+            Privacy Policy
+          </Link>
         </div>
       </div>
     </footer>

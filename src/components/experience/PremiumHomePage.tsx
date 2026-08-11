@@ -4,10 +4,13 @@ import { useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { RichText } from "@/components/RichText";
-import { Testimonials } from "@/components/Testimonials";
-import { homeAbout, homeProcedures, homeTravel } from "@/content/home-sections";
+import { PremiumHeroMedia } from "@/components/experience/PremiumHeroMedia";
+import { PremiumHomeFaq } from "@/components/experience/PremiumHomeFaq";
+import { ConsultInterestForm } from "@/components/experience/ConsultInterestForm";
+import { PremiumTestimonials } from "@/components/experience/PremiumTestimonials";
+import { homeAbout, homeExploreProcedures, homeProcedures, homeTravel } from "@/content/home-sections";
+import { PremiumTrustStrip } from "@/components/experience/PremiumTrustStrip";
 import {
-  trustSignals,
   conciergeSteps,
   procedureCategories,
   homeDifference,
@@ -15,6 +18,8 @@ import {
   type ProcedureCategoryId,
 } from "@/content/premium-home";
 import { CONSULT_URL, CONTACT_URL } from "@/lib/site";
+import { resolveHeroSrc } from "@/lib/hero-images";
+import { toTitleCase } from "@/lib/text";
 import type { PageContent } from "@/lib/content";
 
 export function PremiumHomePage({ page }: { page: PageContent }) {
@@ -36,13 +41,10 @@ export function PremiumHomePage({ page }: { page: PageContent }) {
       {/* Hero */}
       <section className="premium-hero">
         <div className="premium-hero-media">
-          <Image
+          <PremiumHeroMedia
             src="/images/shutterstock_99994967_801684509466.JPG"
             alt="Cosmetic surgery guidance in Tampa Bay"
-            fill
-            priority
             className="object-cover"
-            sizes="100vw"
           />
           <div className="premium-hero-scrim" />
         </div>
@@ -50,65 +52,82 @@ export function PremiumHomePage({ page }: { page: PageContent }) {
           <div className="premium-hero-copy">
             <p className="premium-eyebrow">Tampa Bay · Concierge cosmetic surgery guidance</p>
             <h1 className="premium-hero-title">
-              Confidence isn&apos;t one procedure.
-              <span className="premium-hero-accent"> It&apos;s the right plan.</span>
+              {toTitleCase(page.h1)}
+              <span className="premium-hero-accent"> Confidence starts with the right plan.</span>
             </h1>
-            <p className="premium-hero-lead">
-              Lipo 360, tummy tuck, breast surgery, and male body sculpting—with a team that guides you
-              from complimentary consult through recovery.
-            </p>
+            <RichText
+              as="p"
+              className="premium-hero-lead"
+              text="Lipo 360, tummy tuck, breast surgery, and male body sculpting—with a team that guides you from complimentary consult through recovery."
+              autoLinkKeywords
+            />
             <div className="premium-hero-cta">
               <a href={CONSULT_URL} className="btn btn-primary premium-btn-glow" target="_blank" rel="noreferrer">
                 Book free virtual consult
               </a>
-              <Link href="/liposuction-360" className="btn btn-outline !border-white/30 !text-white">
+              <Link href="#procedures" className="btn btn-outline !border-white/30 !text-white">
                 Explore procedures
               </Link>
             </div>
           </div>
           <blockquote className="premium-hero-quote">
-            <p>&ldquo;{featuredQuote}&rdquo;</p>
+            <p>
+              &ldquo;
+              <RichText as="span" text={featuredQuote} autoLinkKeywords />
+              &rdquo;
+            </p>
             <footer>— Tampa Bay Body Sculpting patient</footer>
           </blockquote>
         </div>
       </section>
 
-      {/* Trust strip */}
-      <section className="premium-trust" aria-label="Why patients trust us">
-        <div className="container premium-trust-grid">
-          {trustSignals.map((item) => (
-            <div key={item.label} className="premium-trust-item">
-              <p className="premium-trust-label">{item.label}</p>
-              <p className="premium-trust-detail">{item.detail}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      <PremiumTrustStrip />
 
       {/* About */}
       <section className="premium-section">
         <div className="container premium-split">
           <div className="premium-split-media">
             <Image
-              src={homeAbout.image.src}
+              src={resolveHeroSrc(homeAbout.image.src)}
               alt={homeAbout.image.alt}
               width={720}
               height={720}
+              loading="lazy"
+              unoptimized
+              sizes="(max-width: 768px) 100vw, 720px"
               className="premium-split-image"
             />
           </div>
           <div>
             <p className="premium-eyebrow">{homeAbout.title}</p>
             <h2 className="premium-section-title">{homeAbout.subtitle}</h2>
+            {"stats" in homeAbout && homeAbout.stats ? (
+              <ul className="premium-about-stats">
+                {homeAbout.stats.map((stat) => (
+                  <li key={stat.label}>
+                    <span className="premium-about-stat-value">{stat.value}</span>
+                    <span className="premium-about-stat-label">{stat.label}</span>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
             <div className="premium-prose stack-4 mt-6">
               {homeAbout.paragraphs.map((p) => (
-                <RichText key={p.text.slice(0, 48)} text={p.text} links={p.links} />
+                <RichText
+                  key={p.text.slice(0, 48)}
+                  text={p.text}
+                  links={p.links}
+                  autoLinkKeywords
+                />
               ))}
             </div>
             <a href={CONTACT_URL} className="inline-link mt-6 inline-block font-ui text-sm uppercase tracking-wider" target="_blank" rel="noreferrer">
               Contact our team →
             </a>
           </div>
+        </div>
+        <div className="container mt-12 max-w-3xl">
+          <ConsultInterestForm location="homepage-about" />
         </div>
       </section>
 
@@ -138,17 +157,22 @@ export function PremiumHomePage({ page }: { page: PageContent }) {
             ))}
           </div>
           <div className="premium-procedure-grid">
-            {filteredProcedures.map((item) => (
+            {filteredProcedures.map((item) => {
+              const cardSrc = resolveHeroSrc(item.image);
+              return (
               <article key={item.title} className="premium-procedure-card">
                 <Link
                   href={item.href}
                   className={`premium-procedure-media${item.imageMediaClass ? ` ${item.imageMediaClass}` : ""}`}
                 >
                   <Image
-                    src={item.image}
+                    src={cardSrc}
                     alt={item.imageAlt}
                     width={640}
                     height={480}
+                    loading="lazy"
+                    unoptimized={cardSrc.endsWith(".webp")}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 320px"
                     className={`premium-procedure-image${item.imageClass ? ` ${item.imageClass}` : ""}`}
                   />
                 </Link>
@@ -159,6 +183,7 @@ export function PremiumHomePage({ page }: { page: PageContent }) {
                   <RichText
                     text={item.body}
                     links={item.links}
+                    autoLinkKeywords
                     className="premium-procedure-copy !text-left !text-[0.95rem]"
                   />
                   <Link href={item.href} className="premium-card-link">
@@ -166,7 +191,8 @@ export function PremiumHomePage({ page }: { page: PageContent }) {
                   </Link>
                 </div>
               </article>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -183,7 +209,7 @@ export function PremiumHomePage({ page }: { page: PageContent }) {
               <li key={step.step} className="premium-journey-step">
                 <span className="premium-journey-num">{step.step}</span>
                 <h3>{step.title}</h3>
-                <p>{step.body}</p>
+                <RichText as="p" text={step.body} autoLinkKeywords />
               </li>
             ))}
           </ol>
@@ -193,16 +219,19 @@ export function PremiumHomePage({ page }: { page: PageContent }) {
       {/* Difference */}
       <section className="premium-section premium-section--soft premium-section--difference">
         <div className="container">
-          <p className="premium-eyebrow text-center">{homeDifference.title}</p>
-          <div className="premium-difference-intro">
-            <h2 className="premium-section-title text-center">{homeDifference.introTitle}</h2>
-            <p className="premium-section-intro">{homeDifference.intro}</p>
+          <div className="premium-difference-header">
+            <p className="premium-eyebrow">{homeDifference.title}</p>
+            <h2 className="premium-section-title">{homeDifference.introTitle}</h2>
+            <p className="premium-difference-lead">{homeDifference.intro}</p>
           </div>
-          <div className="premium-bento mt-12">
-            {homeDifference.columns.map((col) => (
-              <article key={col.title} className="premium-bento-card">
+          <div className="premium-difference-cards">
+            {homeDifference.columns.map((col, index) => (
+              <article key={col.title} className="premium-difference-card">
+                <span className="premium-difference-card-num">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
                 <h3>{col.title}</h3>
-                <p>{col.body}</p>
+                <RichText as="p" text={col.body} autoLinkKeywords />
               </article>
             ))}
           </div>
@@ -210,14 +239,16 @@ export function PremiumHomePage({ page }: { page: PageContent }) {
       </section>
 
       {/* Why choose */}
-      <section className="premium-section">
+      <section className="premium-section premium-section--why-choose">
         <div className="container">
-          <h2 className="premium-section-title text-center">{homeWhyChoose.title}</h2>
+          <div className="premium-why-choose-header">
+            <h2 className="premium-section-title">{homeWhyChoose.title}</h2>
+          </div>
           <div className="premium-benefits">
             {homeWhyChoose.items.map((item) => (
               <div key={item.title} className="premium-benefit">
                 <h3>{item.title}</h3>
-                <p>{item.body}</p>
+                <RichText as="p" text={item.body} autoLinkKeywords />
               </div>
             ))}
           </div>
@@ -225,10 +256,28 @@ export function PremiumHomePage({ page }: { page: PageContent }) {
       </section>
 
       {page.testimonials.length > 0 ? (
-        <div className="premium-section premium-section--soft">
-          <Testimonials items={page.testimonials.slice(0, 6)} />
+        <div className="premium-section premium-section--soft premium-section--testimonials">
+          <PremiumTestimonials />
         </div>
       ) : null}
+
+      {/* Explore procedures — internal link hub for SEO */}
+      <section className="premium-section premium-section--explore">
+        <div className="container">
+          <p className="premium-eyebrow">Procedure guides</p>
+          <h2 className="premium-section-title">{homeExploreProcedures.title}</h2>
+          <p className="premium-explore-intro">{homeExploreProcedures.intro}</p>
+          <ul className="premium-explore-links">
+            {homeExploreProcedures.links.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="premium-explore-link">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
 
       {/* Travel */}
       <section className="premium-section">
@@ -237,11 +286,13 @@ export function PremiumHomePage({ page }: { page: PageContent }) {
             <p className="premium-eyebrow">{homeTravel.subtitle}</p>
             <h2 className="premium-section-title">{homeTravel.title}</h2>
             <div className="premium-prose mt-4">
-              <RichText text={homeTravel.body} />
+              <RichText text={homeTravel.body} autoLinkKeywords />
             </div>
             <ul className="premium-checklist mt-6">
               {homeTravel.bullets.map((b) => (
-                <li key={b}>{b}</li>
+                <li key={b}>
+                  <RichText as="span" text={b} autoLinkKeywords />
+                </li>
               ))}
             </ul>
             <div className="flex flex-wrap gap-3 mt-8">
@@ -255,25 +306,31 @@ export function PremiumHomePage({ page }: { page: PageContent }) {
           </div>
           <div className="premium-split-media">
             <Image
-              src={homeTravel.image}
+              src={resolveHeroSrc(homeTravel.image)}
               alt="Travel to Tampa Bay for cosmetic surgery"
               width={800}
               height={600}
+              loading="lazy"
+              unoptimized
+              sizes="(max-width: 768px) 100vw, 800px"
               className="premium-split-image"
             />
           </div>
         </div>
       </section>
 
+      <PremiumHomeFaq />
+
       {/* Final CTA */}
       <section className="premium-final-cta">
         <div className="container premium-final-inner">
           <h2>Your cosmetic surgery journey starts here</h2>
-          <p>
-            Schedule your complimentary virtual consultation and discover the personalized, concierge
-            experience that sets Tampa Bay Body Sculpting apart.
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
+          <RichText
+            as="p"
+            text="Schedule your complimentary virtual consultation and discover the personalized, concierge experience that sets Tampa Bay Body Sculpting apart."
+            autoLinkKeywords
+          />
+          <div className="flex flex-wrap gap-3 mt-8 premium-final-actions">
             <a href={CONSULT_URL} className="btn btn-dark !bg-black !text-white !px-8" target="_blank" rel="noreferrer">
               Start consultation
             </a>

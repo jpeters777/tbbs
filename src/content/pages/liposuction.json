@@ -102,7 +102,7 @@
           "text": "Arm liposuction removes stubborn fat from the upper arms to create a leaner, more toned appearance. It's an excellent option for patients who struggle with excess arm fullness despite diet and exercise.",
           "links": [
             {
-              "href": "/arm-lipo-360%C2%B0-%2F-arm-lift",
+              "href": "/arm-lipo-360-arm-lift",
               "text": "Arm liposuction"
             }
           ]
@@ -124,12 +124,7 @@
         {
           "type": "p",
           "text": "Fat transfer breast augmentation uses purified fat removed during liposuction to naturally enhance breast volume and shape without implants. It's an excellent option for patients seeking subtle, natural-looking enhancement.",
-          "links": [
-            {
-              "href": "/breast-rejuvenation",
-              "text": "Fat transfer breast augmentation"
-            }
-          ]
+          "links": []
         }
       ]
     },
@@ -221,7 +216,7 @@
           "text": "Learn More About Arm Liposuction",
           "links": [
             {
-              "href": "/arm-lipo-360%C2%B0-%2F-arm-lift",
+              "href": "/arm-lipo-360-arm-lift",
               "text": "Learn More About Arm Liposuction"
             }
           ]
@@ -373,7 +368,7 @@
               "text": "tummy tuck"
             },
             {
-              "href": "/arm-lipo-360%C2%B0-%2F-arm-lift",
+              "href": "/arm-lipo-360-arm-lift",
               "text": "arm lift"
             },
             {
@@ -417,10 +412,6 @@
             {
               "href": "/breast-reduction",
               "text": "breast reduction"
-            },
-            {
-              "href": "/breast-rejuvenation",
-              "text": "fat transfer breast augmentation"
             },
             {
               "href": "https://form.jotform.com/212097230845050",
@@ -491,10 +482,6 @@
             {
               "href": "/brazilian-butt-lift-bbl",
               "text": "Brazilian Butt Lift (BBL)"
-            },
-            {
-              "href": "/breast-rejuvenation",
-              "text": "fat transfer breast augmentation"
             }
           ]
         },
@@ -563,7 +550,7 @@
               "text": "Lipo 360"
             },
             {
-              "href": "/arm-lipo-360%C2%B0-%2F-arm-lift",
+              "href": "/arm-lipo-360-arm-lift",
               "text": "arm liposuction"
             },
             {
@@ -710,7 +697,7 @@
       "blocks": [
         {
           "type": "p",
-          "text": "Lipo360 Recovery Guide (pdf)",
+          "text": "Lipo 360 Recovery Guide (available from our team during consultation)",
           "links": []
         }
       ]
@@ -735,12 +722,12 @@
     {
       "title": "Arm Liposuction",
       "description": "Arm liposuction removes stubborn fat from the upper arms to create a leaner, more toned appearance. It's an excellent option for patients who struggle with excess arm fullness despite diet and exercise.",
-      "href": "/arm-lipo-360%C2%B0-%2F-arm-lift"
+      "href": "/arm-lipo-360-arm-lift"
     },
     {
       "title": "Fat Transfer Breast Augmentation",
       "description": "Arm liposuction removes stubborn fat from the upper arms to create a leaner, more toned appearance. It's an excellent option for patients who struggle with excess arm fullness despite diet and exercise.",
-      "href": "/arm-lipo-360%C2%B0-%2F-arm-lift"
+      "href": "/arm-lipo-360-arm-lift"
     },
     {
       "title": "Male Abdominal Sculpting",

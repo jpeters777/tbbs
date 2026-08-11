@@ -20,7 +20,7 @@ export function ConversionRail({ compact = false }: { compact?: boolean }) {
           {siteConfig.phone}
         </a>
         <ul className="premium-rail-list">
-          <li>Board-certified surgeon network</li>
+          <li>Board-certified provider network</li>
           <li>Financing & travel support</li>
           <li>Serving Tampa Bay & out-of-town patients</li>
         </ul>

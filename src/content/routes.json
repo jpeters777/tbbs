@@ -3,6 +3,7 @@
   "/resources": "resources",
   "/breast-rejuvenation": "breast-rejuvenation",
   "/labiaplasty": "labiaplasty",
+  "/male-liposuction-360": "male-liposuction-360-1",
   "/male-liposuction-360-1": "male-liposuction-360-1",
   "/women": "women",
   "/breast-augmentation": "breast-augmentation",
@@ -13,6 +14,9 @@
   "/male-chest-reduction": "male-chest-reduction",
   "/breast-reduction": "breast-reduction",
   "/financing-options": "financing-options",
+  "/how-we-select-providers": "how-we-select-providers",
+  "/privacy-policy": "privacy-policy",
+  "/male-tummy-tuck": "male-tummy-tuck-1",
   "/male-tummy-tuck-1": "male-tummy-tuck-1",
   "/": "home",
   "/male-abdominal-sculpting": "male-abdominal-sculpting",
@@ -37,5 +41,6 @@
   "/liposuction": "liposuction",
   "/travel-information": "travel-information",
   "/female-chin-liposuction": "female-chin-liposuction",
-  "/female-ba-gallery": "female-b-a-gallery"
+  "/female-ba-gallery": "female-b-a-gallery",
+  "/arm-lipo-360-arm-lift": "arm-lipo-360----arm-lift"
 }

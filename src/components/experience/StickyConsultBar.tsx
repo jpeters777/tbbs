@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { siteConfig, CONSULT_URL } from "@/lib/site";
+import { CONSULT_URL } from "@/lib/site";
+import { TrackedPhoneLink } from "@/components/TrackedPhoneLink";
 
 export function StickyConsultBar() {
   const [visible, setVisible] = useState(false);
@@ -34,9 +35,12 @@ export function StickyConsultBar() {
           </a>{" "}
           virtual consultation?
         </p>
-        <a href={siteConfig.phoneHref} className="btn btn-outline sticky-consult-bar-btn sticky-consult-bar-call">
+        <TrackedPhoneLink
+          className="btn btn-outline sticky-consult-bar-btn sticky-consult-bar-call"
+          location="sticky-bar"
+        >
           Call now
-        </a>
+        </TrackedPhoneLink>
         <a
           href={CONSULT_URL}
           className="btn btn-primary sticky-consult-bar-btn sticky-consult-bar-book shadow-[0_0_32px_rgba(101,235,201,0.25)]"

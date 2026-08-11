@@ -4,7 +4,60 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { siteConfig } from "@/lib/site";
+import { hasNavDropdown, siteConfig, type NavItem } from "@/lib/site";
+import { TrackedPhoneLink } from "@/components/TrackedPhoneLink";
+
+function DesktopDropdown({ item }: { item: NavItem }) {
+  if (item.groups?.length) {
+    return (
+      <div className="absolute right-0 top-full min-w-[280px] border border-[var(--color-border)] bg-black py-2 shadow-xl">
+        {item.groups.map((group, groupIdx) => (
+          <div key={group.label} className={groupIdx > 0 ? "mt-2 border-t border-[var(--color-border)] pt-2" : ""}>
+            <p
+              className="px-4 py-1.5 text-[0.65rem] uppercase tracking-[0.12em] text-white/45"
+              style={{ fontFamily: "var(--font-ui)" }}
+            >
+              {group.label}
+            </p>
+            {group.children.map((child, childIdx) => (
+              <Link
+                key={`${item.label}-${group.label}-${childIdx}-${child.href}`}
+                href={child.href}
+                className="block px-4 py-2 text-sm text-white/85 hover:bg-[var(--color-accent-soft)] hover:text-[var(--color-accent)]"
+              >
+                {child.label}
+              </Link>
+            ))}
+          </div>
+        ))}
+        <div className="mt-2 border-t border-[var(--color-border)] pt-2">
+          <Link
+            href={item.href}
+            className="block px-4 py-2 text-sm font-semibold text-[var(--color-accent)] hover:bg-[var(--color-accent-soft)]"
+          >
+            View all {item.label.toLowerCase()} →
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
+  if (!item.children?.length) return null;
+
+  return (
+    <div className="absolute right-0 top-full min-w-[250px] border border-[var(--color-border)] bg-black py-2 shadow-xl">
+      {item.children.map((child, childIdx) => (
+        <Link
+          key={`${item.label}-${childIdx}-${child.href}`}
+          href={child.href}
+          className="block px-4 py-2 text-sm text-white/85 hover:bg-[var(--color-accent-soft)] hover:text-[var(--color-accent)]"
+        >
+          {child.label}
+        </Link>
+      ))}
+    </div>
+  );
+}
 
 export function Header({ premium = false }: { premium?: boolean }) {
   const [open, setOpen] = useState(false);
@@ -32,48 +85,33 @@ export function Header({ premium = false }: { premium?: boolean }) {
 
         <div className="hidden lg:flex items-center gap-4">
           <div className="flex flex-col items-end gap-1">
-          <nav className="flex items-center">
-            {siteConfig.main.map((item) => (
-              <div
-                key={item.href}
-                className="relative"
-                onMouseEnter={() => setActiveMenu(item.label)}
-                onMouseLeave={() => setActiveMenu(null)}
-              >
-                <Link
-                  href={item.href}
-                  className={`px-3 py-2 text-[0.72rem] uppercase tracking-[0.14em] font-semibold transition-colors border-b-2 ${
-                    isActive(item.href)
-                      ? "text-[var(--color-accent)] border-[var(--color-accent)]"
-                      : "text-white border-transparent hover:text-[var(--color-accent)]"
-                  }`}
-                  style={{ fontFamily: "var(--font-ui)" }}
+            <nav className="flex items-center">
+              {siteConfig.main.map((item) => (
+                <div
+                  key={item.href}
+                  className="relative"
+                  onMouseEnter={() => setActiveMenu(item.label)}
+                  onMouseLeave={() => setActiveMenu(null)}
                 >
-                  {item.label}
-                </Link>
-                {item.children && activeMenu === item.label ? (
-                  <div className="absolute right-0 top-full min-w-[250px] border border-[var(--color-border)] bg-black py-2 shadow-xl">
-                    {item.children.map((child, childIdx) => (
-                      <Link
-                        key={`${item.label}-${childIdx}-${child.href}`}
-                        href={child.href}
-                        className="block px-4 py-2 text-sm text-white/85 hover:bg-[var(--color-accent-soft)] hover:text-[var(--color-accent)]"
-                      >
-                        {child.label}
-                      </Link>
-                    ))}
-                  </div>
-                ) : null}
-              </div>
-            ))}
-          </nav>
-          <a
-            href={siteConfig.phoneHref}
-            className="pr-3 text-xs tracking-[0.06em] text-white/90"
-            style={{ fontFamily: "var(--font-ui)" }}
-          >
-            {siteConfig.phone}
-          </a>
+                  <Link
+                    href={item.href}
+                    className={`px-3 py-2 text-[0.72rem] uppercase tracking-[0.14em] font-semibold transition-colors border-b-2 ${
+                      isActive(item.href)
+                        ? "text-[var(--color-accent)] border-[var(--color-accent)]"
+                        : "text-white border-transparent hover:text-[var(--color-accent)]"
+                    }`}
+                    style={{ fontFamily: "var(--font-ui)" }}
+                  >
+                    {item.label}
+                  </Link>
+                  {hasNavDropdown(item) && activeMenu === item.label ? <DesktopDropdown item={item} /> : null}
+                </div>
+              ))}
+            </nav>
+            <TrackedPhoneLink
+              className="pr-3 text-xs tracking-[0.06em] text-white/90"
+              location="header-desktop"
+            />
           </div>
           <a
             href={siteConfig.consultUrl}
@@ -115,7 +153,25 @@ export function Header({ premium = false }: { premium?: boolean }) {
                 >
                   {item.label}
                 </Link>
-                {item.children ? (
+                {item.groups?.length ? (
+                  <div className="pl-3 flex flex-col gap-1 pb-2">
+                    {item.groups.map((group) => (
+                      <div key={group.label} className="pt-1">
+                        <p className="py-1 text-[0.65rem] uppercase tracking-wider text-white/40">{group.label}</p>
+                        {group.children.map((child, childIdx) => (
+                          <Link
+                            key={`m-${item.label}-${group.label}-${childIdx}-${child.href}`}
+                            href={child.href}
+                            className="block py-1 text-sm text-white/65"
+                            onClick={() => setOpen(false)}
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                ) : item.children ? (
                   <div className="pl-3 flex flex-col gap-1 pb-2">
                     {item.children.map((child, childIdx) => (
                       <Link
@@ -131,9 +187,7 @@ export function Header({ premium = false }: { premium?: boolean }) {
                 ) : null}
               </div>
             ))}
-            <a href={siteConfig.phoneHref} className="py-2 font-semibold text-white">
-              Call {siteConfig.phone}
-            </a>
+            <TrackedPhoneLink className="py-2 font-semibold text-white" location="header-mobile" />
           </div>
         </div>
       ) : null}

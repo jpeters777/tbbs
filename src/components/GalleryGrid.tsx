@@ -9,15 +9,38 @@ type GalleryImage = {
 export function GalleryGrid({
   title = "Gallery",
   images,
+  variant = "default",
 }: {
   title?: string;
   images: GalleryImage[];
+  variant?: "default" | "premium";
 }) {
   const usable = images
     .map((img) => ({ ...img, src: img.localSrc || img.src }))
     .filter((img) => img.src && !img.src.startsWith("data:") && img.src.includes("/images/"));
 
   if (usable.length < 2) return null;
+
+  if (variant === "premium") {
+    return (
+      <section className="premium-inner-gallery">
+        <h2 className="premium-inner-title">{title}</h2>
+        <div className="premium-inner-gallery-grid">
+          {usable.slice(0, 12).map((img, idx) => (
+            <div key={`${img.src}-${idx}`} className="premium-inner-gallery-item">
+              <Image
+                src={img.src}
+                alt={img.alt || `Gallery image ${idx + 1}`}
+                fill
+                className="object-cover grayscale transition duration-500 hover:scale-105 hover:grayscale-0"
+                sizes="(max-width: 768px) 50vw, 33vw"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="section">

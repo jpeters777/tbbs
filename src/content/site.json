@@ -7,39 +7,53 @@
     {
       "label": "Liposuction",
       "href": "/liposuction",
-      "children": [
+      "groups": [
         {
-          "label": "Lipo 360",
-          "href": "/liposuction-360"
+          "label": "Signature procedures",
+          "children": [
+            {
+              "label": "Lipo 360",
+              "href": "/liposuction-360"
+            },
+            {
+              "label": "Brazilian Butt Lift (BBL)",
+              "href": "/brazilian-butt-lift-bbl"
+            },
+            {
+              "label": "Feminine Waist Contouring",
+              "href": "/feminine-waist-contouring"
+            }
+          ]
         },
         {
-          "label": "Brazilian Butt Lift (BBL)",
-          "href": "/brazilian-butt-lift-bbl"
-        },
-        {
-          "label": "Arm Lipo 360 / Arm Lift",
-          "href": "/arm-lipo-360-arm-lift"
-        },
-        {
-          "label": "Thigh Liposuction",
-          "href": "/thigh-liposuction"
-        },
-        {
-          "label": "Female Chin Liposuction",
-          "href": "/female-chin-liposuction"
-        },
-        {
-          "label": "Feminine Waist Contouring",
-          "href": "/feminine-waist-contouring"
-        },
-        {
-          "label": "Male Lipo 360",
-          "href": "/male-liposuction-360-1"
+          "label": "Combined & area-specific",
+          "children": [
+            {
+              "label": "Tummy Tuck",
+              "href": "/tummy-tuck"
+            },
+            {
+              "label": "Mommy Makeover",
+              "href": "/mommy-makeover"
+            },
+            {
+              "label": "Thigh Liposuction",
+              "href": "/thigh-liposuction"
+            },
+            {
+              "label": "Arm Lipo 360 / Arm Lift",
+              "href": "/arm-lipo-360-arm-lift"
+            },
+            {
+              "label": "Female Chin Liposuction",
+              "href": "/female-chin-liposuction"
+            }
+          ]
         }
       ]
     },
     {
-      "label": "Breasts",
+      "label": "Breast",
       "href": "/breasts",
       "children": [
         {
@@ -55,7 +69,7 @@
           "href": "/breast-reduction"
         },
         {
-          "label": "Breast Rejuvenation",
+          "label": "Breast Rejuvenation (Fat Transfer)",
           "href": "/breast-rejuvenation"
         },
         {
@@ -77,6 +91,14 @@
       "href": "/women",
       "children": [
         {
+          "label": "Feminine Waist Contouring",
+          "href": "/feminine-waist-contouring"
+        },
+        {
+          "label": "Brazilian Butt Lift (BBL)",
+          "href": "/brazilian-butt-lift-bbl"
+        },
+        {
           "label": "Mommy Makeover",
           "href": "/mommy-makeover"
         },
@@ -89,8 +111,16 @@
           "href": "/labiaplasty"
         },
         {
-          "label": "Female Before & After",
+          "label": "Female Chin Liposuction",
+          "href": "/female-chin-liposuction"
+        },
+        {
+          "label": "Before & After Gallery",
           "href": "/female-ba-gallery"
+        },
+        {
+          "label": "All body contouring →",
+          "href": "/liposuction"
         }
       ]
     },
@@ -100,7 +130,7 @@
       "children": [
         {
           "label": "Male Lipo 360",
-          "href": "/male-liposuction-360-1"
+          "href": "/male-liposuction-360"
         },
         {
           "label": "Male Chest Reduction",
@@ -111,16 +141,16 @@
           "href": "/male-abdominal-sculpting"
         },
         {
-          "label": "Male Chin Liposuction",
-          "href": "/male-chin-liposuction"
-        },
-        {
           "label": "Male Tummy Tuck",
-          "href": "/male-tummy-tuck-1"
+          "href": "/male-tummy-tuck"
         },
         {
           "label": "Adult Circumcision",
           "href": "/adult-circumcision"
+        },
+        {
+          "label": "Male Chin Liposuction",
+          "href": "/male-chin-liposuction"
         },
         {
           "label": "Male Surgery Gallery",
@@ -135,6 +165,10 @@
         {
           "label": "Financing Options",
           "href": "/financing-options"
+        },
+        {
+          "label": "How We Select Providers",
+          "href": "/how-we-select-providers"
         },
         {
           "label": "Travel Information",
@@ -166,5 +200,10 @@
     "instagram": "https://www.instagram.com/bodysculptingtampabay/"
   },
   "brand": "Tampa Bay Body Sculpting",
-  "logo": "/images/blob-ff4190c.png"
+  "logo": "/images/blob-ff4190c.png",
+  "googleReviews": {
+    "profileUrl": "https://www.google.com/maps/place/?q=place_id:ChIJz2z9q9DBwogRZnN7x88pcwU",
+    "ratingValue": 4.7,
+    "reviewCount": 431
+  }
 }

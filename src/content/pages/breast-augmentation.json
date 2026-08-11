@@ -32,7 +32,7 @@
         },
         {
           "type": "p",
-          "text": "At Tampa Bay Body Sculpting, we work with a carefully selected network of Board-Certified Cosmetic Surgeons in Florida experienced in advanced breast enhancement procedures. Every treatment plan is personalized to help you feel confident, informed, and comfortable throughout the process.",
+          "text": "At Tampa Bay Body Sculpting, we work with a carefully selected board-certified provider network in Florida experienced in advanced breast enhancement procedures. Every treatment plan is personalized to help you feel confident, informed, and comfortable throughout the process.",
           "links": []
         }
       ]
@@ -82,12 +82,7 @@
         {
           "type": "p",
           "text": "Breast augmentation can be performed using silicone or saline implants, each offering unique advantages depending on your goals and anatomy. Some patients may also be candidates for fat transfer breast augmentation, which uses your own fat to provide a modest increase in breast volume without implants. Your provider will review each option and help you determine which approach best suits your desired results.",
-          "links": [
-            {
-              "href": "/breast-rejuvenation",
-              "text": "fat transfer breast augmentation"
-            }
-          ]
+          "links": []
         },
         {
           "type": "p",
@@ -130,7 +125,7 @@
               "text": "Brazilian Butt Lift (BBL)"
             },
             {
-              "href": "/arm-lipo-360%C2%B0-%2F-arm-lift",
+              "href": "/arm-lipo-360-arm-lift",
               "text": "arm liposuction"
             },
             {
@@ -186,12 +181,7 @@
         {
           "type": "p",
           "text": "Yes. Some patients are candidates for fat transfer breast augmentation, which uses fat removed through liposuction to provide a modest increase in breast volume. This option is ideal for women seeking subtle enhancement without implants.",
-          "links": [
-            {
-              "href": "/breast-rejuvenation",
-              "text": "fat transfer breast augmentation"
-            }
-          ]
+          "links": []
         },
         {
           "type": "h4",

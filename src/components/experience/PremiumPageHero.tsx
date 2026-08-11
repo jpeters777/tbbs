@@ -1,5 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
+import { PremiumHeroMedia } from "@/components/experience/PremiumHeroMedia";
+import { RichText } from "@/components/RichText";
 import { CONSULT_URL } from "@/lib/site";
 
 export function PremiumPageHero({
@@ -17,7 +18,13 @@ export function PremiumPageHero({
     <section className="relative premium-page-hero overflow-hidden min-h-[42vh] flex items-end">
       {imageSrc ? (
         <>
-          <Image src={imageSrc} alt={imageAlt || title} fill className="object-cover opacity-50" sizes="100vw" priority />
+          <div className="absolute inset-0">
+            <PremiumHeroMedia
+              src={imageSrc}
+              alt={imageAlt || title}
+              className="object-cover opacity-50"
+            />
+          </div>
           <div className="premium-hero-scrim" />
         </>
       ) : (
@@ -28,7 +35,9 @@ export function PremiumPageHero({
           ← Home
         </Link>
         <h1 className="premium-page-title">{title}</h1>
-        {subtitle ? <p className="premium-page-subtitle">{subtitle}</p> : null}
+        {subtitle ? (
+          <RichText as="p" className="premium-page-subtitle" text={subtitle} autoLinkKeywords />
+        ) : null}
         <div className="flex flex-wrap gap-3 mt-8">
           <a href={CONSULT_URL} className="btn btn-primary premium-btn-glow" target="_blank" rel="noreferrer">
             Free virtual consult

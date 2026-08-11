@@ -820,11 +820,6 @@
     "permanent": true
   },
   {
-    "source": "/privacy-policy",
-    "destination": "/",
-    "permanent": true
-  },
-  {
     "source": "/promotions",
     "destination": "/",
     "permanent": true

@@ -46,7 +46,7 @@ export function HomePage({ page }: { page: PageContent }) {
             <div className="about-copy">
               <h4 className="about-subtitle">{homeAbout.subtitle}</h4>
               {homeAbout.paragraphs.map((p) => (
-                <RichText key={p.text.slice(0, 40)} text={p.text} links={p.links} />
+                <RichText key={p.text.slice(0, 40)} text={p.text} links={p.links} autoLinkKeywords />
               ))}
             </div>
           </div>
@@ -68,7 +68,9 @@ export function HomePage({ page }: { page: PageContent }) {
             {homeDifference.columns.map((col) => (
               <article key={col.title} className="feature-card">
                 <h3 className="feature-card-title feature-card-title--accent">{col.title}</h3>
-                <p className="feature-card-body">{col.body}</p>
+                <p className="feature-card-body">
+                  <RichText as="span" text={col.body} autoLinkKeywords />
+                </p>
               </article>
             ))}
           </div>
@@ -103,7 +105,7 @@ export function HomePage({ page }: { page: PageContent }) {
                   />
                 </Link>
                 <div className="procedure-card-body">
-                  <RichText text={item.body} links={item.links} />
+                  <RichText text={item.body} links={item.links} autoLinkKeywords />
                 </div>
               </article>
             ))}
@@ -120,11 +122,13 @@ export function HomePage({ page }: { page: PageContent }) {
           <div className="about-split">
             <div className="about-copy">
               <h4 className="about-subtitle">{homeTravel.subtitle}</h4>
-              <RichText text={homeTravel.body} />
+              <RichText text={homeTravel.body} autoLinkKeywords />
               <p className="mt-4 mb-2 text-[var(--color-heading-soft)]">We provide guidance on:</p>
               <ul className="travel-list">
                 {homeTravel.bullets.map((b) => (
-                  <li key={b}>{b}</li>
+                  <li key={b}>
+                    <RichText as="span" text={b} autoLinkKeywords />
+                  </li>
                 ))}
               </ul>
             </div>

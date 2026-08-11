@@ -33,6 +33,16 @@ export const specialRedirects: RedirectEntry[] = [
     destination: "/female-ba-gallery",
     permanent: true,
   },
+  {
+    source: "/male-liposuction-360-1",
+    destination: "/male-liposuction-360",
+    permanent: true,
+  },
+  {
+    source: "/male-tummy-tuck-1",
+    destination: "/male-tummy-tuck",
+    permanent: true,
+  },
 ];
 
 export const allLegacyRedirects = legacyRedirects as RedirectEntry[];

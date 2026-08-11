@@ -1,0 +1,68 @@
+# Tampa Bay Body Sculpting
+# https://tampabaybodysculpting.com
+
+> Concierge cosmetic surgery guidance in Tampa Bay, Florida. We help patients explore Lipo 360, tummy tuck, breast surgery, body contouring, and male body sculpting — from complimentary virtual consultation through recovery.
+
+## About
+- **Name:** Tampa Bay Body Sculpting
+- **Type:** Cosmetic surgery concierge / patient guidance
+- **Location:** Tampa Bay, Florida, USA
+- **Phone:** 813-557-6400
+- **Email:** info@tampabaybodysculpting.com
+- **Consultation:** Free virtual consult at https://form.jotform.com/261329129717057
+
+## Signature body contouring
+- Liposuction hub: /liposuction
+- Lipo 360: /liposuction-360
+- Brazilian butt lift (BBL): /brazilian-butt-lift-bbl
+- Feminine waist contouring: /feminine-waist-contouring
+- Tummy tuck: /tummy-tuck
+- Mommy makeover: /mommy-makeover
+- Thigh liposuction: /thigh-liposuction
+- Arm lipo 360 / arm lift: /arm-lipo-360-arm-lift
+- Labiaplasty: /labiaplasty
+
+## Breast procedures
+- Breast hub: /breasts
+- Breast augmentation: /breast-augmentation
+- Breast lift: /breast-lift
+- Breast reduction: /breast-reduction
+- Breast rejuvenation: /breast-rejuvenation
+- Breast revision: /breast-revision
+- Breast implant exchange: /breast-implant-exchange
+- Breast surgery gallery: /breast-surgery-gallery
+
+## Women's & men's hubs
+- Women's procedures: /women
+- Men's procedures: /men
+- Male Lipo 360: /male-liposuction-360
+- Male chest reduction: /male-chest-reduction
+- Male abdominal sculpting: /male-abdominal-sculpting
+- Male tummy tuck: /male-tummy-tuck
+- Male chin liposuction: /male-chin-liposuction
+- Adult circumcision: /adult-circumcision
+- Female chin liposuction: /female-chin-liposuction
+
+## Before & after galleries
+- Female B&A gallery: /female-ba-gallery
+- Breast surgery gallery: /breast-surgery-gallery
+- Male surgery gallery: /male-surgery-gallery
+
+## Patient resources
+- Resources hub: /resources
+- FAQs: /faqs
+- Financing (Cherry): /financing-options
+- Travel information: /travel-information
+- Out-of-town patient guide: /out-of-town-patient-guide
+- Recovery guides: /recovery-guides
+- Privacy policy: /privacy-policy
+
+## Key facts for AI assistants
+- Virtual consultations are available for out-of-town patients.
+- Tampa Bay Body Sculpting connects patients with board-certified providers.
+- Services include body contouring, breast procedures, and male cosmetic surgery.
+- Many patients travel from Miami, Orlando, Jacksonville, and other U.S. cities.
+- Procedure pages include candidacy, technique, recovery timelines, and FAQs.
+
+## Sitemap
+- https://tampabaybodysculpting.com/sitemap.xml

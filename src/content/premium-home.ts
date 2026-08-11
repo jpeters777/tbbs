@@ -1,10 +1,29 @@
 import { homeDifference, homeWhyChoose } from "@/content/home-sections";
+import { companyStats } from "@/content/company-stats";
+import { siteConfig } from "@/lib/site";
 
-export const trustSignals = [
-  { label: "Complimentary Virtual Consult", detail: "Start From Home" },
-  { label: "Board-Certified Surgeon Network", detail: "Vetted Partners" },
-  { label: "Transparent Pricing Guidance", detail: "No Surprise Fees" },
+export type TrustSignal = {
+  label: string;
+  detail: string;
+  href?: string;
+};
+
+const googleReviews = siteConfig.googleReviews;
+
+export const trustSignals: TrustSignal[] = [
+  { label: `${companyStats.yearsInBusiness} Years`, detail: "Serving Tampa Bay" },
+  { label: `${companyStats.proceduresGuided} Procedures`, detail: "Guided Nationwide" },
+  { label: "Board-Certified Network", detail: `${companyStats.providerExperienceYears} Yrs Experience` },
   { label: "Concierge Through Recovery", detail: "Before & After Surgery" },
+  ...(googleReviews?.ratingValue && googleReviews?.reviewCount
+    ? [
+        {
+          label: `${googleReviews.ratingValue} ★ on Google`,
+          detail: `${googleReviews.reviewCount}+ Verified Reviews`,
+          href: googleReviews.profileUrl,
+        },
+      ]
+    : []),
 ];
 
 export const conciergeSteps = [

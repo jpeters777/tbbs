@@ -1,17 +1,67 @@
 import type { Metadata } from "next";
 import { PremiumHomePage } from "@/components/experience/PremiumHomePage";
+import { HomeJsonLd } from "@/components/seo/HomeJsonLd";
 import { getHomePage } from "@/lib/content";
-import { toTitleCase } from "@/lib/text";
+import { resolveHeroSrc } from "@/lib/hero-images";
+import { toTitleCase, absoluteSeoTitle } from "@/lib/text";
+
+const HOME_HERO = resolveHeroSrc("/images/shutterstock_99994967_801684509466.JPG");
+
+const title = toTitleCase(
+  "Tampa Bay Body Sculpting | Cosmetic Surgery, Lipo 360 & Tummy Tuck"
+);
+const description =
+  "Considering cosmetic surgery in Tampa? Explore Lipo 360, tummy tuck, breast surgery, body contouring, and male body sculpting. Schedule your free consultation.";
 
 export const metadata: Metadata = {
-  title: toTitleCase(
+  title: absoluteSeoTitle(
     "Tampa Bay Body Sculpting | Cosmetic Surgery, Lipo 360 & Tummy Tuck"
   ),
-  description:
-    "Considering cosmetic surgery in Tampa? Explore Lipo 360, tummy tuck, breast surgery, body contouring, and male body sculpting. Schedule your free consultation.",
+  description,
+  alternates: {
+    canonical: "https://tampabaybodysculpting.com/",
+  },
+  openGraph: {
+    title,
+    description,
+    url: "https://tampabaybodysculpting.com/",
+    type: "website",
+    locale: "en_US",
+    images: [
+      {
+        url: HOME_HERO,
+        width: 1200,
+        height: 630,
+        alt: "Cosmetic surgery guidance in Tampa Bay",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: [HOME_HERO],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  category: "health",
 };
 
 export default function Page() {
   const page = getHomePage();
-  return <PremiumHomePage page={page} />;
+  return (
+    <>
+      <link rel="preload" as="image" href={HOME_HERO} fetchPriority="high" />
+      <HomeJsonLd />
+      <PremiumHomePage page={page} />
+    </>
+  );
 }

@@ -1,4 +1,6 @@
 import { CONTACT_URL, CONSULT_URL } from "@/lib/site";
+import { premiumWhyChoose } from "@/content/premium-shared-sections";
+import { companyStats } from "@/content/company-stats";
 
 export const homeAbout = {
   title: "About Tampa Bay Body Sculpting",
@@ -7,13 +9,18 @@ export const homeAbout = {
     alt: "Male and female Lipo 360 body contouring in Tampa",
   },
   subtitle: "Personalized Cosmetic Surgery Guidance in Tampa Bay",
+  stats: [
+    { value: `${companyStats.yearsInBusiness} years`, label: "Serving Tampa Bay patients" },
+    { value: companyStats.proceduresGuided, label: "Cosmetic procedures guided" },
+    { value: `${companyStats.providerExperienceYears} yrs`, label: "Avg. provider experience" },
+  ],
   paragraphs: [
     {
-      text: "At Tampa Bay Body Sculpting, we provide a personalized, concierge approach to cosmetic surgery. Our mission is to help you confidently navigate your transformation with trusted cosmetic surgery providers, individualized recommendations, transparent pricing, and dedicated support from your complimentary consultation through recovery.",
-      links: [] as { href: string; text: string }[],
+      text: `At Tampa Bay Body Sculpting, we provide a personalized, concierge approach to cosmetic surgery. For ${companyStats.yearsInBusiness} years we have helped patients confidently navigate transformation with vetted board-certified providers, individualized recommendations, transparent pricing, and dedicated support from complimentary consultation through recovery.`,
+      links: [{ href: "/how-we-select-providers", text: "how we select providers" }],
     },
     {
-      text: "Whether you're considering Lipo 360, body contouring, a tummy tuck, Brazilian Butt Lift (BBL), breast augmentation, chin and neck liposuction, or male body contouring, we help you understand your options and choose the procedures that best align with your goals. Through our trusted network of experienced, board-certified cosmetic surgeons, we simplify the process so you can focus on achieving natural-looking, confidence-building results.",
+      text: "Whether you're considering Lipo 360, body contouring, a tummy tuck, Brazilian Butt Lift (BBL), breast augmentation, chin and neck liposuction, or male body contouring, we help you understand your options and choose the procedures that best align with your goals. Through our trusted board-certified provider network, we simplify the process so you can focus on achieving natural-looking, confidence-building results.",
       links: [
         { href: "/liposuction-360", text: "Lipo 360" },
         { href: "/tummy-tuck", text: "tummy tuck" },
@@ -36,7 +43,7 @@ export const homeDifference = {
     },
     {
       title: "Trusted Cosmetic Surgery Network",
-      body: "We partner with experienced, board-certified cosmetic surgeons who are known for delivering safe, natural-looking results. Whether you're considering Lipo 360, a tummy tuck, breast surgery, body contouring, or facial procedures, we'll help you find the right approach for your goals with confidence and transparency.",
+      body: "We partner with experienced board-certified providers who are known for delivering safe, natural-looking results. Whether you're considering Lipo 360, a tummy tuck, breast surgery, body contouring, or facial procedures, we'll help you find the right approach for your goals with confidence and transparency.",
     },
     {
       title: "Concierge Experience",
@@ -46,33 +53,9 @@ export const homeDifference = {
 };
 
 export const homeWhyChoose = {
-  title: "Why Patients Choose Tampa Bay Body Sculpting",
-  items: [
-    {
-      title: "Personalized Treatment Planning",
-      body: "Every patient receives recommendations tailored to their anatomy, goals, and lifestyle.",
-    },
-    {
-      title: "Trusted Cosmetic Surgery Network",
-      body: "We work with experienced cosmetic surgery providers who share our commitment to patient safety and natural-looking results.",
-    },
-    {
-      title: "Complimentary Virtual Consultations",
-      body: "Start your journey from the comfort of your home with a personalized consultation.",
-    },
-    {
-      title: "Transparent Pricing",
-      body: "Clear procedure information, financing options, and no hidden surprises.",
-    },
-    {
-      title: "Patient Concierge Support",
-      body: "We're with you before, during, and after surgery to answer questions and help coordinate your experience.",
-    },
-    {
-      title: "Serving Tampa Bay and Beyond",
-      body: "Patients travel from throughout Florida and across the country for cosmetic surgery.",
-    },
-  ],
+  title: premiumWhyChoose.title,
+  intro: premiumWhyChoose.intro,
+  items: premiumWhyChoose.items,
 };
 
 export type ProcedureCategory = "body" | "breast" | "face" | "men";
@@ -167,11 +150,8 @@ export const homeProcedures: {
       href: "/breast-augmentation",
       image: "/images/blob-71f8471.png",
       imageAlt: "Woman representing breast augmentation with implants",
-      body: "Enhance your confidence with breast augmentation tailored to your desired size, shape, and overall proportions. Whether using implants or fat transfer, our trusted cosmetic surgeons help create balanced, natural-looking results that complement your body.",
-      links: [
-        { href: "/breast-augmentation", text: "implants" },
-        { href: "/breast-rejuvenation", text: "fat transfer" },
-      ],
+      body: "Enhance your confidence with breast augmentation tailored to your desired size, shape, and overall proportions. Whether using implants or fat transfer, our trusted surgeons help create balanced, natural-looking results that complement your body.",
+      links: [{ href: "/breast-augmentation", text: "implants" }],
       category: "breast",
     },
     {
@@ -309,6 +289,30 @@ export const homeTravel = {
     "Follow-up care",
   ],
   image: "/images/shutterstock_359476844_801685051614.JPG",
+};
+
+export const homeExploreProcedures = {
+  title: "Explore Cosmetic Surgery Procedures",
+  intro:
+    "Whether you're researching your options or ready to schedule a consultation, explore our comprehensive guides for today's most popular cosmetic surgery procedures.",
+  links: [
+    { label: "Lipo 360", href: "/liposuction-360" },
+    { label: "Tummy Tuck", href: "/tummy-tuck" },
+    { label: "Breast Augmentation", href: "/breast-augmentation" },
+    { label: "Breast Lift", href: "/breast-lift" },
+    { label: "Breast Reduction", href: "/breast-reduction" },
+    { label: "BBL", href: "/brazilian-butt-lift-bbl" },
+    { label: "Chin Liposuction", href: "/female-chin-liposuction" },
+    { label: "Arm Liposuction", href: "/arm-lipo-360-arm-lift" },
+    { label: "Thigh Liposuction", href: "/thigh-liposuction" },
+    { label: "Male Body Sculpting", href: "/men" },
+    { label: "Gynecomastia Surgery Tampa", href: "/male-chest-reduction" },
+    { label: "Dad Bod Surgery Tampa", href: "/male-abdominal-sculpting" },
+    { label: "Male Tummy Tuck Tampa", href: "/male-tummy-tuck" },
+    { label: "Mommy Makeover", href: "/mommy-makeover" },
+    { label: "Women's Procedures", href: "/women" },
+    { label: "Resources & FAQs", href: "/resources" },
+  ],
 };
 
 export { CONSULT_URL };
