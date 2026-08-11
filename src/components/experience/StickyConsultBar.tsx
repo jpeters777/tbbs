@@ -3,9 +3,11 @@
 import { useEffect, useState } from "react";
 import { CONSULT_URL } from "@/lib/site";
 import { TrackedPhoneLink } from "@/components/TrackedPhoneLink";
+import { useMobileChrome } from "@/components/MobileChromeProvider";
 
 export function StickyConsultBar() {
   const [visible, setVisible] = useState(false);
+  const { suppressStickyBar } = useMobileChrome();
 
   useEffect(() => {
     const onScroll = () => setVisible(window.scrollY > 480);
@@ -14,7 +16,7 @@ export function StickyConsultBar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  if (!visible) return null;
+  if (!visible || suppressStickyBar) return null;
 
   return (
     <div

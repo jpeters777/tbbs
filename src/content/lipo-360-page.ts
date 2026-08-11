@@ -124,6 +124,11 @@ export type Lipo360RelatedItem = {
 
 export const lipo360RelatedProcedures: Lipo360RelatedItem[] = [
   {
+    title: "Before & After Gallery",
+    href: "/female-ba-gallery",
+    body: "Browse real patient results for Lipo 360 and related body contouring procedures.",
+  },
+  {
     title: "Liposuction Hub",
     href: "/liposuction",
     body: "Explore all liposuction options—arm, thigh, chin, male body sculpting, and more.",

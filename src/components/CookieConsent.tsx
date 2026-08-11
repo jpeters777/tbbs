@@ -8,6 +8,7 @@ import {
   hasAnalyticsConfigured,
   type CookieConsentValue,
 } from "@/lib/analytics-config";
+import { useMobileChrome } from "@/components/MobileChromeProvider";
 
 function publishConsent(value: CookieConsentValue) {
   window.localStorage.setItem(COOKIE_CONSENT_KEY, value);
@@ -17,12 +18,22 @@ function publishConsent(value: CookieConsentValue) {
 /** Cookie notice — required before analytics scripts load. */
 export function CookieConsent() {
   const [visible, setVisible] = useState(false);
+  const { setCookieVisible } = useMobileChrome();
 
   useEffect(() => {
-    if (!hasAnalyticsConfigured()) return;
+    if (!hasAnalyticsConfigured()) {
+      setCookieVisible(false);
+      return;
+    }
     const stored = window.localStorage.getItem(COOKIE_CONSENT_KEY);
-    if (!stored) setVisible(true);
-  }, []);
+    const shouldShow = !stored;
+    setVisible(shouldShow);
+    setCookieVisible(shouldShow);
+  }, [setCookieVisible]);
+
+  useEffect(() => {
+    setCookieVisible(visible);
+  }, [visible, setCookieVisible]);
 
   if (!visible) return null;
 

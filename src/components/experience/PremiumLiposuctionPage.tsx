@@ -2,7 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { RichText } from "@/components/RichText";
 import { PremiumHeroMedia } from "@/components/experience/PremiumHeroMedia";
-import { PremiumFinancingCta } from "@/components/experience/PremiumFinancingCta";
+import { PremiumCostSection } from "@/components/experience/PremiumCostSection";
+import { PremiumJumpNav, SeeResultsLink } from "@/components/experience/PremiumJumpNav";
 import { PremiumPageFaq } from "@/components/experience/PremiumPageFaq";
 import { LiposuctionJsonLd } from "@/components/seo/LiposuctionJsonLd";
 import { PremiumTrustStrip } from "@/components/experience/PremiumTrustStrip";
@@ -23,6 +24,14 @@ import {
 import type { PageContent } from "@/lib/content";
 import { CONSULT_URL, CONTACT_URL } from "@/lib/site";
 import { resolveHeroSrc } from "@/lib/hero-images";
+
+const LIPOSUCTION_JUMP_LINKS = [
+  { href: "#procedures", label: "Procedures" },
+  { href: "#recovery", label: "Recovery" },
+  { href: "#cost", label: "Cost & financing" },
+  { href: "#results", label: "Results" },
+  { href: "#faq", label: "FAQ" },
+];
 
 export function PremiumLiposuctionPage({ page }: { page: PageContent }) {
   let procedureIndex = 0;
@@ -55,12 +64,14 @@ export function PremiumLiposuctionPage({ page }: { page: PageContent }) {
               <Link href="#procedures" className="btn btn-outline !border-white/30 !text-white">
                 Explore liposuction options
               </Link>
+              <SeeResultsLink className="btn btn-outline !border-white/30 !text-white" />
             </div>
           </div>
         </div>
       </section>
 
       <PremiumTrustStrip />
+      <PremiumJumpNav links={LIPOSUCTION_JUMP_LINKS} />
 
       {/* Intro */}
       <section className="premium-section">
@@ -252,9 +263,10 @@ export function PremiumLiposuctionPage({ page }: { page: PageContent }) {
               Read full recovery guides →
             </Link>
           </div>
-          <PremiumFinancingCta location="liposuction-recovery" procedureLabel="Liposuction" />
         </div>
       </section>
+
+      <PremiumCostSection procedureLabel="Liposuction" location="liposuction-cost" />
 
       {/* Combinations */}
       <section className="premium-section premium-section--explore">
@@ -301,6 +313,17 @@ export function PremiumLiposuctionPage({ page }: { page: PageContent }) {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="premium-section premium-section--soft" id="results">
+        <div className="container max-w-3xl">
+          <p className="premium-eyebrow">Patient results</p>
+          <h2 className="premium-section-title">See liposuction before &amp; after results</h2>
+          <p className="premium-section-intro mt-4">
+            Browse real patient outcomes to understand contour changes and set realistic expectations before your consult.
+          </p>
+          <SeeResultsLink className="inline-link mt-6 inline-block font-ui text-sm uppercase tracking-wider" />
         </div>
       </section>
 

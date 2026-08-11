@@ -7,6 +7,8 @@ import { RichText } from "@/components/RichText";
 import { PremiumHeroMedia } from "@/components/experience/PremiumHeroMedia";
 import { PremiumHomeFaq } from "@/components/experience/PremiumHomeFaq";
 import { ConsultInterestForm } from "@/components/experience/ConsultInterestForm";
+import { PremiumCostSection } from "@/components/experience/PremiumCostSection";
+import { PremiumJumpNav, SeeResultsLink } from "@/components/experience/PremiumJumpNav";
 import { PremiumTestimonials } from "@/components/experience/PremiumTestimonials";
 import { homeAbout, homeExploreProcedures, homeProcedures, homeTravel } from "@/content/home-sections";
 import { PremiumTrustStrip } from "@/components/experience/PremiumTrustStrip";
@@ -21,6 +23,13 @@ import { CONSULT_URL, CONTACT_URL } from "@/lib/site";
 import { resolveHeroSrc } from "@/lib/hero-images";
 import { toTitleCase } from "@/lib/text";
 import type { PageContent } from "@/lib/content";
+
+const HOME_JUMP_LINKS = [
+  { href: "#procedures", label: "Procedures" },
+  { href: "#cost", label: "Cost & financing" },
+  { href: "#faq", label: "FAQ" },
+  { href: "/female-ba-gallery", label: "See results" },
+];
 
 export function PremiumHomePage({ page }: { page: PageContent }) {
   const [filter, setFilter] = useState<ProcedureCategoryId>("all");
@@ -68,6 +77,7 @@ export function PremiumHomePage({ page }: { page: PageContent }) {
               <Link href="#procedures" className="btn btn-outline !border-white/30 !text-white">
                 Explore procedures
               </Link>
+              <SeeResultsLink className="btn btn-outline !border-white/30 !text-white" />
             </div>
           </div>
           <blockquote className="premium-hero-quote">
@@ -82,6 +92,7 @@ export function PremiumHomePage({ page }: { page: PageContent }) {
       </section>
 
       <PremiumTrustStrip />
+      <PremiumJumpNav links={HOME_JUMP_LINKS} />
 
       {/* About */}
       <section className="premium-section">
@@ -318,6 +329,12 @@ export function PremiumHomePage({ page }: { page: PageContent }) {
           </div>
         </div>
       </section>
+
+      <PremiumCostSection
+        procedureLabel="Cosmetic surgery"
+        location="home-cost"
+        detail="Every plan is personalized—cost depends on the procedure, combinations, surgeon, facility, and anesthesia. We review clear pricing on your complimentary virtual consultation so you know what is included before you decide."
+      />
 
       <PremiumHomeFaq />
 

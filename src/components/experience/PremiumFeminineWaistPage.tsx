@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { RichText } from "@/components/RichText";
 import { PremiumHeroMedia } from "@/components/experience/PremiumHeroMedia";
-import { PremiumFinancingCta } from "@/components/experience/PremiumFinancingCta";
+import { PremiumCostSection } from "@/components/experience/PremiumCostSection";
+import { PremiumJumpNav, SeeResultsLink } from "@/components/experience/PremiumJumpNav";
 import { PremiumPageFaq } from "@/components/experience/PremiumPageFaq";
 import { FeminineWaistJsonLd } from "@/components/seo/FeminineWaistJsonLd";
 import { PremiumTrustStrip } from "@/components/experience/PremiumTrustStrip";
@@ -24,6 +25,17 @@ import {
   feminineWaistWhyChoose,
 } from "@/content/feminine-waist-page";
 import { CONSULT_URL, CONTACT_URL } from "@/lib/site";
+
+const FEMININE_WAIST_JUMP_LINKS = [
+  { href: "#at-a-glance", label: "At a glance" },
+  { href: "#how-waist-contouring-works", label: "How it works" },
+  { href: "#hourglass-sculpting", label: "Hourglass sculpting" },
+  { href: "#candidacy", label: "Candidacy" },
+  { href: "#recovery", label: "Recovery" },
+  { href: "#cost", label: "Cost & financing" },
+  { href: "#waist-results", label: "Results" },
+  { href: "#faq", label: "FAQ" },
+];
 
 export function PremiumFeminineWaistPage() {
   let relatedIndex = 0;
@@ -54,32 +66,14 @@ export function PremiumFeminineWaistPage() {
                 <Link href="#at-a-glance" className="btn btn-outline !border-white/30 !text-white">
                   Waist contouring at a glance
                 </Link>
-              </div>
-              <div className="flex flex-wrap gap-x-4 gap-y-2 mt-6">
-                <Link href="#how-waist-contouring-works" className="inline-link text-sm">
-                  How it works
-                </Link>
-                <Link href="#hourglass-sculpting" className="inline-link text-sm">
-                  Hourglass sculpting
-                </Link>
-                <Link href="#candidacy" className="inline-link text-sm">
-                  Candidacy
-                </Link>
-                <Link href="#recovery" className="inline-link text-sm">
-                  Recovery
-                </Link>
-                <Link href="#waist-results" className="inline-link text-sm">
-                  Results
-                </Link>
-                <Link href="#faq" className="inline-link text-sm">
-                  FAQs
-                </Link>
+                <SeeResultsLink className="btn btn-outline !border-white/30 !text-white" />
               </div>
             </div>
           </div>
         </section>
 
         <PremiumTrustStrip />
+        <PremiumJumpNav links={FEMININE_WAIST_JUMP_LINKS} />
 
         <section className="premium-section">
           <div className="container max-w-3xl">
@@ -355,9 +349,10 @@ export function PremiumFeminineWaistPage() {
                 Read full recovery guides →
               </Link>
             </div>
-            <PremiumFinancingCta location="feminine-waist-recovery" procedureLabel="Waist contouring" />
           </div>
         </section>
+
+        <PremiumCostSection procedureLabel="Waist contouring" location="feminine-waist-cost" />
 
         <section className="premium-section" id="waist-results">
           <div className="container">
@@ -377,6 +372,7 @@ export function PremiumFeminineWaistPage() {
                 </div>
               ))}
             </div>
+            <SeeResultsLink className="inline-link mt-8 inline-block font-ui text-sm uppercase tracking-wider" />
           </div>
         </section>
 

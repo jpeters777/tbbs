@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import {
   CONSULT_URL,
@@ -12,7 +12,7 @@ import {
 } from "@/lib/site";
 import { TrackedPhoneLink } from "@/components/TrackedPhoneLink";
 
-/** Fast paths surfaced at the top of the mobile menu — procedures first, then hubs. */
+/** Fast paths at the top of the mobile menu — procedures, then patient research. */
 const MOBILE_QUICK_LINKS = [
   { label: "Lipo 360", href: "/liposuction-360" },
   { label: "Tummy Tuck", href: "/tummy-tuck" },
@@ -20,6 +20,9 @@ const MOBILE_QUICK_LINKS = [
   { label: "Breast", href: "/breasts" },
   { label: "Women", href: "/women" },
   { label: "Men", href: "/men" },
+  { label: "Gallery", href: "/female-ba-gallery" },
+  { label: "Financing", href: "/financing-options" },
+  { label: "Recovery", href: "/recovery-guides" },
 ] as const;
 
 function navSectionForPath(pathname: string, items: NavItem[]): string | null {
@@ -51,6 +54,8 @@ export function MobileNav({ open, pathname, onClose }: MobileNavProps) {
   );
   const [expanded, setExpanded] = useState<string | null>(activeSection);
   const [mounted, setMounted] = useState(false);
+  const panelRef = useRef<HTMLDivElement>(null);
+  const previouslyFocused = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -62,11 +67,44 @@ export function MobileNav({ open, pathname, onClose }: MobileNavProps) {
 
   useEffect(() => {
     if (!open) return;
+    previouslyFocused.current = document.activeElement as HTMLElement | null;
+    const panel = panelRef.current;
+    const focusables = () =>
+      panel
+        ? Array.from(
+            panel.querySelectorAll<HTMLElement>(
+              'a[href], button:not([disabled]), select, textarea, input, [tabindex]:not([tabindex="-1"])'
+            )
+          )
+        : [];
+
+    const first = focusables()[0];
+    first?.focus();
+
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") onClose();
+      if (event.key === "Escape") {
+        onClose();
+        return;
+      }
+      if (event.key !== "Tab" || !panel) return;
+      const items = focusables();
+      if (items.length === 0) return;
+      const firstEl = items[0];
+      const lastEl = items[items.length - 1];
+      if (event.shiftKey && document.activeElement === firstEl) {
+        event.preventDefault();
+        lastEl.focus();
+      } else if (!event.shiftKey && document.activeElement === lastEl) {
+        event.preventDefault();
+        firstEl.focus();
+      }
     };
+
     window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
+    return () => {
+      window.removeEventListener("keydown", onKeyDown);
+      previouslyFocused.current?.focus?.();
+    };
   }, [open, onClose]);
 
   useEffect(() => {
@@ -98,7 +136,7 @@ export function MobileNav({ open, pathname, onClose }: MobileNavProps) {
       aria-label="Site menu"
     >
       <button type="button" className="mobile-nav-backdrop" aria-label="Close menu" onClick={onClose} />
-      <div className="mobile-nav-panel">
+      <div className="mobile-nav-panel" ref={panelRef}>
         <div className="mobile-nav-quick">
           <p className="mobile-nav-quick-label">Quick find</p>
           <div className="mobile-nav-quick-grid">

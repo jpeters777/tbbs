@@ -6,6 +6,7 @@ import { PremiumHeroMedia } from "@/components/experience/PremiumHeroMedia";
 import { PremiumFinancingCta } from "@/components/experience/PremiumFinancingCta";
 import { PremiumContentSections } from "@/components/experience/PremiumContentSections";
 import { PremiumPageFaq } from "@/components/experience/PremiumPageFaq";
+import { ConsultInterestForm } from "@/components/experience/ConsultInterestForm";
 import { PageJsonLd } from "@/components/seo/PageJsonLd";
 import { PremiumTrustStrip } from "@/components/experience/PremiumTrustStrip";
 import type { PageContent } from "@/lib/content";
@@ -86,6 +87,7 @@ export function PremiumUnifiedLayout({ data }: { data: UnifiedData }) {
     recovery ? { href: "#recovery", label: "Recovery" } : null,
     related.length > 0 ? { href: "#related", label: "Related" } : null,
     faqs.length > 0 ? { href: "#faq", label: "FAQ" } : null,
+    { href: "#get-started", label: "Get started" },
   ].filter(Boolean) as { href: string; label: string }[];
 
   return (
@@ -125,7 +127,7 @@ export function PremiumUnifiedLayout({ data }: { data: UnifiedData }) {
 
         <PremiumTrustStrip />
 
-        {jumpLinks.length > 1 ? (
+        {jumpLinks.length > 0 ? (
           <nav className="premium-jump-nav" aria-label="On this page">
             <div className="container premium-jump-nav-scroller">
               {jumpLinks.map((link) => (
@@ -398,6 +400,17 @@ export function PremiumUnifiedLayout({ data }: { data: UnifiedData }) {
             </div>
           </section>
         ) : null}
+
+        <section className="premium-section premium-section--soft" id="get-started">
+          <div className="container max-w-3xl">
+            <p className="premium-eyebrow">Next step</p>
+            <h2 className="premium-section-title">Ready to talk through your options?</h2>
+            <p className="premium-section-intro mt-4">
+              Tell us what you&apos;re researching and choose how you&apos;d like to connect—no obligation.
+            </p>
+            <ConsultInterestForm className="mt-8" location={`unified-${page.slug}`} />
+          </div>
+        </section>
 
         <section className="premium-final-cta">
           <div className="container premium-final-inner">
