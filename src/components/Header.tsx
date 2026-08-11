@@ -124,15 +124,21 @@ export function Header({ premium = false }: { premium?: boolean }) {
           </a>
         </div>
 
-        <div className="flex items-center gap-3 lg:hidden">
-          <a href={siteConfig.consultUrl} className="btn btn-primary !py-2 !px-3 !text-[0.7rem]" target="_blank" rel="noreferrer">
-            Consultation
+        <div className="flex items-center gap-2 sm:gap-3 lg:hidden">
+          <a
+            href={siteConfig.consultUrl}
+            className="btn btn-primary header-mobile-consult premium-btn-glow"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Consult
           </a>
           <button
             type="button"
-            className="border border-[var(--color-border-strong)] px-3 py-2 text-xs uppercase tracking-wider text-white"
+            className="header-mobile-menu"
             aria-expanded={open}
-            aria-label="Toggle menu"
+            aria-controls="mobile-site-menu"
+            aria-label={open ? "Close menu" : "Open menu"}
             onClick={() => setOpen((v) => !v)}
           >
             {open ? "Close" : "Menu"}

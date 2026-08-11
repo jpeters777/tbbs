@@ -81,8 +81,6 @@ export const HOMEPAGE_KEYWORD_LINKS: KeywordLink[] = [
   { text: "abdomen, chest, flanks, and back", href: "/men" },
   { text: "Virtual consultations", href: "/resources" },
   { text: "Virtual consultations", href: "/resources" },
-  { text: "transparent pricing", href: "/financing-options" },
-  { text: "Transparent Pricing", href: "/financing-options" },
   { text: "breast lift", href: "/breast-lift" },
   { text: "FAQs", href: "/faqs" },
   { text: "Women", href: "/women" },
