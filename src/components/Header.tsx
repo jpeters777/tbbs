@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { hasNavDropdown, siteConfig, type NavItem } from "@/lib/site";
 import { TrackedPhoneLink } from "@/components/TrackedPhoneLink";
+import { MobileNav } from "@/components/MobileNav";
 
 function DesktopDropdown({ item }: { item: NavItem }) {
   if (item.groups?.length) {
@@ -134,63 +135,12 @@ export function Header({ premium = false }: { premium?: boolean }) {
             aria-label="Toggle menu"
             onClick={() => setOpen((v) => !v)}
           >
-            Menu
+            {open ? "Close" : "Menu"}
           </button>
         </div>
       </div>
 
-      {open ? (
-        <div className="lg:hidden border-t border-[var(--color-border)] bg-black">
-          <div className="container py-4 flex flex-col gap-2">
-            {siteConfig.main.map((item) => (
-              <div key={item.href} className="border-b border-[var(--color-border)] pb-2">
-                <Link
-                  href={item.href}
-                  className={`block py-2 font-semibold uppercase tracking-wide text-sm ${
-                    isActive(item.href) ? "text-[var(--color-accent)]" : "text-white"
-                  }`}
-                  onClick={() => setOpen(false)}
-                >
-                  {item.label}
-                </Link>
-                {item.groups?.length ? (
-                  <div className="pl-3 flex flex-col gap-1 pb-2">
-                    {item.groups.map((group) => (
-                      <div key={group.label} className="pt-1">
-                        <p className="py-1 text-[0.65rem] uppercase tracking-wider text-white/40">{group.label}</p>
-                        {group.children.map((child, childIdx) => (
-                          <Link
-                            key={`m-${item.label}-${group.label}-${childIdx}-${child.href}`}
-                            href={child.href}
-                            className="block py-1 text-sm text-white/65"
-                            onClick={() => setOpen(false)}
-                          >
-                            {child.label}
-                          </Link>
-                        ))}
-                      </div>
-                    ))}
-                  </div>
-                ) : item.children ? (
-                  <div className="pl-3 flex flex-col gap-1 pb-2">
-                    {item.children.map((child, childIdx) => (
-                      <Link
-                        key={`m-${item.label}-${childIdx}-${child.href}`}
-                        href={child.href}
-                        className="py-1 text-sm text-white/65"
-                        onClick={() => setOpen(false)}
-                      >
-                        {child.label}
-                      </Link>
-                    ))}
-                  </div>
-                ) : null}
-              </div>
-            ))}
-            <TrackedPhoneLink className="py-2 font-semibold text-white" location="header-mobile" />
-          </div>
-        </div>
-      ) : null}
+      {open ? <MobileNav open={open} pathname={pathname} onClose={() => setOpen(false)} /> : null}
     </header>
   );
 }
