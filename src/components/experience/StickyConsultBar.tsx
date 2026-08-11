@@ -39,7 +39,7 @@ export function StickyConsultBar() {
           className="btn btn-outline sticky-consult-bar-btn sticky-consult-bar-call"
           location="sticky-bar"
         >
-          Call now
+          Call
         </TrackedPhoneLink>
         <a
           href={CONSULT_URL}
@@ -47,7 +47,7 @@ export function StickyConsultBar() {
           target="_blank"
           rel="noreferrer"
         >
-          Book free consult
+          Book consult
         </a>
       </div>
     </div>

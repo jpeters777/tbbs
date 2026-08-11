@@ -78,6 +78,16 @@ export function PremiumUnifiedLayout({ data }: { data: UnifiedData }) {
         ? { href: "#faq", label: "Common questions" }
         : { href: "/liposuction", label: "Explore procedures" };
 
+  const jumpLinks = [
+    glance ? { href: "#at-a-glance", label: "At a glance" } : null,
+    procedureDirectory && procedureDirectory.items.length > 0
+      ? { href: "#procedures", label: "Procedures" }
+      : null,
+    recovery ? { href: "#recovery", label: "Recovery" } : null,
+    related.length > 0 ? { href: "#related", label: "Related" } : null,
+    faqs.length > 0 ? { href: "#faq", label: "FAQ" } : null,
+  ].filter(Boolean) as { href: string; label: string }[];
+
   return (
     <>
       <PageJsonLd page={page} />
@@ -114,6 +124,18 @@ export function PremiumUnifiedLayout({ data }: { data: UnifiedData }) {
         </section>
 
         <PremiumTrustStrip />
+
+        {jumpLinks.length > 1 ? (
+          <nav className="premium-jump-nav" aria-label="On this page">
+            <div className="container premium-jump-nav-scroller">
+              {jumpLinks.map((link) => (
+                <a key={link.href} href={link.href} className="premium-jump-nav-link">
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </nav>
+        ) : null}
 
         {intro.paragraphs.length > 0 ? (
           <section className="premium-section">

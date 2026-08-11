@@ -69,6 +69,20 @@ export function MobileNav({ open, pathname, onClose }: MobileNavProps) {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [open, onClose]);
 
+  useEffect(() => {
+    if (!open) return;
+    const html = document.documentElement;
+    const body = document.body;
+    const prevHtmlOverflow = html.style.overflow;
+    const prevBodyOverflow = body.style.overflow;
+    html.style.overflow = "hidden";
+    body.style.overflow = "hidden";
+    return () => {
+      html.style.overflow = prevHtmlOverflow;
+      body.style.overflow = prevBodyOverflow;
+    };
+  }, [open]);
+
   if (!open || !mounted) return null;
 
   const toggleSection = (label: string) => {
@@ -76,7 +90,13 @@ export function MobileNav({ open, pathname, onClose }: MobileNavProps) {
   };
 
   return createPortal(
-    <div className="mobile-nav-overlay" role="dialog" aria-modal="true" aria-label="Site menu">
+    <div
+      id="mobile-site-menu"
+      className="mobile-nav-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Site menu"
+    >
       <button type="button" className="mobile-nav-backdrop" aria-label="Close menu" onClick={onClose} />
       <div className="mobile-nav-panel">
         <div className="mobile-nav-quick">
