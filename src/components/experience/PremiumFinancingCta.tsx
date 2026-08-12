@@ -12,14 +12,16 @@ type PremiumFinancingCtaProps = {
 
 /** Cherry apply + financing link — placed near recovery/pricing on procedure pages. */
 export function PremiumFinancingCta({ location, procedureLabel }: PremiumFinancingCtaProps) {
-  const context = procedureLabel ? `${procedureLabel} ` : "";
-
   return (
     <aside className="premium-financing-cta" aria-label="Financing options">
       <div className="premium-financing-cta-inner">
         <div>
           <p className="premium-eyebrow">Financing</p>
-          <h3 className="premium-financing-cta-title">Flexible payment plans for {context}surgery</h3>
+          <h3 className="premium-financing-cta-title">
+            {procedureLabel
+              ? `Flexible payment plans for ${procedureLabel}`
+              : "Flexible payment plans for cosmetic surgery"}
+          </h3>
           <p className="premium-financing-cta-copy">
             Transparent pricing is reviewed during your complimentary consultation. Apply with Cherry in minutes for
             flexible monthly payments—many patients move forward sooner rather than waiting to save.
