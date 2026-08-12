@@ -258,11 +258,6 @@ export const breastsContent: CuratedPageContent = createCuratedPage({
       body: "Breast procedures combined with tummy tuck and body contouring.",
     },
     {
-      title: "Breast Surgery Gallery",
-      href: "/breast-surgery-gallery",
-      body: "Before-and-after examples across breast procedures.",
-    },
-    {
       title: "Women's Procedures Hub",
       href: "/women",
       body: "Browse all women's body and breast procedures.",
@@ -335,8 +330,7 @@ export const breastsContent: CuratedPageContent = createCuratedPage({
     },
     {
       q: "How Do I See Before-And-After Results?",
-      a: "Visit our breast surgery gallery for examples across procedures. Your consultation also includes outcome discussions matched to your anatomy.",
-      links: [{ text: "Breast Surgery Gallery", href: "/breast-surgery-gallery" }],
+      a: "During your complimentary virtual consultation, your provider discusses expected outcomes matched to your anatomy and goals.",
     },
     {
       q: "Are Breast Procedures Safe?",

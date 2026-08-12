@@ -310,11 +310,6 @@ export type TummyTuckRelatedItem = {
 
 export const tummyTuckRelatedProcedures: TummyTuckRelatedItem[] = [
   {
-    title: "Before & After Gallery",
-    href: "/female-ba-gallery",
-    body: "See real patient tummy tuck and body contouring results before your consultation.",
-  },
-  {
     title: "Mommy Makeover",
     href: "/mommy-makeover",
     body: "Combines tummy tuck with breast and body procedures to restore shape after pregnancy—one of the most popular abdominoplasty pathways.",

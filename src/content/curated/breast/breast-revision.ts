@@ -291,11 +291,6 @@ export const breastRevisionContent: CuratedPageContent = createCuratedPage({
       body: "When revision goals include smaller size.",
     },
     {
-      title: "Breast Surgery Gallery",
-      href: "/breast-surgery-gallery",
-      body: "View before-and-after breast surgery outcomes.",
-    },
-    {
       title: "Women's Procedures Hub",
       href: "/women",
       body: "Explore women's body and breast procedures in Tampa Bay.",

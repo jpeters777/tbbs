@@ -2,7 +2,7 @@ import Link from "next/link";
 import { RichText } from "@/components/RichText";
 import { PremiumHeroMedia } from "@/components/experience/PremiumHeroMedia";
 import { PremiumCostSection } from "@/components/experience/PremiumCostSection";
-import { PremiumJumpNav, SeeResultsLink } from "@/components/experience/PremiumJumpNav";
+import { PremiumJumpNav } from "@/components/experience/PremiumJumpNav";
 import { PremiumPageFaq } from "@/components/experience/PremiumPageFaq";
 import { BblJsonLd } from "@/components/seo/BblJsonLd";
 import { PremiumTrustStrip } from "@/components/experience/PremiumTrustStrip";
@@ -66,7 +66,6 @@ export function PremiumBblPage() {
                 <Link href="#at-a-glance" className="btn btn-outline !border-white/30 !text-white">
                   BBL at a glance
                 </Link>
-                <SeeResultsLink className="btn btn-outline !border-white/30 !text-white" />
               </div>
             </div>
           </div>
@@ -409,7 +408,6 @@ export function PremiumBblPage() {
                 </div>
               ))}
             </div>
-            <SeeResultsLink className="inline-link mt-8 inline-block font-ui text-sm uppercase tracking-wider" />
           </div>
         </section>
 

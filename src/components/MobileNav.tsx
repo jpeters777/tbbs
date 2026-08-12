@@ -20,7 +20,6 @@ const MOBILE_QUICK_LINKS = [
   { label: "Breast", href: "/breasts" },
   { label: "Women", href: "/women" },
   { label: "Men", href: "/men" },
-  { label: "Gallery", href: "/female-ba-gallery" },
   { label: "Financing", href: "/financing-options" },
   { label: "Recovery", href: "/recovery-guides" },
 ] as const;

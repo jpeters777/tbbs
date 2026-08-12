@@ -291,11 +291,6 @@ export const maleAbdominalSculptingContent: CuratedPageContent = createCuratedPa
       body: "Browse all men's body sculpting options in Tampa Bay.",
     },
     {
-      title: "Male Surgery Gallery",
-      href: "/male-surgery-gallery",
-      body: "View before-and-after abdominal etching results.",
-    },
-    {
       title: "Financing Options",
       href: "/financing-options",
       body: "Flexible payment plans for abdominal sculpting.",

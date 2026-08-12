@@ -215,11 +215,6 @@ export const menHubContent: CuratedPageContent = createCuratedPage({
       body: "Foreskin removal for medical, hygiene, or personal reasons.",
     },
     {
-      title: "Male Surgery Gallery",
-      href: "/male-surgery-gallery",
-      body: "Before-and-after results from men's body contouring patients.",
-    },
-    {
       title: "Women's Procedures Hub",
       href: "/women",
       body: "Browse women's body contouring and breast procedures.",
@@ -293,8 +288,7 @@ export const menHubContent: CuratedPageContent = createCuratedPage({
     },
     {
       q: "Can I See Before-And-After Results?",
-      a: "Yes. Visit our male surgery gallery for before-and-after photos from men's body contouring patients.",
-      links: [{ text: "male surgery gallery", href: "/male-surgery-gallery" }],
+      a: "During your complimentary virtual consultation, your provider can discuss expected outcomes for your goals and body type.",
     },
     {
       q: "How Do I Schedule A Men's Procedure Consultation?",

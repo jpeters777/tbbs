@@ -285,11 +285,6 @@ export const maleLiposuction360Content: CuratedPageContent = createCuratedPage({
       body: "Browse all men's body sculpting options in Tampa Bay.",
     },
     {
-      title: "Male Surgery Gallery",
-      href: "/male-surgery-gallery",
-      body: "View before-and-after results from male body contouring patients.",
-    },
-    {
       title: "Travel Information",
       href: "/travel-information",
       body: "Planning Male Lipo 360 from out of town—flights, lodging, and Tampa Bay travel tips.",

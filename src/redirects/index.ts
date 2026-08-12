@@ -9,6 +9,21 @@ export type RedirectEntry = {
 /** Encoded or special-character paths that need explicit redirect rules. */
 export const specialRedirects: RedirectEntry[] = [
   {
+    source: "/female-ba-gallery",
+    destination: "/",
+    permanent: true,
+  },
+  {
+    source: "/breast-surgery-gallery",
+    destination: "/",
+    permanent: true,
+  },
+  {
+    source: "/male-surgery-gallery",
+    destination: "/",
+    permanent: true,
+  },
+  {
     source: "/arm-lipo-360%C2%B0-%2F-arm-lift",
     destination: "/arm-lipo-360-arm-lift",
     permanent: true,
@@ -25,12 +40,12 @@ export const specialRedirects: RedirectEntry[] = [
   },
   {
     source: "/female-b%26a-gallery",
-    destination: "/female-ba-gallery",
+    destination: "/",
     permanent: true,
   },
   {
     source: "/female-b&a-gallery",
-    destination: "/female-ba-gallery",
+    destination: "/",
     permanent: true,
   },
   {

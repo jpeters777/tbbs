@@ -128,8 +128,6 @@ export const HOMEPAGE_KEYWORD_LINKS: KeywordLink[] = [
   { text: "Male Chest Reduction", href: "/male-chest-reduction" },
   { text: "complimentary virtual consultation", href: "/resources" },
   { text: "complimentary consultation", href: "/resources" },
-  { text: "before and after", href: "/female-ba-gallery" },
-  { text: "Before & After Gallery", href: "/female-ba-gallery" },
 ];
 
 export type TextSpan =
@@ -223,9 +221,7 @@ export function getPageKeywordLinks(currentPath?: string): KeywordLink[] {
   }
   if (
     normalized &&
-    (normalized.startsWith("/male-") ||
-      normalized === "/men" ||
-      normalized === "/male-surgery-gallery")
+    (normalized.startsWith("/male-") || normalized === "/men")
   ) {
     links = links.map((link) => {
       if (link.href.split("#")[0] === "/female-chin-liposuction") {

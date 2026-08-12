@@ -226,11 +226,6 @@ export const womenHubContent: CuratedPageContent = createCuratedPage({
       body: "Surgical reshaping for comfort and aesthetic goals.",
     },
     {
-      title: "Female Gallery",
-      href: "/female-b-a-gallery",
-      body: "Before-and-after results from women's procedures.",
-    },
-    {
       title: "Men's Procedures Hub",
       href: "/men",
       body: "Browse men's body sculpting options.",
@@ -298,8 +293,7 @@ export const womenHubContent: CuratedPageContent = createCuratedPage({
     },
     {
       q: "Can I See Before-And-After Results?",
-      a: "Yes. Visit our female before-and-after gallery for results from women's body contouring patients.",
-      links: [{ text: "female gallery", href: "/female-b-a-gallery" }],
+      a: "During your complimentary virtual consultation, your provider can discuss expected outcomes for your goals and body type.",
     },
     {
       q: "How Do I Schedule A Women's Procedure Consultation?",

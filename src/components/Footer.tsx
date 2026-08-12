@@ -19,7 +19,6 @@ const procedureLinks = [
   { label: "Breast Augmentation", href: "/breast-augmentation" },
   { label: "Women's Procedures", href: "/women" },
   { label: "Men's Body Contouring", href: "/men" },
-  { label: "Before & After Gallery", href: "/female-ba-gallery" },
 ];
 
 export function Footer() {

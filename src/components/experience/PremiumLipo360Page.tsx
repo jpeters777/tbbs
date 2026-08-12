@@ -2,7 +2,7 @@ import Link from "next/link";
 import { RichText } from "@/components/RichText";
 import { PremiumHeroMedia } from "@/components/experience/PremiumHeroMedia";
 import { PremiumCostSection } from "@/components/experience/PremiumCostSection";
-import { PremiumJumpNav, SeeResultsLink } from "@/components/experience/PremiumJumpNav";
+import { PremiumJumpNav } from "@/components/experience/PremiumJumpNav";
 import { PremiumPageFaq } from "@/components/experience/PremiumPageFaq";
 import { Lipo360JsonLd } from "@/components/seo/Lipo360JsonLd";
 import { PremiumTrustStrip } from "@/components/experience/PremiumTrustStrip";
@@ -26,7 +26,6 @@ const LIPO360_JUMP_LINKS = [
   { href: "#cost", label: "Cost & financing" },
   { href: "#related", label: "Related" },
   { href: "#faq", label: "FAQ" },
-  { href: "/female-ba-gallery", label: "See results" },
 ];
 
 export function PremiumLipo360Page() {
@@ -62,7 +61,6 @@ export function PremiumLipo360Page() {
                 <Link href="#at-a-glance" className="btn btn-outline !border-white/30 !text-white">
                   Lipo 360 at a glance
                 </Link>
-                <SeeResultsLink className="btn btn-outline !border-white/30 !text-white" />
               </div>
             </div>
           </div>

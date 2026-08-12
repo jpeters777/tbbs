@@ -301,11 +301,6 @@ export const breastReductionContent: CuratedPageContent = createCuratedPage({
       body: "Explore women's body and breast procedures in Tampa Bay.",
     },
     {
-      title: "Breast Surgery Gallery",
-      href: "/breast-surgery-gallery",
-      body: "View before-and-after examples of breast reduction outcomes.",
-    },
-    {
       title: "Financing Options",
       href: "/financing-options",
       body: "Payment plans when reduction is not covered by insurance.",

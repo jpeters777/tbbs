@@ -8,7 +8,7 @@ import { PremiumHeroMedia } from "@/components/experience/PremiumHeroMedia";
 import { PremiumHomeFaq } from "@/components/experience/PremiumHomeFaq";
 import { ConsultInterestForm } from "@/components/experience/ConsultInterestForm";
 import { PremiumCostSection } from "@/components/experience/PremiumCostSection";
-import { PremiumJumpNav, SeeResultsLink } from "@/components/experience/PremiumJumpNav";
+import { PremiumJumpNav } from "@/components/experience/PremiumJumpNav";
 import { PremiumTestimonials } from "@/components/experience/PremiumTestimonials";
 import { homeAbout, homeExploreProcedures, homeProcedures, homeTravel } from "@/content/home-sections";
 import { PremiumTrustStrip } from "@/components/experience/PremiumTrustStrip";
@@ -28,7 +28,6 @@ const HOME_JUMP_LINKS = [
   { href: "#procedures", label: "Procedures" },
   { href: "#cost", label: "Cost & financing" },
   { href: "#faq", label: "FAQ" },
-  { href: "/female-ba-gallery", label: "See results" },
 ];
 
 export function PremiumHomePage({ page }: { page: PageContent }) {
@@ -77,7 +76,6 @@ export function PremiumHomePage({ page }: { page: PageContent }) {
               <Link href="#procedures" className="btn btn-outline !border-white/30 !text-white">
                 Explore procedures
               </Link>
-              <SeeResultsLink className="btn btn-outline !border-white/30 !text-white" />
             </div>
           </div>
           <blockquote className="premium-hero-quote">

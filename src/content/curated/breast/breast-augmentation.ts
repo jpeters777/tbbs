@@ -301,11 +301,6 @@ export const breastAugmentationContent: CuratedPageContent = createCuratedPage({
       body: "Explore women's body and breast procedures in Tampa Bay.",
     },
     {
-      title: "Breast Surgery Gallery",
-      href: "/breast-surgery-gallery",
-      body: "View before-and-after examples of breast enhancement outcomes.",
-    },
-    {
       title: "Financing Options",
       href: "/financing-options",
       body: "Flexible payment plans to help fit breast augmentation into your budget.",

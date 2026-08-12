@@ -1,5 +1,3 @@
-import Link from "next/link";
-import type { ReactNode } from "react";
 
 export type JumpLink = {
   href: string;
@@ -26,22 +24,5 @@ export function PremiumJumpNav({
         ))}
       </div>
     </nav>
-  );
-}
-
-/** Compact “See results” text control used near heroes and result sections. */
-export function SeeResultsLink({
-  href = "/female-ba-gallery",
-  className = "inline-link text-sm",
-  children = "See before & after results →",
-}: {
-  href?: string;
-  className?: string;
-  children?: ReactNode;
-}) {
-  return (
-    <Link href={href} className={className}>
-      {children}
-    </Link>
   );
 }

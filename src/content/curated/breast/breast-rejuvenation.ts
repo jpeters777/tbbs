@@ -301,11 +301,6 @@ export const breastRejuvenationContent: CuratedPageContent = createCuratedPage({
       body: "Explore women's body and breast procedures in Tampa Bay.",
     },
     {
-      title: "Breast Surgery Gallery",
-      href: "/breast-surgery-gallery",
-      body: "View before-and-after rejuvenation outcomes.",
-    },
-    {
       title: "Financing Options",
       href: "/financing-options",
       body: "Flexible payment plans for breast rejuvenation.",

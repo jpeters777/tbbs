@@ -257,11 +257,6 @@ export const resourcesPage: CuratedPageContent = createCuratedPage({
       body: "Explore body contouring procedures including Lipo 360, BBL, and waist sculpting.",
     },
     {
-      title: "Female Body Gallery",
-      href: "/female-b-a-gallery",
-      body: "Before and after body sculpting results for female patients.",
-    },
-    {
       title: "Breast Procedures",
       href: "/breasts",
       body: "Augmentation, lift, reduction, revision, and rejuvenation options.",
@@ -302,8 +297,7 @@ export const resourcesPage: CuratedPageContent = createCuratedPage({
     },
     {
       q: "Where can I see before and after photos?",
-      a: "Browse our female body, breast surgery, and male surgery galleries for real patient transformations.",
-      links: [{ text: "Female Body Gallery", href: "/female-b-a-gallery" }],
+      a: "Expected outcomes are reviewed during your complimentary virtual consultation with a board-certified provider matched to your procedure.",
     },
     {
       q: "How do I contact Tampa Bay Body Sculpting?",

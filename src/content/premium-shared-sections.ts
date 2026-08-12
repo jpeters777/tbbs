@@ -113,7 +113,6 @@ export const breastCombinationGroups: ComboGroup[] = [
     links: [
       { label: "Breast Revision", href: "/breast-revision" },
       { label: "Breast Implant Exchange", href: "/breast-implant-exchange" },
-      { label: "Breast Surgery Gallery", href: "/breast-surgery-gallery" },
     ],
   },
   {
@@ -141,7 +140,6 @@ export const menCombinationGroups: ComboGroup[] = [
     links: [
       { label: "Male Chin Liposuction", href: "/male-chin-liposuction" },
       { label: "Adult Circumcision", href: "/adult-circumcision" },
-      { label: "Male Surgery Gallery", href: "/male-surgery-gallery" },
     ],
   },
   {
@@ -177,7 +175,7 @@ export const womenCombinationGroups: ComboGroup[] = [
     links: [
       { label: "Women's Hub", href: "/women" },
       { label: "Breast Procedures", href: "/breasts" },
-      { label: "Female Gallery", href: "/female-b-a-gallery" },
+      { label: "Liposuction Hub", href: "/liposuction" },
     ],
   },
 ];
