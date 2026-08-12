@@ -24,6 +24,16 @@ export const specialRedirects: RedirectEntry[] = [
     permanent: true,
   },
   {
+    source: "/before-after-photos/:path*",
+    destination: "/",
+    permanent: true,
+  },
+  {
+    source: "/before-after-photos",
+    destination: "/",
+    permanent: true,
+  },
+  {
     source: "/arm-lipo-360%C2%B0-%2F-arm-lift",
     destination: "/arm-lipo-360-arm-lift",
     permanent: true,

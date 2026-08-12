@@ -212,8 +212,8 @@ export const faqsPage: CuratedPageContent = createCuratedPage({
         body: "Results depend on anatomy, procedure extent, and healing. Your consultation sets honest expectations—what's achievable for your body, not a filtered photo.",
       },
       {
-        title: "Before & After Galleries",
-        body: "Browse our female body, breast, and male surgery galleries to see real patient transformations. Photos help you understand possibilities—your plan will be personalized.",
+        title: "Consultation Expectations",
+        body: "During your complimentary virtual consultation, your provider discusses expected outcomes for your goals and body type—not generic photos.",
       },
       {
         title: "Maintaining Results",

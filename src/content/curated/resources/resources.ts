@@ -37,7 +37,7 @@ export const resourcesPage: CuratedPageContent = createCuratedPage({
     { href: "#procedure-focus", label: "Resource library" },
     { href: "#candidacy", label: "Who this helps" },
     { href: "#recovery", label: "Recovery prep" },
-    { href: "#results", label: "Guides & galleries" },
+    { href: "#results", label: "Recovery guides" },
     { href: "#faq", label: "FAQs" },
   ],
   glance: {
@@ -47,7 +47,6 @@ export const resourcesPage: CuratedPageContent = createCuratedPage({
       "Travel & out-of-town guides",
       "Recovery timelines & guides",
       "Cosmetic surgery FAQs",
-      "Before & after galleries",
       "Virtual consultation",
     ],
     candidates: [
@@ -96,13 +95,8 @@ export const resourcesPage: CuratedPageContent = createCuratedPage({
       },
       {
         step: "05",
-        title: "Browse Before & After Galleries",
-        body: "View real patient results in our female body, breast, and male surgery galleries. Photos inform expectations—not replace consultation.",
-      },
-      {
-        step: "06",
         title: "Schedule Your Consultation",
-        body: "When you're ready, book a complimentary virtual consultation. Personalized guidance turns general resources into your surgical plan.",
+        body: "When you're ready, book a complimentary virtual consultation. Your provider discusses expected outcomes matched to your anatomy and goals.",
       },
     ],
   },
@@ -190,9 +184,9 @@ export const resourcesPage: CuratedPageContent = createCuratedPage({
     ],
   },
   results: {
-    title: "Guides & Galleries",
+    title: "Recovery Guides",
     intro:
-      "Beyond written guides on this site, procedure-specific recovery references and before-and-after galleries are available from our team during consultation.",
+      "Procedure-specific recovery references are available from our team during consultation. Use the guides below to understand what to plan for before surgery day.",
     items: [
       {
         title: "Lipo 360 Recovery Guide",
@@ -205,18 +199,6 @@ export const resourcesPage: CuratedPageContent = createCuratedPage({
       {
         title: "Male Lipo 360 Recovery Guide",
         body: "Available from our team during consultation—recovery guidance tailored to male body contouring patients.",
-      },
-      {
-        title: "Female Body Gallery",
-        body: "Before and after photos showcasing Lipo 360, waist contouring, and BBL results.",
-      },
-      {
-        title: "Breast Surgery Gallery",
-        body: "Augmentation, lift, and body combination results from breast surgery patients.",
-      },
-      {
-        title: "Male Surgery Gallery",
-        body: "Male body sculpting, abdominal contouring, and chest reduction transformations.",
       },
     ],
   },

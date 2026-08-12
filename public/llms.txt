@@ -30,7 +30,6 @@
 - Breast rejuvenation: /breast-rejuvenation
 - Breast revision: /breast-revision
 - Breast implant exchange: /breast-implant-exchange
-- Breast surgery gallery: /breast-surgery-gallery
 
 ## Women's & men's hubs
 - Women's procedures: /women
@@ -42,11 +41,6 @@
 - Male chin liposuction: /male-chin-liposuction
 - Adult circumcision: /adult-circumcision
 - Female chin liposuction: /female-chin-liposuction
-
-## Before & after galleries
-- Female B&A gallery: /female-ba-gallery
-- Breast surgery gallery: /breast-surgery-gallery
-- Male surgery gallery: /male-surgery-gallery
 
 ## Patient resources
 - Resources hub: /resources
