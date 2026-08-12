@@ -28,47 +28,6 @@
     }
   ],
   "testimonials": [],
-  "images": [
-    {
-      "src": "https://img1.wsimg.com/isteam/ip/63a9ae1f-fda4-44c0-addf-b31927ec5222/1%202-0e1690c.jpg/:/rs=w:370,cg:true,m",
-      "alt": "Before and after images of breast augmentation surgery.",
-      "localSrc": "/images/1_2-0e1690c.jpg"
-    },
-    {
-      "src": "https://img1.wsimg.com/isteam/ip/63a9ae1f-fda4-44c0-addf-b31927ec5222/52829D2A-5744-4278-8705-B5758FF9B42C_L0_001-3_.jpg/:/rs=w:370,cg:true,m",
-      "alt": "Before and after breast augmentation photos.",
-      "localSrc": "/images/52829D2A-5744-4278-8705-B5758FF9B42C_L0_001-3_.jpg"
-    },
-    {
-      "src": "https://img1.wsimg.com/isteam/ip/63a9ae1f-fda4-44c0-addf-b31927ec5222/IMG_1019.jpg/:/rs=w:370,cg:true,m",
-      "alt": "Before and after photos of breast augmentation surgery showing enhanced breast size.",
-      "localSrc": "/images/IMG_1019.jpg"
-    },
-    {
-      "src": "https://img1.wsimg.com/isteam/ip/63a9ae1f-fda4-44c0-addf-b31927ec5222/4.jpg/:/rs=w:370,cg:true,m",
-      "alt": "Before and after photo showing breast augmentation, breast lift, and Lipo 360 with waist contouring.",
-      "localSrc": "/images/4.jpg"
-    },
-    {
-      "src": "https://img1.wsimg.com/isteam/ip/63a9ae1f-fda4-44c0-addf-b31927ec5222/9.jpg/:/rs=w:370,cg:true,m",
-      "alt": "Before and after breast augmentation comparison showing enhanced volume and shape.",
-      "localSrc": "/images/9.jpg"
-    },
-    {
-      "src": "https://img1.wsimg.com/isteam/ip/63a9ae1f-fda4-44c0-addf-b31927ec5222/8.jpg/:/rs=w:370,cg:true,m",
-      "alt": "Before and after breast augmentation results.",
-      "localSrc": "/images/8.jpg"
-    },
-    {
-      "src": "https://img1.wsimg.com/isteam/ip/63a9ae1f-fda4-44c0-addf-b31927ec5222/3.jpg/:/rs=w:370,cg:true,m",
-      "alt": "Before and after body contouring and breast augmentation surgery.",
-      "localSrc": "/images/3.jpg"
-    },
-    {
-      "src": "https://img1.wsimg.com/isteam/ip/63a9ae1f-fda4-44c0-addf-b31927ec5222/6.jpg/:/rs=w:370,cg:true,m",
-      "alt": "Before and after photo showing breast augmentation, breast lift, and Lipo 360 with waist contouring.",
-      "localSrc": "/images/6.jpg"
-    }
-  ],
+  "images": [],
   "routeKey": "breast-surgery-gallery"
 }
