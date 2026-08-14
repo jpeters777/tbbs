@@ -1,6 +1,11 @@
 import { createCuratedPage } from "@/lib/premium-curated/build-content";
 import type { CuratedPageContent } from "@/lib/premium-curated/types";
 import { CHERRY_APPLY_URL } from "@/lib/site";
+import {
+  CONSULT_PHOTO_FAQ_A,
+  CONSULT_PHOTO_FAQ_Q,
+  CONSULT_PHOTO_MEDIUM,
+} from "@/content/consult-photo-messaging";
 
 const OG_IMAGE =
   "https://img1.wsimg.com/isteam/ip/63a9ae1f-fda4-44c0-addf-b31927ec5222/shutterstock_263340653-b2373a9.jpg";
@@ -212,8 +217,8 @@ export const faqsPage: CuratedPageContent = createCuratedPage({
         body: "Results depend on anatomy, procedure extent, and healing. Your consultation sets honest expectations—what's achievable for your body, not a filtered photo.",
       },
       {
-        title: "Consultation Expectations",
-        body: "During your complimentary virtual consultation, your provider discusses expected outcomes for your goals and body type—not generic photos.",
+        title: "Before & After Photos At Consultation",
+        body: CONSULT_PHOTO_MEDIUM,
       },
       {
         title: "Maintaining Results",
@@ -270,7 +275,11 @@ export const faqsPage: CuratedPageContent = createCuratedPage({
     },
     {
       q: "Are virtual consultations available for cosmetic surgery?",
-      a: "Yes, virtual consultations are available for many body contouring and cosmetic surgery procedures. This allows patients to discuss goals, review photos, and begin the consultation process remotely before traveling to Tampa Bay.",
+      a: "Yes, virtual consultations are available for many body contouring and cosmetic surgery procedures. You can discuss goals, share your own photos for assessment, review representative before & after results privately, and begin planning remotely before traveling to Tampa Bay.",
+    },
+    {
+      q: CONSULT_PHOTO_FAQ_Q,
+      a: CONSULT_PHOTO_FAQ_A,
     },
     {
       q: "How do I know which procedure is right for me?",

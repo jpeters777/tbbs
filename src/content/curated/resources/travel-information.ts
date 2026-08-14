@@ -78,7 +78,7 @@ export const travelInformationPage: CuratedPageContent = createCuratedPage({
       {
         step: "01",
         title: "Virtual Consultation From Home",
-        body: "Begin remotely to discuss goals, review photos, and receive personalized procedure recommendations. Many traveling patients complete this step before booking flights.",
+        body: "Begin remotely to discuss goals, share your own photos for assessment, review representative before & after results privately, and receive personalized procedure recommendations. Many traveling patients complete this step before booking flights.",
       },
       {
         step: "02",
@@ -360,7 +360,7 @@ export const travelInformationPage: CuratedPageContent = createCuratedPage({
     },
     {
       q: "Can I start with a virtual consultation?",
-      a: "Yes. Virtual consultations allow you to discuss goals, review photos, and begin planning before booking travel.",
+      a: "Yes. Virtual consultations allow you to discuss goals, share your own photos for assessment, review representative before & after results privately, and begin planning before booking travel.",
     },
     {
       q: "What procedures are most popular for traveling patients?",

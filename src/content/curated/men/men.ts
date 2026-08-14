@@ -60,7 +60,7 @@ export const menHubContent: CuratedPageContent = createCuratedPage({
       {
         step: "01",
         title: "Complimentary Virtual Consultation",
-        body: "Share your goals, photos, and medical history during a free virtual consult. We review your anatomy and discuss which procedures—Lipo 360, chest reduction, etching, tummy tuck, or chin lipo—align with your objectives.",
+        body: "Share your goals, your own photos, and medical history during a free virtual consult. We also review representative before & after results privately and discuss which procedures—Lipo 360, chest reduction, etching, tummy tuck, or chin lipo—align with your objectives.",
       },
       {
         step: "02",
@@ -288,7 +288,7 @@ export const menHubContent: CuratedPageContent = createCuratedPage({
     },
     {
       q: "Can I See Before-And-After Results?",
-      a: "During your complimentary virtual consultation, your provider can discuss expected outcomes for your goals and body type.",
+      a: "Yes. Before & after photos are reviewed privately during your complimentary consultation—not posted on our public website. Your provider will walk through representative results and discuss what may be realistic for your anatomy and goals.",
     },
     {
       q: "How Do I Schedule A Men's Procedure Consultation?",
@@ -301,7 +301,7 @@ export const menHubContent: CuratedPageContent = createCuratedPage({
     },
     {
       q: "What Should I Expect At My First Consultation?",
-      a: "Your free virtual consult covers goals, medical history, photos, procedure options, candidacy, pricing, and next steps—no obligation to proceed.",
+      a: "Your free virtual consult covers goals, medical history, sharing your own photos, privately reviewing representative before & after results, procedure options, candidacy, pricing, and next steps—no obligation to proceed.",
     },
   ],
   faqTitle: "Men's Body Contouring FAQs",

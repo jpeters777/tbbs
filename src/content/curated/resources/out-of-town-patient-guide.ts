@@ -77,7 +77,7 @@ export const outOfTownPatientGuidePage: CuratedPageContent = createCuratedPage({
       {
         step: "01",
         title: "Schedule Your Consultation",
-        body: "Many patients begin with a virtual consultation to discuss goals, review photos, and receive personalized procedure recommendations from an experienced provider within our network.",
+        body: "Many patients begin with a virtual consultation to discuss goals, share their own photos for assessment, review representative before & after results privately, and receive personalized procedure recommendations from an experienced provider within our network.",
       },
       {
         step: "02",

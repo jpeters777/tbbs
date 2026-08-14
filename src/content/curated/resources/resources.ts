@@ -1,5 +1,10 @@
 import { createCuratedPage } from "@/lib/premium-curated/build-content";
 import type { CuratedPageContent } from "@/lib/premium-curated/types";
+import {
+  CONSULT_PHOTO_FAQ_A,
+  CONSULT_PHOTO_FAQ_Q,
+  CONSULT_PHOTO_MEDIUM,
+} from "@/content/consult-photo-messaging";
 
 const OG_IMAGE =
   "https://img1.wsimg.com/isteam/ip/63a9ae1f-fda4-44c0-addf-b31927ec5222/shutterstock_263340653-b2373a9.jpg";
@@ -37,7 +42,7 @@ export const resourcesPage: CuratedPageContent = createCuratedPage({
     { href: "#procedure-focus", label: "Resource library" },
     { href: "#candidacy", label: "Who this helps" },
     { href: "#recovery", label: "Recovery prep" },
-    { href: "#results", label: "Recovery guides" },
+    { href: "#results", label: "Guides & photos" },
     { href: "#faq", label: "FAQs" },
   ],
   glance: {
@@ -184,10 +189,14 @@ export const resourcesPage: CuratedPageContent = createCuratedPage({
     ],
   },
   results: {
-    title: "Recovery Guides",
+    title: "Recovery Guides & Results Photos",
     intro:
-      "Procedure-specific recovery references are available from our team during consultation. Use the guides below to understand what to plan for before surgery day.",
+      `${CONSULT_PHOTO_MEDIUM} Procedure-specific recovery references are also available from our team during consultation. Use the guides below to understand what to plan for before surgery day.`,
     items: [
+      {
+        title: "Before & After Photos",
+        body: "Reviewed privately in your complimentary consultation—not posted on our public website—so you can discuss outcomes matched to your goals.",
+      },
       {
         title: "Lipo 360 Recovery Guide",
         body: "Available from our team during consultation—covers garment wear, activity limits, and healing milestones for Lipo 360 patients.",
@@ -278,8 +287,8 @@ export const resourcesPage: CuratedPageContent = createCuratedPage({
       a: "Recovery guides for Lipo 360, Lipo 360 + BBL, and Male Lipo 360 are available from our team during consultation.",
     },
     {
-      q: "Where can I see before and after photos?",
-      a: "Expected outcomes are reviewed during your complimentary virtual consultation with a board-certified provider matched to your procedure.",
+      q: CONSULT_PHOTO_FAQ_Q,
+      a: CONSULT_PHOTO_FAQ_A,
     },
     {
       q: "How do I contact Tampa Bay Body Sculpting?",
