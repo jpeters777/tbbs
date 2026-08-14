@@ -273,7 +273,7 @@ export const outOfTownPatientGuidePage: CuratedPageContent = createCuratedPage({
     },
     {
       q: "Are virtual consultations available?",
-      a: "Yes. Many patients begin the process with a virtual consultation before traveling to Tampa.",
+      a: "Yes. Many patients begin with a virtual consultation before traveling to Tampa—where you can share your own photos, review representative before & after results privately, and discuss next steps.",
     },
     {
       q: "When can I fly after surgery?",
