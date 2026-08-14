@@ -60,7 +60,7 @@ export const menHubContent: CuratedPageContent = createCuratedPage({
       {
         step: "01",
         title: "Complimentary Virtual Consultation",
-        body: "Share your goals, your own photos, and medical history during a free virtual consult. You also review your doctor's before & after portfolio with your doctor and discuss which procedures—Lipo 360, chest reduction, etching, tummy tuck, or chin lipo—align with your objectives.",
+        body: "Share your goals, your own photos, and medical history during a free virtual consult. You also review your provider's before & after portfolio with your provider and discuss which procedures—Lipo 360, chest reduction, etching, tummy tuck, or chin lipo—align with your objectives.",
       },
       {
         step: "02",
@@ -288,7 +288,7 @@ export const menHubContent: CuratedPageContent = createCuratedPage({
     },
     {
       q: "Can I See Before-And-After Results?",
-      a: "Yes. You can review your doctor's before & after portfolio with your doctor during your complimentary consultation—we do not post patient galleries on our public website. Together you'll discuss what may be realistic for your anatomy and goals.",
+      a: "Yes. You can review your provider's before & after portfolio with your provider during your complimentary consultation—we do not post patient galleries on our public website. Together you'll discuss what may be realistic for your anatomy and goals.",
     },
     {
       q: "How Do I Schedule A Men's Procedure Consultation?",
@@ -301,7 +301,7 @@ export const menHubContent: CuratedPageContent = createCuratedPage({
     },
     {
       q: "What Should I Expect At My First Consultation?",
-      a: "Your free virtual consult covers goals, medical history, sharing your own photos, reviewing your doctor's before & after portfolio with your doctor, procedure options, candidacy, pricing, and next steps—no obligation to proceed.",
+      a: "Your free virtual consult covers goals, medical history, sharing your own photos, reviewing your provider's before & after portfolio with your provider, procedure options, candidacy, pricing, and next steps—no obligation to proceed.",
     },
   ],
   faqTitle: "Men's Body Contouring FAQs",

@@ -25,7 +25,7 @@ export const homeFaqs: {
   },
   {
     q: "Are Virtual Consultations Available?",
-    a: "Yes. Complimentary virtual consultations are available so you can discuss goals, share your own photos for assessment, review your doctor's before & after portfolio with your doctor, and begin planning from home before traveling to Tampa Bay. Visit our resources page to learn more.",
+    a: "Yes. Complimentary virtual consultations are available so you can discuss goals, share your own photos for assessment, review your provider's before & after portfolio with your provider, and begin planning from home before traveling to Tampa Bay. Visit our resources page to learn more.",
     links: [{ text: "resources page", href: "/resources" }],
   },
   {

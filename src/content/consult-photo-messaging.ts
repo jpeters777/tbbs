@@ -5,15 +5,15 @@
 
 /** One-line notice for cards, CTAs, and short callouts */
 export const CONSULT_PHOTO_SHORT =
-  "Review your doctor's before & after portfolio with your doctor during your complimentary consultation.";
+  "Review your provider's before & after portfolio with your provider during your complimentary consultation.";
 
 /** Medium notice for section bodies and resource intros */
 export const CONSULT_PHOTO_MEDIUM =
-  "We do not post patient before & after galleries on our website. Instead, you review your doctor's before & after portfolio with your doctor during your complimentary consultation so you can discuss outcomes that relate to your goals and body type.";
+  "We do not post patient before & after galleries on our website. Instead, you review your provider's before & after portfolio with your provider during your complimentary consultation so you can discuss outcomes that relate to your goals and body type.";
 
 /** FAQ question used on Resources and FAQs pages */
 export const CONSULT_PHOTO_FAQ_Q = "Where can I see before and after photos?";
 
 /** FAQ answer — honest, conversion-oriented, no gallery promise */
 export const CONSULT_PHOTO_FAQ_A =
-  "You can review your doctor's before & after portfolio with your doctor during your complimentary consultation—we do not post patient galleries on our public website. Together you'll discuss what may be realistic for your anatomy and goals.";
+  "You can review your provider's before & after portfolio with your provider during your complimentary consultation—we do not post patient galleries on our public website. Together you'll discuss what may be realistic for your anatomy and goals.";

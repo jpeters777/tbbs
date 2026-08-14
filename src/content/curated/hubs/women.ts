@@ -61,7 +61,7 @@ export const womenHubContent: CuratedPageContent = createCuratedPage({
       {
         step: "01",
         title: "Complimentary Virtual Consultation",
-        body: "Share your goals, your own photos, and medical history during a free virtual consult. You also review your doctor's before & after portfolio with your doctor and discuss Lipo 360, BBL, tummy tuck, waist contouring, or other procedures that align with your vision.",
+        body: "Share your goals, your own photos, and medical history during a free virtual consult. You also review your provider's before & after portfolio with your provider and discuss Lipo 360, BBL, tummy tuck, waist contouring, or other procedures that align with your vision.",
       },
       {
         step: "02",
@@ -293,7 +293,7 @@ export const womenHubContent: CuratedPageContent = createCuratedPage({
     },
     {
       q: "Can I See Before-And-After Results?",
-      a: "Yes. You can review your doctor's before & after portfolio with your doctor during your complimentary consultation—we do not post patient galleries on our public website. Together you'll discuss what may be realistic for your anatomy and goals.",
+      a: "Yes. You can review your provider's before & after portfolio with your provider during your complimentary consultation—we do not post patient galleries on our public website. Together you'll discuss what may be realistic for your anatomy and goals.",
     },
     {
       q: "How Do I Schedule A Women's Procedure Consultation?",
@@ -306,7 +306,7 @@ export const womenHubContent: CuratedPageContent = createCuratedPage({
     },
     {
       q: "What Should I Expect At My First Consultation?",
-      a: "Your free virtual consult covers goals, medical history, sharing your own photos, reviewing your doctor's before & after portfolio with your doctor, procedure options, candidacy, pricing, and next steps—no obligation to proceed.",
+      a: "Your free virtual consult covers goals, medical history, sharing your own photos, reviewing your provider's before & after portfolio with your provider, procedure options, candidacy, pricing, and next steps—no obligation to proceed.",
     },
   ],
   faqTitle: "Women's Body Contouring FAQs",

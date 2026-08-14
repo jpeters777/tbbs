@@ -5,7 +5,7 @@ export const premiumWhyChooseItems = [
   },
   {
     title: "Complimentary Virtual Consultations",
-    body: "Start from home with a no-pressure consult. Share your goals, review your doctor's before & after portfolio with your doctor, ask questions, and begin planning before you travel to Tampa Bay.",
+    body: "Start from home with a no-pressure consult. Share your goals, review your provider's before & after portfolio with your provider, ask questions, and begin planning before you travel to Tampa Bay.",
   },
   {
     title: "Transparent Pricing & Financing",
