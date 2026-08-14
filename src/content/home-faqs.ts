@@ -1,4 +1,8 @@
 import type { KeywordLink } from "@/lib/keyword-links";
+import {
+  CONSULT_PHOTO_FAQ_A,
+  CONSULT_PHOTO_FAQ_Q,
+} from "@/content/consult-photo-messaging";
 
 /** Top homepage FAQs — concise, factual answers optimized for SEO and AI search (AIO). */
 export const homeFaqs: {
@@ -21,8 +25,12 @@ export const homeFaqs: {
   },
   {
     q: "Are Virtual Consultations Available?",
-    a: "Yes. Complimentary virtual consultations are available so you can discuss goals, review photos, and begin planning from home before traveling to Tampa Bay. Visit our resources page to learn more.",
+    a: "Yes. Complimentary virtual consultations are available so you can discuss goals, share your own photos for assessment, review representative before & after results privately, and begin planning from home before traveling to Tampa Bay. Visit our resources page to learn more.",
     links: [{ text: "resources page", href: "/resources" }],
+  },
+  {
+    q: CONSULT_PHOTO_FAQ_Q,
+    a: CONSULT_PHOTO_FAQ_A,
   },
   {
     q: "Do You Offer Financing For Cosmetic Surgery?",

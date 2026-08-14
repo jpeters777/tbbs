@@ -1,85 +1,10 @@
 ---
-description: Do not modify locked pages, navigation, or approved global chrome unless the user explicitly requests it
+description: Site pages and navigation are unlocked for normal editing
 alwaysApply: true
 ---
 
-# Locked pages — do not edit
+# Pages unlocked — edit as needed
 
-The **homepage** (`/`), **liposuction hub** (`/liposuction`), **Lipo 360** (`/liposuction-360`), **BBL** (`/brazilian-butt-lift-bbl`), **feminine waist contouring** (`/feminine-waist-contouring`), **tummy tuck** (`/tummy-tuck`), and **approved site navigation** are locked. Do not change their content, layout, styling, structure, or behavior unless the user **explicitly** asks to edit that specific page or nav.
+Homepage, liposuction hub, Lipo 360, BBL, feminine waist contouring, tummy tuck, site navigation, shared sections, and other site pages are **not locked**. Apply approved content, design, and structural changes across the site as requested.
 
-## Homepage (locked)
-
-- `src/app/page.tsx`
-- `src/components/experience/PremiumHomePage.tsx`
-- `src/components/experience/PremiumHomeFaq.tsx`
-- `src/components/experience/PremiumTestimonials.tsx`
-- `src/content/home-sections.ts`
-- `src/content/home-faqs.ts`
-- `src/content/premium-home.ts`
-- `src/components/seo/HomeJsonLd.tsx`
-- `src/lib/seo/home-schema.ts`
-
-## Liposuction hub (locked)
-
-- `src/components/experience/PremiumLiposuctionPage.tsx`
-- `src/content/liposuction-page.ts`
-- `src/components/seo/LiposuctionJsonLd.tsx`
-- `src/lib/seo/liposuction-schema.ts`
-- Liposuction-specific branch in `src/app/[...slug]/page.tsx` (`pageSlug === "liposuction"` metadata)
-- Liposuction routing in `src/components/experience/PremiumPageView.tsx` (`page.slug === "liposuction"`)
-
-## Lipo 360 (locked)
-
-- `src/components/experience/PremiumLipo360Page.tsx`
-- `src/content/lipo-360-page.ts`
-- `src/components/seo/Lipo360JsonLd.tsx`
-- `src/lib/seo/lipo-360-schema.ts`
-- Lipo 360-specific branch in `src/app/[...slug]/page.tsx` (`pageSlug === "liposuction-360"` metadata)
-- Lipo 360 routing in `src/components/experience/PremiumPageView.tsx` (`page.slug === "liposuction-360"`)
-
-## BBL (locked)
-
-- `src/components/experience/PremiumBblPage.tsx`
-- `src/content/bbl-page.ts`
-- `src/components/seo/BblJsonLd.tsx`
-- `src/lib/seo/bbl-schema.ts`
-- BBL-specific branch in `src/app/[...slug]/page.tsx` (`pageSlug === "brazilian-butt-lift-bbl"` metadata)
-- BBL routing in `src/components/experience/PremiumPageView.tsx` (`page.slug === "brazilian-butt-lift-bbl"`)
-
-## Feminine waist contouring (locked)
-
-- `src/components/experience/PremiumFeminineWaistPage.tsx`
-- `src/content/feminine-waist-page.ts`
-- `src/components/seo/FeminineWaistJsonLd.tsx`
-- `src/lib/seo/feminine-waist-schema.ts`
-- Feminine waist-specific branch in `src/app/[...slug]/page.tsx` (`pageSlug === "feminine-waist-contouring"` metadata)
-- Feminine waist routing in `src/components/experience/PremiumPageView.tsx` (`page.slug === "feminine-waist-contouring"`)
-
-## Tummy tuck (locked)
-
-- `src/components/experience/PremiumTummyTuckPage.tsx`
-- `src/content/tummy-tuck-page.ts`
-- `src/components/seo/TummyTuckJsonLd.tsx`
-- `src/lib/seo/tummy-tuck-schema.ts`
-- Tummy tuck-specific branch in `src/app/[...slug]/page.tsx` (`pageSlug === "tummy-tuck"` metadata)
-- Tummy tuck routing in `src/components/experience/PremiumPageView.tsx` (`page.slug === "tummy-tuck"`)
-
-## Site navigation (locked)
-
-Approved SEO/booking nav structure—do not reorder, regroup, or relabel top nav or dropdowns without explicit approval.
-
-- `src/content/site.json` — main nav, dropdown groups, and children
-- `src/components/Header.tsx` — header nav rendering (including grouped Liposuction dropdown)
-- `src/lib/site.ts` — nav types and dropdown helpers
-- `src/components/Footer.tsx` — footer procedure links (aligned with flagship pages)
-
-## Allowed without explicit approval
-
-- Work on **other** inner pages or shared components **only if** changes do not alter homepage, liposuction, Lipo 360, BBL, feminine waist contouring, tummy tuck, or locked navigation output.
-- If a shared file change would affect a locked page, **stop and ask** before editing.
-
-Shared CSS in `src/app/premium.css` may only be changed when it does not alter locked page output, unless the user explicitly requests a locked page edit.
-
-## When the user says to work on another page
-
-Proceed on the requested page only. Leave locked pages untouched.
+Previous locks existed only to prevent accidental edits during a focused editing window. Do not treat those pages as protected unless the user explicitly asks to lock something again.
