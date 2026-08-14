@@ -77,7 +77,7 @@ export const outOfTownPatientGuidePage: CuratedPageContent = createCuratedPage({
       {
         step: "01",
         title: "Schedule Your Consultation",
-        body: "Many patients begin with a virtual consultation to discuss goals, share their own photos for assessment, review representative before & after results privately, and receive personalized procedure recommendations from an experienced provider within our network.",
+        body: "Many patients begin with a virtual consultation to discuss goals, share their own photos for assessment, review their doctor's before & after portfolio with their doctor, and receive personalized procedure recommendations from an experienced provider within our network.",
       },
       {
         step: "02",
@@ -273,7 +273,7 @@ export const outOfTownPatientGuidePage: CuratedPageContent = createCuratedPage({
     },
     {
       q: "Are virtual consultations available?",
-      a: "Yes. Many patients begin with a virtual consultation before traveling to Tampa—where you can share your own photos, review representative before & after results privately, and discuss next steps.",
+      a: "Yes. Many patients begin with a virtual consultation before traveling to Tampa—where you can share your own photos, review your doctor's before & after portfolio with your doctor, and discuss next steps.",
     },
     {
       q: "When can I fly after surgery?",

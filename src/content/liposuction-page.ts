@@ -18,7 +18,7 @@ export const liposuctionIntro = {
   title: "Refine Your Shape With Liposuction",
   lead: "Stubborn fat doesn't always respond to diet and exercise. Liposuction permanently removes unwanted fat and enhances natural body contours—whether you're slimming your abdomen, sculpting your waist, defining your arms, or treating multiple areas at once.",
   paragraphs: [
-    "At Tampa Bay Body Sculpting, we help you find the right liposuction procedure based on your goals, anatomy, and desired outcome. During your complimentary virtual consultation, we review your photos, walk through representative before & after results privately, discuss options like Lipo 360 or thigh liposuction, and connect you with experienced board-certified providers.",
+    "At Tampa Bay Body Sculpting, we help you find the right liposuction procedure based on your goals, anatomy, and desired outcome. During your complimentary consultation, we review your photos, you review your doctor's before & after portfolio with your doctor, discuss options like Lipo 360 or thigh liposuction, and connect with experienced board-certified providers.",
     "Our concierge team guides you from first consult through recovery—with transparent pricing, financing options, travel support for out-of-town patients, and dedicated follow-up along the way.",
   ],
 };

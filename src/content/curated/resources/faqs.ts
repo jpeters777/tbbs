@@ -275,7 +275,7 @@ export const faqsPage: CuratedPageContent = createCuratedPage({
     },
     {
       q: "Are virtual consultations available for cosmetic surgery?",
-      a: "Yes, virtual consultations are available for many body contouring and cosmetic surgery procedures. You can discuss goals, share your own photos for assessment, review representative before & after results privately, and begin planning remotely before traveling to Tampa Bay.",
+      a: "Yes, virtual consultations are available for many body contouring and cosmetic surgery procedures. You can discuss goals, share your own photos for assessment, review your doctor's before & after portfolio with your doctor, and begin planning remotely before traveling to Tampa Bay.",
     },
     {
       q: CONSULT_PHOTO_FAQ_Q,

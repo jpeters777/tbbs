@@ -195,7 +195,7 @@ export const resourcesPage: CuratedPageContent = createCuratedPage({
     items: [
       {
         title: "Before & After Photos",
-        body: "Reviewed privately in your complimentary consultation—not posted on our public website—so you can discuss outcomes matched to your goals.",
+        body: "Review your doctor's before & after portfolio with your doctor during your complimentary consultation—not posted on our public website—so you can discuss outcomes matched to your goals.",
       },
       {
         title: "Lipo 360 Recovery Guide",
