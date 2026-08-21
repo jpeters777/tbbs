@@ -1,9 +1,9 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { homeExploreProcedures } from "@/content/home-sections";
-import { trackConsultClick } from "@/lib/analytics";
-import { CONSULT_URL, siteConfig } from "@/lib/site";
+import { siteConfig } from "@/lib/site";
+import { TrackedConsultLink } from "@/components/TrackedConsultLink";
 import { TrackedPhoneLink } from "@/components/TrackedPhoneLink";
 
 const PROCEDURE_OPTIONS = [
@@ -25,11 +25,8 @@ export function ConsultInterestForm({
   const [step, setStep] = useState<1 | 2>(1);
   const [procedure, setProcedure] = useState("");
 
-  const consultHref = useMemo(() => {
-    if (!procedure || procedure === "Other / Not sure yet") return CONSULT_URL;
-    const params = new URLSearchParams({ procedureInterest: procedure });
-    return `${CONSULT_URL}?${params.toString()}`;
-  }, [procedure]);
+  const procedureInterest =
+    procedure && procedure !== "Other / Not sure yet" ? procedure : undefined;
 
   return (
     <div className={`premium-consult-form ${className}`.trim()} aria-label="Consultation interest form">
@@ -75,15 +72,13 @@ export function ConsultInterestForm({
             consultation is complimentary.
           </p>
           <div className="premium-consult-form-actions">
-            <a
-              href={consultHref}
+            <TrackedConsultLink
               className="btn btn-primary premium-btn-glow"
-              target="_blank"
-              rel="noreferrer"
-              onClick={() => trackConsultClick(location, procedure || undefined)}
+              location={location}
+              procedureInterest={procedureInterest}
             >
               Book free virtual consult
-            </a>
+            </TrackedConsultLink>
             <TrackedPhoneLink className="btn btn-outline !border-white/25 !text-white" location={`${location}-phone`}>
               Call {siteConfig.phone}
             </TrackedPhoneLink>

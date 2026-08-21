@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 import { TrackedPhoneLink } from "@/components/TrackedPhoneLink";
+import { TrackedConsultLink } from "@/components/TrackedConsultLink";
 
 const resourceLinks = [
   { label: "How We Select Providers", href: "/how-we-select-providers" },
@@ -76,9 +77,9 @@ export function Footer() {
             <a href={siteConfig.social.facebook} className="site-footer-link" target="_blank" rel="noreferrer">
               Facebook
             </a>
-            <a href={siteConfig.consultUrl} className="btn btn-primary site-footer-cta" target="_blank" rel="noreferrer">
+            <TrackedConsultLink className="btn btn-primary site-footer-cta" location="footer">
               Start a consultation
-            </a>
+            </TrackedConsultLink>
           </div>
         </div>
       </div>

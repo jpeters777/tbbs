@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { CONSULT_URL } from "@/lib/site";
 import { TrackedPhoneLink } from "@/components/TrackedPhoneLink";
@@ -7,6 +9,7 @@ import { TrackedConsultLink } from "@/components/TrackedConsultLink";
 import { useMobileChrome } from "@/components/MobileChromeProvider";
 
 export function StickyConsultBar() {
+  const pathname = usePathname();
   const [visible, setVisible] = useState(false);
   const { suppressStickyBar } = useMobileChrome();
 
@@ -17,7 +20,7 @@ export function StickyConsultBar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  if (!visible || suppressStickyBar) return null;
+  if (pathname === "/consult" || !visible || suppressStickyBar) return null;
 
   return (
     <div
@@ -28,14 +31,9 @@ export function StickyConsultBar() {
       <div className="container sticky-consult-bar-inner">
         <p className="sticky-consult-bar-text hidden sm:block">
           Ready for a{" "}
-          <a
-            href={CONSULT_URL}
-            className="sticky-consult-bar-link"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <Link href={CONSULT_URL} className="sticky-consult-bar-link">
             complimentary
-          </a>{" "}
+          </Link>{" "}
           virtual consultation?
         </p>
         <TrackedPhoneLink

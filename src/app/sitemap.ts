@@ -13,6 +13,7 @@ const UNPUBLISHED_GALLERY_SLUGS = new Set([
 export default function sitemap(): MetadataRoute.Sitemap {
   const paths = [
     "/",
+    "/consult",
     ...getAllPageSlugs()
       .filter((slug) => !UNPUBLISHED_GALLERY_SLUGS.has(slug))
       .map((slug) => getPublicPathForSlug(slug)),
@@ -21,6 +22,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return paths.map((path) => ({
     url: path === "/" ? `${BASE}/` : `${BASE}${path}`,
     changeFrequency: path === "/" ? "weekly" : "monthly",
-    priority: path === "/" ? 1 : 0.8,
+    priority: path === "/" ? 1 : path === "/consult" ? 0.9 : 0.8,
   }));
 }
