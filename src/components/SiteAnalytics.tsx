@@ -9,6 +9,7 @@ import {
   hasAnalyticsConfigured,
   type CookieConsentValue,
 } from "@/lib/analytics-config";
+import { ANALYTICS_READY_EVENT, flushAnalyticsQueue } from "@/lib/analytics";
 
 function readConsent(): CookieConsentValue | null {
   if (typeof window === "undefined") return null;
@@ -61,14 +62,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       ) : null}
       {!gtmId && gaId ? (
         <>
+          <Script id="ga4-config" strategy="afterInteractive">
+            {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','${gaId}');window.dispatchEvent(new Event('${ANALYTICS_READY_EVENT}'));`}
+          </Script>
           <Script
             src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
             strategy="afterInteractive"
+            onLoad={() => {
+              flushAnalyticsQueue();
+              window.dispatchEvent(new Event(ANALYTICS_READY_EVENT));
+            }}
           />
-          <Script id="ga4-config" strategy="afterInteractive">
-            {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());gtag('config','${gaId}');`}
-          </Script>
         </>
       ) : null}
     </>

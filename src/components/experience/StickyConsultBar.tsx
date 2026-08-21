@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { CONSULT_URL } from "@/lib/site";
 import { TrackedPhoneLink } from "@/components/TrackedPhoneLink";
+import { TrackedConsultLink } from "@/components/TrackedConsultLink";
 import { useMobileChrome } from "@/components/MobileChromeProvider";
 
 export function StickyConsultBar() {
@@ -43,14 +44,12 @@ export function StickyConsultBar() {
         >
           Call
         </TrackedPhoneLink>
-        <a
-          href={CONSULT_URL}
+        <TrackedConsultLink
           className="btn btn-primary sticky-consult-bar-btn sticky-consult-bar-book shadow-[0_0_32px_rgba(101,235,201,0.25)]"
-          target="_blank"
-          rel="noreferrer"
+          location="sticky-bar"
         >
           Book consult
-        </a>
+        </TrackedConsultLink>
       </div>
     </div>
   );

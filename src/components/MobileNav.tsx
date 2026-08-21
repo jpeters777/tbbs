@@ -4,13 +4,13 @@ import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import {
-  CONSULT_URL,
   getNavDropdownItems,
   hasNavDropdown,
   siteConfig,
   type NavItem,
 } from "@/lib/site";
 import { TrackedPhoneLink } from "@/components/TrackedPhoneLink";
+import { TrackedConsultLink } from "@/components/TrackedConsultLink";
 
 /** Fast paths at the top of the mobile menu — procedures, then patient research. */
 const MOBILE_QUICK_LINKS = [
@@ -236,15 +236,13 @@ export function MobileNav({ open, pathname, onClose }: MobileNavProps) {
 
         <div className="mobile-nav-footer">
           <TrackedPhoneLink className="mobile-nav-phone" location="header-mobile" onClick={onClose} />
-          <a
-            href={CONSULT_URL}
+          <TrackedConsultLink
             className="btn btn-primary mobile-nav-consult premium-btn-glow"
-            target="_blank"
-            rel="noreferrer"
+            location="mobile-nav"
             onClick={onClose}
           >
             Free virtual consult
-          </a>
+          </TrackedConsultLink>
         </div>
       </div>
     </div>,

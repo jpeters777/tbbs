@@ -1,4 +1,6 @@
-import { CONSULT_URL, siteConfig } from "@/lib/site";
+import { TrackedConsultLink } from "@/components/TrackedConsultLink";
+import { TrackedPhoneLink } from "@/components/TrackedPhoneLink";
+import { siteConfig } from "@/lib/site";
 
 export function CTABanner({
   title = "Your Cosmetic Surgery Journey Starts Here",
@@ -15,12 +17,12 @@ export function CTABanner({
           <p className="section-lead mx-auto">{body}</p>
         </div>
         <div className="flex flex-wrap justify-center gap-3">
-          <a href={CONSULT_URL} className="btn btn-dark" target="_blank" rel="noreferrer">
+          <TrackedConsultLink className="btn btn-dark" location="cta-banner">
             Start a consultation
-          </a>
-          <a href={siteConfig.phoneHref} className="btn btn-outline !border-black/40 !text-[var(--color-on-accent)]">
+          </TrackedConsultLink>
+          <TrackedPhoneLink className="btn btn-outline !border-black/40 !text-[var(--color-on-accent)]" location="cta-banner">
             {siteConfig.phone}
-          </a>
+          </TrackedPhoneLink>
         </div>
       </div>
     </section>
