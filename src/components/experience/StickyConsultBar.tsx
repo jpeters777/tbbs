@@ -20,7 +20,7 @@ export function StickyConsultBar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  if (pathname === "/consult" || !visible || suppressStickyBar) return null;
+  if (pathname === "/consult" || pathname === "/contact" || !visible || suppressStickyBar) return null;
 
   return (
     <div

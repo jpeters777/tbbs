@@ -4,7 +4,12 @@ export const JOTFORM_CONTACT_ID = "261329129717057";
 /** Full HIPAA virtual consultation intake — medical history, photos, procedures. */
 export const JOTFORM_VIRTUAL_CONSULT_ID = "212097230845050";
 
+const CONTACT_EMBED_BASE = `https://hipaa.jotform.com/${JOTFORM_CONTACT_ID}`;
 const VIRTUAL_CONSULT_EMBED_BASE = `https://hipaa.jotform.com/${JOTFORM_VIRTUAL_CONSULT_ID}`;
+
+export function buildContactEmbedSrc() {
+  return CONTACT_EMBED_BASE;
+}
 
 export function buildJotformEmbedSrc(procedureInterest?: string | null) {
   if (!procedureInterest?.trim()) return VIRTUAL_CONSULT_EMBED_BASE;

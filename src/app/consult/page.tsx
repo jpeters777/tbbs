@@ -63,7 +63,7 @@ export default async function ConsultPage({ searchParams }: ConsultPageProps) {
 
       <section className="premium-section pt-0">
         <div className="container consult-page-form">
-          <JotformEmbed procedureInterest={procedureInterest} />
+          <JotformEmbed form="virtual-consult" procedureInterest={procedureInterest} />
         </div>
       </section>
     </div>

@@ -3274,6 +3274,16 @@
   border: 0;
 }
 
+.jotform-embed-frame--contact {
+  min-height: 720px;
+}
+
+@media (max-width: 767px) {
+  .jotform-embed-frame--contact {
+    min-height: 820px;
+  }
+}
+
 @media (max-width: 767px) {
   .jotform-embed-frame {
     min-height: 1200px;
