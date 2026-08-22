@@ -17,15 +17,16 @@ const dmSans = DM_Sans({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
   display: "swap",
-  preload: true,
+  preload: false,
 });
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
   subsets: ["latin"],
-  weight: ["400", "600"],
+  weight: ["500", "600"],
   display: "swap",
-  preload: false,
+  preload: true,
+  adjustFontFallback: true,
 });
 
 const cantarell = Cantarell({

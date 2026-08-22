@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { PremiumHeroMedia } from "@/components/experience/PremiumHeroMedia";
-import { HeroPreload } from "@/components/experience/HeroPreload";
 import { RichText } from "@/components/RichText";
 import { CONSULT_URL } from "@/lib/site";
 import { toTitleCase } from "@/lib/text";
@@ -16,9 +15,7 @@ type PremiumHomeHeroProps = {
 /** Server-rendered homepage hero so LCP image is in the first HTML payload. */
 export function PremiumHomeHero({ page, featuredQuote }: PremiumHomeHeroProps) {
   return (
-    <>
-      <HeroPreload src={HOME_HERO_SRC} />
-      <section className="premium-hero">
+    <section className="premium-hero">
         <div className="premium-hero-media">
           <PremiumHeroMedia
             src={HOME_HERO_SRC}
@@ -59,6 +56,5 @@ export function PremiumHomeHero({ page, featuredQuote }: PremiumHomeHeroProps) {
           </blockquote>
         </div>
       </section>
-    </>
   );
 }

@@ -1,8 +1,8 @@
 import Image from "next/image";
 import {
   HERO_IMAGE_SIZES,
+  resolveHeroMobileSrc,
   resolveHeroSrc,
-  resolveHeroSrcSet,
 } from "@/lib/hero-images";
 
 type PremiumHeroMediaProps = {
@@ -22,8 +22,8 @@ const LCP_IMG_STYLE = {
 };
 
 /**
- * LCP-optimized full-bleed hero. Priority heroes use a native img + srcSet so
- * mobile loads a small WebP without waiting on Next/Image or extra font preloads.
+ * LCP-optimized full-bleed hero. Priority heroes use picture + native img (no
+ * srcSet preload duplication) so mobile gets the 640px WebP by default.
  */
 export function PremiumHeroMedia({
   src,
@@ -32,15 +32,30 @@ export function PremiumHeroMedia({
   priority = true,
 }: PremiumHeroMediaProps) {
   const optimizedSrc = resolveHeroSrc(src);
-  const srcSet = resolveHeroSrcSet(src);
+  const mobileSrc = resolveHeroMobileSrc(src);
 
   if (priority && optimizedSrc.endsWith(".webp")) {
+    if (mobileSrc) {
+      return (
+        <picture>
+          <source media="(min-width: 769px)" srcSet={optimizedSrc} type="image/webp" />
+          {/* eslint-disable-next-line @next/next/no-img-element -- intentional LCP path */}
+          <img
+            src={mobileSrc}
+            alt={alt}
+            fetchPriority="high"
+            decoding="sync"
+            className={className}
+            style={LCP_IMG_STYLE}
+          />
+        </picture>
+      );
+    }
+
     return (
       // eslint-disable-next-line @next/next/no-img-element -- intentional LCP path
       <img
         src={optimizedSrc}
-        srcSet={srcSet}
-        sizes={HERO_IMAGE_SIZES}
         alt={alt}
         fetchPriority="high"
         decoding="sync"

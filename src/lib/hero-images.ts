@@ -37,10 +37,3 @@ export function resolveHeroMobileSrc(src: string): string | undefined {
   if (!desktop) return undefined;
   return desktop.replace(/\.webp$/, "-640.webp");
 }
-
-export function resolveHeroSrcSet(src: string): string | undefined {
-  const desktop = resolveHeroSrc(src);
-  const mobile = resolveHeroMobileSrc(src);
-  if (!mobile || mobile === desktop) return undefined;
-  return `${mobile} 640w, ${desktop} 1400w`;
-}
