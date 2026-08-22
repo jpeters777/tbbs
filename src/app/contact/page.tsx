@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { JotformEmbed } from "@/components/experience/JotformEmbed";
 import { TrackedPhoneLink } from "@/components/TrackedPhoneLink";
-import { siteConfig } from "@/lib/site";
+import { siteConfig, SITE_URL } from "@/lib/site";
 import { absoluteSeoTitle, toTitleCase } from "@/lib/text";
 
 const title = "Contact Us";
@@ -12,11 +12,11 @@ const description =
 export const metadata: Metadata = {
   title: absoluteSeoTitle(title),
   description,
-  alternates: { canonical: "https://tampabaybodysculpting.com/contact" },
+  alternates: { canonical: `${SITE_URL}/contact` },
   openGraph: {
     title: toTitleCase(title),
     description,
-    url: "https://tampabaybodysculpting.com/contact",
+    url: `${SITE_URL}/contact`,
     type: "website",
   },
   robots: { index: true, follow: true },

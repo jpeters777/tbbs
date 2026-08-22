@@ -1,5 +1,8 @@
 import site from "@/content/site.json";
 
+/** Primary public origin — must match Vercel domain redirect (non-www → www). */
+export const SITE_URL = "https://www.tampabaybodysculpting.com";
+
 export type NavChild = { label: string; href: string };
 export type NavGroup = { label: string; children: NavChild[] };
 export type NavItem = {

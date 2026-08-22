@@ -3,6 +3,7 @@ import { PremiumHomePage } from "@/components/experience/PremiumHomePage";
 import { HomeJsonLd } from "@/components/seo/HomeJsonLd";
 import { getHomePage } from "@/lib/content";
 import { resolveHeroSrc } from "@/lib/hero-images";
+import { SITE_URL } from "@/lib/site";
 import { toTitleCase, absoluteSeoTitle } from "@/lib/text";
 
 const HOME_HERO = resolveHeroSrc("/images/shutterstock_99994967_801684509466.JPG");
@@ -19,12 +20,12 @@ export const metadata: Metadata = {
   ),
   description,
   alternates: {
-    canonical: "https://tampabaybodysculpting.com/",
+    canonical: `${SITE_URL}/`,
   },
   openGraph: {
     title,
     description,
-    url: "https://tampabaybodysculpting.com/",
+    url: `${SITE_URL}/`,
     type: "website",
     locale: "en_US",
     images: [

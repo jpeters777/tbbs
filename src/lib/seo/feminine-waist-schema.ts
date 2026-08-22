@@ -1,6 +1,7 @@
 import { feminineWaistFaqs, feminineWaistRelatedProcedures } from "@/content/feminine-waist-page";
+import { SITE_URL } from "@/lib/site";
 
-const BASE = "https://tampabaybodysculpting.com";
+const BASE = SITE_URL;
 const PAGE_URL = BASE + "/feminine-waist-contouring";
 
 export function buildFeminineWaistSchema() {

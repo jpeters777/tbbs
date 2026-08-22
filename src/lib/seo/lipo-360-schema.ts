@@ -1,6 +1,7 @@
 import { lipo360Faqs, lipo360RelatedProcedures } from "@/content/lipo-360-page";
+import { SITE_URL } from "@/lib/site";
 
-const BASE = "https://tampabaybodysculpting.com";
+const BASE = SITE_URL;
 const PAGE_URL = BASE + "/liposuction-360";
 
 export function buildLipo360Schema() {

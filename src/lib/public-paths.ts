@@ -1,3 +1,5 @@
+import { SITE_URL } from "@/lib/site";
+
 const SLUG_TO_PUBLIC_PATH: Record<string, string> = {
   "arm-lipo-360----arm-lift": "/arm-lipo-360-arm-lift",
   "female-b-a-gallery": "/female-ba-gallery",
@@ -11,7 +13,7 @@ export function getPublicPathForSlug(slug: string): string {
 }
 
 export function getCanonicalUrlForSlug(slug: string): string {
-  return `https://tampabaybodysculpting.com${getPublicPathForSlug(slug)}`;
+  return `${SITE_URL}${getPublicPathForSlug(slug)}`;
 }
 
 /** Normalize any path or slug form to the public path used in nav and canonicals. */

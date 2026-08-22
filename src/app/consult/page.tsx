@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { JotformEmbed } from "@/components/experience/JotformEmbed";
 import { TrackedPhoneLink } from "@/components/TrackedPhoneLink";
-import { siteConfig } from "@/lib/site";
+import { siteConfig, SITE_URL } from "@/lib/site";
 import { absoluteSeoTitle, toTitleCase } from "@/lib/text";
 
 type ConsultPageProps = {
@@ -16,11 +16,11 @@ const description =
 export const metadata: Metadata = {
   title: absoluteSeoTitle(title),
   description,
-  alternates: { canonical: "https://tampabaybodysculpting.com/consult" },
+  alternates: { canonical: `${SITE_URL}/consult` },
   openGraph: {
     title: toTitleCase(title),
     description,
-    url: "https://tampabaybodysculpting.com/consult",
+    url: `${SITE_URL}/consult`,
     type: "website",
   },
   robots: { index: true, follow: true },

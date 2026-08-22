@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { getAllPageSlugs } from "@/lib/content";
 import { getPublicPathForSlug } from "@/lib/public-paths";
 
-const BASE = "https://tampabaybodysculpting.com";
+import { SITE_URL } from "@/lib/site";
 
 const UNPUBLISHED_GALLERY_SLUGS = new Set([
   "female-b-a-gallery",
@@ -21,7 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   return paths.map((path) => ({
-    url: path === "/" ? `${BASE}/` : `${BASE}${path}`,
+    url: path === "/" ? `${SITE_URL}/` : `${SITE_URL}${path}`,
     changeFrequency: path === "/" ? "weekly" : "monthly",
     priority: path === "/" ? 1 : path === "/consult" || path === "/contact" ? 0.9 : 0.8,
   }));

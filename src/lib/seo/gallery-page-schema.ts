@@ -1,8 +1,9 @@
 import type { GalleryPageContent } from "@/lib/premium-curated/gallery-types";
 import { getCanonicalUrlForSlug } from "@/lib/public-paths";
 import { resolveOgImage } from "@/lib/seo/og-image";
+import { SITE_URL } from "@/lib/site";
 
-const BASE = "https://tampabaybodysculpting.com";
+const BASE = SITE_URL;
 
 export function buildGalleryPageSchema(content: GalleryPageContent) {
   const pageUrl = getCanonicalUrlForSlug(content.slug);

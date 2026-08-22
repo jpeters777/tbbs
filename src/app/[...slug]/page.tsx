@@ -19,6 +19,7 @@ import {
   resolvePathToSlug,
 } from "@/lib/content";
 import { toTitleCase, absoluteSeoTitle } from "@/lib/text";
+import { SITE_URL } from "@/lib/site";
 
 type Props = {
   params: Promise<{ slug: string[] }>;
@@ -72,7 +73,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title = toTitleCase(lipo360Seo.title);
     const ogImageUrl = lipo360Seo.ogImage.startsWith("http")
       ? lipo360Seo.ogImage
-      : `https://tampabaybodysculpting.com${lipo360Seo.ogImage}`;
+      : `${SITE_URL}${lipo360Seo.ogImage}`;
     return {
       title: absoluteSeoTitle(lipo360Seo.title),
       description: lipo360Seo.description,
@@ -109,7 +110,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title = toTitleCase(bblSeo.title);
     const ogImageUrl = bblSeo.ogImage.startsWith("http")
       ? bblSeo.ogImage
-      : `https://tampabaybodysculpting.com${bblSeo.ogImage}`;
+      : `${SITE_URL}${bblSeo.ogImage}`;
     return {
       title: absoluteSeoTitle(bblSeo.title),
       description: bblSeo.description,
@@ -146,7 +147,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title = toTitleCase(feminineWaistSeo.title);
     const ogImageUrl = feminineWaistSeo.ogImage.startsWith("http")
       ? feminineWaistSeo.ogImage
-      : `https://tampabaybodysculpting.com${feminineWaistSeo.ogImage}`;
+      : `${SITE_URL}${feminineWaistSeo.ogImage}`;
     return {
       title: absoluteSeoTitle(feminineWaistSeo.title),
       description: feminineWaistSeo.description,
@@ -183,7 +184,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title = toTitleCase(tummyTuckSeo.title);
     const ogImageUrl = tummyTuckSeo.ogImage.startsWith("http")
       ? tummyTuckSeo.ogImage
-      : `https://tampabaybodysculpting.com${tummyTuckSeo.ogImage}`;
+      : `${SITE_URL}${tummyTuckSeo.ogImage}`;
     return {
       title: absoluteSeoTitle(tummyTuckSeo.title),
       description: tummyTuckSeo.description,
@@ -228,7 +229,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = seo.title;
   const ogImageUrl = seo.ogImage.startsWith("http")
     ? seo.ogImage
-    : `https://tampabaybodysculpting.com${seo.ogImage}`;
+    : `${SITE_URL}${seo.ogImage}`;
 
   return {
     title: absoluteSeoTitle(seo.title),

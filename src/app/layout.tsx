@@ -6,7 +6,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MobileChromeProvider } from "@/components/MobileChromeProvider";
 import { StickyConsultBar } from "@/components/experience/StickyConsultBar";
-import { siteConfig } from "@/lib/site";
+import { siteConfig, SITE_URL } from "@/lib/site";
 import { toTitleCase } from "@/lib/text";
 import "./globals.css";
 import "./premium.css";
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   description:
     "Lipo 360, Tummy Tuck, Breast Procedures, Arm and Thigh Liposuction, and Male Body Sculpting.",
-  metadataBase: new URL("https://tampabaybodysculpting.com"),
+  metadataBase: new URL(SITE_URL),
   openGraph: {
     siteName: siteConfig.brand,
     type: "website",

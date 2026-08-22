@@ -1,6 +1,7 @@
 import type { ContentSection, PageContent } from "@/lib/content";
 import { imageSrc } from "@/lib/content";
 import { getPublicPathForSlug } from "@/lib/public-paths";
+import { SITE_URL } from "@/lib/site";
 import { toTitleCase } from "@/lib/text";
 
 const SKIP_SECTION_HEADINGS = [
@@ -143,5 +144,5 @@ export function getPageHeroImage(page: PageContent): string {
 }
 
 export function getCanonicalUrl(page: PageContent): string {
-  return `https://tampabaybodysculpting.com${getPublicPathForSlug(page.slug)}`;
+  return `${SITE_URL}${getPublicPathForSlug(page.slug)}`;
 }

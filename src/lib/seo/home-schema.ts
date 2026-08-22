@@ -1,11 +1,11 @@
 import { homeExploreProcedures } from "@/content/home-sections";
 import { homeFaqs } from "@/content/home-faqs";
 import { companyStats } from "@/content/company-stats";
-import { siteConfig } from "@/lib/site";
+import { siteConfig, SITE_URL } from "@/lib/site";
 import { buildAreaServedSchema } from "@/lib/seo/geo-schema";
 import { buildAggregateRatingSchema } from "@/lib/seo/reviews-schema";
 
-const BASE = "https://tampabaybodysculpting.com";
+const BASE = SITE_URL;
 
 /** Full JSON-LD graph for homepage SEO + AIO (AI search). */
 export function buildHomeSchema() {

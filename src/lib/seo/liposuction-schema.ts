@@ -1,6 +1,7 @@
 import { liposuctionFaqs, liposuctionProcedureGroups } from "@/content/liposuction-page";
+import { SITE_URL } from "@/lib/site";
 
-const BASE = "https://tampabaybodysculpting.com";
+const BASE = SITE_URL;
 const PAGE_URL = `${BASE}/liposuction`;
 
 export function buildLiposuctionSchema() {

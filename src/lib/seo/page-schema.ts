@@ -1,8 +1,9 @@
 import type { PageContent } from "@/lib/content";
 import { getCanonicalUrl, normalizeFaqs } from "@/lib/premium-page-utils";
 import { toTitleCase } from "@/lib/text";
+import { SITE_URL } from "@/lib/site";
 
-const BASE = "https://tampabaybodysculpting.com";
+const BASE = SITE_URL;
 
 export function buildPageSchema(page: PageContent) {
   const url = getCanonicalUrl(page);

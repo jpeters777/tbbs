@@ -1,6 +1,7 @@
 import { bblFaqs, bblRelatedProcedures } from "@/content/bbl-page";
+import { SITE_URL } from "@/lib/site";
 
-const BASE = "https://tampabaybodysculpting.com";
+const BASE = SITE_URL;
 const PAGE_URL = BASE + "/brazilian-butt-lift-bbl";
 
 export function buildBblSchema() {

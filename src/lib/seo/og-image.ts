@@ -1,4 +1,5 @@
 import { resolveHeroSrc } from "@/lib/hero-images";
+import { SITE_URL } from "@/lib/site";
 
 /** Shared generic OG image used as a placeholder before hero-specific images are applied. */
 export const GENERIC_OG_IMAGE =
@@ -17,5 +18,5 @@ export function resolveOgImage(ogImage: string | undefined, heroSrc: string): st
 }
 
 export function ogImageAbsoluteUrl(ogImage: string): string {
-  return ogImage.startsWith("http") ? ogImage : `https://tampabaybodysculpting.com${ogImage}`;
+  return ogImage.startsWith("http") ? ogImage : `${SITE_URL}${ogImage}`;
 }

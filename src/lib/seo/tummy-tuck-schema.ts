@@ -1,6 +1,7 @@
 import { tummyTuckFaqs, tummyTuckRelatedProcedures } from "@/content/tummy-tuck-page";
+import { SITE_URL } from "@/lib/site";
 
-const BASE = "https://tampabaybodysculpting.com";
+const BASE = SITE_URL;
 const PAGE_URL = BASE + "/tummy-tuck";
 
 export function buildTummyTuckSchema() {

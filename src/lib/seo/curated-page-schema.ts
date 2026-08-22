@@ -1,8 +1,9 @@
 import type { CuratedPageContent } from "@/lib/premium-curated/types";
 import { getCanonicalUrlForSlug } from "@/lib/public-paths";
 import { resolveOgImage } from "@/lib/seo/og-image";
+import { SITE_URL } from "@/lib/site";
 
-const BASE = "https://tampabaybodysculpting.com";
+const BASE = SITE_URL;
 
 export function buildCuratedPageSchema(content: CuratedPageContent) {
   const pageUrl = getCanonicalUrlForSlug(content.slug);
