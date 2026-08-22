@@ -7,9 +7,26 @@ import { PremiumLiposuctionPage } from "@/components/experience/PremiumLiposucti
 import { PremiumLipo360Page } from "@/components/experience/PremiumLipo360Page";
 import { PremiumStandardPage } from "@/components/experience/PremiumStandardPage";
 import { PremiumTummyTuckPage } from "@/components/experience/PremiumTummyTuckPage";
+import { HeroPreload } from "@/components/experience/HeroPreload";
 import { getGalleryPage } from "@/content/curated/gallery-registry";
 import { getCuratedPage } from "@/content/curated/registry";
 import type { PageContent } from "@/lib/content";
+import { imageSrc } from "@/lib/content";
+import { resolveHeroSrc } from "@/lib/hero-images";
+import type { ReactNode } from "react";
+
+function withHeroPreload(page: PageContent, content: ReactNode) {
+  const src = imageSrc(page.hero);
+  if (!src || resolveHeroSrc(src) === src) {
+    return content;
+  }
+  return (
+    <>
+      <HeroPreload src={src} />
+      {content}
+    </>
+  );
+}
 
 export function PremiumPageView({ page }: { page: PageContent }) {
   if (page.slug === "privacy-policy") {
@@ -17,23 +34,23 @@ export function PremiumPageView({ page }: { page: PageContent }) {
   }
 
   if (page.slug === "liposuction") {
-    return <PremiumLiposuctionPage page={page} />;
+    return withHeroPreload(page, <PremiumLiposuctionPage page={page} />);
   }
 
   if (page.slug === "liposuction-360") {
-    return <PremiumLipo360Page />;
+    return withHeroPreload(page, <PremiumLipo360Page />);
   }
 
   if (page.slug === "brazilian-butt-lift-bbl") {
-    return <PremiumBblPage />;
+    return withHeroPreload(page, <PremiumBblPage />);
   }
 
   if (page.slug === "feminine-waist-contouring") {
-    return <PremiumFeminineWaistPage />;
+    return withHeroPreload(page, <PremiumFeminineWaistPage />);
   }
 
   if (page.slug === "tummy-tuck") {
-    return <PremiumTummyTuckPage />;
+    return withHeroPreload(page, <PremiumTummyTuckPage />);
   }
 
   const gallery = getGalleryPage(page.slug);
@@ -43,8 +60,8 @@ export function PremiumPageView({ page }: { page: PageContent }) {
 
   const curated = getCuratedPage(page.slug);
   if (curated) {
-    return <PremiumCuratedPage content={curated} />;
+    return withHeroPreload(page, <PremiumCuratedPage content={curated} />);
   }
 
-  return <PremiumStandardPage page={page} />;
+  return withHeroPreload(page, <PremiumStandardPage page={page} />);
 }

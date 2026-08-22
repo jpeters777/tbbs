@@ -8,8 +8,10 @@ import sharp from "sharp";
 
 const ROOT = process.cwd();
 const OUT_DIR = path.join(ROOT, "public/images/heroes");
-const MAX_WIDTH = 1400;
-const QUALITY = 78;
+const DESKTOP_WIDTH = 1400;
+const MOBILE_WIDTH = 640;
+const DESKTOP_QUALITY = 72;
+const MOBILE_QUALITY = 68;
 
 /** Source path (public URL) → output filename (without dir) */
 const HERO_SOURCES = {
@@ -43,9 +45,20 @@ fs.mkdirSync(OUT_DIR, { recursive: true });
 let totalBefore = 0;
 let totalAfter = 0;
 
+async function writeWebp(inputPath, outputPath, width, quality) {
+  await sharp(inputPath)
+    .rotate()
+    .resize({ width, withoutEnlargement: true })
+    .webp({ quality, effort: 4 })
+    .toFile(outputPath);
+  return fs.statSync(outputPath).size;
+}
+
 for (const [srcUrl, outName] of Object.entries(HERO_SOURCES)) {
   const inputPath = path.join(ROOT, "public", srcUrl.replace(/^\//, ""));
   const outputPath = path.join(OUT_DIR, outName);
+  const mobileName = outName.replace(/\.webp$/, "-640.webp");
+  const mobilePath = path.join(OUT_DIR, mobileName);
 
   if (!fs.existsSync(inputPath)) {
     console.warn("Skip missing:", inputPath);
@@ -53,16 +66,14 @@ for (const [srcUrl, outName] of Object.entries(HERO_SOURCES)) {
   }
 
   const before = fs.statSync(inputPath).size;
-  await sharp(inputPath)
-    .rotate()
-    .resize({ width: MAX_WIDTH, withoutEnlargement: true })
-    .webp({ quality: QUALITY, effort: 4 })
-    .toFile(outputPath);
+  const desktopBytes = await writeWebp(inputPath, outputPath, DESKTOP_WIDTH, DESKTOP_QUALITY);
+  const mobileBytes = await writeWebp(inputPath, mobilePath, MOBILE_WIDTH, MOBILE_QUALITY);
 
-  const after = fs.statSync(outputPath).size;
   totalBefore += before;
-  totalAfter += after;
-  console.log(`${outName}: ${Math.round(before / 1024)}KB → ${Math.round(after / 1024)}KB`);
+  totalAfter += desktopBytes + mobileBytes;
+  console.log(
+    `${outName}: ${Math.round(before / 1024)}KB → desktop ${Math.round(desktopBytes / 1024)}KB, mobile ${Math.round(mobileBytes / 1024)}KB`
+  );
 }
 
-console.log(`\nTotal: ${Math.round(totalBefore / 1024)}KB → ${Math.round(totalAfter / 1024)}KB`);
+console.log(`\nTotal sources: ${Math.round(totalBefore / 1024)}KB → variants ${Math.round(totalAfter / 1024)}KB`);

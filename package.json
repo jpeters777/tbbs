@@ -10,6 +10,7 @@
     "audit:links": "node scripts/audit-links.mjs",
     "audit:images": "node scripts/audit-images.mjs",
     "audit:links:http": "node scripts/audit-links-http.mjs",
+    "optimize:heroes": "node scripts/optimize-hero-images.mjs",
     "audit": "npm run audit:links && npm run audit:images"
   },
   "dependencies": {

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PremiumHomePage } from "@/components/experience/PremiumHomePage";
+import { PremiumHomeHero } from "@/components/experience/PremiumHomeHero";
 import { HomeJsonLd } from "@/components/seo/HomeJsonLd";
 import { getHomePage } from "@/lib/content";
 import { resolveHeroSrc } from "@/lib/hero-images";
@@ -58,11 +59,15 @@ export const metadata: Metadata = {
 
 export default function Page() {
   const page = getHomePage();
+  const featuredQuote =
+    page.testimonials[0] ??
+    "The team made cosmetic surgery feel manageable—from my first virtual consult through recovery.";
+
   return (
-    <>
-      <link rel="preload" as="image" href={HOME_HERO} fetchPriority="high" />
+    <div className="premium-home pb-24">
       <HomeJsonLd />
+      <PremiumHomeHero page={page} featuredQuote={featuredQuote} />
       <PremiumHomePage page={page} />
-    </>
+    </div>
   );
 }

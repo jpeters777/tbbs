@@ -15,19 +15,25 @@ import "./ba-gallery.css";
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "600", "700"],
+  display: "swap",
+  preload: true,
 });
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "600"],
+  display: "swap",
+  preload: false,
 });
 
 const cantarell = Cantarell({
   variable: "--font-cantarell",
   subsets: ["latin"],
   weight: ["400", "700"],
+  display: "swap",
+  preload: false,
 });
 
 export const metadata: Metadata = {

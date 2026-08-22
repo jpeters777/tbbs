@@ -31,3 +31,16 @@ export const HERO_IMAGE_SIZES = "(max-width: 768px) 100vw, (max-width: 1200px) 1
 export function resolveHeroSrc(src: string): string {
   return HERO_WEBP[src] ?? src;
 }
+
+export function resolveHeroMobileSrc(src: string): string | undefined {
+  const desktop = HERO_WEBP[src];
+  if (!desktop) return undefined;
+  return desktop.replace(/\.webp$/, "-640.webp");
+}
+
+export function resolveHeroSrcSet(src: string): string | undefined {
+  const desktop = resolveHeroSrc(src);
+  const mobile = resolveHeroMobileSrc(src);
+  if (!mobile || mobile === desktop) return undefined;
+  return `${mobile} 640w, ${desktop} 1400w`;
+}

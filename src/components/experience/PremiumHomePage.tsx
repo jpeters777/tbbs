@@ -1,12 +1,11 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { RichText } from "@/components/RichText";
-import { PremiumHeroMedia } from "@/components/experience/PremiumHeroMedia";
 import { PremiumHomeFaq } from "@/components/experience/PremiumHomeFaq";
-import { ConsultInterestForm } from "@/components/experience/ConsultInterestForm";
 import { PremiumCostSection } from "@/components/experience/PremiumCostSection";
 import { PremiumJumpNav } from "@/components/experience/PremiumJumpNav";
 import { PremiumTestimonials } from "@/components/experience/PremiumTestimonials";
@@ -24,6 +23,12 @@ import { resolveHeroSrc } from "@/lib/hero-images";
 import { toTitleCase } from "@/lib/text";
 import type { PageContent } from "@/lib/content";
 
+const ConsultInterestForm = dynamic(
+  () =>
+    import("@/components/experience/ConsultInterestForm").then((mod) => mod.ConsultInterestForm),
+  { ssr: false }
+);
+
 const HOME_JUMP_LINKS = [
   { href: "#procedures", label: "Procedures" },
   { href: "#cost", label: "Cost & financing" },
@@ -40,55 +45,8 @@ export function PremiumHomePage({ page }: { page: PageContent }) {
     );
   }, [filter]);
 
-  const featuredQuote =
-    page.testimonials[0] ??
-    "The team made cosmetic surgery feel manageable—from my first virtual consult through recovery.";
-
   return (
-    <div className="premium-home pb-24">
-      {/* Hero */}
-      <section className="premium-hero">
-        <div className="premium-hero-media">
-          <PremiumHeroMedia
-            src="/images/shutterstock_99994967_801684509466.JPG"
-            alt="Cosmetic surgery guidance in Tampa Bay"
-            className="object-cover"
-          />
-          <div className="premium-hero-scrim" />
-        </div>
-        <div className="container premium-hero-content">
-          <div className="premium-hero-copy">
-            <p className="premium-eyebrow">Tampa Bay · Concierge cosmetic surgery guidance</p>
-            <h1 className="premium-hero-title">
-              {toTitleCase(page.h1)}
-              <span className="premium-hero-accent"> Confidence starts with the right plan.</span>
-            </h1>
-            <RichText
-              as="p"
-              className="premium-hero-lead"
-              text="Lipo 360, tummy tuck, breast surgery, and male body sculpting—with a team that guides you from complimentary consult through recovery."
-              autoLinkKeywords
-            />
-            <div className="premium-hero-cta">
-              <a href={CONSULT_URL} className="btn btn-primary premium-btn-glow" target="_blank" rel="noreferrer">
-                Book free virtual consult
-              </a>
-              <Link href="#procedures" className="btn btn-outline !border-white/30 !text-white">
-                Explore procedures
-              </Link>
-            </div>
-          </div>
-          <blockquote className="premium-hero-quote">
-            <p>
-              &ldquo;
-              <RichText as="span" text={featuredQuote} autoLinkKeywords />
-              &rdquo;
-            </p>
-            <footer>— Tampa Bay Body Sculpting patient</footer>
-          </blockquote>
-        </div>
-      </section>
-
+    <>
       <PremiumTrustStrip />
       <PremiumJumpNav links={HOME_JUMP_LINKS} />
 
@@ -355,6 +313,6 @@ export function PremiumHomePage({ page }: { page: PageContent }) {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }
