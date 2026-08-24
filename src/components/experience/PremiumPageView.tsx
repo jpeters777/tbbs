@@ -38,7 +38,7 @@ export function PremiumPageView({ page }: { page: PageContent }) {
 
   const gallery = getGalleryPage(page.slug);
   if (gallery) {
-    return <PremiumGalleryPage content={gallery} images={page.images} />;
+    return <PremiumGalleryPage content={gallery} />;
   }
 
   const curated = getCuratedPage(page.slug);

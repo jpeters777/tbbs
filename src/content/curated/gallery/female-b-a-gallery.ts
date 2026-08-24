@@ -1,4 +1,10 @@
 import type { GalleryPageContent } from "@/lib/premium-curated/gallery-types";
+import {
+  CONSULT_PHOTO_FAQ_A,
+  CONSULT_PHOTO_FAQ_Q,
+  CONSULT_PHOTO_GALLERY_LEAD,
+  CONSULT_PHOTO_MEDIUM,
+} from "@/content/consult-photo-messaging";
 
 const OG_IMAGE =
   "https://img1.wsimg.com/isteam/ip/63a9ae1f-fda4-44c0-addf-b31927ec5222/shutterstock_263340653-b2373a9.jpg";
@@ -6,9 +12,9 @@ const OG_IMAGE =
 export const femaleBaGalleryPage: GalleryPageContent = {
   slug: "female-b-a-gallery",
   seo: {
-    title: "Female Body Sculpting Before & After Gallery | Tampa Bay Body Sculpting",
+    title: "Female Body Sculpting Before & After Photos | Tampa Bay Body Sculpting",
     description:
-      "Browse female body sculpting before and after photos—Lipo 360, waist contouring, and BBL results in Tampa. Book a free virtual consultation.",
+      "Review Lipo 360, waist contouring, and BBL before & after photos at your complimentary Tampa Bay consult. We do not post patient galleries online.",
     ogImage: OG_IMAGE,
   },
   visuals: {
@@ -19,22 +25,22 @@ export const femaleBaGalleryPage: GalleryPageContent = {
   },
   breadcrumb: { href: "/women", label: "Women" },
   intro: {
-    eyebrow: "Before & after · Tampa Bay",
-    heroTitle: "Female Before & After Gallery In Tampa Bay",
-    title: "Body Sculpting Before & After Results",
-    lead: "Browse before and after photos from female body contouring patients—including Lipo 360, waist sculpting, and BBL transformations in our Tampa Bay provider network.",
+    eyebrow: "Results at consultation · Tampa Bay",
+    heroTitle: "Female Before & After Photos In Tampa Bay",
+    title: "How To Review Body Sculpting Results",
+    lead: CONSULT_PHOTO_GALLERY_LEAD,
     paragraphs: [
-      "Photos show what's possible for specific patients—not guaranteed outcomes for everyone. Focus on proportions, waist-to-hip balance, and natural contour rather than comparing yourself to social media ideals.",
-      "Save images that reflect your goals, then schedule a complimentary virtual consultation. We'll discuss which procedures fit your anatomy and set realistic expectations together.",
+      CONSULT_PHOTO_MEDIUM,
+      "Use your consult to talk through proportions, waist-to-hip balance, and which combination of Lipo 360, waist contouring, or BBL may fit your anatomy. Photos you review with your provider show specific patients—not guaranteed outcomes.",
     ],
   },
   gallery: {
-    title: "Body Sculpting Gallery: Before and After Results",
-    intro: "Cases shown in order. Side-by-side Lipo 360, waist contouring, and BBL results.",
+    title: "See Before & After Photos At Your Consult",
+    intro: "Your provider's portfolio is reviewed together during a complimentary consultation—not published on this site.",
   },
   lookFor: {
     title: "What To Look For In Body Contouring Photos",
-    intro: "Use these photos as a research tool—not a shopping catalog.",
+    intro: "Use these checkpoints when you review photos with your provider—not as a public shopping catalog.",
     items: [
       {
         title: "Waist & Hip Balance",
@@ -50,11 +56,11 @@ export const femaleBaGalleryPage: GalleryPageContent = {
       },
       {
         title: "Healed Timeline",
-        body: "Gallery photos show results months after surgery—not the swollen first weeks. Early recovery looks very different from final outcomes.",
+        body: "Healed results are typically photographed months after surgery—not during the swollen first weeks. Early recovery looks very different from final outcomes.",
       },
     ],
   },
-  relatedIntro: "Explore procedure guides for the treatments shown in this gallery.",
+  relatedIntro: "Explore procedure guides for the treatments you may review in photos at your consult.",
   relatedProcedures: [
     {
       title: "Lipo 360",
@@ -87,40 +93,40 @@ export const femaleBaGalleryPage: GalleryPageContent = {
       body: "Browse all female body contouring options.",
     },
   ],
-  faqTitle: "Body Sculpting Gallery FAQs",
-  faqIntro: "Common questions about reviewing before and after body contouring photos.",
+  faqTitle: "Before & After Photo FAQs",
+  faqIntro: "Common questions about reviewing body contouring results before surgery.",
   faqs: [
     {
-      q: "What Procedures Are Shown In This Gallery?",
-      a: "Most photos reflect Lipo 360, waist contouring, BBL, or combinations. Photo descriptions and your consultation clarify which procedures produced each result.",
+      q: CONSULT_PHOTO_FAQ_Q,
+      a: CONSULT_PHOTO_FAQ_A,
     },
     {
-      q: "Can I Expect These Exact Results?",
-      a: "Outcomes depend on your anatomy, skin elasticity, procedure combination, and healing. Gallery photos illustrate possibilities—not promises.",
+      q: "What Procedures Would I See In A Portfolio?",
+      a: "Most body contouring portfolios include Lipo 360, waist contouring, BBL, or combinations. Your consultation clarifies which procedures produced each result.",
     },
     {
-      q: "Why Do Some Photos Include BBL And Lipo 360?",
+      q: "Can I Expect Those Exact Results?",
+      a: "Outcomes depend on your anatomy, skin elasticity, procedure combination, and healing. Photos illustrate possibilities—not promises.",
+    },
+    {
+      q: "Why Do Some Results Include BBL And Lipo 360?",
       a: "Many Tampa Bay patients combine fat transfer to the buttocks with 360 liposuction for a comprehensive hourglass transformation in one surgical plan.",
     },
     {
-      q: "How Long After Surgery Are These Photos Taken?",
-      a: "Before and after galleries typically show healed results at several months post-op, once swelling subsides and tissues settle.",
+      q: "How Long After Surgery Are Result Photos Taken?",
+      a: "Portfolios typically show healed results at several months post-op, once swelling subsides and tissues settle.",
     },
     {
       q: "Should I Bring Reference Photos To My Consult?",
-      a: "Absolutely. Save images that reflect your aesthetic direction. Your provider uses them to understand goals while setting realistic expectations.",
-    },
-    {
-      q: "Are Combination Results Harder To Predict?",
-      a: "Combined procedures address multiple concerns at once but require longer recovery. Your virtual consult covers timing, downtime, and staged vs. combined options.",
+      a: "Yes. Save images that reflect your aesthetic direction. Your provider uses them to understand goals while setting realistic expectations.",
     },
     {
       q: "How Do I Book A Consultation?",
-      a: "Schedule a complimentary virtual consultation through our site. We'll connect you with board-certified providers across Florida.",
+      a: "Submit our short contact form or schedule a complimentary virtual consultation. We'll connect you with board-certified providers across Florida.",
     },
   ],
   finalCtaTitle: "Ready To Explore Your Body Contouring Options?",
-  schemaName: "Female Body Sculpting Before and After Gallery",
+  schemaName: "Female Body Sculpting Before and After Photos",
   schemaDescription:
-    "Before and after body sculpting photo gallery featuring Lipo 360, waist contouring, and BBL results in Tampa Bay.",
+    "How to review Lipo 360, waist contouring, and BBL before and after photos at a complimentary consultation with Tampa Bay Body Sculpting. Patient galleries are not posted publicly.",
 };

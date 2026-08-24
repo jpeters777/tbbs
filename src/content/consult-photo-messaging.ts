@@ -17,3 +17,9 @@ export const CONSULT_PHOTO_FAQ_Q = "Where can I see before and after photos?";
 /** FAQ answer — honest, conversion-oriented, no gallery promise */
 export const CONSULT_PHOTO_FAQ_A =
   "You can review your provider's before & after portfolio with your provider during your complimentary consultation—we do not post patient galleries on our public website. Together you'll discuss what may be realistic for your anatomy and goals.";
+
+/** Gallery hub pages: honest title-adjacent lead without promising online photos */
+export const CONSULT_PHOTO_GALLERY_LEAD =
+  "We do not post patient before & after photos on this website. At your complimentary consultation, you review your provider's portfolio together so you can discuss outcomes that relate to your goals and body type.";
+
+export const CONSULT_PHOTO_GALLERY_CTA = "Request a consult to view photos";

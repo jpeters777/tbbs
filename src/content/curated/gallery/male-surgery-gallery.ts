@@ -1,4 +1,10 @@
 import type { GalleryPageContent } from "@/lib/premium-curated/gallery-types";
+import {
+  CONSULT_PHOTO_FAQ_A,
+  CONSULT_PHOTO_FAQ_Q,
+  CONSULT_PHOTO_GALLERY_LEAD,
+  CONSULT_PHOTO_MEDIUM,
+} from "@/content/consult-photo-messaging";
 
 const OG_IMAGE =
   "https://img1.wsimg.com/isteam/ip/63a9ae1f-fda4-44c0-addf-b31927ec5222/shutterstock_263340653-b2373a9.jpg";
@@ -6,9 +12,9 @@ const OG_IMAGE =
 export const maleSurgeryGalleryPage: GalleryPageContent = {
   slug: "male-surgery-gallery",
   seo: {
-    title: "Male Surgery Before & After Gallery | Tampa Bay Body Sculpting",
+    title: "Male Surgery Before & After Photos | Tampa Bay Body Sculpting",
     description:
-      "Browse male cosmetic surgery before and after photos—Lipo 360, chest reduction, and abdominal sculpting results in Tampa. Book a free consult.",
+      "Review male Lipo 360, chest reduction, and abdominal sculpting before & after photos at your complimentary Tampa Bay consult. We do not post patient galleries online.",
     ogImage: OG_IMAGE,
   },
   visuals: {
@@ -19,22 +25,22 @@ export const maleSurgeryGalleryPage: GalleryPageContent = {
   },
   breadcrumb: { href: "/men", label: "Men" },
   intro: {
-    eyebrow: "Before & after · Tampa Bay",
-    heroTitle: "Male Surgery Gallery In Tampa Bay",
-    title: "Male Body Sculpting Before & After Results",
-    lead: "Browse before and after photos from male cosmetic surgery patients—including abdominal sculpting, Lipo 360, and chest reduction results in our Tampa Bay network.",
+    eyebrow: "Results at consultation · Tampa Bay",
+    heroTitle: "Male Surgery Photos In Tampa Bay",
+    title: "How To Review Male Body Sculpting Results",
+    lead: CONSULT_PHOTO_GALLERY_LEAD,
     paragraphs: [
-      "Men seek body contouring for defined abdominals, reduced chest tissue, and streamlined flanks. These photos show real outcomes while reminding you that results depend on starting anatomy, procedure type, and post-operative fitness.",
-      "Schedule a complimentary virtual consultation to discuss your goals. We'll review what's achievable for your frame—whether that's male Lipo 360, gynecomastia surgery, or abdominal etching.",
+      CONSULT_PHOTO_MEDIUM,
+      "Schedule a complimentary consultation to discuss what's achievable for your frame—whether that's male Lipo 360, gynecomastia surgery, or abdominal etching.",
     ],
   },
   gallery: {
-    title: "Male Surgery Gallery: Before and After Results",
-    intro: "Cases shown in order. Side-by-side male Lipo 360, chest reduction, and body sculpting results.",
+    title: "See Male Before & After Photos At Your Consult",
+    intro: "Your provider's male body sculpting portfolio is reviewed together during a complimentary consultation—not published on this site.",
   },
   lookFor: {
     title: "What To Look For In Male Body Sculpting Photos",
-    intro: "Evaluate photos for natural masculine contour—not exaggerated transformation.",
+    intro: "Evaluate photos with your provider for natural masculine contour—not exaggerated transformation.",
     items: [
       {
         title: "Abdominal Definition",
@@ -87,11 +93,15 @@ export const maleSurgeryGalleryPage: GalleryPageContent = {
       body: "Browse all male body contouring options.",
     },
   ],
-  faqTitle: "Male Surgery Gallery FAQs",
-  faqIntro: "Common questions about reviewing men's before and after photos.",
+  faqTitle: "Male Photo Review FAQs",
+  faqIntro: "Common questions about reviewing men's body sculpting results before surgery.",
   faqs: [
     {
-      q: "What Procedures Are Shown In This Gallery?",
+      q: CONSULT_PHOTO_FAQ_Q,
+      a: CONSULT_PHOTO_FAQ_A,
+    },
+    {
+      q: "What Procedures Would I See In A Portfolio?",
       a: "Photos may reflect male Lipo 360, gynecomastia surgery, abdominal sculpting, or combinations. Your consultation clarifies which procedure produced each result.",
     },
     {
@@ -111,16 +121,12 @@ export const maleSurgeryGalleryPage: GalleryPageContent = {
       a: "Being near a stable, healthy weight improves results and safety. Liposuction and chest reduction refine contour—they aren't weight-loss procedures.",
     },
     {
-      q: "Can I Combine Chest And Abdominal Procedures?",
-      a: "Yes. Many men address gynecomastia and abdominal fat in one surgical plan when candidacy allows. Your consult reviews combination options.",
-    },
-    {
       q: "How Do I Schedule A Consultation?",
-      a: "Book a complimentary virtual consultation online. We'll connect you with board-certified providers experienced in male body contouring across Florida.",
+      a: "Submit our short contact form or book a complimentary virtual consultation. We'll connect you with board-certified providers experienced in male body contouring across Florida.",
     },
   ],
   finalCtaTitle: "Ready To Discuss Your Male Body Sculpting Goals?",
-  schemaName: "Male Surgery Before and After Gallery",
+  schemaName: "Male Surgery Before and After Photos",
   schemaDescription:
-    "Before and after male cosmetic surgery photo gallery featuring Lipo 360, chest reduction, and abdominal sculpting results in Tampa Bay.",
+    "How to review male Lipo 360, chest reduction, and abdominal sculpting before and after photos at a complimentary consultation with Tampa Bay Body Sculpting. Patient galleries are not posted publicly.",
 };

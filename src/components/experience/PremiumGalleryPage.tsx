@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { BeforeAfterGallery } from "@/components/BeforeAfterGallery";
 import { PremiumHeroMedia } from "@/components/experience/PremiumHeroMedia";
 import { RichText } from "@/components/RichText";
 import { PremiumPageFaq } from "@/components/experience/PremiumPageFaq";
@@ -9,16 +8,13 @@ import { PremiumFinancingCta } from "@/components/experience/PremiumFinancingCta
 import { PremiumTrustStrip } from "@/components/experience/PremiumTrustStrip";
 import type { GalleryPageContent } from "@/lib/premium-curated/gallery-types";
 import { getPublicPathForSlug } from "@/lib/public-paths";
-import { CONSULT_URL, CONTACT_URL } from "@/lib/site";
-
-type GalleryImage = { src: string; alt: string; localSrc?: string };
+import { CONTACT_URL } from "@/lib/site";
+import { CONSULT_PHOTO_GALLERY_CTA } from "@/content/consult-photo-messaging";
 
 export function PremiumGalleryPage({
   content,
-  images,
 }: {
   content: GalleryPageContent;
-  images: GalleryImage[];
 }) {
   const pagePath = getPublicPathForSlug(content.slug);
   return (
@@ -41,11 +37,11 @@ export function PremiumGalleryPage({
               <h1 className="premium-hero-title">{content.intro.heroTitle}</h1>
               <RichText as="p" className="premium-hero-lead" text={content.intro.lead} autoLinkKeywords currentPath={pagePath} />
               <div className="premium-hero-cta">
-                <a href={CONSULT_URL} className="btn btn-primary premium-btn-glow" target="_blank" rel="noreferrer">
-                  Book free virtual consult
-                </a>
+                <Link href={CONTACT_URL} className="btn btn-primary premium-btn-glow">
+                  {CONSULT_PHOTO_GALLERY_CTA}
+                </Link>
                 <Link href="#gallery" className="btn btn-outline !border-white/30 !text-white">
-                  View before & after
+                  How photo review works
                 </Link>
               </div>
             </div>
@@ -65,13 +61,18 @@ export function PremiumGalleryPage({
           </div>
         </section>
 
-        <div id="gallery">
-          <BeforeAfterGallery
-            title={content.gallery.title}
-            intro={content.gallery.intro}
-            images={images}
-          />
-        </div>
+        <section className="premium-section" id="gallery">
+          <div className="container max-w-3xl">
+            <p className="premium-eyebrow">Photo review</p>
+            <h2 className="premium-section-title">{content.gallery.title}</h2>
+            {content.gallery.intro ? (
+              <p className="premium-section-intro mt-4">{content.gallery.intro}</p>
+            ) : null}
+            <Link href={CONTACT_URL} className="btn btn-primary premium-btn-glow mt-8">
+              {CONSULT_PHOTO_GALLERY_CTA}
+            </Link>
+          </div>
+        </section>
 
         <GalleryConsultBridge location={`${content.slug}-gallery-bridge`} />
 
@@ -138,16 +139,16 @@ export function PremiumGalleryPage({
             <h2>{content.finalCtaTitle}</h2>
             <RichText
               as="p"
-              text="Schedule your complimentary virtual consultation. Bring photos that reflect your goals—we'll discuss what's realistic for your anatomy."
+              text="Submit the short contact form to start. At your complimentary consultation, you'll review your provider's before & after portfolio and discuss what's realistic for your anatomy."
               autoLinkKeywords currentPath={pagePath}
             />
             <div className="flex flex-wrap gap-3 mt-8 premium-final-actions">
-              <a href={CONSULT_URL} className="btn btn-dark !bg-black !text-white !px-8" target="_blank" rel="noreferrer">
-                Start consultation
-              </a>
-              <a href={CONTACT_URL} className="btn btn-outline !border-black/30 !text-black" target="_blank" rel="noreferrer">
-                Contact us
-              </a>
+              <Link href={CONTACT_URL} className="btn btn-dark !bg-black !text-white !px-8">
+                {CONSULT_PHOTO_GALLERY_CTA}
+              </Link>
+              <Link href="/consult" className="btn btn-outline !border-black/30 !text-black">
+                Full virtual consult form
+              </Link>
             </div>
           </div>
         </section>

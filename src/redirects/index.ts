@@ -9,68 +9,53 @@ export type RedirectEntry = {
 /** Encoded or special-character paths that need explicit redirect rules. */
 export const specialRedirects: RedirectEntry[] = [
   {
-    source: "/female-ba-gallery",
-    destination: "/women",
-    permanent: true,
-  },
-  {
-    source: "/breast-surgery-gallery",
-    destination: "/breasts",
-    permanent: true,
-  },
-  {
-    source: "/male-surgery-gallery",
-    destination: "/men",
-    permanent: true,
-  },
-  {
     source: "/before-after-photos/body/arms/:path*",
-    destination: "/arm-lipo-360-arm-lift",
+    destination: "/female-ba-gallery",
     permanent: true,
   },
   {
     source: "/before-after-photos/body/lipo-360/:path*",
-    destination: "/liposuction-360",
+    destination: "/female-ba-gallery",
     permanent: true,
   },
   {
     source: "/before-after-photos/body/brazilian-butt-lift/:path*",
-    destination: "/brazilian-butt-lift-bbl",
+    destination: "/female-ba-gallery",
     permanent: true,
   },
   {
     source: "/before-after-photos/body/thighs/:path*",
-    destination: "/thigh-liposuction",
+    destination: "/female-ba-gallery",
     permanent: true,
   },
   {
     source: "/before-after-photos/body/body-contouring/:path*",
-    destination: "/liposuction",
+    destination: "/female-ba-gallery",
     permanent: true,
   },
   {
     source: "/before-after-photos/face/chin-and-neck-liposuction/:path*",
-    destination: "/female-chin-liposuction",
+    destination: "/female-ba-gallery",
     permanent: true,
   },
   {
     source: "/before-after-photos/male/:path*",
-    destination: "/men",
+    destination: "/male-surgery-gallery",
     permanent: true,
   },
   {
     source: "/before-after-photos/breast/:path*",
-    destination: "/breasts",
+    destination: "/breast-surgery-gallery",
     permanent: true,
   },
   {
     source: "/before-after-photos/:path*",
-    destination: "/liposuction",
+    destination: "/female-ba-gallery",
     permanent: true,
   },
   {
     source: "/before-after-photos",
-    destination: "/liposuction",
+    destination: "/female-ba-gallery",
     permanent: true,
   },
   {
@@ -90,12 +75,12 @@ export const specialRedirects: RedirectEntry[] = [
   },
   {
     source: "/female-b%26a-gallery",
-    destination: "/women",
+    destination: "/female-ba-gallery",
     permanent: true,
   },
   {
     source: "/female-b&a-gallery",
-    destination: "/women",
+    destination: "/female-ba-gallery",
     permanent: true,
   },
   {

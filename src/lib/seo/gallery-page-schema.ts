@@ -33,12 +33,6 @@ export function buildGalleryPageSchema(content: GalleryPageContent) {
           acceptedAnswer: { "@type": "Answer", text: faq.a },
         })),
       },
-      {
-        "@type": "ImageGallery",
-        name: content.schemaName,
-        description: content.schemaDescription,
-        url: pageUrl,
-      },
     ],
   };
 }
