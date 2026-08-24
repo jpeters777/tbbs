@@ -20,6 +20,6 @@ export const CONSULT_PHOTO_FAQ_A =
 
 /** Gallery hub pages: honest title-adjacent lead without promising online photos */
 export const CONSULT_PHOTO_GALLERY_LEAD =
-  "We do not post patient before & after photos on this website. At your complimentary consultation, you review your provider's portfolio together so you can discuss outcomes that relate to your goals and body type.";
+  "Patient photos are not published on this website. At your complimentary consultation, you sit with your provider and review their before & after portfolio — so you can see their actual work and talk through what's realistic for your body and goals.";
 
 export const CONSULT_PHOTO_GALLERY_CTA = "Request a consult to view photos";
