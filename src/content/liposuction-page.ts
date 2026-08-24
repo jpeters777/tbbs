@@ -86,7 +86,7 @@ export const liposuctionProcedureGroups: LiposuctionProcedureGroup[] = [
     items: [
       {
         title: "Male Lipo 360",
-        href: "/male-liposuction-360-1",
+        href: "/male-liposuction-360",
         body: "Removes stubborn fat from the abdomen, flanks, and lower back for a leaner, more athletic masculine shape.",
       },
       {
@@ -285,7 +285,7 @@ export const liposuctionFaqs: {
   {
     q: "Is Liposuction A Good Option For Men?",
     a: "Yes. Liposuction is one of the most popular cosmetic procedures for men. It can refine the abdomen, flanks, chest, back, and neck. We also offer Male Lipo 360, male abdominal sculpting, and male chest reduction for masculine, athletic-looking results.",
-    links: [{ text: "Male Lipo 360", href: "/male-liposuction-360-1" }],
+    links: [{ text: "Male Lipo 360", href: "/male-liposuction-360" }],
   },
   {
     q: "What Financing Options Are Available?",

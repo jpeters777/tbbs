@@ -12,6 +12,7 @@ type ConsultPageProps = {
 const title = "Free Virtual Consultation";
 const description =
   "Book a complimentary virtual consultation with Tampa Bay Body Sculpting. Concierge guidance, board-certified provider network, no obligation.";
+const ogImage = `${SITE_URL}${siteConfig.logo}`;
 
 export const metadata: Metadata = {
   title: absoluteSeoTitle(title),
@@ -22,6 +23,14 @@ export const metadata: Metadata = {
     description,
     url: `${SITE_URL}/consult`,
     type: "website",
+    locale: "en_US",
+    images: [{ url: ogImage, width: 512, height: 512, alt: siteConfig.brand }],
+  },
+  twitter: {
+    card: "summary",
+    title: toTitleCase(title),
+    description,
+    images: [ogImage],
   },
   robots: { index: true, follow: true },
 };

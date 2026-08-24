@@ -220,11 +220,11 @@ export const homeProcedures: {
     },
     {
       title: "Male Lipo 360",
-      href: "/male-liposuction-360-1",
+      href: "/male-liposuction-360",
       image: "/images/blob-dbc3bdb.png",
       imageAlt: "Male body sculpting and Lipo 360 results",
       body: "Remove stubborn fat from the abdomen, waist, flanks, and lower back to create a slimmer, more defined masculine shape from every angle.",
-      links: [{ href: "/male-liposuction-360-1", text: "Male Lipo 360" }],
+      links: [{ href: "/male-liposuction-360", text: "Male Lipo 360" }],
       category: "men",
     },
     {

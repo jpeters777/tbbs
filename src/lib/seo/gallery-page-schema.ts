@@ -2,6 +2,7 @@ import type { GalleryPageContent } from "@/lib/premium-curated/gallery-types";
 import { getCanonicalUrlForSlug } from "@/lib/public-paths";
 import { resolveOgImage } from "@/lib/seo/og-image";
 import { SITE_URL } from "@/lib/site";
+import { buildBreadcrumbList, buildOrganizationNode } from "@/lib/seo/organization-schema";
 
 const BASE = SITE_URL;
 
@@ -11,6 +12,7 @@ export function buildGalleryPageSchema(content: GalleryPageContent) {
   return {
     "@context": "https://schema.org",
     "@graph": [
+      buildOrganizationNode(),
       {
         "@type": "MedicalWebPage",
         "@id": `${pageUrl}/#webpage`,
@@ -21,6 +23,7 @@ export function buildGalleryPageSchema(content: GalleryPageContent) {
         about: { "@id": `${BASE}/#organization` },
         inLanguage: "en-US",
       },
+      buildBreadcrumbList(pageUrl, content.seo.title),
       {
         "@type": "FAQPage",
         "@id": `${pageUrl}/#faq`,

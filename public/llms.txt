@@ -9,7 +9,7 @@
 - **Location:** Tampa Bay, Florida, USA
 - **Phone:** 813-557-6400
 - **Email:** info@tampabaybodysculpting.com
-- **Consultation:** Free virtual consult at https://form.jotform.com/261329129717057
+- **Consultation:** Short contact form at https://www.tampabaybodysculpting.com/contact — full virtual consult at https://www.tampabaybodysculpting.com/consult
 
 ## Signature body contouring
 - Liposuction hub: /liposuction
@@ -59,4 +59,4 @@
 - Procedure pages include candidacy, technique, recovery timelines, and FAQs.
 
 ## Sitemap
-- https://tampabaybodysculpting.com/sitemap.xml
+- https://www.tampabaybodysculpting.com/sitemap.xml

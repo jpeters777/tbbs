@@ -77,7 +77,7 @@ export const lipo360Combinations = {
     {
       label: "Men",
       links: [
-        { label: "Male Lipo 360", href: "/male-liposuction-360-1" },
+        { label: "Male Lipo 360", href: "/male-liposuction-360" },
         { label: "Male Abdominal Sculpting", href: "/male-abdominal-sculpting" },
         { label: "Men's Procedures", href: "/men" },
       ],
@@ -150,7 +150,7 @@ export const lipo360RelatedProcedures: Lipo360RelatedItem[] = [
   },
   {
     title: "Male Lipo 360",
-    href: "/male-liposuction-360-1",
+    href: "/male-liposuction-360",
     body: "Removes stubborn fat from the abdomen, flanks, and lower back for a leaner, more athletic masculine shape.",
   },
   {

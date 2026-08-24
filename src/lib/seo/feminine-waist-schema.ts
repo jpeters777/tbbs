@@ -1,5 +1,6 @@
 import { feminineWaistFaqs, feminineWaistRelatedProcedures } from "@/content/feminine-waist-page";
 import { SITE_URL } from "@/lib/site";
+import { buildBreadcrumbList, buildOrganizationNode } from "@/lib/seo/organization-schema";
 
 const BASE = SITE_URL;
 const PAGE_URL = BASE + "/feminine-waist-contouring";
@@ -56,7 +57,7 @@ export function buildFeminineWaistSchema() {
 
   return {
     "@context": "https://schema.org",
-    "@graph": [webpage, faqPage, procedureList, medicalProcedure],
+    "@graph": [buildOrganizationNode(), webpage, buildBreadcrumbList(PAGE_URL, webpage.name), faqPage, procedureList, medicalProcedure],
   };
 }
 

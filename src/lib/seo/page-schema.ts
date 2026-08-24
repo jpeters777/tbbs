@@ -2,6 +2,7 @@ import type { PageContent } from "@/lib/content";
 import { getCanonicalUrl, normalizeFaqs } from "@/lib/premium-page-utils";
 import { toTitleCase } from "@/lib/text";
 import { SITE_URL } from "@/lib/site";
+import { buildBreadcrumbList, buildOrganizationNode } from "@/lib/seo/organization-schema";
 
 const BASE = SITE_URL;
 
@@ -21,7 +22,11 @@ export function buildPageSchema(page: PageContent) {
     inLanguage: "en-US",
   };
 
-  const graph: Record<string, unknown>[] = [webpage];
+  const graph: Record<string, unknown>[] = [
+    buildOrganizationNode(),
+    webpage,
+    buildBreadcrumbList(url, title),
+  ];
 
   if (faqs.length > 0) {
     graph.push({

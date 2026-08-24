@@ -1,5 +1,6 @@
 import { lipo360Faqs, lipo360RelatedProcedures } from "@/content/lipo-360-page";
 import { SITE_URL } from "@/lib/site";
+import { buildBreadcrumbList, buildOrganizationNode } from "@/lib/seo/organization-schema";
 
 const BASE = SITE_URL;
 const PAGE_URL = BASE + "/liposuction-360";
@@ -53,7 +54,7 @@ export function buildLipo360Schema() {
 
   return {
     "@context": "https://schema.org",
-    "@graph": [webpage, faqPage, procedureList, medicalProcedure],
+    "@graph": [buildOrganizationNode(), webpage, buildBreadcrumbList(PAGE_URL, webpage.name), faqPage, procedureList, medicalProcedure],
   };
 }
 

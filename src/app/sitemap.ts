@@ -22,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return paths.map((path) => ({
     url: path === "/" ? `${SITE_URL}/` : `${SITE_URL}${path}`,
+    lastModified: new Date(),
     changeFrequency: path === "/" ? "weekly" : "monthly",
     priority: path === "/" ? 1 : path === "/consult" || path === "/contact" ? 0.9 : 0.8,
   }));

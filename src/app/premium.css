@@ -3249,6 +3249,14 @@
   max-width: 42rem;
 }
 
+.contact-page-promo {
+  max-width: 42rem;
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.92);
+}
+
 .consult-page-alt-contact {
   margin-top: 1rem;
   font-size: 0.95rem;

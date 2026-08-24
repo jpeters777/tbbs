@@ -2,6 +2,7 @@ import type { CuratedPageContent } from "@/lib/premium-curated/types";
 import { getCanonicalUrlForSlug } from "@/lib/public-paths";
 import { resolveOgImage } from "@/lib/seo/og-image";
 import { SITE_URL } from "@/lib/site";
+import { buildBreadcrumbList, buildOrganizationNode } from "@/lib/seo/organization-schema";
 
 const BASE = SITE_URL;
 
@@ -55,7 +56,14 @@ export function buildCuratedPageSchema(content: CuratedPageContent) {
 
   return {
     "@context": "https://schema.org",
-    "@graph": [webpage, faqPage, procedureList, medicalProcedure],
+    "@graph": [
+      buildOrganizationNode(),
+      webpage,
+      buildBreadcrumbList(pageUrl, content.seo.title),
+      faqPage,
+      procedureList,
+      medicalProcedure,
+    ],
   };
 }
 

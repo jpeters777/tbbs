@@ -8,6 +8,7 @@ import { absoluteSeoTitle, toTitleCase } from "@/lib/text";
 const title = "Contact Us";
 const description =
   "Contact Tampa Bay Body Sculpting with a quick form. Our concierge team responds about procedures, consultations, and next steps.";
+const ogImage = `${SITE_URL}${siteConfig.logo}`;
 
 export const metadata: Metadata = {
   title: absoluteSeoTitle(title),
@@ -18,6 +19,14 @@ export const metadata: Metadata = {
     description,
     url: `${SITE_URL}/contact`,
     type: "website",
+    locale: "en_US",
+    images: [{ url: ogImage, width: 512, height: 512, alt: siteConfig.brand }],
+  },
+  twitter: {
+    card: "summary",
+    title: toTitleCase(title),
+    description,
+    images: [ogImage],
   },
   robots: { index: true, follow: true },
 };
@@ -30,8 +39,12 @@ export default function ContactPage() {
           <nav className="premium-breadcrumb" aria-label="Breadcrumb">
             <Link href="/">← Home</Link>
           </nav>
-          <p className="premium-eyebrow">Contact</p>
+          <p className="premium-eyebrow">Fall 2026 · Limited time</p>
           <h1 className="premium-section-title consult-page-title">Get in touch</h1>
+          <p className="contact-page-promo">
+            Fall consult special: submit the short form below to claim <strong>$500 toward your procedure</strong> when
+            you complete your complimentary virtual consult by October 31, 2026.
+          </p>
           <p className="premium-section-lead consult-page-lead">
             Have a quick question or want our team to reach out? Complete the short form below. For a full surgical
             intake with medical history and photos, use our{" "}

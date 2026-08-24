@@ -10,27 +10,67 @@ export type RedirectEntry = {
 export const specialRedirects: RedirectEntry[] = [
   {
     source: "/female-ba-gallery",
-    destination: "/",
+    destination: "/women",
     permanent: true,
   },
   {
     source: "/breast-surgery-gallery",
-    destination: "/",
+    destination: "/breasts",
     permanent: true,
   },
   {
     source: "/male-surgery-gallery",
-    destination: "/",
+    destination: "/men",
+    permanent: true,
+  },
+  {
+    source: "/before-after-photos/body/arms/:path*",
+    destination: "/arm-lipo-360-arm-lift",
+    permanent: true,
+  },
+  {
+    source: "/before-after-photos/body/lipo-360/:path*",
+    destination: "/liposuction-360",
+    permanent: true,
+  },
+  {
+    source: "/before-after-photos/body/brazilian-butt-lift/:path*",
+    destination: "/brazilian-butt-lift-bbl",
+    permanent: true,
+  },
+  {
+    source: "/before-after-photos/body/thighs/:path*",
+    destination: "/thigh-liposuction",
+    permanent: true,
+  },
+  {
+    source: "/before-after-photos/body/body-contouring/:path*",
+    destination: "/liposuction",
+    permanent: true,
+  },
+  {
+    source: "/before-after-photos/face/chin-and-neck-liposuction/:path*",
+    destination: "/female-chin-liposuction",
+    permanent: true,
+  },
+  {
+    source: "/before-after-photos/male/:path*",
+    destination: "/men",
+    permanent: true,
+  },
+  {
+    source: "/before-after-photos/breast/:path*",
+    destination: "/breasts",
     permanent: true,
   },
   {
     source: "/before-after-photos/:path*",
-    destination: "/",
+    destination: "/liposuction",
     permanent: true,
   },
   {
     source: "/before-after-photos",
-    destination: "/",
+    destination: "/liposuction",
     permanent: true,
   },
   {
@@ -50,12 +90,12 @@ export const specialRedirects: RedirectEntry[] = [
   },
   {
     source: "/female-b%26a-gallery",
-    destination: "/",
+    destination: "/women",
     permanent: true,
   },
   {
     source: "/female-b&a-gallery",
-    destination: "/",
+    destination: "/women",
     permanent: true,
   },
   {

@@ -1,38 +1,13 @@
 import { homeExploreProcedures } from "@/content/home-sections";
 import { homeFaqs } from "@/content/home-faqs";
-import { companyStats } from "@/content/company-stats";
 import { siteConfig, SITE_URL } from "@/lib/site";
-import { buildAreaServedSchema } from "@/lib/seo/geo-schema";
-import { buildAggregateRatingSchema } from "@/lib/seo/reviews-schema";
+import { buildOrganizationNode } from "@/lib/seo/organization-schema";
 
 const BASE = SITE_URL;
 
 /** Full JSON-LD graph for homepage SEO + AIO (AI search). */
 export function buildHomeSchema() {
-  const organization = {
-    "@type": "MedicalBusiness",
-    "@id": `${BASE}/#organization`,
-    name: siteConfig.brand,
-    url: `${BASE}/`,
-    telephone: siteConfig.phone,
-    email: siteConfig.email,
-    description:
-      "Concierge cosmetic surgery guidance in Tampa Bay, Florida — Lipo 360, tummy tuck, breast surgery, body contouring, and male body sculpting with complimentary virtual consultations.",
-    areaServed: buildAreaServedSchema(),
-    ...(buildAggregateRatingSchema()
-      ? { aggregateRating: buildAggregateRatingSchema() }
-      : {}),
-    sameAs: [siteConfig.social.facebook, siteConfig.social.instagram],
-    knowsAbout: [
-      "Lipo 360",
-      "Tummy tuck",
-      "Breast augmentation",
-      "Brazilian butt lift",
-      "Body contouring",
-      "Male body sculpting",
-      "Gynecomastia surgery",
-    ],
-  };
+  const organization = buildOrganizationNode();
 
   const website = {
     "@type": "WebSite",

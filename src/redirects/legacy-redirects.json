@@ -1,7 +1,7 @@
 [
   {
     "source": "/about-us",
-    "destination": "/",
+    "destination": "/how-we-select-providers",
     "permanent": true
   },
   {
@@ -531,7 +531,7 @@
   },
   {
     "source": "/contact-us",
-    "destination": "/",
+    "destination": "/contact",
     "permanent": true
   },
   {
@@ -566,7 +566,7 @@
   },
   {
     "source": "/leave-a-review",
-    "destination": "/",
+    "destination": "/contact",
     "permanent": true
   },
   {
@@ -616,7 +616,7 @@
   },
   {
     "source": "/med-spa-blog/achieve-your-ideal-physique-with-male-body-sculpting-in-tampa-florida",
-    "destination": "/male-liposuction-360-1",
+    "destination": "/male-liposuction-360",
     "permanent": true
   },
   {
@@ -826,7 +826,7 @@
   },
   {
     "source": "/reviews",
-    "destination": "/",
+    "destination": "/contact",
     "permanent": true
   },
   {
@@ -916,7 +916,7 @@
   },
   {
     "source": "/services/male/male-body-sculpting-tampa-fl",
-    "destination": "/male-liposuction-360-1",
+    "destination": "/male-liposuction-360",
     "permanent": true
   },
   {
