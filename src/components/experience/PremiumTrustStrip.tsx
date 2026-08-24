@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { trustSignals } from "@/content/premium-home";
 
 /** Shared black trust strip below hero sections. */
@@ -13,17 +14,25 @@ export function PremiumTrustStrip() {
             </>
           );
 
+          const isInternal = item.href?.startsWith("/");
+
           return (
             <div key={item.label} className="premium-trust-item">
               {item.href ? (
-                <a
-                  href={item.href}
-                  className="premium-trust-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {content}
-                </a>
+                isInternal ? (
+                  <Link href={item.href} className="premium-trust-link">
+                    {content}
+                  </Link>
+                ) : (
+                  <a
+                    href={item.href}
+                    className="premium-trust-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {content}
+                  </a>
+                )
               ) : (
                 content
               )}

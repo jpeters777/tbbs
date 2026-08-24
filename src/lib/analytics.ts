@@ -74,6 +74,15 @@ export function trackConsultClick(location: string, procedureInterest?: string) 
   });
 }
 
+/** Primary conversion CTA → /contact. Reuses consult_click so existing GA4 conversions keep firing. */
+export function trackContactClick(location: string, procedureInterest?: string) {
+  trackEvent("consult_click", {
+    location,
+    destination: "contact",
+    ...(procedureInterest ? { procedure_interest: procedureInterest } : {}),
+  });
+}
+
 export function trackCherryClick(location: string) {
   trackEvent("cherry_apply_click", { location });
 }

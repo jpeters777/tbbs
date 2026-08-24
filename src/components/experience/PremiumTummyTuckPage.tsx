@@ -24,7 +24,7 @@ import {
   tummyTuckVisuals,
   tummyTuckWhyChoose,
 } from "@/content/tummy-tuck-page";
-import { CONSULT_URL, CONTACT_URL } from "@/lib/site";
+import { TrackedContactLink } from "@/components/TrackedContactLink";
 
 const TUMMY_TUCK_JUMP_LINKS = [
   { href: "#at-a-glance", label: "At a glance" },
@@ -60,9 +60,9 @@ export function PremiumTummyTuckPage() {
               <h1 className="premium-hero-title">{tummyTuckIntro.heroTitle}</h1>
               <RichText as="p" className="premium-hero-lead" text={tummyTuckIntro.lead} autoLinkKeywords />
               <div className="premium-hero-cta">
-                <a href={CONSULT_URL} className="btn btn-primary premium-btn-glow" target="_blank" rel="noreferrer">
-                  Book free virtual consult
-                </a>
+                <TrackedContactLink className="btn btn-primary premium-btn-glow" location="tummy-tuck-hero">
+                  Request a consult
+                </TrackedContactLink>
                 <Link href="#at-a-glance" className="btn btn-outline !border-white/30 !text-white">
                   Tummy tuck at a glance
                 </Link>
@@ -83,14 +83,12 @@ export function PremiumTummyTuckPage() {
                 <RichText key={text.slice(0, 48)} text={text} autoLinkKeywords />
               ))}
             </div>
-            <a
-              href={CONSULT_URL}
+            <TrackedContactLink
               className="inline-link mt-6 inline-block font-ui text-sm uppercase tracking-wider"
-              target="_blank"
-              rel="noreferrer"
+              location="tummy-tuck-intro"
             >
-              Schedule your complimentary consultation →
-            </a>
+              Get in touch →
+            </TrackedContactLink>
           </div>
         </section>
 
@@ -188,14 +186,12 @@ export function PremiumTummyTuckPage() {
                 <RichText key={paragraph.slice(0, 48)} as="p" text={paragraph} autoLinkKeywords={false} />
               ))}
             </div>
-            <a
-              href={CONSULT_URL}
+            <TrackedContactLink
               className="inline-link mt-6 inline-block font-ui text-sm uppercase tracking-wider"
-              target="_blank"
-              rel="noreferrer"
+              location="tummy-tuck-focus"
             >
-              Book your free virtual consult →
-            </a>
+              Request a consult →
+            </TrackedContactLink>
           </div>
         </section>
 
@@ -264,14 +260,9 @@ export function PremiumTummyTuckPage() {
             <div className="premium-prose max-w-3xl mt-8">
               <RichText as="p" text={tummyTuckCandidacy.closing} autoLinkKeywords />
             </div>
-            <a
-              href={CONSULT_URL}
-              className="inline-link mt-4 inline-block"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Check your candidacy with a free consult →
-            </a>
+            <TrackedContactLink className="inline-link mt-4 inline-block" location="tummy-tuck-candidacy">
+              Check your candidacy — get in touch →
+            </TrackedContactLink>
           </div>
         </section>
 
@@ -452,12 +443,9 @@ export function PremiumTummyTuckPage() {
               autoLinkKeywords
             />
             <div className="flex flex-wrap gap-3 mt-8 premium-final-actions">
-              <a href={CONSULT_URL} className="btn btn-dark !bg-black !text-white !px-8" target="_blank" rel="noreferrer">
-                Start consultation
-              </a>
-              <a href={CONTACT_URL} className="btn btn-outline !border-black/30 !text-black" target="_blank" rel="noreferrer">
-                Contact us
-              </a>
+              <TrackedContactLink className="btn btn-dark !bg-black !text-white !px-8" location="tummy-tuck-final">
+                Request a consult
+              </TrackedContactLink>
             </div>
           </div>
         </section>

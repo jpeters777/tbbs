@@ -8,7 +8,8 @@ import { PremiumFinancingCta } from "@/components/experience/PremiumFinancingCta
 import { PremiumTrustStrip } from "@/components/experience/PremiumTrustStrip";
 import type { GalleryPageContent } from "@/lib/premium-curated/gallery-types";
 import { getPublicPathForSlug } from "@/lib/public-paths";
-import { CONTACT_URL } from "@/lib/site";
+import { TrackedContactLink } from "@/components/TrackedContactLink";
+import { TrackedConsultLink } from "@/components/TrackedConsultLink";
 import { CONSULT_PHOTO_GALLERY_CTA } from "@/content/consult-photo-messaging";
 
 export function PremiumGalleryPage({
@@ -37,9 +38,9 @@ export function PremiumGalleryPage({
               <h1 className="premium-hero-title">{content.intro.heroTitle}</h1>
               <RichText as="p" className="premium-hero-lead" text={content.intro.lead} autoLinkKeywords currentPath={pagePath} />
               <div className="premium-hero-cta">
-                <Link href={CONTACT_URL} className="btn btn-primary premium-btn-glow">
+                <TrackedContactLink className="btn btn-primary premium-btn-glow" location={`${content.slug}-gallery-hero`}>
                   {CONSULT_PHOTO_GALLERY_CTA}
-                </Link>
+                </TrackedContactLink>
                 <Link href="#gallery" className="btn btn-outline !border-white/30 !text-white">
                   How photo review works
                 </Link>
@@ -68,9 +69,9 @@ export function PremiumGalleryPage({
             {content.gallery.intro ? (
               <p className="premium-section-intro mt-4">{content.gallery.intro}</p>
             ) : null}
-            <Link href={CONTACT_URL} className="btn btn-primary premium-btn-glow mt-8">
+            <TrackedContactLink className="btn btn-primary premium-btn-glow mt-8" location={`${content.slug}-gallery-review`}>
               {CONSULT_PHOTO_GALLERY_CTA}
-            </Link>
+            </TrackedContactLink>
           </div>
         </section>
 
@@ -143,12 +144,12 @@ export function PremiumGalleryPage({
               autoLinkKeywords currentPath={pagePath}
             />
             <div className="flex flex-wrap gap-3 mt-8 premium-final-actions">
-              <Link href={CONTACT_URL} className="btn btn-dark !bg-black !text-white !px-8">
+              <TrackedContactLink className="btn btn-dark !bg-black !text-white !px-8" location={`${content.slug}-gallery-final`}>
                 {CONSULT_PHOTO_GALLERY_CTA}
-              </Link>
-              <Link href="/consult" className="btn btn-outline !border-black/30 !text-black">
+              </TrackedContactLink>
+              <TrackedConsultLink className="btn btn-outline !border-black/30 !text-black" location={`${content.slug}-gallery-consult`}>
                 Full virtual consult form
-              </Link>
+              </TrackedConsultLink>
             </div>
           </div>
         </section>

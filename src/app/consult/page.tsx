@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { JotformEmbed } from "@/components/experience/JotformEmbed";
 import { TrackedPhoneLink } from "@/components/TrackedPhoneLink";
-import { siteConfig, SITE_URL } from "@/lib/site";
+import { CONTACT_URL, siteConfig, SITE_URL } from "@/lib/site";
 import { absoluteSeoTitle, toTitleCase } from "@/lib/text";
 
 type ConsultPageProps = {
@@ -46,23 +46,29 @@ export default async function ConsultPage({ searchParams }: ConsultPageProps) {
           <nav className="premium-breadcrumb" aria-label="Breadcrumb">
             <Link href="/">← Home</Link>
           </nav>
-          <p className="premium-eyebrow">Get started</p>
+          <p className="premium-eyebrow">Full intake</p>
           <h1 className="premium-section-title consult-page-title">Free virtual consultation</h1>
           <p className="premium-section-lead consult-page-lead">
             {hasProcedure ? (
               <>
-                Complete the virtual consultation form below for <strong>{procedureInterest}</strong>. Our Tampa
-                Bay concierge team uses your answers to provide personalized guidance. There is no obligation.
+                This is the full surgical intake after the short contact form. Complete the virtual consultation form
+                below for <strong>{procedureInterest}</strong>. Our Tampa Bay concierge team uses your answers to
+                provide personalized guidance. There is no obligation.
               </>
             ) : (
               <>
-                Complete the virtual consultation form below. Our Tampa Bay concierge team uses your answers to provide
-                personalized guidance on procedures, candidacy, and next steps. There is no obligation.
+                This is the full surgical intake after the short contact form. Complete the virtual consultation form
+                below. Our Tampa Bay concierge team uses your answers to provide personalized guidance on procedures,
+                candidacy, and next steps. There is no obligation.
               </>
             )}
           </p>
           <p className="consult-page-alt-contact">
-            Prefer to talk now?{" "}
+            Prefer to start with a shorter form?{" "}
+            <Link href={CONTACT_URL} className="inline-link">
+              Get in touch
+            </Link>
+            . Prefer to talk now?{" "}
             <TrackedPhoneLink className="inline-link" location="consult-page">
               Call {siteConfig.phone}
             </TrackedPhoneLink>

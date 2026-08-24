@@ -18,9 +18,8 @@ import {
   homeWhyChoose,
   type ProcedureCategoryId,
 } from "@/content/premium-home";
-import { CONSULT_URL, CONTACT_URL } from "@/lib/site";
+import { TrackedContactLink } from "@/components/TrackedContactLink";
 import { resolveHeroSrc } from "@/lib/hero-images";
-import { toTitleCase } from "@/lib/text";
 import type { PageContent } from "@/lib/content";
 
 const ConsultInterestForm = dynamic(
@@ -88,9 +87,9 @@ export function PremiumHomePage({ page }: { page: PageContent }) {
                 />
               ))}
             </div>
-            <a href={CONTACT_URL} className="inline-link mt-6 inline-block font-ui text-sm uppercase tracking-wider" target="_blank" rel="noreferrer">
-              Contact our team →
-            </a>
+            <TrackedContactLink className="inline-link mt-6 inline-block font-ui text-sm uppercase tracking-wider" location="homepage-about-link">
+              Get in touch →
+            </TrackedContactLink>
           </div>
         </div>
         <div className="container mt-12 max-w-3xl">
@@ -304,12 +303,9 @@ export function PremiumHomePage({ page }: { page: PageContent }) {
             autoLinkKeywords
           />
           <div className="flex flex-wrap gap-3 mt-8 premium-final-actions">
-            <a href={CONSULT_URL} className="btn btn-dark !bg-black !text-white !px-8" target="_blank" rel="noreferrer">
-              Start consultation
-            </a>
-            <a href={CONTACT_URL} className="btn btn-outline !border-black/30 !text-black" target="_blank" rel="noreferrer">
-              Contact us
-            </a>
+            <TrackedContactLink className="btn btn-dark !bg-black !text-white !px-8" location="homepage-final">
+              Request a consult
+            </TrackedContactLink>
           </div>
         </div>
       </section>

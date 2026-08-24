@@ -1,4 +1,4 @@
-import { CONTACT_URL, CONSULT_URL } from "@/lib/site";
+import { CONTACT_URL } from "@/lib/site";
 import { premiumWhyChoose } from "@/content/premium-shared-sections";
 import { companyStats } from "@/content/company-stats";
 
@@ -314,5 +314,3 @@ export const homeExploreProcedures = {
     { label: "Resources & FAQs", href: "/resources" },
   ],
 };
-
-export { CONSULT_URL };

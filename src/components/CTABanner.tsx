@@ -1,4 +1,4 @@
-import { TrackedConsultLink } from "@/components/TrackedConsultLink";
+import { TrackedContactLink } from "@/components/TrackedContactLink";
 import { TrackedPhoneLink } from "@/components/TrackedPhoneLink";
 import { siteConfig } from "@/lib/site";
 
@@ -17,9 +17,9 @@ export function CTABanner({
           <p className="section-lead mx-auto">{body}</p>
         </div>
         <div className="flex flex-wrap justify-center gap-3">
-          <TrackedConsultLink className="btn btn-dark" location="cta-banner">
-            Start a consultation
-          </TrackedConsultLink>
+          <TrackedContactLink className="btn btn-dark" location="cta-banner">
+            Request a consult
+          </TrackedContactLink>
           <TrackedPhoneLink className="btn btn-outline !border-black/40 !text-[var(--color-on-accent)]" location="cta-banner">
             {siteConfig.phone}
           </TrackedPhoneLink>

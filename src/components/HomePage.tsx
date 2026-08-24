@@ -60,9 +60,9 @@ export function HomePage({ page }: { page: PageContent }) {
           <h3 className="section-kicker">{homeDifference.introTitle}</h3>
           <p className="difference-intro">{homeDifference.intro}</p>
           <div className="text-center mt-8 mb-10">
-            <a href={CONTACT_URL} className="btn btn-primary" target="_blank" rel="noreferrer">
-              Contact us
-            </a>
+            <Link href={CONTACT_URL} className="btn btn-primary">
+              Get in touch
+            </Link>
           </div>
           <div className="feature-grid feature-grid--difference">
             {homeDifference.columns.map((col) => (

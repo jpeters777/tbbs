@@ -10,7 +10,7 @@ import { PremiumTrustStrip } from "@/components/experience/PremiumTrustStrip";
 import { premiumWhyChoose } from "@/content/premium-shared-sections";
 import { getPublicPathForSlug } from "@/lib/public-paths";
 import type { CuratedPageContent } from "@/lib/premium-curated/types";
-import { CONSULT_URL, CONTACT_URL } from "@/lib/site";
+import { TrackedContactLink } from "@/components/TrackedContactLink";
 
 export function PremiumCuratedPage({ content }: { content: CuratedPageContent }) {
   let relatedIndex = 0;
@@ -42,9 +42,9 @@ export function PremiumCuratedPage({ content }: { content: CuratedPageContent })
               <h1 className="premium-hero-title">{content.intro.heroTitle}</h1>
               <RichText as="p" className="premium-hero-lead" text={content.intro.lead} autoLinkKeywords currentPath={pagePath} />
               <div className="premium-hero-cta">
-                <a href={CONSULT_URL} className="btn btn-primary premium-btn-glow" target="_blank" rel="noreferrer">
-                  Book free virtual consult
-                </a>
+                <TrackedContactLink className="btn btn-primary premium-btn-glow" location={`curated-${content.slug}-hero`}>
+                  Request a consult
+                </TrackedContactLink>
                 <Link href="#at-a-glance" className="btn btn-outline !border-white/30 !text-white">
                   {content.heroSecondaryCta}
                 </Link>
@@ -86,14 +86,12 @@ export function PremiumCuratedPage({ content }: { content: CuratedPageContent })
                 <RichText key={text.slice(0, 48)} text={text} autoLinkKeywords currentPath={pagePath} />
               ))}
             </div>
-            <a
-              href={CONSULT_URL}
+            <TrackedContactLink
               className="inline-link mt-6 inline-block font-ui text-sm uppercase tracking-wider"
-              target="_blank"
-              rel="noreferrer"
+              location={`curated-${content.slug}-intro`}
             >
-              Schedule your complimentary consultation →
-            </a>
+              Get in touch →
+            </TrackedContactLink>
           </div>
         </section>
 
@@ -205,14 +203,12 @@ export function PremiumCuratedPage({ content }: { content: CuratedPageContent })
                   <RichText key={paragraph.slice(0, 48)} as="p" text={paragraph} autoLinkKeywords={false} />
                 ))}
               </div>
-              <a
-                href={CONSULT_URL}
+              <TrackedContactLink
                 className="inline-link mt-6 inline-block font-ui text-sm uppercase tracking-wider"
-                target="_blank"
-                rel="noreferrer"
+                location={`curated-${content.slug}-focus`}
               >
-                Book your free virtual consult →
-              </a>
+                Request a consult →
+              </TrackedContactLink>
             </div>
           </section>
         ) : null}
@@ -305,9 +301,9 @@ export function PremiumCuratedPage({ content }: { content: CuratedPageContent })
             <div className="premium-prose max-w-3xl mt-8">
               <RichText as="p" text={content.candidacy.closing} autoLinkKeywords currentPath={pagePath} />
             </div>
-            <a href={CONSULT_URL} className="inline-link mt-4 inline-block" target="_blank" rel="noreferrer">
-              Check your candidacy with a free consult →
-            </a>
+            <TrackedContactLink className="inline-link mt-4 inline-block" location={`curated-${content.slug}-candidacy`}>
+              Check your candidacy — get in touch →
+            </TrackedContactLink>
           </div>
         </section>
 
@@ -473,12 +469,9 @@ export function PremiumCuratedPage({ content }: { content: CuratedPageContent })
               autoLinkKeywords currentPath={pagePath}
             />
             <div className="flex flex-wrap gap-3 mt-8 premium-final-actions">
-              <a href={CONSULT_URL} className="btn btn-dark !bg-black !text-white !px-8" target="_blank" rel="noreferrer">
-                Start consultation
-              </a>
-              <a href={CONTACT_URL} className="btn btn-outline !border-black/30 !text-black" target="_blank" rel="noreferrer">
-                Contact us
-              </a>
+              <TrackedContactLink className="btn btn-dark !bg-black !text-white !px-8" location={`curated-${content.slug}-final`}>
+                Request a consult
+              </TrackedContactLink>
             </div>
           </div>
         </section>

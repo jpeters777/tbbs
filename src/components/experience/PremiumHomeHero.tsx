@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { PremiumHeroMedia } from "@/components/experience/PremiumHeroMedia";
 import { RichText } from "@/components/RichText";
-import { CONSULT_URL } from "@/lib/site";
+import { TrackedContactLink } from "@/components/TrackedContactLink";
 import { toTitleCase } from "@/lib/text";
 import type { PageContent } from "@/lib/content";
 
@@ -38,9 +38,9 @@ export function PremiumHomeHero({ page, featuredQuote }: PremiumHomeHeroProps) {
               autoLinkKeywords
             />
             <div className="premium-hero-cta">
-              <Link href={CONSULT_URL} className="btn btn-primary premium-btn-glow">
-                Book free virtual consult
-              </Link>
+              <TrackedContactLink className="btn btn-primary premium-btn-glow" location="home-hero">
+                Request a consult
+              </TrackedContactLink>
               <Link href="#procedures" className="btn btn-outline !border-white/30 !text-white">
                 Explore procedures
               </Link>

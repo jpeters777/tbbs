@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { hasNavDropdown, siteConfig, type NavItem } from "@/lib/site";
 import { TrackedPhoneLink } from "@/components/TrackedPhoneLink";
-import { TrackedConsultLink } from "@/components/TrackedConsultLink";
+import { TrackedContactLink } from "@/components/TrackedContactLink";
 import { MobileNav } from "@/components/MobileNav";
 import { useMobileChrome } from "@/components/MobileChromeProvider";
 
@@ -125,24 +125,24 @@ export function Header({ premium = false }: { premium?: boolean }) {
               location="header-desktop"
             />
           </div>
-          <TrackedConsultLink
+          <TrackedContactLink
             className="btn btn-primary !py-2.5 !px-4 !text-[0.72rem] shrink-0 premium-btn-glow"
             location="header-desktop"
           >
-            Free consult
-          </TrackedConsultLink>
+            Get in touch
+          </TrackedContactLink>
         </div>
 
         <div className="flex items-center gap-2 sm:gap-3 lg:hidden">
           <TrackedPhoneLink className="header-mobile-call" location="header-mobile-chrome">
             Call
           </TrackedPhoneLink>
-          <TrackedConsultLink
+          <TrackedContactLink
             className="btn btn-primary header-mobile-consult premium-btn-glow"
             location="header-mobile"
           >
-            Consult
-          </TrackedConsultLink>
+            Get in touch
+          </TrackedContactLink>
           <button
             type="button"
             className="header-mobile-menu"

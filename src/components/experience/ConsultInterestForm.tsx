@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { homeExploreProcedures } from "@/content/home-sections";
 import { siteConfig } from "@/lib/site";
-import { TrackedConsultLink } from "@/components/TrackedConsultLink";
+import { TrackedContactLink } from "@/components/TrackedContactLink";
 import { TrackedPhoneLink } from "@/components/TrackedPhoneLink";
 
 const PROCEDURE_OPTIONS = [
@@ -68,17 +68,16 @@ export function ConsultInterestForm({
             {procedure ? `Great — let's talk about ${procedure}` : "Ready to connect?"}
           </h3>
           <p className="premium-consult-form-intro">
-            Choose how you&apos;d like to reach our Tampa Bay concierge team. There is no obligation and your
-            consultation is complimentary.
+            Start with a short form so our Tampa Bay concierge team can reach out. There is no obligation.
           </p>
           <div className="premium-consult-form-actions">
-            <TrackedConsultLink
+            <TrackedContactLink
               className="btn btn-primary premium-btn-glow"
               location={location}
               procedureInterest={procedureInterest}
             >
-              Book free virtual consult
-            </TrackedConsultLink>
+              Start with a short form
+            </TrackedContactLink>
             <TrackedPhoneLink className="btn btn-outline !border-white/25 !text-white" location={`${location}-phone`}>
               Call {siteConfig.phone}
             </TrackedPhoneLink>

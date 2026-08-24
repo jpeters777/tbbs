@@ -26,3 +26,10 @@ export function buildConsultPageHref(procedureInterest?: string | null) {
   const params = new URLSearchParams({ procedureInterest: procedureInterest.trim() });
   return `/consult?${params.toString()}`;
 }
+
+export function buildContactPageHref(procedureInterest?: string | null) {
+  if (!procedureInterest?.trim()) return "/contact";
+
+  const params = new URLSearchParams({ procedureInterest: procedureInterest.trim() });
+  return `/contact?${params.toString()}`;
+}

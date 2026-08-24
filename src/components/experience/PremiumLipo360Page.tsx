@@ -18,7 +18,7 @@ import {
   lipo360Visuals,
   lipo360WhyChoose,
 } from "@/content/lipo-360-page";
-import { CONSULT_URL, CONTACT_URL } from "@/lib/site";
+import { TrackedContactLink } from "@/components/TrackedContactLink";
 
 const LIPO360_JUMP_LINKS = [
   { href: "#at-a-glance", label: "At a glance" },
@@ -55,9 +55,9 @@ export function PremiumLipo360Page() {
               <h1 className="premium-hero-title">{lipo360Intro.heroTitle}</h1>
               <RichText as="p" className="premium-hero-lead" text={lipo360Intro.lead} autoLinkKeywords />
               <div className="premium-hero-cta">
-                <a href={CONSULT_URL} className="btn btn-primary premium-btn-glow" target="_blank" rel="noreferrer">
-                  Book free virtual consult
-                </a>
+                <TrackedContactLink className="btn btn-primary premium-btn-glow" location="lipo360-hero">
+                  Request a consult
+                </TrackedContactLink>
                 <Link href="#at-a-glance" className="btn btn-outline !border-white/30 !text-white">
                   Lipo 360 at a glance
                 </Link>
@@ -79,14 +79,12 @@ export function PremiumLipo360Page() {
                 <RichText key={text.slice(0, 48)} text={text} autoLinkKeywords />
               ))}
             </div>
-            <a
-              href={CONSULT_URL}
+            <TrackedContactLink
               className="inline-link mt-6 inline-block font-ui text-sm uppercase tracking-wider"
-              target="_blank"
-              rel="noreferrer"
+              location="lipo360-intro"
             >
-              Schedule your complimentary consultation →
-            </a>
+              Get in touch →
+            </TrackedContactLink>
           </div>
         </section>
 
@@ -302,12 +300,9 @@ export function PremiumLipo360Page() {
               autoLinkKeywords
             />
             <div className="flex flex-wrap gap-3 mt-8 premium-final-actions">
-              <a href={CONSULT_URL} className="btn btn-dark !bg-black !text-white !px-8" target="_blank" rel="noreferrer">
-                Start consultation
-              </a>
-              <a href={CONTACT_URL} className="btn btn-outline !border-black/30 !text-black" target="_blank" rel="noreferrer">
-                Contact us
-              </a>
+              <TrackedContactLink className="btn btn-dark !bg-black !text-white !px-8" location="lipo360-final">
+                Request a consult
+              </TrackedContactLink>
             </div>
           </div>
         </section>

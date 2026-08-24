@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { JotformEmbed } from "@/components/experience/JotformEmbed";
 import { TrackedPhoneLink } from "@/components/TrackedPhoneLink";
-import { siteConfig, SITE_URL } from "@/lib/site";
+import { CONSULT_URL, siteConfig, SITE_URL } from "@/lib/site";
 import { absoluteSeoTitle, toTitleCase } from "@/lib/text";
 
 const title = "Contact Us";
@@ -46,12 +46,14 @@ export default function ContactPage() {
             you complete your complimentary virtual consult by October 31, 2026.
           </p>
           <p className="premium-section-lead consult-page-lead">
-            Have a quick question or want our team to reach out? Complete the short form below. For a full surgical
-            intake with medical history and photos, use our{" "}
-            <Link href="/consult" className="inline-link">
-              free virtual consultation form
+            Have a quick question or want our team to reach out? Complete the short form below—that is the fastest way
+            to start.
+          </p>
+          <p className="premium-section-lead consult-page-lead">
+            Already talking with us, or ready for full surgical intake (medical history and photos)?{" "}
+            <Link href={CONSULT_URL} className="inline-link">
+              Complete your virtual consult →
             </Link>
-            .
           </p>
           <p className="consult-page-alt-contact">
             Prefer to talk now?{" "}

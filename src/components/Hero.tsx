@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { CONSULT_URL } from "@/lib/site";
+import Link from "next/link";
+import { CONTACT_URL } from "@/lib/site";
 
 type HeroProps = {
   title: string;
@@ -17,10 +18,11 @@ export function Hero({
   imageSrc,
   imageAlt = "",
   brandFirst = false,
-  ctaLabel = "Start a consultation",
-  ctaHref = CONSULT_URL,
+  ctaLabel = "Request a consult",
+  ctaHref = CONTACT_URL,
 }: HeroProps) {
   void brandFirst;
+  const isInternal = ctaHref.startsWith("/");
   return (
     <section className="relative min-h-[82vh] flex items-center justify-center overflow-hidden bg-black text-white text-center">
       {imageSrc ? (
@@ -49,9 +51,15 @@ export function Hero({
           </p>
         ) : null}
         <div className="animate-fade-up-delay-2 mt-8 flex justify-center">
-          <a href={ctaHref} className="btn btn-primary" target="_blank" rel="noreferrer">
-            {ctaLabel}
-          </a>
+          {isInternal ? (
+            <Link href={ctaHref} className="btn btn-primary">
+              {ctaLabel}
+            </Link>
+          ) : (
+            <a href={ctaHref} className="btn btn-primary" target="_blank" rel="noreferrer">
+              {ctaLabel}
+            </a>
+          )}
         </div>
       </div>
     </section>

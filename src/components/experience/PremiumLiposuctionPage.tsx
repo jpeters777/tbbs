@@ -22,7 +22,7 @@ import {
   liposuctionWhyChoose,
 } from "@/content/liposuction-page";
 import type { PageContent } from "@/lib/content";
-import { CONSULT_URL, CONTACT_URL } from "@/lib/site";
+import { TrackedContactLink } from "@/components/TrackedContactLink";
 import { resolveHeroSrc } from "@/lib/hero-images";
 
 const LIPOSUCTION_JUMP_LINKS = [
@@ -57,9 +57,9 @@ export function PremiumLiposuctionPage({ page }: { page: PageContent }) {
             <h1 className="premium-hero-title">{liposuctionIntro.heroTitle}</h1>
             <RichText as="p" className="premium-hero-lead" text={liposuctionIntro.lead} autoLinkKeywords />
             <div className="premium-hero-cta">
-              <a href={CONSULT_URL} className="btn btn-primary premium-btn-glow" target="_blank" rel="noreferrer">
-                Book free virtual consult
-              </a>
+              <TrackedContactLink className="btn btn-primary premium-btn-glow" location="liposuction-hero">
+                Request a consult
+              </TrackedContactLink>
               <Link href="#procedures" className="btn btn-outline !border-white/30 !text-white">
                 Explore liposuction options
               </Link>
@@ -94,14 +94,12 @@ export function PremiumLiposuctionPage({ page }: { page: PageContent }) {
                 <RichText key={text.slice(0, 48)} text={text} autoLinkKeywords />
               ))}
             </div>
-            <a
-              href={CONSULT_URL}
+            <TrackedContactLink
               className="inline-link mt-6 inline-block font-ui text-sm uppercase tracking-wider"
-              target="_blank"
-              rel="noreferrer"
+              location="liposuction-intro"
             >
-              Schedule your complimentary consultation →
-            </a>
+              Get in touch →
+            </TrackedContactLink>
           </div>
         </div>
       </section>
@@ -330,12 +328,9 @@ export function PremiumLiposuctionPage({ page }: { page: PageContent }) {
             autoLinkKeywords
           />
           <div className="flex flex-wrap gap-3 mt-8 premium-final-actions">
-            <a href={CONSULT_URL} className="btn btn-dark !bg-black !text-white !px-8" target="_blank" rel="noreferrer">
-              Start consultation
-            </a>
-            <a href={CONTACT_URL} className="btn btn-outline !border-black/30 !text-black" target="_blank" rel="noreferrer">
-              Contact us
-            </a>
+            <TrackedContactLink className="btn btn-dark !bg-black !text-white !px-8" location="liposuction-final">
+              Request a consult
+            </TrackedContactLink>
           </div>
         </div>
       </section>

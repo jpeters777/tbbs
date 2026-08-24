@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 import { TrackedPhoneLink } from "@/components/TrackedPhoneLink";
+import { TrackedContactLink } from "@/components/TrackedContactLink";
 import { TrackedConsultLink } from "@/components/TrackedConsultLink";
 
 const resourceLinks = [
@@ -77,8 +78,11 @@ export function Footer() {
             <a href={siteConfig.social.facebook} className="site-footer-link" target="_blank" rel="noreferrer">
               Facebook
             </a>
-            <TrackedConsultLink className="btn btn-primary site-footer-cta" location="footer">
-              Start a consultation
+            <TrackedContactLink className="btn btn-primary site-footer-cta" location="footer">
+              Request a consult
+            </TrackedContactLink>
+            <TrackedConsultLink className="site-footer-link" location="footer-next-step">
+              Already in touch? Complete your virtual consult →
             </TrackedConsultLink>
           </div>
         </div>
