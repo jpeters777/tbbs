@@ -60,7 +60,7 @@ export const femaleBaGalleryPage: GalleryPageContent = {
       },
     ],
   },
-  relatedIntro: "Explore procedure guides for the treatments you may review in photos at your consult.",
+  relatedIntro: "Explore procedure guides, then open the matching photo-category page that explains consult-only review.",
   relatedProcedures: [
     {
       title: "Lipo 360",
@@ -88,9 +88,14 @@ export const femaleBaGalleryPage: GalleryPageContent = {
       body: "Combined breast and body restoration after pregnancy.",
     },
     {
-      title: "Women's Procedures Hub",
-      href: "/women",
-      body: "Browse all female body contouring options.",
+      title: "Lipo 360 Photos At Consult",
+      href: "/before-after-photos/body/lipo-360",
+      body: "Where Tampa Lipo 360 before & after photos are reviewed—at consult, not on a public gallery page.",
+    },
+    {
+      title: "BBL Photos At Consult",
+      href: "/before-after-photos/body/brazilian-butt-lift",
+      body: "How Brazilian butt lift photo review works during a complimentary consultation.",
     },
   ],
   faqTitle: "Before & After Photo FAQs",

@@ -101,6 +101,21 @@ export const liposuctionProcedureGroups: LiposuctionProcedureGroup[] = [
       },
     ],
   },
+  {
+    label: "Photo review",
+    items: [
+      {
+        title: "Body Contouring Photos At Consult",
+        href: "/before-after-photos/body/body-contouring",
+        body: "Tampa body contouring before & after photos are reviewed at your complimentary consult—not posted on this website.",
+      },
+      {
+        title: "Before & After Photos Hub",
+        href: "/before-after-photos",
+        body: "How photo review works for Lipo 360, BBL, arms, thighs, breast, and male sculpting.",
+      },
+    ],
+  },
 ];
 
 export const liposuctionTreatmentAreas = [

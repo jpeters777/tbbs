@@ -1,4 +1,5 @@
 import legacyRedirects from "./legacy-redirects.json";
+import { PHOTO_CATEGORY_CASE_ROOTS } from "../lib/photo-category-paths";
 
 export type RedirectEntry = {
   source: string;
@@ -6,56 +7,37 @@ export type RedirectEntry = {
   permanent: boolean;
 };
 
+function photoCategoryCaseRedirects(): RedirectEntry[] {
+  return PHOTO_CATEGORY_CASE_ROOTS.flatMap((root) => [
+    {
+      source: `${root}/tampa-fl/:id(\\d+)`,
+      destination: root,
+      permanent: true,
+    },
+    {
+      source: `${root}/tampa-fl`,
+      destination: root,
+      permanent: true,
+    },
+    {
+      source: `${root}/:id(\\d+)`,
+      destination: root,
+      permanent: true,
+    },
+  ]);
+}
+
 /** Encoded or special-character paths that need explicit redirect rules. */
 export const specialRedirects: RedirectEntry[] = [
+  ...photoCategoryCaseRedirects(),
   {
-    source: "/before-after-photos/body/arms/:path*",
-    destination: "/female-ba-gallery",
+    source: "/before-after-photos/body",
+    destination: "/before-after-photos",
     permanent: true,
   },
   {
-    source: "/before-after-photos/body/lipo-360/:path*",
-    destination: "/female-ba-gallery",
-    permanent: true,
-  },
-  {
-    source: "/before-after-photos/body/brazilian-butt-lift/:path*",
-    destination: "/female-ba-gallery",
-    permanent: true,
-  },
-  {
-    source: "/before-after-photos/body/thighs/:path*",
-    destination: "/female-ba-gallery",
-    permanent: true,
-  },
-  {
-    source: "/before-after-photos/body/body-contouring/:path*",
-    destination: "/female-ba-gallery",
-    permanent: true,
-  },
-  {
-    source: "/before-after-photos/face/chin-and-neck-liposuction/:path*",
-    destination: "/female-ba-gallery",
-    permanent: true,
-  },
-  {
-    source: "/before-after-photos/male/:path*",
-    destination: "/male-surgery-gallery",
-    permanent: true,
-  },
-  {
-    source: "/before-after-photos/breast/:path*",
-    destination: "/breast-surgery-gallery",
-    permanent: true,
-  },
-  {
-    source: "/before-after-photos/:path*",
-    destination: "/female-ba-gallery",
-    permanent: true,
-  },
-  {
-    source: "/before-after-photos",
-    destination: "/female-ba-gallery",
+    source: "/before-after-photos/face",
+    destination: "/before-after-photos/face/chin-and-neck-liposuction",
     permanent: true,
   },
   {

@@ -224,6 +224,11 @@ export const thighLiposuctionPage = createCuratedPage({
   },
   relatedProcedures: [
     {
+      title: "Thigh Photos At Consult",
+      href: "/before-after-photos/body/thighs",
+      body: "Tampa thigh liposuction before & after photos are reviewed at your complimentary consult—not posted on the website.",
+    },
+    {
       title: "Lipo 360",
       href: "/liposuction-360",
       body: "Circumferential midsection sculpting often combined with thigh lipo for balanced upper and lower body proportions.",

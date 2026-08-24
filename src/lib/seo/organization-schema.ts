@@ -48,23 +48,35 @@ export function buildOrganizationNode() {
   };
 }
 
-export function buildBreadcrumbList(pageUrl: string, pageName: string) {
+export function buildBreadcrumbList(
+  pageUrl: string,
+  pageName: string,
+  parents: { name: string; url: string }[] = [],
+) {
+  const itemListElement = [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: `${BASE}/`,
+    },
+    ...parents.map((parent, index) => ({
+      "@type": "ListItem",
+      position: index + 2,
+      name: parent.name,
+      item: parent.url,
+    })),
+    {
+      "@type": "ListItem",
+      position: parents.length + 2,
+      name: pageName,
+      item: pageUrl,
+    },
+  ];
+
   return {
     "@type": "BreadcrumbList",
     "@id": `${pageUrl}/#breadcrumb`,
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: `${BASE}/`,
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: pageName,
-        item: pageUrl,
-      },
-    ],
+    itemListElement,
   };
 }

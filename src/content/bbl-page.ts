@@ -361,6 +361,11 @@ export type BblRelatedItem = {
 
 export const bblRelatedProcedures: BblRelatedItem[] = [
   {
+    title: "BBL Photos At Consult",
+    href: "/before-after-photos/body/brazilian-butt-lift",
+    body: "Tampa Brazilian butt lift before & after photos are reviewed at your complimentary consult—not posted on the website.",
+  },
+  {
     title: "Lipo 360",
     href: "/liposuction-360",
     body: "Comprehensive midsection sculpting—often combined with a BBL to slim the waist while enhancing curves.",

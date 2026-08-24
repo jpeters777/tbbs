@@ -60,7 +60,7 @@ export const maleSurgeryGalleryPage: GalleryPageContent = {
       },
     ],
   },
-  relatedIntro: "Explore men's procedure guides for candidacy, recovery, and what to expect.",
+  relatedIntro: "Explore men's procedure guides, then the male sculpting photo-category page for consult-only review.",
   relatedProcedures: [
     {
       title: "Male Lipo 360",
@@ -88,9 +88,9 @@ export const maleSurgeryGalleryPage: GalleryPageContent = {
       body: "Refine jawline and submental fullness for a sharper profile.",
     },
     {
-      title: "Men's Procedures Hub",
-      href: "/men",
-      body: "Browse all male body contouring options.",
+      title: "Male Body Sculpting Photos At Consult",
+      href: "/before-after-photos/male/male-body-sculpting",
+      body: "Where historical male sculpting photo URLs now explain consult-only review.",
     },
   ],
   faqTitle: "Male Photo Review FAQs",

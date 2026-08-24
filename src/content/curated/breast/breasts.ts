@@ -223,9 +223,9 @@ export const breastsContent: CuratedPageContent = createCuratedPage({
   },
   relatedProcedures: [
     {
-      title: "Breast Augmentation",
-      href: "/breast-augmentation",
-      body: "Implant-based volume enhancement—the most popular breast procedure in Tampa Bay.",
+      title: "Breast Surgery Photos At Consult",
+      href: "/before-after-photos/breast",
+      body: "Tampa breast before & after photos are reviewed at your complimentary consult—not posted on the website.",
     },
     {
       title: "Breast Lift",

@@ -60,7 +60,7 @@ export const breastSurgeryGalleryPage: GalleryPageContent = {
       },
     ],
   },
-  relatedIntro: "Explore procedure guides for candidacy, recovery, and what to expect.",
+  relatedIntro: "Explore procedure guides, then the breast rejuvenation photo-category page for consult-only review.",
   relatedProcedures: [
     {
       title: "Breast Augmentation",
@@ -88,9 +88,9 @@ export const breastSurgeryGalleryPage: GalleryPageContent = {
       body: "Combined breast and body restoration after pregnancy.",
     },
     {
-      title: "Breast Procedures Hub",
-      href: "/breasts",
-      body: "Browse all breast surgery options in one place.",
+      title: "Breast Rejuvenation Photos At Consult",
+      href: "/before-after-photos/breast/breast-rejuvenation",
+      body: "Where historical breast-rejuvenation photo URLs now explain consult-only review.",
     },
   ],
   faqTitle: "Breast Photo Review FAQs",

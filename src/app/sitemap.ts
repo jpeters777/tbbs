@@ -3,6 +3,7 @@ import { getAllPageSlugs } from "@/lib/content";
 import { getPublicPathForSlug } from "@/lib/public-paths";
 
 import { SITE_URL } from "@/lib/site";
+import { getPhotoCategoryPaths } from "@/content/photo-categories";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const paths = [
@@ -10,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/consult",
     "/contact",
     ...getAllPageSlugs().map((slug) => getPublicPathForSlug(slug)),
+    ...getPhotoCategoryPaths(),
   ];
 
   return paths.map((path) => ({

@@ -225,6 +225,11 @@ export const armLipo360ArmLiftPage = createCuratedPage({
   },
   relatedProcedures: [
     {
+      title: "Arm Photos At Consult",
+      href: "/before-after-photos/body/arms",
+      body: "Tampa arm liposuction before & after photos are reviewed at your complimentary consult—not posted on the website.",
+    },
+    {
       title: "Lipo 360",
       href: "/liposuction-360",
       body: "Midsection sculpting often combined with arm contouring for comprehensive upper-body refinement.",

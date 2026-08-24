@@ -4,6 +4,8 @@ export type GalleryLookForItem = { title: string; body: string };
 
 export type GalleryPageContent = {
   slug: string;
+  /** Public path when it differs from `/${slug}` (photo-category URLs). */
+  canonicalPath?: string;
   seo: {
     title: string;
     description: string;

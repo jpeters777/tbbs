@@ -6,8 +6,20 @@ import { buildBreadcrumbList, buildOrganizationNode } from "@/lib/seo/organizati
 
 const BASE = SITE_URL;
 
+function pageUrlFromContent(content: GalleryPageContent) {
+  if (content.canonicalPath) {
+    return `${SITE_URL}${content.canonicalPath}`;
+  }
+  return getCanonicalUrlForSlug(content.slug);
+}
+
 export function buildGalleryPageSchema(content: GalleryPageContent) {
-  const pageUrl = getCanonicalUrlForSlug(content.slug);
+  const pageUrl = pageUrlFromContent(content);
+  const nestedPhotoCategory =
+    Boolean(content.canonicalPath) && content.canonicalPath !== "/before-after-photos";
+  const breadcrumbParents = nestedPhotoCategory
+    ? [{ name: "Before & After Photos", url: `${BASE}/before-after-photos` }]
+    : [];
 
   return {
     "@context": "https://schema.org",
@@ -23,7 +35,7 @@ export function buildGalleryPageSchema(content: GalleryPageContent) {
         about: { "@id": `${BASE}/#organization` },
         inLanguage: "en-US",
       },
-      buildBreadcrumbList(pageUrl, content.seo.title),
+      buildBreadcrumbList(pageUrl, content.seo.title, breadcrumbParents),
       {
         "@type": "FAQPage",
         "@id": `${pageUrl}/#faq`,
@@ -41,7 +53,7 @@ export function gallerySeoFromContent(content: GalleryPageContent) {
   return {
     title: content.seo.title,
     description: content.seo.description,
-    canonical: getCanonicalUrlForSlug(content.slug),
+    canonical: pageUrlFromContent(content),
     ogImage: resolveOgImage(content.seo.ogImage, content.visuals.hero.src),
   };
 }

@@ -124,6 +124,11 @@ export type Lipo360RelatedItem = {
 
 export const lipo360RelatedProcedures: Lipo360RelatedItem[] = [
   {
+    title: "Lipo 360 Photos At Consult",
+    href: "/before-after-photos/body/lipo-360",
+    body: "Tampa Lipo 360 before & after photos are reviewed at your complimentary consult—not posted on the website.",
+  },
+  {
     title: "Liposuction Hub",
     href: "/liposuction",
     body: "Explore all liposuction options—arm, thigh, chin, male body sculpting, and more.",

@@ -185,9 +185,9 @@ export const menHubContent: CuratedPageContent = createCuratedPage({
   },
   relatedProcedures: [
     {
-      title: "Male Lipo 360",
-      href: "/male-liposuction-360",
-      body: "Circumferential midsection liposuction—the most popular men's body contouring procedure.",
+      title: "Male Surgery Photos At Consult",
+      href: "/before-after-photos/male",
+      body: "Tampa male surgery before & after photos are reviewed at your complimentary consult—not posted on the website.",
     },
     {
       title: "Male Chest Reduction",

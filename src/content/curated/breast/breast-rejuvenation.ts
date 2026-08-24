@@ -261,6 +261,11 @@ export const breastRejuvenationContent: CuratedPageContent = createCuratedPage({
   },
   relatedProcedures: [
     {
+      title: "Breast Rejuvenation Photos At Consult",
+      href: "/before-after-photos/breast/breast-rejuvenation",
+      body: "Tampa breast rejuvenation before & after photos are reviewed at your complimentary consult—not posted on the website.",
+    },
+    {
       title: "Breast Augmentation",
       href: "/breast-augmentation",
       body: "Implant-based volume enhancement—often part of rejuvenation plans.",

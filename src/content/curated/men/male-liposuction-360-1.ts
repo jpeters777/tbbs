@@ -260,6 +260,11 @@ export const maleLiposuction360Content: CuratedPageContent = createCuratedPage({
   },
   relatedProcedures: [
     {
+      title: "Male Sculpting Photos At Consult",
+      href: "/before-after-photos/male/male-body-sculpting",
+      body: "Tampa male body sculpting before & after photos are reviewed at your complimentary consult—not posted on the website.",
+    },
+    {
       title: "Male Abdominal Sculpting",
       href: "/male-abdominal-sculpting",
       body: "High-definition abdominal etching to enhance muscle visibility—often combined with Male Lipo 360 for a more athletic midsection.",

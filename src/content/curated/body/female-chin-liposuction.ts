@@ -225,6 +225,11 @@ export const femaleChinLiposuctionPage = createCuratedPage({
   },
   relatedProcedures: [
     {
+      title: "Chin & Neck Photos At Consult",
+      href: "/before-after-photos/face/chin-and-neck-liposuction",
+      body: "Tampa chin and neck liposuction before & after photos are reviewed at your complimentary consult—not posted on the website.",
+    },
+    {
       title: "Liposuction Hub",
       href: "/liposuction",
       body: "Explore all liposuction and body contouring options—including facial and body treatment combinations.",

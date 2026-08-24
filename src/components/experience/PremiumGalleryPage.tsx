@@ -16,7 +16,7 @@ export function PremiumGalleryPage({
 }: {
   content: GalleryPageContent;
 }) {
-  const pagePath = getPublicPathForSlug(content.slug);
+  const pagePath = content.canonicalPath ?? getPublicPathForSlug(content.slug);
   return (
     <>
       <GalleryPageJsonLd content={content} />
