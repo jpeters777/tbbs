@@ -230,6 +230,6 @@ export const lipo360Faqs: {
   {
     q: "How Do I Schedule A Lipo 360 Consultation?",
     a: "Schedule a complimentary virtual consultation online or call 813-557-6400. Our team will discuss your goals, review your options, and help you determine the best plan for your body.",
-    links: [{ text: "virtual consultation", href: "/resources" }],
+    links: [{ text: "virtual consultation", href: "/contact" }],
   },
 ];

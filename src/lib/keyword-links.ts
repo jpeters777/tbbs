@@ -79,8 +79,10 @@ export const HOMEPAGE_KEYWORD_LINKS: KeywordLink[] = [
   { text: "Liposuction", href: "/liposuction" },
   { text: "BBL", href: "/brazilian-butt-lift-bbl" },
   { text: "abdomen, chest, flanks, and back", href: "/men" },
-  { text: "Virtual consultations", href: "/resources" },
-  { text: "Virtual consultations", href: "/resources" },
+  { text: "complimentary virtual consultations", href: "/contact" },
+  { text: "complimentary virtual consultation", href: "/contact" },
+  { text: "complimentary consultation", href: "/contact" },
+  { text: "Virtual consultations", href: "/contact" },
   { text: "breast lift", href: "/breast-lift" },
   { text: "FAQs", href: "/faqs" },
   { text: "Women", href: "/women" },
@@ -91,9 +93,8 @@ export const HOMEPAGE_KEYWORD_LINKS: KeywordLink[] = [
   { text: "gynecomastia treatment", href: "/male-chest-reduction" },
   { text: "arm and thigh liposuction", href: "/thigh-liposuction" },
   { text: "thigh liposuction", href: "/thigh-liposuction" },
-  { text: "virtual consultation", href: "/resources" },
-  { text: "virtual consultations", href: "/resources" },
-  { text: "complimentary virtual consultations", href: "/resources" },
+  { text: "virtual consultation", href: "/contact" },
+  { text: "virtual consultations", href: "/contact" },
   { text: "recovery resources", href: "/recovery-guides" },
   { text: "Recovery guides", href: "/recovery-guides" },
   { text: "travel information", href: "/travel-information" },
@@ -126,8 +127,6 @@ export const HOMEPAGE_KEYWORD_LINKS: KeywordLink[] = [
   { text: "Female body contouring", href: "/women" },
   { text: "male chest reduction", href: "/male-chest-reduction" },
   { text: "Male Chest Reduction", href: "/male-chest-reduction" },
-  { text: "complimentary virtual consultation", href: "/resources" },
-  { text: "complimentary consultation", href: "/resources" },
 ];
 
 export type TextSpan =

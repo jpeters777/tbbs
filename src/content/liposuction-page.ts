@@ -311,7 +311,7 @@ export const liposuctionFaqs: {
     q: "How Do I Schedule A Liposuction Consultation?",
     a: "Schedule a complimentary virtual consultation online or call 813-557-6400. Our team will discuss your goals, review your options, and help you determine the best liposuction plan for your body.",
     links: [
-      { text: "virtual consultation", href: "/resources" },
+      { text: "virtual consultation", href: "/contact" },
       { text: "FAQs", href: "/faqs" },
     ],
   },

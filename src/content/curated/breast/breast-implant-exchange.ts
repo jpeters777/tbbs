@@ -374,7 +374,7 @@ export const breastImplantExchangeContent: CuratedPageContent = createCuratedPag
     {
       q: "How Do I Schedule An Implant Exchange Consultation In Tampa Bay?",
       a: "Schedule a complimentary virtual consultation online or call 813-557-6400. Bring prior implant information when available. Our team connects you with board-certified providers.",
-      links: [{ text: "virtual consultation", href: "/resources" }],
+      links: [{ text: "virtual consultation", href: "/contact" }],
     },
   ],
   faqTitle: "Breast Implant Exchange FAQs",

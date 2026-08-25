@@ -523,6 +523,6 @@ export const bblFaqs: {
   {
     q: "How Do I Schedule A BBL Consultation?",
     a: "Schedule a complimentary virtual consultation online or call 813-557-6400. Our team will discuss your goals, review your options, and help you plan your body contouring journey.",
-    links: [{ text: "virtual consultation", href: "/resources" }],
+    links: [{ text: "virtual consultation", href: "/contact" }],
   },
 ];

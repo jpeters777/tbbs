@@ -375,7 +375,7 @@ export const breastAugmentationContent: CuratedPageContent = createCuratedPage({
     {
       q: "How Do I Schedule A Breast Augmentation Consultation In Tampa Bay?",
       a: "Schedule a complimentary virtual consultation online or call 813-557-6400. Our team will discuss your goals, review implant options, and connect you with board-certified providers in Florida.",
-      links: [{ text: "virtual consultation", href: "/resources" }],
+      links: [{ text: "virtual consultation", href: "/contact" }],
     },
   ],
   faqTitle: "Breast Augmentation FAQs",

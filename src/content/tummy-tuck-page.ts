@@ -463,6 +463,6 @@ export const tummyTuckFaqs: {
   {
     q: "How Do I Schedule A Tummy Tuck Consultation In Tampa Bay?",
     a: "Schedule a complimentary virtual consultation online or call 813-557-6400. Our team will discuss your abdominal goals, review candidacy, and connect you with board-certified providers in Florida.",
-    links: [{ text: "virtual consultation", href: "/resources" }],
+    links: [{ text: "virtual consultation", href: "/contact" }],
   },
 ];

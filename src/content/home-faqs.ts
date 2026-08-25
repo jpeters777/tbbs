@@ -49,6 +49,7 @@ export const homeFaqs: {
     q: "How Do I Schedule A Consultation?",
     a: "Schedule a free virtual consultation through our online form or call 813-557-6400. Our team will discuss your goals, help you explore procedure options like Lipo 360 or tummy tuck, and point you to FAQs and recovery guides as needed.",
     links: [
+      { text: "online form", href: "/contact" },
       { text: "FAQs", href: "/faqs" },
       { text: "recovery guides", href: "/recovery-guides" },
     ],

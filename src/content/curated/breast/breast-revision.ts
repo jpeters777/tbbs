@@ -375,7 +375,7 @@ export const breastRevisionContent: CuratedPageContent = createCuratedPage({
     {
       q: "How Do I Schedule A Breast Revision Consultation In Tampa Bay?",
       a: "Schedule a complimentary virtual consultation online or call 813-557-6400. Bring prior surgery details when possible. Our team connects you with revision-experienced providers.",
-      links: [{ text: "virtual consultation", href: "/resources" }],
+      links: [{ text: "virtual consultation", href: "/contact" }],
     },
   ],
   faqTitle: "Breast Revision FAQs",

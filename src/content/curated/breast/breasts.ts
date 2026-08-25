@@ -344,12 +344,12 @@ export const breastsContent: CuratedPageContent = createCuratedPage({
     {
       q: "Do You Offer Virtual Consultations For Breast Surgery?",
       a: "Yes. Complimentary virtual consultations are the starting point for all breast procedures—we discuss goals and guide you to the right procedure page and provider.",
-      links: [{ text: "virtual consultation", href: "/resources" }],
+      links: [{ text: "virtual consultation", href: "/contact" }],
     },
     {
       q: "How Do I Schedule A Breast Surgery Consultation In Tampa Bay?",
-      a: "Schedule online or call 813-557-6400. Our team will help you navigate breast procedure options and connect you with board-certified providers in Florida.",
-      links: [{ text: "virtual consultation", href: "/resources" }],
+      a: "Schedule a complimentary virtual consultation online or call 813-557-6400. Our team will help you navigate breast procedure options and connect you with board-certified providers in Florida.",
+      links: [{ text: "virtual consultation", href: "/contact" }],
     },
   ],
   faqTitle: "Breast Surgery FAQs",

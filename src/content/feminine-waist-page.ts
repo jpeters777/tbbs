@@ -457,6 +457,6 @@ export const feminineWaistFaqs: {
   {
     q: "How Do I Schedule A Waist Contouring Consultation In Tampa Bay?",
     a: "Schedule a complimentary virtual consultation online or call 813-557-6400. Our team will discuss your hourglass goals, review options, and connect you with board-certified providers in Florida.",
-    links: [{ text: "virtual consultation", href: "/resources" }],
+    links: [{ text: "virtual consultation", href: "/contact" }],
   },
 ];
