@@ -1,0 +1,20 @@
+---
+description: Read TBBS_MASTER_CONTEXT.md before any TBBS work; flag conflicts with old code
+alwaysApply: true
+---
+
+# Master context
+
+Before suggesting or making changes, **read `TBBS_MASTER_CONTEXT.md`**. It is the business, SEO, migration, compliance, branding, and operations source of truth.
+
+1. Inspect the repository (routes, redirects, forms, analytics, content) before proposing work.
+2. If old code or content **conflicts** with the master context, **flag the conflict**. Do not assume the old version is correct.
+3. Newer instructions in the master context (and Jeneé’s later decisions) win over older archived copy.
+4. Do not rewrite the site. Prefer incremental, testable changes. Do not rename URLs casually.
+5. Do not add doctor names or old provider B&A photos. Do not change payment terms unless she confirms.
+6. Do not enable an AI chatbot. Do not publish Jotform IDs in public copy.
+7. Ask Jeneé only for true business decisions. Technical facts come from the repo.
+
+Locked as of Aug 26, 2026 (see `TBBS_MASTER_CONTEXT.md` §1b): www canonical; `/contact` first then `/consult`; labiaplasty and adult circumcision stay in nav; Cherry-only financing on the site.
+
+After code changes, follow the Eriq QA rule (`npm test`) and stay on `main` until she asks to commit/push.
