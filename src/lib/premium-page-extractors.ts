@@ -264,7 +264,7 @@ export function preparePremiumPageData(page: PageContent) {
     overview.length > 1 ? overview.slice(1) : page.description ? [page.description] : []
   );
 
-  let sections = preparePremiumPageSections(page, overview);
+  const sections = preparePremiumPageSections(page, overview);
 
   let glance: { sectionTitle: string; groups: GlanceGroup[] } | null = null;
   let recovery: { title: string; steps: RecoveryStep[] } | null = null;

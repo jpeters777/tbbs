@@ -33,6 +33,7 @@ const LIPOSUCTION_JUMP_LINKS = [
 ];
 
 export function PremiumLiposuctionPage({ page }: { page: PageContent }) {
+  const pagePath = `/${page.slug}`;
   let procedureIndex = 0;
 
   return (
@@ -55,7 +56,7 @@ export function PremiumLiposuctionPage({ page }: { page: PageContent }) {
             </Link>
             <p className="premium-eyebrow">{liposuctionIntro.eyebrow}</p>
             <h1 className="premium-hero-title">{liposuctionIntro.heroTitle}</h1>
-            <RichText as="p" className="premium-hero-lead" text={liposuctionIntro.lead} autoLinkKeywords />
+            <RichText as="p" className="premium-hero-lead" text={liposuctionIntro.lead} autoLinkKeywords currentPath={pagePath} />
             <div className="premium-hero-cta">
               <TrackedContactLink className="btn btn-primary premium-btn-glow" location="liposuction-hero">
                 Request a consult
@@ -91,7 +92,7 @@ export function PremiumLiposuctionPage({ page }: { page: PageContent }) {
             <h2 className="premium-section-title">{liposuctionIntro.title}</h2>
             <div className="premium-prose stack-4 mt-6">
               {liposuctionIntro.paragraphs.map((text) => (
-                <RichText key={text.slice(0, 48)} text={text} autoLinkKeywords />
+                <RichText key={text.slice(0, 48)} text={text} autoLinkKeywords currentPath={pagePath} />
               ))}
             </div>
             <TrackedContactLink
@@ -137,7 +138,7 @@ export function PremiumLiposuctionPage({ page }: { page: PageContent }) {
                             className="premium-lipo-directory-body"
                             text={item.body}
                             links={item.links}
-                            autoLinkKeywords
+                            autoLinkKeywords currentPath={pagePath}
                           />
                         </div>
                         <Link href={item.href} className="premium-lipo-directory-link" aria-label={`View ${item.title}`}>
@@ -163,12 +164,12 @@ export function PremiumLiposuctionPage({ page }: { page: PageContent }) {
             as="p"
             className="premium-section-intro max-w-2xl"
             text={liposuctionTreatmentAreasIntro}
-            autoLinkKeywords
+            autoLinkKeywords currentPath={pagePath}
           />
           <ul className="premium-checklist premium-checklist--grid mt-8">
             {liposuctionTreatmentAreas.map((area) => (
               <li key={area}>
-                <RichText as="span" text={area} autoLinkKeywords />
+                <RichText as="span" text={area} autoLinkKeywords currentPath={pagePath} />
               </li>
             ))}
           </ul>
@@ -184,14 +185,14 @@ export function PremiumLiposuctionPage({ page }: { page: PageContent }) {
               as="p"
               className="premium-section-intro max-w-2xl"
               text="Liposuction works best for patients who understand what it can achieve. During your consultation, we help determine whether liposuction—or a complementary procedure like a tummy tuck—is the right fit."
-              autoLinkKeywords
+              autoLinkKeywords currentPath={pagePath}
             />
           </div>
           <div className="premium-benefits">
             {liposuctionCandidateSignals.map((item) => (
               <div key={item.title} className="premium-benefit">
                 <h3>{item.title}</h3>
-                <RichText as="p" text={item.body} autoLinkKeywords />
+                <RichText as="p" text={item.body} autoLinkKeywords currentPath={pagePath} />
               </div>
             ))}
           </div>
@@ -211,7 +212,7 @@ export function PremiumLiposuctionPage({ page }: { page: PageContent }) {
               <article key={col.title} className="premium-difference-card">
                 <span className="premium-difference-card-num">{String(index + 1).padStart(2, "0")}</span>
                 <h3>{col.title}</h3>
-                <RichText as="p" text={col.body} autoLinkKeywords />
+                <RichText as="p" text={col.body} autoLinkKeywords currentPath={pagePath} />
               </article>
             ))}
           </div>
@@ -235,14 +236,14 @@ export function PremiumLiposuctionPage({ page }: { page: PageContent }) {
             as="p"
             className="premium-section-intro max-w-2xl"
             text="Recovery varies by treatment areas and the amount of fat removed. Following your provider's instructions helps promote optimal healing and results."
-            autoLinkKeywords
+            autoLinkKeywords currentPath={pagePath}
           />
           <ol className="premium-journey mt-10">
             {liposuctionRecoverySteps.map((step) => (
               <li key={step.step} className="premium-journey-step">
                 <span className="premium-journey-num">{step.step}</span>
                 <h3>{step.title}</h3>
-                <RichText as="p" text={step.body} autoLinkKeywords />
+                <RichText as="p" text={step.body} autoLinkKeywords currentPath={pagePath} />
               </li>
             ))}
           </ol>
@@ -251,7 +252,7 @@ export function PremiumLiposuctionPage({ page }: { page: PageContent }) {
             <ul className="premium-checklist">
               {liposuctionRecoveryTips.map((tip) => (
                 <li key={tip}>
-                  <RichText as="span" text={tip} autoLinkKeywords />
+                  <RichText as="span" text={tip} autoLinkKeywords currentPath={pagePath} />
                 </li>
               ))}
             </ul>
@@ -269,7 +270,7 @@ export function PremiumLiposuctionPage({ page }: { page: PageContent }) {
         <div className="container">
           <p className="premium-eyebrow">Combined procedures</p>
           <h2 className="premium-section-title">{liposuctionCombinations.title}</h2>
-          <RichText as="p" className="premium-explore-intro" text={liposuctionCombinations.intro} autoLinkKeywords />
+          <RichText as="p" className="premium-explore-intro" text={liposuctionCombinations.intro} autoLinkKeywords currentPath={pagePath} />
           <div className="premium-lipo-combo-grid">
             {liposuctionCombinations.groups.map((group) => (
               <section key={group.label} className="premium-lipo-combo-group" aria-label={group.label}>
@@ -298,14 +299,14 @@ export function PremiumLiposuctionPage({ page }: { page: PageContent }) {
               as="p"
               className="premium-section-intro max-w-2xl"
               text={liposuctionWhyChoose.intro}
-              autoLinkKeywords
+              autoLinkKeywords currentPath={pagePath}
             />
           </div>
           <div className="premium-benefits">
             {liposuctionWhyChoose.items.map((item) => (
               <div key={item.title} className="premium-benefit">
                 <h3>{item.title}</h3>
-                <RichText as="p" text={item.body} autoLinkKeywords />
+                <RichText as="p" text={item.body} autoLinkKeywords currentPath={pagePath} />
               </div>
             ))}
           </div>
@@ -316,6 +317,7 @@ export function PremiumLiposuctionPage({ page }: { page: PageContent }) {
         title="Liposuction FAQs"
         intro="Clear answers about candidacy, recovery, combinations, and what to expect when researching liposuction in Tampa Bay."
         faqs={liposuctionFaqs}
+        currentPath={pagePath}
       />
 
       {/* Final CTA */}
@@ -325,7 +327,7 @@ export function PremiumLiposuctionPage({ page }: { page: PageContent }) {
           <RichText
             as="p"
             text="Schedule your complimentary virtual consultation and discover the personalized, concierge experience that sets Tampa Bay Body Sculpting apart."
-            autoLinkKeywords
+            autoLinkKeywords currentPath={pagePath}
           />
           <div className="flex flex-wrap gap-3 mt-8 premium-final-actions">
             <TrackedContactLink className="btn btn-dark !bg-black !text-white !px-8" location="liposuction-final">

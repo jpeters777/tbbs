@@ -39,7 +39,6 @@ export function PremiumHeroMedia({
       return (
         <picture>
           <source media="(min-width: 769px)" srcSet={optimizedSrc} type="image/webp" />
-          {/* eslint-disable-next-line @next/next/no-img-element -- intentional LCP path */}
           <img
             src={mobileSrc}
             alt={alt}
