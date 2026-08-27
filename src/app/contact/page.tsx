@@ -43,7 +43,7 @@ export default function ContactPage() {
           <h1 className="premium-section-title consult-page-title">Get in touch</h1>
           <p className="contact-page-promo">
             Fall consult special: submit the short form below to claim <strong>$500 toward your procedure</strong> when
-            you complete your complimentary virtual consult by October 31, 2026.
+            you complete your complimentary virtual consult by September 30, 2026.
           </p>
           <p className="premium-section-lead consult-page-lead">
             Have a quick question or want our team to reach out? Complete the short form below—that is the fastest way
