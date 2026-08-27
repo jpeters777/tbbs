@@ -214,7 +214,7 @@ export function PremiumCuratedPage({ content }: { content: CuratedPageContent })
         ) : null}
 
         {content.comparison ? (
-          <section className="premium-section premium-section--difference">
+          <section id="compare" className="premium-section premium-section--difference">
             <div className="container">
               <div className="premium-difference-header">
                 <p className="premium-eyebrow">Understand your options</p>

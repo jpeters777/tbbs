@@ -18,6 +18,12 @@ export const HOMEPAGE_KEYWORD_LINKS: KeywordLink[] = [
   { text: "Male body contouring", href: "/men" },
   { text: "men's body contouring", href: "/men" },
   { text: "Men's body contouring", href: "/men" },
+  { text: "men's procedures", href: "/men" },
+  { text: "Men's procedures", href: "/men" },
+  { text: "Men's Procedures", href: "/men" },
+  { text: "men's options", href: "/men" },
+  { text: "men's", href: "/men" },
+  { text: "Men's", href: "/men" },
   { text: "Male Body Sculpting", href: "/men" },
   { text: "male body sculpting", href: "/men" },
   { text: "Male Abdominal Sculpting", href: "/male-abdominal-sculpting" },
@@ -51,6 +57,8 @@ export const HOMEPAGE_KEYWORD_LINKS: KeywordLink[] = [
   { text: "Body contouring", href: "/liposuction" },
   { text: "women's body contouring", href: "/women" },
   { text: "Women's body contouring", href: "/women" },
+  { text: "women's", href: "/women" },
+  { text: "Women's", href: "/women" },
   { text: "Lipo 360", href: "/liposuction-360" },
   { text: "Tummy Tuck", href: "/tummy-tuck" },
   { text: "tummy tuck", href: "/tummy-tuck" },
@@ -250,8 +258,17 @@ export function getPageKeywordLinks(currentPath?: string): KeywordLink[] {
 /** True when the match is a whole word/phrase, not a substring (e.g. "men" in "complimentary"). */
 function isWholeWordMatch(text: string, start: number, end: number): boolean {
   const isWordChar = (ch: string) => /[a-zA-Z0-9]/.test(ch);
+  const isApostrophe = (ch: string) => ch === "'" || ch === "\u2019";
   if (start > 0 && isWordChar(text[start - 1]!)) return false;
   if (end < text.length && isWordChar(text[end]!)) return false;
+  // Do not match "Men" inside "Men's" / "Women" inside "Women's"
+  if (
+    end + 1 < text.length &&
+    isApostrophe(text[end]!) &&
+    /[sS]/.test(text[end + 1]!)
+  ) {
+    return false;
+  }
   return true;
 }
 

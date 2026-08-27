@@ -239,7 +239,7 @@ export function PremiumUnifiedLayout({ data }: { data: UnifiedData }) {
         ) : null}
 
         {comparison ? (
-          <section className="premium-section premium-section--difference">
+          <section id="compare" className="premium-section premium-section--difference">
             <div className="container">
               <div className="premium-difference-header">
                 <p className="premium-eyebrow">Compare options</p>

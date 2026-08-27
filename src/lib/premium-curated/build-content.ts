@@ -144,8 +144,10 @@ export function createCuratedPage(input: CreateCuratedPageInput): CuratedPageCon
     intro:
       input.recovery?.intro ??
       "Recovery varies by procedure extent and whether combinations are included. Following your surgeon's protocol supports smoother healing and better results.",
-    essentialsTitle: "Essential Recovery Guidelines",
-    essentialsIntro: "Follow your surgeon's instructions first. These are the topics patients ask about most.",
+    essentialsTitle: input.recovery?.essentialsTitle ?? "Essential Recovery Guidelines",
+    essentialsIntro:
+      input.recovery?.essentialsIntro ??
+      "Follow your surgeon's instructions first. These are the topics patients ask about most.",
     steps: input.recovery?.steps ?? DEFAULT_RECOVERY_STEPS,
     essentials: input.recovery?.essentials ?? DEFAULT_RECOVERY_ESSENTIALS,
     tips: input.recovery?.tips ?? DEFAULT_RECOVERY_TIPS,

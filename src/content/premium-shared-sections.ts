@@ -17,7 +17,7 @@ export const premiumWhyChooseItems = [
   },
   {
     title: "Board-Certified Provider Network",
-    body: "We connect you with experienced, board-certified providers across Florida who prioritize patient safety and natural-looking results—not a one-size-fits-all referral.",
+    body: "Our trusted provider network includes experienced, board-certified surgeons across Florida who prioritize patient safety and natural-looking results—with personalized guidance, not a one-size-fits-all referral.",
   },
   {
     title: "Travel & Out-of-Town Patient Support",
