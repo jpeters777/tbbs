@@ -17,6 +17,7 @@ import { maleAbdominalSculptingContent } from "@/content/curated/men/male-abdomi
 import { maleTummyTuckContent } from "@/content/curated/men/male-tummy-tuck-1";
 import { maleChinLiposuctionContent } from "@/content/curated/men/male-chin-liposuction";
 import { adultCircumcisionContent } from "@/content/curated/men/adult-circumcision";
+import { pwagContent } from "@/content/curated/men/pwag";
 import { menHubContent } from "@/content/curated/men/men";
 import { womenHubContent } from "@/content/curated/hubs/women";
 import { faqsPage } from "@/content/curated/resources/faqs";
@@ -46,6 +47,7 @@ const CURATED_PAGES: Record<string, CuratedPageContent> = {
   "male-tummy-tuck-1": maleTummyTuckContent,
   "male-chin-liposuction": maleChinLiposuctionContent,
   "adult-circumcision": adultCircumcisionContent,
+  pwag: pwagContent,
   men: menHubContent,
   women: womenHubContent,
   faqs: faqsPage,

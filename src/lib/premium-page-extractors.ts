@@ -192,7 +192,8 @@ function getIntroTitle(page: PageContent, shortTitle: string): string {
 function getPageCategory(slug: string): "body" | "breast" | "women" | "men" | "resources" | "hub" {
   if (HUB_SLUGS.has(slug)) return "hub";
   if (slug.includes("breast") || slug === "breasts") return "breast";
-  if (slug.startsWith("male-") || slug === "men" || slug === "adult-circumcision") return "men";
+  if (slug.startsWith("male-") || slug === "men" || slug === "adult-circumcision" || slug === "pwag")
+    return "men";
   if (slug === "labiaplasty" || slug === "mommy-makeover" || slug === "feminine-waist-contouring") return "women";
   if (["faqs", "financing", "travel", "recovery", "resources", "out-of-town"].some((k) => slug.includes(k)))
     return "resources";

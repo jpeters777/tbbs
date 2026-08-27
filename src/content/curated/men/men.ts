@@ -119,6 +119,10 @@ export const menHubContent: CuratedPageContent = createCuratedPage({
         title: "Adult Circumcision",
         body: "Surgical foreskin removal for medical, hygiene, or personal reasons. Performed by experienced providers in our men's procedure network.",
       },
+      {
+        title: "PWAG (Penile Width And Girth)",
+        body: "Non-surgical PWAG girth enhancement with hyaluronic acid fillers under local anesthesia—typically quick treatment with minimal downtime. Confidential consult first.",
+      },
     ],
     closingParagraphs: [
       "Not sure which procedure fits your goals? Start with a complimentary virtual consultation—we will help you navigate options honestly.",
@@ -215,6 +219,11 @@ export const menHubContent: CuratedPageContent = createCuratedPage({
       body: "Foreskin removal for medical, hygiene, or personal reasons.",
     },
     {
+      title: "PWAG",
+      href: "/pwag",
+      body: "Non-surgical penile width and girth enhancement with dermal fillers.",
+    },
+    {
       title: "Women's Procedures Hub",
       href: "/women",
       body: "Browse women's body contouring and breast procedures.",
@@ -234,7 +243,7 @@ export const menHubContent: CuratedPageContent = createCuratedPage({
   faqs: [
     {
       q: "What Men's Procedures Does Tampa Bay Body Sculpting Offer?",
-      a: "We guide patients through Male Lipo 360, gynecomastia surgery, abdominal etching, male tummy tuck, chin liposuction, and adult circumcision via our board-certified provider network.",
+      a: "We guide patients through Male Lipo 360, gynecomastia surgery, abdominal etching, male tummy tuck, chin liposuction, adult circumcision, and PWAG (penile width and girth enhancement) through our board-certified provider network.",
     },
     {
       q: "How Do I Choose The Right Men's Procedure?",
@@ -265,7 +274,7 @@ export const menHubContent: CuratedPageContent = createCuratedPage({
     },
     {
       q: "Are Your Providers Board-Certified?",
-      a: "Yes. We connect you with carefully selected board-certified providers in Florida experienced in men's body contouring.",
+      a: "Yes. Our trusted provider network includes carefully selected board-certified providers in Florida experienced in men's body contouring and men's procedures.",
     },
     {
       q: "What Is The Recovery Like For Men's Body Contouring?",
@@ -310,7 +319,7 @@ export const menHubContent: CuratedPageContent = createCuratedPage({
   schemaProcedureName: "Male Body Contouring",
   schemaAlternateNames: ["Men's Body Sculpting", "Male Cosmetic Surgery", "Men's Procedures"],
   schemaDescription:
-    "Explore male body contouring in Tampa Bay including liposuction, gynecomastia surgery, abdominal etching, tummy tuck, and chin liposuction.",
+    "Explore male body contouring and men's procedures in Tampa Bay including liposuction, gynecomastia surgery, abdominal etching, tummy tuck, chin liposuction, adult circumcision, and PWAG.",
   heroSecondaryCta: "Men's procedures at a glance",
   jumpLinks: [
     { href: "#how-it-works", label: "How it works" },

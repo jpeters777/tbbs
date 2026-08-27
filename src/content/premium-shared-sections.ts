@@ -140,6 +140,7 @@ export const menCombinationGroups: ComboGroup[] = [
     links: [
       { label: "Male Chin Liposuction", href: "/male-chin-liposuction" },
       { label: "Adult Circumcision", href: "/adult-circumcision" },
+      { label: "PWAG", href: "/pwag" },
     ],
   },
   {

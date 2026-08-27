@@ -37,7 +37,7 @@ export function getPageHeroTitle(page: PageContent): string {
 export function getPageEyebrow(slug: string): string {
   if (slug.includes("gallery")) return "Patient results · Tampa Bay";
   if (slug.includes("breast") || slug === "breasts") return "Breast procedures · Tampa Bay";
-  if (slug.startsWith("male-") || slug === "men" || slug === "adult-circumcision")
+  if (slug.startsWith("male-") || slug === "men" || slug === "adult-circumcision" || slug === "pwag")
     return "Men's body sculpting · Tampa Bay";
   if (slug === "women" || slug === "labiaplasty" || slug === "mommy-makeover" || slug === "feminine-waist-contouring")
     return "Women's procedures · Tampa Bay";

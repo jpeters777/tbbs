@@ -411,6 +411,7 @@ export const recoveryGuidesPage: CuratedPageContent = createCuratedPage({
           { label: "Male Tummy Tuck", href: "/male-tummy-tuck#recovery" },
           { label: "Male Chin Liposuction", href: "/male-chin-liposuction#recovery" },
           { label: "Adult Circumcision", href: "/adult-circumcision#recovery" },
+          { label: "PWAG", href: "/pwag#recovery" },
           { label: "Men's Procedures", href: "/men#recovery" },
         ],
       },

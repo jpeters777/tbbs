@@ -319,6 +319,11 @@ export const adultCircumcisionContent: CuratedPageContent = createCuratedPage({
       body: "Jawline contouring for a stronger facial profile.",
     },
     {
+      title: "PWAG",
+      href: "/pwag",
+      body: "Non-surgical penile width and girth enhancement with dermal fillers.",
+    },
+    {
       title: "Financing Options",
       href: "/financing-options",
       body: "Cherry financing and payment guidance after your quote.",

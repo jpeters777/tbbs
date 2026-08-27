@@ -17,7 +17,7 @@ import { toTitleCase } from "@/lib/text";
 
 function getParentLink(page: PageContent): { href: string; label: string } | null {
   const slug = page.slug;
-  if (slug.startsWith("male-") || slug === "adult-circumcision")
+  if (slug.startsWith("male-") || slug === "adult-circumcision" || slug === "pwag")
     return { href: "/men", label: "Men's procedures" };
   if (
     slug.startsWith("female-") ||
