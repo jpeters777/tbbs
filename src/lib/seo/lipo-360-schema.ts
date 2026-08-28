@@ -12,9 +12,8 @@ export function buildLipo360Schema() {
     "@type": "MedicalWebPage",
     "@id": PAGE_URL + "/#webpage",
     url: PAGE_URL,
-    name: "Lipo 360 Tampa | Liposuction & Waist Contouring | Tampa Bay Body Sculpting",
-    description:
-      "Discover Lipo 360 in Tampa Bay to sculpt your waist, abdomen, flanks, and back. Complimentary virtual consultations with Tampa Bay Body Sculpting.",
+    name: lipo360Seo.title,
+    description: lipo360Seo.description,
     isPartOf: { "@id": BASE + "/#website" },
     about: organization,
     inLanguage: "en-US",
@@ -59,9 +58,9 @@ export function buildLipo360Schema() {
 }
 
 export const lipo360Seo = {
-  title: "Lipo 360 Tampa | Liposuction & Waist Contouring | Tampa Bay Body Sculpting",
+  title: "Lipo 360 Tampa | Circumferential Liposuction | Tampa Bay Body Sculpting",
   description:
-    "Discover Lipo 360 in Tampa Bay to sculpt your waist, abdomen, flanks, and back. Schedule your complimentary virtual consultation with Tampa Bay Body Sculpting.",
+    "Looking for Lipo 360 in Tampa? Sculpt your waist, abdomen, flanks, and back with circumferential liposuction. Book a complimentary virtual consult today.",
   canonical: PAGE_URL,
   ogImage: "/images/blob-10293ad.png",
 };

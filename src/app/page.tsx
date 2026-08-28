@@ -10,14 +10,14 @@ import { toTitleCase, absoluteSeoTitle } from "@/lib/text";
 const HOME_HERO = resolveHeroSrc("/images/shutterstock_99994967_801684509466.JPG");
 
 const title = toTitleCase(
-  "Tampa Bay Body Sculpting | Cosmetic Surgery, Lipo 360 & Tummy Tuck"
+  "Tampa Bay Body Sculpting | Body Contouring & Lipo 360 in Tampa"
 );
 const description =
-  "Considering cosmetic surgery in Tampa? Explore Lipo 360, tummy tuck, breast surgery, body contouring, and male body sculpting. Schedule your free consultation.";
+  "Body sculpting and body contouring in Tampa Bay—Lipo 360, BBL, tummy tuck, breast surgery, and men's procedures. Start your complimentary virtual consult.";
 
 export const metadata: Metadata = {
   title: absoluteSeoTitle(
-    "Tampa Bay Body Sculpting | Cosmetic Surgery, Lipo 360 & Tummy Tuck"
+    "Tampa Bay Body Sculpting | Body Contouring & Lipo 360 in Tampa"
   ),
   description,
   alternates: {

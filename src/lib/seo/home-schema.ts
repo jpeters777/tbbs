@@ -22,9 +22,9 @@ export function buildHomeSchema() {
     "@type": "WebPage",
     "@id": `${BASE}/#webpage`,
     url: `${BASE}/`,
-    name: "Tampa Bay Body Sculpting | Cosmetic Surgery, Lipo 360 & Tummy Tuck",
+    name: "Tampa Bay Body Sculpting | Body Contouring & Lipo 360 in Tampa",
     description:
-      "Considering cosmetic surgery in Tampa? Explore Lipo 360, tummy tuck, breast surgery, body contouring, and male body sculpting. Schedule your free consultation.",
+      "Body sculpting and body contouring in Tampa Bay—Lipo 360, BBL, tummy tuck, breast surgery, and men's procedures. Start your complimentary virtual consult.",
     isPartOf: { "@id": `${BASE}/#website` },
     about: { "@id": `${BASE}/#organization` },
     inLanguage: "en-US",

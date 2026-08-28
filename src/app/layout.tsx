@@ -40,12 +40,12 @@ const cantarell = Cantarell({
 export const metadata: Metadata = {
   title: {
     default: toTitleCase(
-      "Tampa Bay Body Sculpting | Cosmetic Surgery, Lipo 360 & Tummy Tuck"
+      "Tampa Bay Body Sculpting | Body Contouring & Lipo 360 in Tampa"
     ),
     template: `%s | ${toTitleCase("Tampa Bay Body Sculpting")}`,
   },
   description:
-    "Lipo 360, Tummy Tuck, Breast Procedures, Arm and Thigh Liposuction, and Male Body Sculpting.",
+    "Body sculpting and body contouring in Tampa Bay—Lipo 360, BBL, tummy tuck, breast surgery, and men's procedures.",
   metadataBase: new URL(SITE_URL),
   openGraph: {
     siteName: siteConfig.brand,
