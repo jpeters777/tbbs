@@ -182,6 +182,7 @@ export const travelInformationPage: CuratedPageContent = createCuratedPage({
         links: [
           { label: "Lipo 360", href: "/liposuction-360" },
           { label: "Brazilian Butt Lift (BBL)", href: "/brazilian-butt-lift-bbl" },
+          { label: "Lipo 360 + BBL", href: "/lipo-360-bbl" },
           { label: "Tummy Tuck", href: "/tummy-tuck" },
           { label: "Breast Procedures", href: "/breasts" },
           { label: "Men's Procedures", href: "/men" },

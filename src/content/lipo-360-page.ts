@@ -62,6 +62,7 @@ export const lipo360Combinations = {
       links: [
         { label: "Tummy Tuck", href: "/tummy-tuck" },
         { label: "Brazilian Butt Lift (BBL)", href: "/brazilian-butt-lift-bbl" },
+        { label: "Lipo 360 + BBL", href: "/lipo-360-bbl" },
         { label: "Mommy Makeover", href: "/mommy-makeover" },
         { label: "Thigh Liposuction", href: "/thigh-liposuction" },
       ],
@@ -139,6 +140,11 @@ export const lipo360RelatedProcedures: Lipo360RelatedItem[] = [
     body: "Remove excess skin and tighten abdominal muscles—often combined with Lipo 360 for comprehensive midsection results.",
   },
   {
+    title: "Lipo 360 + BBL",
+    href: "/lipo-360-bbl",
+    body: "Pair circumferential waist sculpting with fat transfer when you want a slimmer midsection and enhanced curves in one plan.",
+  },
+  {
     title: "Brazilian Butt Lift (BBL)",
     href: "/brazilian-butt-lift-bbl",
     body: "Uses purified fat from liposuction to enhance buttock shape and volume while improving overall body proportions.",
@@ -202,7 +208,10 @@ export const lipo360Faqs: {
   {
     q: "Can Lipo 360 Be Combined With A Brazilian Butt Lift (BBL)?",
     a: "Yes. Lipo 360 is commonly combined with a BBL, using purified fat removed during liposuction to enhance buttock shape and volume while improving overall body proportions.",
-    links: [{ text: "Brazilian Butt Lift (BBL)", href: "/brazilian-butt-lift-bbl" }],
+    links: [
+      { text: "Lipo 360 + BBL", href: "/lipo-360-bbl" },
+      { text: "Brazilian Butt Lift (BBL)", href: "/brazilian-butt-lift-bbl" },
+    ],
   },
   {
     q: "What Is Recovery Like After Lipo 360?",

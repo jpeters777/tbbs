@@ -256,6 +256,7 @@ export const bblCombinations = {
     {
       label: "Waist & midsection",
       links: [
+        { label: "Lipo 360 + BBL", href: "/lipo-360-bbl" },
         { label: "Lipo 360", href: "/liposuction-360" },
         { label: "Tummy Tuck", href: "/tummy-tuck" },
         { label: "Mommy Makeover", href: "/mommy-makeover" },
@@ -366,6 +367,11 @@ export const bblRelatedProcedures: BblRelatedItem[] = [
     body: "Tampa Brazilian butt lift before & after photos are reviewed at your complimentary consult—not posted on the website.",
   },
   {
+    title: "Lipo 360 + BBL",
+    href: "/lipo-360-bbl",
+    body: "The dedicated combination guide—circumferential waist sculpting plus fat transfer in one surgical plan.",
+  },
+  {
     title: "Lipo 360",
     href: "/liposuction-360",
     body: "Comprehensive midsection sculpting—often combined with a BBL to slim the waist while enhancing curves.",
@@ -457,6 +463,7 @@ export const bblFaqs: {
     q: "Can A BBL Be Combined With Other Procedures?",
     a: "Yes. A BBL is commonly combined with Lipo 360, tummy tuck, mommy makeover, or waist contouring to enhance overall body shape and definition.",
     links: [
+      { text: "Lipo 360 + BBL", href: "/lipo-360-bbl" },
       { text: "Lipo 360", href: "/liposuction-360" },
       { text: "tummy tuck", href: "/tummy-tuck" },
       { text: "mommy makeover", href: "/mommy-makeover" },

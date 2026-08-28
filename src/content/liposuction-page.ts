@@ -50,6 +50,11 @@ export const liposuctionProcedureGroups: LiposuctionProcedureGroup[] = [
         body: "Precision abdominal and waist sculpting designed to enhance natural curves and create a more defined feminine midsection.",
       },
       {
+        title: "Lipo 360 + BBL",
+        href: "/lipo-360-bbl",
+        body: "Circumferential waist sculpting plus fat transfer to the buttocks in one plan—slim the midsection and enhance curves together.",
+      },
+      {
         title: "Brazilian Butt Lift (BBL)",
         href: "/brazilian-butt-lift-bbl",
         body: "Combines liposuction with fat transfer to enhance buttock shape and volume using your body's own fat.",
@@ -206,6 +211,7 @@ export const liposuctionCombinations = {
       label: "Body contouring",
       links: [
         { label: "Lipo 360", href: "/liposuction-360" },
+        { label: "Lipo 360 + BBL", href: "/lipo-360-bbl" },
         { label: "Tummy Tuck", href: "/tummy-tuck" },
         { label: "Mommy Makeover", href: "/mommy-makeover" },
         { label: "Brazilian Butt Lift (BBL)", href: "/brazilian-butt-lift-bbl" },

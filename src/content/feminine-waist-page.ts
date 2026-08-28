@@ -168,6 +168,7 @@ export const feminineWaistCombinations = {
       label: "Hourglass combinations",
       links: [
         { label: "Brazilian Butt Lift (BBL)", href: "/brazilian-butt-lift-bbl" },
+        { label: "Lipo 360 + BBL", href: "/lipo-360-bbl" },
         { label: "Lipo 360", href: "/liposuction-360" },
         { label: "Tummy Tuck", href: "/tummy-tuck" },
         { label: "Mommy Makeover", href: "/mommy-makeover" },
@@ -314,6 +315,11 @@ export const feminineWaistRelatedProcedures: FeminineWaistRelatedItem[] = [
     title: "Lipo 360",
     href: "/liposuction-360",
     body: "The circumferential midsection technique often used to achieve a slimmer waist—abdomen, flanks, and back in one plan.",
+  },
+  {
+    title: "Lipo 360 + BBL",
+    href: "/lipo-360-bbl",
+    body: "Circumferential waist sculpting plus fat transfer when hourglass proportion is the goal in one surgical plan.",
   },
   {
     title: "Brazilian Butt Lift (BBL)",

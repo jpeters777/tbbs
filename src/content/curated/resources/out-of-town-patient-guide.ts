@@ -247,6 +247,11 @@ export const outOfTownPatientGuidePage: CuratedPageContent = createCuratedPage({
       body: "Requires extended in-town stay and strict early recovery—plan travel accordingly.",
     },
     {
+      title: "Lipo 360 + BBL",
+      href: "/lipo-360-bbl",
+      body: "Combined sitting rules and garment wear—plan a longer Tampa stay than liposuction alone.",
+    },
+    {
       title: "Mommy Makeover",
       href: "/mommy-makeover",
       body: "Combined procedures mean longer recovery—factor into your Tampa stay length.",

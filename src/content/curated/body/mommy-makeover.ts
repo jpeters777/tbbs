@@ -239,6 +239,11 @@ export const mommyMakeoverPage = createCuratedPage({
       body: "Circumferential waist sculpting commonly paired with tummy tuck for a slimmer, more defined midsection.",
     },
     {
+      title: "Lipo 360 + BBL",
+      href: "/lipo-360-bbl",
+      body: "Waist sculpting plus fat transfer when hourglass curves are part of a postpartum or body-contouring plan.",
+    },
+    {
       title: "Breast Augmentation",
       href: "/breast-augmentation",
       body: "Restores breast volume after breastfeeding—frequently combined with abdominal restoration.",

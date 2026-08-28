@@ -1,5 +1,6 @@
 import type { CuratedPageContent } from "@/lib/premium-curated/types";
 import { mommyMakeoverPage } from "@/content/curated/body/mommy-makeover";
+import { lipo360BblPage } from "@/content/curated/body/lipo-360-bbl";
 import { thighLiposuctionPage } from "@/content/curated/body/thigh-liposuction";
 import { armLipo360ArmLiftPage } from "@/content/curated/body/arm-lipo-360-arm-lift";
 import { femaleChinLiposuctionPage } from "@/content/curated/body/female-chin-liposuction";
@@ -30,6 +31,7 @@ import { howWeSelectProvidersPage } from "@/content/curated/resources/how-we-sel
 
 const CURATED_PAGES: Record<string, CuratedPageContent> = {
   "mommy-makeover": mommyMakeoverPage,
+  "lipo-360-bbl": lipo360BblPage,
   "thigh-liposuction": thighLiposuctionPage,
   "arm-lipo-360----arm-lift": armLipo360ArmLiftPage,
   "female-chin-liposuction": femaleChinLiposuctionPage,

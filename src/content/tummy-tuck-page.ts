@@ -172,6 +172,7 @@ export const tummyTuckCombinations = {
       label: "Midsection & curves",
       links: [
         { label: "Lipo 360", href: "/liposuction-360" },
+        { label: "Lipo 360 + BBL", href: "/lipo-360-bbl" },
         { label: "Feminine Waist Contouring", href: "/feminine-waist-contouring" },
         { label: "Brazilian Butt Lift (BBL)", href: "/brazilian-butt-lift-bbl" },
         { label: "Mommy Makeover", href: "/mommy-makeover" },

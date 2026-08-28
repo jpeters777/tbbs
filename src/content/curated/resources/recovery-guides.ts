@@ -35,6 +35,7 @@ export const recoveryGuidesPage: CuratedPageContent = createCuratedPage({
   jumpLinks: [
     { href: "#liposuction-recovery", label: "Liposuction" },
     { href: "#bbl-recovery", label: "BBL" },
+    { href: "#lipo-360-bbl-recovery", label: "Lipo 360 + BBL" },
     { href: "#tummy-tuck-recovery", label: "Tummy tuck" },
     { href: "#breast-recovery", label: "Breast" },
     { href: "#chin-recovery", label: "Chin lipo" },
@@ -47,6 +48,7 @@ export const recoveryGuidesPage: CuratedPageContent = createCuratedPage({
     col1Items: [
       "Liposuction & Lipo 360",
       "BBL sitting & garment rules",
+      "Lipo 360 + BBL combined recovery",
       "Tummy tuck & drain care",
       "Breast augmentation, lift & reduction",
       "Chin & neck liposuction",
@@ -177,6 +179,38 @@ export const recoveryGuidesPage: CuratedPageContent = createCuratedPage({
         highlights: [
           "Plan a longer Tampa stay than liposuction alone",
           "Confirm flight clearance before traveling home",
+        ],
+      },
+      {
+        id: "lipo-360-bbl-recovery",
+        title: "Lipo 360 + BBL Recovery",
+        href: "/lipo-360-bbl#recovery",
+        body: "Combined recovery follows BBL sitting rules plus Lipo 360 garment wear. Protect transferred fat while compressing donor areas around the waist.",
+        phases: [
+          {
+            label: "First 24–48 hours",
+            text: "Rest with help. Short walks only. No sitting or lying on the buttocks or hips. Compression on liposuction areas.",
+          },
+          {
+            label: "First 1–2 weeks",
+            text: "Sleep on your stomach or side. Garments on donor areas. Massage on lipo zones only when your provider approves.",
+          },
+          {
+            label: "Weeks 2–6",
+            text: "Limited sitting with a BBL pillow may be allowed—weight on thighs only. Continue garments and daily walking.",
+          },
+          {
+            label: "Weeks 6+",
+            text: "Activity eases with approval. Shape continues refining for 3–6 months as fat settles.",
+          },
+          {
+            label: "Key rule",
+            text: "BBL sitting restrictions override typical Lipo 360-only downtime.",
+          },
+        ],
+        highlights: [
+          "Plan recovery around sitting rules, not lipo-only timelines",
+          "Out-of-town patients usually need a longer stay",
         ],
       },
       {
@@ -649,7 +683,8 @@ export const recoveryGuidesPage: CuratedPageContent = createCuratedPage({
     },
     {
       q: "Do you offer procedure-specific recovery guides?",
-      a: "Yes. Recovery guides for Lipo 360, Lipo 360 + BBL, and Male Lipo 360 are available from our team during consultation.",
+      a: "Yes. Recovery guides for Lipo 360, Lipo 360 + BBL, and Male Lipo 360 are available from our team during consultation—and the Lipo 360 + BBL page covers combined sitting and garment rules.",
+      links: [{ text: "Lipo 360 + BBL", href: "/lipo-360-bbl" }],
     },
   ],
   faqTitle: "Recovery FAQs By Procedure",

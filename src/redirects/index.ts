@@ -75,6 +75,11 @@ export const specialRedirects: RedirectEntry[] = [
     destination: "/male-tummy-tuck",
     permanent: true,
   },
+  {
+    source: "/liposuction-360-bbl",
+    destination: "/lipo-360-bbl",
+    permanent: true,
+  },
 ];
 
 export const allLegacyRedirects = legacyRedirects as RedirectEntry[];

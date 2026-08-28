@@ -105,6 +105,11 @@ export const womenHubContent: CuratedPageContent = createCuratedPage({
         body: "Fat transfer to enhance buttock shape and volume using your body's own fat—creating fuller curves and a balanced hourglass figure when combined with waist lipo.",
       },
       {
+        title: "Lipo 360 + BBL",
+        href: "/lipo-360-bbl",
+        body: "Circumferential waist sculpting plus fat transfer in one plan—the combination many patients want when both a slimmer midsection and enhanced curves are the goal.",
+      },
+      {
         title: "Feminine Waist Contouring",
         body: "Precision abdominal and waist sculpting designed to enhance natural curves and create an elegant, feminine midsection with smooth contour transitions.",
       },
@@ -123,7 +128,7 @@ export const womenHubContent: CuratedPageContent = createCuratedPage({
     ],
     closingParagraphs: [
       "Not sure which procedure fits your goals? Start with a complimentary virtual consultation—we will help you navigate options honestly.",
-      "Many women combine procedures like BBL with Lipo 360 or tummy tuck for comprehensive feminine transformation.",
+      "Many women combine procedures like Lipo 360 + BBL or tummy tuck for comprehensive feminine transformation.",
     ],
   },
   candidacy: {
@@ -196,6 +201,11 @@ export const womenHubContent: CuratedPageContent = createCuratedPage({
       body: "Fat transfer to enhance buttock curves and volume.",
     },
     {
+      title: "Lipo 360 + BBL",
+      href: "/lipo-360-bbl",
+      body: "Waist sculpting plus fat transfer when you want both a slimmer midsection and enhanced curves.",
+    },
+    {
       title: "Feminine Waist Contouring",
       href: "/feminine-waist-contouring",
       body: "Precision waist and abdominal sculpting for feminine curves.",
@@ -235,7 +245,7 @@ export const womenHubContent: CuratedPageContent = createCuratedPage({
   faqs: [
     {
       q: "What Women's Procedures Does Tampa Bay Body Sculpting Offer?",
-      a: "We guide patients through Lipo 360, BBL, tummy tuck, feminine waist contouring, mommy makeover, thigh and arm lipo, chin lipo, labiaplasty, and breast procedures via our provider network.",
+      a: "We guide patients through Lipo 360, BBL, Lipo 360 + BBL, tummy tuck, feminine waist contouring, mommy makeover, thigh and arm lipo, chin lipo, labiaplasty, and breast procedures via our provider network.",
     },
     {
       q: "How Do I Choose The Right Women's Procedure?",
@@ -249,6 +259,7 @@ export const womenHubContent: CuratedPageContent = createCuratedPage({
       q: "Can I Combine A BBL With Other Procedures?",
       a: "Yes. BBL is commonly combined with Lipo 360, tummy tuck, or breast procedures for comprehensive hourglass enhancement in one surgical plan when safe.",
       links: [
+        { text: "Lipo 360 + BBL", href: "/lipo-360-bbl" },
         { text: "Brazilian Butt Lift", href: "/brazilian-butt-lift-bbl" },
         { text: "Lipo 360", href: "/liposuction-360" },
       ],

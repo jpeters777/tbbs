@@ -5,6 +5,11 @@ import { normalizePublicPath } from "@/lib/public-paths";
 export type KeywordLink = { text: string; href: string };
 
 export const HOMEPAGE_KEYWORD_LINKS: KeywordLink[] = [
+  { text: "Lipo 360 + BBL", href: "/lipo-360-bbl" },
+  { text: "Lipo 360 and BBL", href: "/lipo-360-bbl" },
+  { text: "Lipo 360 with BBL", href: "/lipo-360-bbl" },
+  { text: "lipo 360 + bbl", href: "/lipo-360-bbl" },
+  { text: "Lipo360 + BBL", href: "/lipo-360-bbl" },
   { text: "Brazilian Butt Lift (BBL)", href: "/brazilian-butt-lift-bbl" },
   { text: "Brazilian butt lifts", href: "/brazilian-butt-lift-bbl" },
   { text: "Brazilian butt lift", href: "/brazilian-butt-lift-bbl" },
@@ -192,6 +197,7 @@ const PROCEDURE_RECOVERY_PATHS = new Set([
   "/labiaplasty",
   "/thigh-liposuction",
   "/arm-lipo-360-arm-lift",
+  "/lipo-360-bbl",
   "/women",
   "/men",
 ]);

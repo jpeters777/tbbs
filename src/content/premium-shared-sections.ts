@@ -76,6 +76,7 @@ export const bodyCombinationGroups: ComboGroup[] = [
     links: [
       { label: "Lipo 360", href: "/liposuction-360" },
       { label: "Brazilian Butt Lift (BBL)", href: "/brazilian-butt-lift-bbl" },
+      { label: "Lipo 360 + BBL", href: "/lipo-360-bbl" },
       { label: "Tummy Tuck", href: "/tummy-tuck" },
       { label: "Mommy Makeover", href: "/mommy-makeover" },
     ],
@@ -159,6 +160,7 @@ export const womenCombinationGroups: ComboGroup[] = [
     links: [
       { label: "Lipo 360", href: "/liposuction-360" },
       { label: "Brazilian Butt Lift (BBL)", href: "/brazilian-butt-lift-bbl" },
+      { label: "Lipo 360 + BBL", href: "/lipo-360-bbl" },
       { label: "Tummy Tuck", href: "/tummy-tuck" },
       { label: "Feminine Waist Contouring", href: "/feminine-waist-contouring" },
     ],
@@ -196,6 +198,7 @@ export const resourcesCombinationGroups: ComboGroup[] = [
     links: [
       { label: "Lipo 360", href: "/liposuction-360" },
       { label: "Brazilian Butt Lift (BBL)", href: "/brazilian-butt-lift-bbl" },
+      { label: "Lipo 360 + BBL", href: "/lipo-360-bbl" },
       { label: "Breast Augmentation", href: "/breast-augmentation" },
     ],
   },

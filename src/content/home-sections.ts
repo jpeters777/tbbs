@@ -302,6 +302,7 @@ export const homeExploreProcedures = {
     { label: "Breast Lift", href: "/breast-lift" },
     { label: "Breast Reduction", href: "/breast-reduction" },
     { label: "BBL", href: "/brazilian-butt-lift-bbl" },
+    { label: "Lipo 360 + BBL", href: "/lipo-360-bbl" },
     { label: "Chin Liposuction", href: "/female-chin-liposuction" },
     { label: "Arm Liposuction", href: "/arm-lipo-360-arm-lift" },
     { label: "Thigh Liposuction", href: "/thigh-liposuction" },
