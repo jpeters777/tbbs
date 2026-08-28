@@ -16,16 +16,16 @@ export const maleChestReductionContent: CuratedPageContent = createCuratedPage({
     ...pageSeo,
     title: "Gynecomastia Surgery Tampa | Male Chest Reduction | Tampa Bay Body Sculpting",
     description:
-      "Gynecomastia surgery in Tampa Bay to treat enlarged male breast tissue and restore a flatter, masculine chest. Board-certified providers, transparent pricing—book your free consult.",
+      "Gynecomastia surgery and male breast reduction in Tampa Bay to treat enlarged male breast tissue and restore a flatter, masculine chest. Start your complimentary virtual consult.",
   },
   visuals: curatedVisualsFromPage(page),
   intro: {
     eyebrow: getPageEyebrow(page.slug),
     heroTitle,
     title: "Restore A Flatter, More Masculine Chest With Gynecomastia Surgery",
-    lead: "Male chest reduction (gynecomastia surgery) removes excess fat and glandular tissue to create a flatter, firmer, more masculine chest—restoring confidence when diet and exercise have not been enough.",
+    lead: "Male chest reduction (gynecomastia surgery / male breast reduction) removes excess fat and glandular tissue to create a flatter, firmer, more masculine chest—restoring confidence when diet and exercise have not been enough.",
     paragraphs: [
-      "Gynecomastia is a common condition that causes enlargement of male breast tissue due to genetics, hormonal changes, weight fluctuations, medications, or aging. Firm glandular tissue often does not respond to exercise alone—surgical removal is frequently the most effective solution.",
+      "Gynecomastia is a common condition that causes enlargement of male breast tissue due to genetics, hormonal changes, weight fluctuations, medications, or aging. Firm glandular tissue often does not respond to exercise alone—surgical removal is frequently the most effective solution. Many men search for male breast reduction when they want a clearer name for the same procedure.",
       "Every procedure is customized: some men achieve excellent results with liposuction alone, while others require excision of firm glandular tissue beneath the nipple. Your provider determines the right approach during consultation.",
       "Male chest reduction is commonly combined with Male Lipo 360, abdominal etching, or chin liposuction for comprehensive upper-body sculpting. Results are typically long-lasting when you maintain a stable weight.",
       "At Tampa Bay Body Sculpting, we connect you with experienced board-certified providers across Florida and guide you from complimentary virtual consultation through recovery.",
@@ -304,7 +304,11 @@ export const maleChestReductionContent: CuratedPageContent = createCuratedPage({
     },
     {
       q: "What Is Male Chest Reduction Surgery?",
-      a: "Male chest reduction (gynecomastia surgery) removes excess fat and/or glandular tissue to create a flatter, more masculine chest contour using liposuction, excision, or both.",
+      a: "Male chest reduction—also called gynecomastia surgery or male breast reduction—removes excess fat and/or glandular tissue to create a flatter, more masculine chest contour using liposuction, excision, or both.",
+    },
+    {
+      q: "Is Male Breast Reduction The Same As Gynecomastia Surgery?",
+      a: "Yes. Male breast reduction and gynecomastia surgery refer to the same type of procedure: reducing excess male breast tissue for a flatter, more masculine chest. Your provider chooses liposuction, gland excision, or both based on your anatomy.",
     },
     {
       q: "Who Is A Good Candidate For Gynecomastia Surgery In Tampa?",

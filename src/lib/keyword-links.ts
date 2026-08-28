@@ -34,6 +34,8 @@ export const HOMEPAGE_KEYWORD_LINKS: KeywordLink[] = [
   { text: "Male Abdominal Sculpting", href: "/male-abdominal-sculpting" },
   { text: "abdominal sculpting", href: "/male-abdominal-sculpting" },
   { text: "Male Chest Reduction", href: "/male-chest-reduction" },
+  { text: "male breast reduction", href: "/male-chest-reduction" },
+  { text: "Male breast reduction", href: "/male-chest-reduction" },
   { text: "gynecomastia surgery", href: "/male-chest-reduction" },
   { text: "Male Lipo 360", href: "/male-liposuction-360" },
   { text: "Male Tummy Tuck", href: "/male-tummy-tuck" },
