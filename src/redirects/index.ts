@@ -31,6 +31,12 @@ function photoCategoryCaseRedirects(): RedirectEntry[] {
 export const specialRedirects: RedirectEntry[] = [
   ...photoCategoryCaseRedirects(),
   {
+    // GMB / local search still links here; child /services/* paths already redirect.
+    source: "/services",
+    destination: "/",
+    permanent: true,
+  },
+  {
     source: "/before-after-photos/body",
     destination: "/before-after-photos",
     permanent: true,
@@ -42,6 +48,17 @@ export const specialRedirects: RedirectEntry[] = [
   },
   {
     source: "/arm-lipo-360%C2%B0-%2F-arm-lift",
+    destination: "/arm-lipo-360-arm-lift",
+    permanent: true,
+  },
+  {
+    // GSC still shows degree-symbol slug without the slash variants below.
+    source: "/arm-lipo%C2%B0-360%C2%B0-arm-lift",
+    destination: "/arm-lipo-360-arm-lift",
+    permanent: true,
+  },
+  {
+    source: "/arm-lipo°-360°-arm-lift",
     destination: "/arm-lipo-360-arm-lift",
     permanent: true,
   },
