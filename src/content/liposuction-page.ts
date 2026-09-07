@@ -212,6 +212,9 @@ export const liposuctionCombinations = {
       links: [
         { label: "Lipo 360", href: "/liposuction-360" },
         { label: "Lipo 360 + BBL", href: "/lipo-360-bbl" },
+        { label: "Arm Lipo 360 / Arm Lift", href: "/arm-lipo-360-arm-lift" },
+        { label: "Thigh Liposuction", href: "/thigh-liposuction" },
+        { label: "Chin & Neck Liposuction", href: "/female-chin-liposuction" },
         { label: "Tummy Tuck", href: "/tummy-tuck" },
         { label: "Mommy Makeover", href: "/mommy-makeover" },
         { label: "Brazilian Butt Lift (BBL)", href: "/brazilian-butt-lift-bbl" },
@@ -259,6 +262,13 @@ export const liposuctionFaqs: {
   {
     q: "What Areas Can Be Treated With Liposuction?",
     a: "Our providers treat nearly every area of the body, including the abdomen, waist, flanks, back, arms, thighs, chin and neck, chest (men), hips, and knees. Popular options include Lipo 360, arm liposuction, thigh liposuction, chin liposuction, and male liposuction.",
+    links: [
+      { text: "Lipo 360", href: "/liposuction-360" },
+      { text: "arm liposuction", href: "/arm-lipo-360-arm-lift" },
+      { text: "thigh liposuction", href: "/thigh-liposuction" },
+      { text: "chin liposuction", href: "/female-chin-liposuction" },
+      { text: "male liposuction", href: "/male-liposuction-360" },
+    ],
   },
   {
     q: "Who Is A Good Candidate For Liposuction?",

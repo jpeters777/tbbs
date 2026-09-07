@@ -65,7 +65,7 @@ export function buildLiposuctionSchema() {
 export const liposuctionSeo = {
   title: "Liposuction & Body Contouring Tampa | Tampa Bay Body Sculpting",
   description:
-    "Body contouring and liposuction in Tampa Bay—Lipo 360, BBL, arm, thigh, and chin lipo, plus male body sculpting. Start your complimentary virtual consult.",
+    "Liposuction in Tampa—Lipo 360, arm, thigh, and chin lipo, plus BBL and male body sculpting with board-certified providers. Complimentary virtual consult.",
   canonical: PAGE_URL,
   ogImage: "/images/shutterstock_263340653-b2373a9.jpg",
 };
