@@ -5,9 +5,9 @@ import { TrackedPhoneLink } from "@/components/TrackedPhoneLink";
 import { CONSULT_URL, siteConfig, SITE_URL } from "@/lib/site";
 import { absoluteSeoTitle, toTitleCase } from "@/lib/text";
 
-const title = "Contact Us";
+const title = "Contact Tampa Bay Body Sculpting | Complimentary Consult";
 const description =
-  "Contact Tampa Bay Body Sculpting with a quick form. Our concierge team responds about procedures, consultations, and next steps.";
+  "Quick contact form—Fall consult special: $500 toward your procedure when you complete your complimentary virtual consult by Sept 30, 2026. Concierge team responds same day when possible.";
 const ogImage = `${SITE_URL}${siteConfig.logo}`;
 
 export const metadata: Metadata = {

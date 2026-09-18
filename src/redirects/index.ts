@@ -97,6 +97,12 @@ export const specialRedirects: RedirectEntry[] = [
     destination: "/lipo-360-bbl",
     permanent: true,
   },
+  {
+    // Legacy blog slug still indexed in GSC (variant of PAL vs AirSculpt post).
+    source: "/med-spa-blog/power-assisted-liposuction-pal-vs-airsculpt-in-tampa-fl",
+    destination: "/liposuction",
+    permanent: true,
+  },
 ];
 
 export const allLegacyRedirects = legacyRedirects as RedirectEntry[];
