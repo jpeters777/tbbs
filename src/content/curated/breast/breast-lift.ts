@@ -8,9 +8,9 @@ export const breastLiftContent: CuratedPageContent = createCuratedPage({
   slug: "breast-lift",
   category: "breast",
   seo: {
-    title: "Breast Lift Tampa | Mastopexy | Tampa Bay Body Sculpting",
+    title: "Breast Lift Tampa | Mastopexy & Breast Reshaping",
     description:
-      "Breast lift (mastopexy) in Tampa Bay to raise sagging breasts and restore a firmer, more youthful shape. Complimentary consultation with board-certified surgeons.",
+      "Breast lift in Tampa Bay—mastopexy to raise sagging breasts and restore a firmer, youthful shape. Board-certified providers. Complimentary virtual consult.",
     ogImage: OG_IMAGE,
   },
   visuals: {
